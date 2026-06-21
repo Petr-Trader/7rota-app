@@ -23,6 +23,30 @@ function defaults() {
     ligaOn: DATA.liga_korekce_on !== false, ligaKor: { ...(DATA.liga_korekce || {}) },
     relOn: DATA.reliability_on !== false, lref: DATA.lref || 120 };
 }
+// Předvolby = konzistentní kombinace ligové korekce + vah (kvůli dvojímu počítání s BT)
+const PRESETS = {
+  mirna: { label: 'Mírná', liga: { A: 1.03, B: 1.0, C: 0.83, D: 0.81 }, w: { lkh: 0.5, bt: 0.5, turnaje: 0.4 },
+    desc: 'MÍRNÁ: ligová korekce LKH lehká (2. liga −17 %, 3. liga −19 %). Sílu napříč ligami nese hlavně Vzájemná síla (BT) — proto má vyšší váhu. Vyhneš se dvojímu počítání téhož.' },
+  vyvazena: { label: 'Vyvážená', liga: { A: 1.04, B: 1.0, C: 0.76, D: 0.73 }, w: { lkh: 0.5, bt: 0.4, turnaje: 0.5 },
+    desc: 'VYVÁŽENÁ (doporučeno): ligová korekce i váha BT střední (2. liga −24 %, 3. liga −27 %). Dobrý výchozí bod.' },
+  plna: { label: 'Plná', liga: { A: 1.08, B: 1.0, C: 0.52, D: 0.46 }, w: { lkh: 0.6, bt: 0.25, turnaje: 0.4 },
+    desc: 'PLNÁ: LKH plně koriguje rozdíl lig dle reálných dat (2. liga −48 %, 3. liga −54 %). Protože to už zahrnuje sílu, váha Vzájemné síly (BT) je nízká, ať se nezapočítává dvakrát.' },
+};
+function applyPreset(name) {
+  const p = PRESETS[name]; if (!p) return;
+  params.ligaKor = { ...p.liga }; params.ligaOn = true;
+  params.wLkh = p.w.lkh; params.wBt = p.w.bt; params.wTurn = p.w.turnaje;
+  saveParams(); syncControls(); render();
+  $('presetDesc').textContent = p.desc;
+}
+function legStats() {
+  const ls = DATA.players.map(p => p.legy).filter(v => v != null).sort((a, b) => a - b);
+  if (!ls.length) { $('legInfo').textContent = ''; return; }
+  const med = ls[Math.floor(ls.length / 2)];
+  $('legInfo').innerHTML = `V této sezóně mají hráči <b>${ls[0]}–${ls[ls.length - 1]}</b> odehraných legů (medián ${med}). `
+    + `Lref = od kolika legů bereš výkon jako plně prokázaný — nad Lref plná důvěra, pod ním se LKH úměrně srazí.`;
+}
+
 function loadParams() {
   const def = defaults();
   try { const s = JSON.parse(localStorage.getItem(LS_PARAMS)); if (!s) return def;
@@ -169,7 +193,7 @@ function syncControls() {
   $('aSize').value = params.aSize;
   $('ligaOn').checked = params.ligaOn;
   $('relOn').checked = params.relOn; $('lref').value = params.lref;
-  renderLigaInputs();
+  renderLigaInputs(); legStats();
 }
 
 function bind() {
@@ -198,6 +222,9 @@ function bind() {
   // detail hráče
   $('detailClose').onclick = () => $('detail').classList.add('hidden');
   $('detail').onclick = e => { if (e.target.id === 'detail') $('detail').classList.add('hidden'); };
+
+  // předvolby
+  document.querySelectorAll('.preset').forEach(b => b.onclick = () => applyPreset(b.dataset.p));
 }
 
 // ---- B: Přidat hráče (kandidáti přes Cloudflare proxy) ----

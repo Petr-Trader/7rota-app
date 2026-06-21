@@ -86,3 +86,8 @@ td.name{cursor:pointer}
 .tile .tl{font-size:11px;color:var(--mut);text-transform:uppercase}
 .tile .tv{font-size:20px;font-weight:700;color:var(--txt);font-variant-numeric:tabular-nums}
 .tile .ts{font-size:11px;color:var(--mut)}
+.presets{display:flex;gap:8px}
+.preset{flex:1;background:var(--bg);border:1px solid var(--line);border-radius:10px;
+  padding:11px 6px;font-size:14px;font-weight:600;color:var(--txt);cursor:pointer}
+.preset:hover{border-color:var(--teal)}
+.preset:active{background:var(--teal);color:#fff}

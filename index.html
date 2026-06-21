@@ -48,6 +48,16 @@
   <!-- VIEW: NASTAVENÍ -->
   <section id="view-nastaveni" class="view hidden">
     <section class="card">
+      <h2>Předvolby (filozofie hodnocení)</h2>
+      <div class="presets">
+        <button class="preset" data-p="mirna">Mírná</button>
+        <button class="preset" data-p="vyvazena">Vyvážená ★</button>
+        <button class="preset" data-p="plna">Plná</button>
+      </div>
+      <p class="hint" id="presetDesc">Vyber předvolbu — nastaví ligovou korekci i váhy metrik konzistentně (kvůli dvojímu počítání síly s BT). Pak můžeš cokoliv ručně doladit níže.</p>
+    </section>
+
+    <section class="card">
       <h2>Váhy metrik</h2>
       <div class="slider"><label>Váha LKH (liga) <output id="wLkhOut"></output></label>
         <input type="range" id="wLkh" min="0" max="1" step="0.05"></div>
@@ -72,6 +82,7 @@
       <label class="chk"><input type="checkbox" id="relOn"> Zohlednit počet odehraných legů</label>
       <div class="row"><label>Referenční počet legů (Lref)</label>
         <input type="number" id="lref" min="10" max="500" step="10" class="num"></div>
+      <p class="hint" id="legInfo"></p>
       <p class="hint">Hráč s málo legy má vysoké LKH méně prokázané → jeho LKH se srazí (faktor √(legy/Lref), max 1). Hráč s dostatkem legů = plná důvěra, žádný penalty za objem.</p>
     </section>
 
