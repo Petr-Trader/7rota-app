@@ -37,7 +37,14 @@
         <input type="number" id="aSize" min="1" max="20" class="num">
         <button id="reset" class="link">výchozí</button>
       </div>
-      <p class="hint">Váhy se normalizují — nemusí dát dohromady 1. LKH/Turnaje/BT jsou pevná data (USO + náš výpočet), měníš jen váhy, zámky a vyřazení.</p>
+
+      <div class="liga">
+        <label class="chk"><input type="checkbox" id="ligaOn"> Ligová korekce LKH (1. vs 3. liga)</label>
+        <div id="ligaBox" class="liga-grid"></div>
+        <p class="hint">Násobí LKH dle ligy hráče — vyrovnává obtížnost soupeřů (1. liga je těžší než 3.). Hráč z 3. ligy s vysokým LKH hraje proti slabším, tak se mu LKH zmenší. Uprav koeficienty dle sebe.</p>
+      </div>
+
+      <p class="hint">Váhy se normalizují — nemusí dát dohromady 1. LKH/Turnaje/BT jsou pevná data (USO + náš výpočet), měníš jen váhy, korekci, zámky a vyřazení.</p>
     </div>
   </section>
 

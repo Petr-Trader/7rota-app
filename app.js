@@ -22,8 +22,12 @@ function stdev(a){ // výběrová (n-1), jako Excel STDEV
 
 function loadParams(){
   const def = {wLkh:DATA.weights_default.lkh, wBt:DATA.weights_default.bt,
-               wTurn:DATA.weights_default.turnaje, aSize:DATA.a_team_size};
-  try{ const s=JSON.parse(localStorage.getItem(LS_PARAMS)); return s? {...def,...s}:def; }
+               wTurn:DATA.weights_default.turnaje, aSize:DATA.a_team_size,
+               ligaOn: DATA.liga_korekce_on!==false,
+               ligaKor: {...(DATA.liga_korekce||{})}};
+  try{ const s=JSON.parse(localStorage.getItem(LS_PARAMS));
+       if(!s) return def;
+       return {...def, ...s, ligaKor:{...def.ligaKor, ...(s.ligaKor||{})}}; }
   catch{ return def; }
 }
 function saveParams(){ localStorage.setItem(LS_PARAMS, JSON.stringify(params)); }
@@ -31,15 +35,23 @@ function loadOverrides(){ try{ return JSON.parse(localStorage.getItem(LS_OVR))||
 function saveOverrides(){ localStorage.setItem(LS_OVR, JSON.stringify(overrides)); }
 function ovr(name){ return overrides[name] || (overrides[name]={lock:null,excluded:false}); }
 
+// LKH po ligove korekci (nasob koeficientem ligy hrace, kdyz je korekce zapnuta)
+function lkhVal(p){
+  if(p.lkh==null) return null;
+  if(params.ligaOn && p.kat && params.ligaKor[p.kat]!=null) return p.lkh*params.ligaKor[p.kat];
+  return p.lkh;
+}
+function mval(p,m){ return m==='lkh' ? lkhVal(p) : p[m]; }
+
 function compute(){
   const ps = DATA.players;
   // z-skóre baseline = všichni hráči s danou metrikou (jako pevný rozsah v Excelu)
   const z = {};
   for(const m of METRICS){
-    const vals = ps.filter(p=>p[m]!=null).map(p=>p[m]);
+    const vals = ps.map(p=>mval(p,m)).filter(v=>v!=null);
     const mu=vals.length?mean(vals):0, sd=stdev(vals);
     z[m] = {};
-    for(const p of ps) z[m][p.jmeno] = (p[m]!=null && sd>0) ? (p[m]-mu)/sd : null;
+    for(const p of ps){ const v=mval(p,m); z[m][p.jmeno] = (v!=null && sd>0) ? (v-mu)/sd : null; }
   }
   const W = {lkh:params.wLkh, bt:params.wBt, turnaje:params.wTurn};
   const out = ps.map(p=>{
@@ -113,6 +125,22 @@ function syncControls(){
   $('wBtOut').textContent=(+params.wBt).toFixed(2);
   $('wTurnOut').textContent=(+params.wTurn).toFixed(2);
   $('aSize').value=params.aSize;
+  $('ligaOn').checked=params.ligaOn;
+  renderLigaInputs();
+}
+
+function renderLigaInputs(){
+  const box=$('ligaBox'); box.style.display=params.ligaOn?'':'none';
+  const popis=DATA.liga_popis||{};
+  box.innerHTML='';
+  for(const k of Object.keys(params.ligaKor||{})){
+    const w=document.createElement('label'); w.className='liga-item';
+    w.innerHTML=`<span>${popis[k]||k}</span><input type="number" step="0.01" min="0" data-k="${k}" value="${params.ligaKor[k]}">`;
+    box.appendChild(w);
+  }
+  box.querySelectorAll('input').forEach(inp=>inp.onchange=e=>{
+    params.ligaKor[e.target.dataset.k]=+e.target.value||0; saveParams(); render();
+  });
 }
 
 function bind(){
@@ -122,8 +150,11 @@ function bind(){
   $('wBt').oninput=e=>upd('wBt',e.target,'wBtOut');
   $('wTurn').oninput=e=>upd('wTurn',e.target,'wTurnOut');
   $('aSize').onchange=e=>{ params.aSize=Math.max(1,+e.target.value||1); saveParams(); syncControls(); render(); };
+  $('ligaOn').onchange=e=>{ params.ligaOn=e.target.checked; saveParams(); renderLigaInputs(); render(); };
   $('reset').onclick=()=>{ params={wLkh:DATA.weights_default.lkh,wBt:DATA.weights_default.bt,
-    wTurn:DATA.weights_default.turnaje,aSize:DATA.a_team_size}; saveParams(); syncControls(); render(); };
+    wTurn:DATA.weights_default.turnaje,aSize:DATA.a_team_size,
+    ligaOn:DATA.liga_korekce_on!==false,ligaKor:{...(DATA.liga_korekce||{})}};
+    saveParams(); syncControls(); render(); };
   $('toggleCtl').onclick=()=>{ const b=$('ctlBody'); const h=b.style.display==='none';
     b.style.display=h?'':'none'; $('toggleCtl').textContent=h?'skrýt':'zobrazit'; };
 }

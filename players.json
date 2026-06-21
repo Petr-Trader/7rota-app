@@ -5,6 +5,19 @@
     "turnaje": 0.5
   },
   "a_team_size": 6,
+  "liga_korekce": {
+    "A": 1.15,
+    "B": 1.0,
+    "C": 0.92,
+    "D": 0.85
+  },
+  "liga_korekce_on": true,
+  "liga_popis": {
+    "A": "extraliga",
+    "B": "1. liga",
+    "C": "2. liga",
+    "D": "3. liga"
+  },
   "players": [
     {
       "jmeno": "Vach Josef",
