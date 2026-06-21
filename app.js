@@ -94,9 +94,12 @@ function render() {
     if (p.lock) tr.classList.add('locked');
     const badge = p.team ? `<span class="badge ${p.team.toLowerCase()}">${p.team}</span>` : '—';
     const jl = p.jenLiga ? ' <span class="tag jl">jen liga</span>' : '';
+    const total = (DATA.liga_zapasu && DATA.liga_zapasu[p.tym]) || 24;
+    const doch = p.utkani != null
+      ? ` <span class="tag doch" title="na soupisce ${p.utkani}/${total}, reálně hrál ${p.hral}×">📋 ${p.utkani}/${total}</span>` : '';
     tr.innerHTML = `
       <td>${p.rank || ''}</td>
-      <td class="l name">${p.jmeno}${jl}</td>
+      <td class="l name">${p.jmeno}${jl}${doch}</td>
       <td>${badge}</td>
       <td class="score">${p.score == null ? '—' : p.score.toFixed(2)}</td>
       <td>${na(p.lkh, 1)}</td>

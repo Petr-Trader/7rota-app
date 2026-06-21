@@ -20,6 +20,10 @@
   },
   "lref": 120,
   "reliability_on": true,
+  "liga_zapasu": {
+    "A": 24,
+    "B": 24
+  },
   "players": [
     {
       "jmeno": "Vach Josef",
@@ -28,7 +32,9 @@
       "lkh": 66.4,
       "legy": 199,
       "turnaje": 2850,
-      "bt": 0.83
+      "bt": 0.83,
+      "utkani": 24,
+      "hral": 24
     },
     {
       "jmeno": "Řečník Vilém",
@@ -37,7 +43,9 @@
       "lkh": 66.1,
       "legy": 202,
       "turnaje": 3250,
-      "bt": 1.21
+      "bt": 1.21,
+      "utkani": 23,
+      "hral": 23
     },
     {
       "jmeno": "Bajtek Jindřich",
@@ -46,7 +54,9 @@
       "lkh": 62.6,
       "legy": 165,
       "turnaje": 2750,
-      "bt": 1.11
+      "bt": 1.11,
+      "utkani": 19,
+      "hral": 19
     },
     {
       "jmeno": "Kožíšek Jiří",
@@ -55,7 +65,9 @@
       "lkh": 57.6,
       "legy": 175,
       "turnaje": 2750,
-      "bt": 1.08
+      "bt": 1.08,
+      "utkani": 21,
+      "hral": 21
     },
     {
       "jmeno": "Majerčin David",
@@ -64,7 +76,9 @@
       "lkh": 56.6,
       "legy": 53,
       "turnaje": 2750,
-      "bt": 0.12
+      "bt": 0.12,
+      "utkani": 15,
+      "hral": 10
     },
     {
       "jmeno": "Velev Stanislav",
@@ -73,7 +87,9 @@
       "lkh": 58.8,
       "legy": 25,
       "turnaje": 750,
-      "bt": 0.31
+      "bt": 0.31,
+      "utkani": 12,
+      "hral": 8
     },
     {
       "jmeno": "Schraml Petr",
@@ -82,7 +98,9 @@
       "lkh": 38.0,
       "legy": 97,
       "turnaje": 2250,
-      "bt": 0.21
+      "bt": 0.21,
+      "utkani": 22,
+      "hral": 17
     },
     {
       "jmeno": "Procházka Lubomír",
@@ -91,7 +109,9 @@
       "lkh": 16.0,
       "legy": 10,
       "turnaje": 1050,
-      "bt": -1.86
+      "bt": -1.86,
+      "utkani": 24,
+      "hral": 5
     },
     {
       "jmeno": "Královič Martin",
@@ -100,7 +120,9 @@
       "lkh": 65.6,
       "legy": 220,
       "turnaje": null,
-      "bt": -0.2
+      "bt": -0.2,
+      "utkani": 24,
+      "hral": 24
     },
     {
       "jmeno": "Zbořil Karel",
@@ -109,7 +131,9 @@
       "lkh": 60.6,
       "legy": 126,
       "turnaje": 1950,
-      "bt": 0.4
+      "bt": 0.4,
+      "utkani": 16,
+      "hral": 16
     },
     {
       "jmeno": "Hamšík Robert",
@@ -118,7 +142,9 @@
       "lkh": 48.1,
       "legy": 208,
       "turnaje": null,
-      "bt": null
+      "bt": null,
+      "utkani": 24,
+      "hral": 24
     },
     {
       "jmeno": "Puková Jaroslava",
@@ -127,7 +153,9 @@
       "lkh": 47.4,
       "legy": 183,
       "turnaje": 1650,
-      "bt": -0.55
+      "bt": -0.55,
+      "utkani": 24,
+      "hral": 24
     },
     {
       "jmeno": "Moravec Zdeněk",
@@ -136,7 +164,9 @@
       "lkh": 42.5,
       "legy": 12,
       "turnaje": null,
-      "bt": null
+      "bt": null,
+      "utkani": 6,
+      "hral": 5
     },
     {
       "jmeno": "Polák Michal",
@@ -145,7 +175,9 @@
       "lkh": 35.6,
       "legy": 43,
       "turnaje": null,
-      "bt": -0.34
+      "bt": -0.34,
+      "utkani": 17,
+      "hral": 14
     },
     {
       "jmeno": "Hampeis Pavel",
@@ -154,7 +186,9 @@
       "lkh": 26.7,
       "legy": 36,
       "turnaje": null,
-      "bt": -1.39
+      "bt": -1.39,
+      "utkani": 13,
+      "hral": 9
     },
     {
       "jmeno": "Knotek Václav",
@@ -163,7 +197,9 @@
       "lkh": 27.8,
       "legy": 67,
       "turnaje": null,
-      "bt": null
+      "bt": null,
+      "utkani": 17,
+      "hral": 17
     },
     {
       "jmeno": "Hozman Stanislav",
@@ -172,7 +208,9 @@
       "lkh": 45.4,
       "legy": 100,
       "turnaje": 1850,
-      "bt": -0.51
+      "bt": -0.51,
+      "utkani": 3,
+      "hral": 3
     },
     {
       "jmeno": "Krykorka Milan",
@@ -181,7 +219,9 @@
       "lkh": null,
       "legy": null,
       "turnaje": null,
-      "bt": -0.42
+      "bt": -0.42,
+      "utkani": 0,
+      "hral": 0
     }
   ]
 }
