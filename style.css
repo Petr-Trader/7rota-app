@@ -60,3 +60,18 @@ td.name{font-weight:600}
 tr.locked td.name::after{content:" 🔒";font-size:11px}
 footer{text-align:center;color:var(--mut);font-size:11px;padding:8px 12px 24px}
 .na{color:var(--mut)}
+td.name{cursor:pointer}
+.detail-overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:40;
+  display:flex;align-items:flex-end;justify-content:center}
+.detail-card{background:#fff;width:100%;max-width:560px;border-radius:16px 16px 0 0;
+  padding:18px 16px calc(20px + env(safe-area-inset-bottom));position:relative;
+  max-height:86vh;overflow-y:auto}
+.detailClose{position:absolute;right:12px;top:12px;background:var(--bg);border:none;
+  width:32px;height:32px;border-radius:8px;font-size:15px;cursor:pointer;color:var(--mut)}
+.detail-card h2{margin:2px 0 4px;font-size:20px}
+.dsub{margin:0 0 14px;color:var(--mut);font-size:13px}
+.dstats{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.tile{background:var(--bg);border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;gap:1px}
+.tile .tl{font-size:11px;color:var(--mut);text-transform:uppercase}
+.tile .tv{font-size:20px;font-weight:700;color:var(--txt);font-variant-numeric:tabular-nums}
+.tile .ts{font-size:11px;color:var(--mut)}

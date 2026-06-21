@@ -80,6 +80,17 @@
   </section>
 </main>
 
+<!-- DETAIL HRÁČE (otevře se klikem na řádek) -->
+<div id="detail" class="detail-overlay hidden">
+  <div class="detail-card">
+    <button id="detailClose" class="detailClose" aria-label="zavřít">✕</button>
+    <h2 id="dName"></h2>
+    <p id="dSub" class="dsub"></p>
+    <div id="dStats" class="dstats"></div>
+    <p class="hint" id="dNote"></p>
+  </div>
+</div>
+
 <footer><p>Data z USO (sipky.org + turnaje.org) · BT vč. korekce anomálie · <span id="gen"></span></p></footer>
 <script src="app.js"></script>
 </body>

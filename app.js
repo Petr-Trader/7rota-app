@@ -116,6 +116,35 @@ function render() {
     ovr(e.target.dataset.n).lock = e.target.value || null; saveOverrides(); render(); });
   tb.querySelectorAll('.xbtn').forEach(x => x.onclick = e => {
     const o = ovr(e.target.dataset.n); o.excluded = !o.excluded; saveOverrides(); render(); });
+  LAST = {}; rows.forEach(p => LAST[p.jmeno] = p);
+  tb.querySelectorAll('td.name').forEach(td => td.onclick = () => openDetail(td.textContent));
+}
+
+let LAST = {};
+function tile(label, val, sub) {
+  return `<div class="tile"><span class="tl">${label}</span><span class="tv">${val}</span>${sub ? `<span class="ts">${sub}</span>` : ''}</div>`;
+}
+function openDetail(jmeno) {
+  // td.name textContent obsahuje i tagy (jen liga / docházka) — najdi hráče dle prefixu
+  const p = LAST[jmeno] || DATA.players.map(x => LAST[x.jmeno]).find(x => x && jmeno.startsWith(x.jmeno));
+  if (!p) return;
+  const total = (DATA.liga_zapasu && DATA.liga_zapasu[p.tym]) || 24;
+  const liga = (DATA.liga_popis && DATA.liga_popis[p.kat]) || p.kat || '?';
+  $('dName').textContent = p.jmeno;
+  $('dSub').innerHTML = `${p.team ? `<span class="badge ${p.team.toLowerCase()}">${p.team}</span>` : ''} `
+    + `tým ${p.tym || '—'} · ${liga}` + (p.rank ? ` · pořadí #${p.rank}` : '');
+  $('dStats').innerHTML =
+    tile('Vážené skóre', p.score == null ? '—' : p.score.toFixed(2))
+    + tile('LKH (liga)', p.lkh == null ? '—' : p.lkh.toFixed(1), p.legy != null ? `${p.legy} legů` : 'bez ligy')
+    + tile('Turnaje', p.turnaje == null ? '—' : p.turnaje, p.turnaje == null ? 'nehraje pohár' : 'Středočeský pohár')
+    + tile('Síla (BT)', p.bt == null ? '—' : p.bt.toFixed(2), 'vzájemné zápasy')
+    + tile('Docházka', `${p.utkani}/${total}`, `reálně hrál ${p.hral}×`);
+  const notes = [];
+  if (p.jenLiga) notes.push('„Jen liga" — nehraje turnaje, soudí se hlavně z LKH.');
+  if (p.lkh == null) notes.push('Bez ligových dat — posuzuje se z turnajů (BT).');
+  if (p.legy != null && p.legy < (params.lref || 120)) notes.push(`Málo odehraných legů (${p.legy}) → LKH méně prokázané (spolehlivostní faktor).`);
+  $('dNote').textContent = notes.join(' ');
+  $('detail').classList.remove('hidden');
 }
 
 function renderLigaInputs() {
@@ -163,6 +192,10 @@ function bind() {
     document.querySelectorAll('.view').forEach(s => s.classList.toggle('hidden', s.id !== 'view-' + v));
     toggleMenu(false);
   });
+
+  // detail hráče
+  $('detailClose').onclick = () => $('detail').classList.add('hidden');
+  $('detail').onclick = e => { if (e.target.id === 'detail') $('detail').classList.add('hidden'); };
 }
 
 async function init() {
