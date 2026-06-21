@@ -12,60 +12,74 @@
 </head>
 <body>
 <header>
-  <h1>🎯 Sedmá rota — žebříček</h1>
+  <button id="menuBtn" class="menuBtn" aria-label="menu">☰</button>
+  <h1>🎯 Sedmá rota</h1>
   <p id="meta" class="meta"></p>
 </header>
 
+<nav id="menu" class="menu hidden">
+  <button class="menuItem" data-view="zebricek">📊 Žebříček &amp; rozřazení A/B</button>
+  <button class="menuItem" data-view="nastaveni">⚙️ Nastavení (váhy, korekce)</button>
+  <button class="menuItem disabled" disabled>👤 Detail hráče &amp; forma <span class="soon">brzy</span></button>
+  <button class="menuItem disabled" disabled>🆚 Sestava vs. soupeř <span class="soon">brzy</span></button>
+</nav>
+<div id="scrim" class="scrim hidden"></div>
+
 <main>
-  <section class="card" id="controls">
-    <h2>Parametry <button id="toggleCtl" class="link">skrýt</button></h2>
-    <div id="ctlBody">
-      <div class="slider">
-        <label>Váha LKH <output id="wLkhOut"></output></label>
-        <input type="range" id="wLkh" min="0" max="1" step="0.05">
+  <!-- VIEW: ŽEBŘÍČEK -->
+  <section id="view-zebricek" class="view">
+    <div class="card">
+      <div class="legend">
+        <span class="badge a">A</span> A-tým &nbsp; <span class="badge b">B</span> B-tým &nbsp;
+        <span class="muted">— vyřazen</span> &nbsp; <span class="tag jl">jen liga</span> bez turnajů
       </div>
-      <div class="slider">
-        <label>Váha Vzájemná síla (BT) <output id="wBtOut"></output></label>
-        <input type="range" id="wBt" min="0" max="1" step="0.05">
-      </div>
-      <div class="slider">
-        <label>Váha Turnaje <output id="wTurnOut"></output></label>
-        <input type="range" id="wTurn" min="0" max="1" step="0.05">
-      </div>
-      <div class="row">
-        <label>Velikost A-týmu</label>
-        <input type="number" id="aSize" min="1" max="20" class="num">
-        <button id="reset" class="link">výchozí</button>
-      </div>
-
-      <div class="liga">
-        <label class="chk"><input type="checkbox" id="ligaOn"> Ligová korekce LKH (1. vs 3. liga)</label>
-        <div id="ligaBox" class="liga-grid"></div>
-        <p class="hint">Násobí LKH dle ligy hráče — vyrovnává obtížnost soupeřů (1. liga je těžší než 3.). Hráč z 3. ligy s vysokým LKH hraje proti slabším, tak se mu LKH zmenší. Uprav koeficienty dle sebe.</p>
-      </div>
-
-      <p class="hint">Váhy se normalizují — nemusí dát dohromady 1. LKH/Turnaje/BT jsou pevná data (USO + náš výpočet), měníš jen váhy, korekci, zámky a vyřazení.</p>
+      <table id="tbl">
+        <thead>
+          <tr><th>#</th><th class="l">Hráč</th><th>Návrh</th><th>Skóre</th>
+            <th>LKH</th><th>Turn.</th><th>BT</th><th>🔒</th><th>✕</th></tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
     </div>
   </section>
 
-  <section class="card">
-    <div class="legend"><span class="badge a">A</span> A-tým &nbsp; <span class="badge b">B</span> B-tým &nbsp; <span class="muted">— vyřazen</span></div>
-    <table id="tbl">
-      <thead>
-        <tr>
-          <th>#</th><th class="l">Hráč</th><th>Návrh</th><th>Skóre</th>
-          <th>LKH</th><th>Turn.</th><th>BT</th><th>🔒</th><th>✕</th>
-        </tr>
-      </thead>
-      <tbody id="rows"></tbody>
-    </table>
+  <!-- VIEW: NASTAVENÍ -->
+  <section id="view-nastaveni" class="view hidden">
+    <section class="card">
+      <h2>Váhy metrik</h2>
+      <div class="slider"><label>Váha LKH (liga) <output id="wLkhOut"></output></label>
+        <input type="range" id="wLkh" min="0" max="1" step="0.05"></div>
+      <div class="slider"><label>Váha Vzájemná síla (BT) <output id="wBtOut"></output></label>
+        <input type="range" id="wBt" min="0" max="1" step="0.05"></div>
+      <div class="slider"><label>Váha Turnaje (Středočeský pohár) <output id="wTurnOut"></output></label>
+        <input type="range" id="wTurn" min="0" max="1" step="0.05"></div>
+      <div class="row"><label>Velikost A-týmu</label>
+        <input type="number" id="aSize" min="1" max="20" class="num"></div>
+      <p class="hint">Váhy se normalizují — nemusí dát 1. Chybí-li hráči metrika (např. bez turnajů), váhy se mu přepočítají z dostupných.</p>
+    </section>
+
+    <section class="card">
+      <h2>Ligová korekce LKH</h2>
+      <label class="chk"><input type="checkbox" id="ligaOn"> Zapnout (1. vs 3. liga)</label>
+      <div id="ligaBox" class="liga-grid"></div>
+      <p class="hint">Násobí LKH dle ligy hráče — vyrovnává obtížnost soupeřů. Hráč z 3. ligy hraje proti slabším, tak se mu LKH zmenší.</p>
+    </section>
+
+    <section class="card">
+      <h2>Spolehlivost LKH (počet legů)</h2>
+      <label class="chk"><input type="checkbox" id="relOn"> Zohlednit počet odehraných legů</label>
+      <div class="row"><label>Referenční počet legů (Lref)</label>
+        <input type="number" id="lref" min="10" max="500" step="10" class="num"></div>
+      <p class="hint">Hráč s málo legy má vysoké LKH méně prokázané → jeho LKH se srazí (faktor √(legy/Lref), max 1). Hráč s dostatkem legů = plná důvěra, žádný penalty za objem.</p>
+    </section>
+
+    <section class="card">
+      <button id="reset" class="btn">Obnovit výchozí</button>
+    </section>
   </section>
 </main>
 
-<footer>
-  <p>Data generována z pipeline 7rota · <span id="gen"></span></p>
-</footer>
-
+<footer><p>Data z USO (sipky.org + turnaje.org) · BT vč. korekce anomálie · <span id="gen"></span></p></footer>
 <script src="app.js"></script>
 </body>
 </html>

@@ -18,168 +18,170 @@
     "C": "2. liga",
     "D": "3. liga"
   },
+  "lref": 120,
+  "reliability_on": true,
   "players": [
     {
       "jmeno": "Vach Josef",
       "tym": "A",
       "kat": "B",
       "lkh": 66.4,
-      "turnaje": 599,
-      "bt": 0.83,
-      "lock": null
+      "legy": 199,
+      "turnaje": 2850,
+      "bt": 0.83
     },
     {
       "jmeno": "Řečník Vilém",
       "tym": "A",
       "kat": "B",
       "lkh": 66.1,
-      "turnaje": 220,
-      "bt": 1.21,
-      "lock": null
-    },
-    {
-      "jmeno": "Královič Martin",
-      "tym": "B",
-      "kat": "D",
-      "lkh": 65.6,
-      "turnaje": 650,
-      "bt": -0.2,
-      "lock": null
+      "legy": 202,
+      "turnaje": 3250,
+      "bt": 1.21
     },
     {
       "jmeno": "Bajtek Jindřich",
       "tym": "A",
       "kat": "B",
       "lkh": 62.6,
-      "turnaje": 361,
-      "bt": 1.11,
-      "lock": null
-    },
-    {
-      "jmeno": "Zbořil Karel",
-      "tym": "B",
-      "kat": "D",
-      "lkh": 60.6,
-      "turnaje": 380,
-      "bt": 0.4,
-      "lock": null
-    },
-    {
-      "jmeno": "Velev Stanislav",
-      "tym": "A",
-      "kat": "B",
-      "lkh": 58.8,
-      "turnaje": 633,
-      "bt": 0.31,
-      "lock": null
+      "legy": 165,
+      "turnaje": 2750,
+      "bt": 1.11
     },
     {
       "jmeno": "Kožíšek Jiří",
       "tym": "A",
       "kat": "B",
       "lkh": 57.6,
-      "turnaje": 520,
-      "bt": 1.08,
-      "lock": null
+      "legy": 175,
+      "turnaje": 2750,
+      "bt": 1.08
     },
     {
       "jmeno": "Majerčin David",
       "tym": "A",
       "kat": "B",
       "lkh": 56.6,
-      "turnaje": 575,
-      "bt": 0.12,
-      "lock": null
+      "legy": 53,
+      "turnaje": 2750,
+      "bt": 0.12
+    },
+    {
+      "jmeno": "Velev Stanislav",
+      "tym": "A",
+      "kat": "B",
+      "lkh": 58.8,
+      "legy": 25,
+      "turnaje": 750,
+      "bt": 0.31
+    },
+    {
+      "jmeno": "Schraml Petr",
+      "tym": "A",
+      "kat": "A",
+      "lkh": 38.0,
+      "legy": 97,
+      "turnaje": 2250,
+      "bt": 0.21
+    },
+    {
+      "jmeno": "Procházka Lubomír",
+      "tym": "A",
+      "kat": "B",
+      "lkh": 16.0,
+      "legy": 10,
+      "turnaje": 1050,
+      "bt": -1.86
+    },
+    {
+      "jmeno": "Královič Martin",
+      "tym": "B",
+      "kat": "D",
+      "lkh": 65.6,
+      "legy": 220,
+      "turnaje": null,
+      "bt": -0.2
+    },
+    {
+      "jmeno": "Zbořil Karel",
+      "tym": "B",
+      "kat": "D",
+      "lkh": 60.6,
+      "legy": 126,
+      "turnaje": 1950,
+      "bt": 0.4
     },
     {
       "jmeno": "Hamšík Robert",
       "tym": "B",
       "kat": "D",
       "lkh": 48.1,
+      "legy": 208,
       "turnaje": null,
-      "bt": null,
-      "lock": null
+      "bt": null
     },
     {
       "jmeno": "Puková Jaroslava",
       "tym": "B",
       "kat": "D",
       "lkh": 47.4,
-      "turnaje": null,
-      "bt": -0.55,
-      "lock": null
+      "legy": 183,
+      "turnaje": 1650,
+      "bt": -0.55
     },
     {
       "jmeno": "Moravec Zdeněk",
       "tym": "B",
       "kat": "B",
       "lkh": 42.5,
+      "legy": 12,
       "turnaje": null,
-      "bt": null,
-      "lock": null
-    },
-    {
-      "jmeno": "Schraml Petr",
-      "tym": "A",
-      "kat": "A",
-      "lkh": 38,
-      "turnaje": 393,
-      "bt": 0.21,
-      "lock": null
+      "bt": null
     },
     {
       "jmeno": "Polák Michal",
       "tym": "B",
       "kat": "D",
       "lkh": 35.6,
-      "turnaje": 350,
-      "bt": -0.34,
-      "lock": null
-    },
-    {
-      "jmeno": "Knotek Václav",
-      "tym": "B",
-      "kat": "D",
-      "lkh": 27.8,
+      "legy": 43,
       "turnaje": null,
-      "bt": null,
-      "lock": null
-    },
-    {
-      "jmeno": "Hozman Stanislav",
-      "tym": "B",
-      "kat": "D",
-      "lkh": 27.3,
-      "turnaje": null,
-      "bt": -0.51,
-      "lock": null
+      "bt": -0.34
     },
     {
       "jmeno": "Hampeis Pavel",
       "tym": "B",
       "kat": "D",
       "lkh": 26.7,
-      "turnaje": 250,
-      "bt": -1.39,
-      "lock": null
+      "legy": 36,
+      "turnaje": null,
+      "bt": -1.39
     },
     {
-      "jmeno": "Procházka Lubomír",
-      "tym": "A",
-      "kat": "B",
-      "lkh": 16,
-      "turnaje": 340,
-      "bt": -1.86,
-      "lock": null
+      "jmeno": "Knotek Václav",
+      "tym": "B",
+      "kat": "D",
+      "lkh": 27.8,
+      "legy": 67,
+      "turnaje": null,
+      "bt": null
+    },
+    {
+      "jmeno": "Hozman Stanislav",
+      "tym": "B",
+      "kat": "D",
+      "lkh": 45.4,
+      "legy": 100,
+      "turnaje": 1850,
+      "bt": -0.51
     },
     {
       "jmeno": "Krykorka Milan",
       "tym": "-",
       "kat": "B",
       "lkh": null,
-      "turnaje": 450,
-      "bt": -0.42,
-      "lock": null
+      "legy": null,
+      "turnaje": null,
+      "bt": -0.42
     }
   ]
 }
