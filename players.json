@@ -85,6 +85,18 @@
         },
         "pohar_pozice": 17,
         "pohar_total": 521
+      },
+      "lkh_detail": {
+        "legy_o": 199,
+        "legy_v": 120,
+        "zapasy_v": 55,
+        "n95": 226,
+        "n133": 40,
+        "n170": 5,
+        "z6": 4,
+        "z5": 0,
+        "z4": 0,
+        "z3": 0
       }
     },
     {
@@ -163,6 +175,18 @@
         },
         "pohar_pozice": 3,
         "pohar_total": 521
+      },
+      "lkh_detail": {
+        "legy_o": 202,
+        "legy_v": 122,
+        "zapasy_v": 54,
+        "n95": 196,
+        "n133": 56,
+        "n170": 8,
+        "z6": 4,
+        "z5": 0,
+        "z4": 0,
+        "z3": 0
       }
     },
     {
@@ -229,6 +253,18 @@
         },
         "pohar_pozice": 21,
         "pohar_total": 521
+      },
+      "lkh_detail": {
+        "legy_o": 165,
+        "legy_v": 94,
+        "zapasy_v": 41,
+        "n95": 166,
+        "n133": 40,
+        "n170": 2,
+        "z6": 4,
+        "z5": 1,
+        "z4": 0,
+        "z3": 0
       }
     },
     {
@@ -291,6 +327,18 @@
         },
         "pohar_pozice": 21,
         "pohar_total": 521
+      },
+      "lkh_detail": {
+        "legy_o": 175,
+        "legy_v": 94,
+        "zapasy_v": 40,
+        "n95": 155,
+        "n133": 28,
+        "n170": 5,
+        "z6": 4,
+        "z5": 2,
+        "z4": 0,
+        "z3": 0
       }
     },
     {
@@ -357,6 +405,18 @@
         },
         "pohar_pozice": 21,
         "pohar_total": 521
+      },
+      "lkh_detail": {
+        "legy_o": 53,
+        "legy_v": 29,
+        "zapasy_v": 14,
+        "n95": 38,
+        "n133": 5,
+        "n170": 3,
+        "z6": 0,
+        "z5": 0,
+        "z4": 0,
+        "z3": 0
       }
     },
     {
@@ -395,6 +455,18 @@
         },
         "pohar_pozice": 268,
         "pohar_total": 521
+      },
+      "lkh_detail": {
+        "legy_o": 25,
+        "legy_v": 15,
+        "zapasy_v": 6,
+        "n95": 22,
+        "n133": 4,
+        "n170": 0,
+        "z6": 0,
+        "z5": 0,
+        "z4": 0,
+        "z3": 0
       }
     },
     {
@@ -461,6 +533,18 @@
         },
         "pohar_pozice": 47,
         "pohar_total": 521
+      },
+      "lkh_detail": {
+        "legy_o": 97,
+        "legy_v": 39,
+        "zapasy_v": 14,
+        "n95": 61,
+        "n133": 4,
+        "n170": 1,
+        "z6": 1,
+        "z5": 0,
+        "z4": 0,
+        "z3": 0
       }
     },
     {
@@ -511,6 +595,18 @@
         },
         "pohar_pozice": 192,
         "pohar_total": 521
+      },
+      "lkh_detail": {
+        "legy_o": 10,
+        "legy_v": 2,
+        "zapasy_v": 0,
+        "n95": 4,
+        "n133": 1,
+        "n170": 0,
+        "z6": 0,
+        "z5": 0,
+        "z4": 0,
+        "z3": 0
       }
     },
     {
@@ -552,6 +648,18 @@
           "winpct": 43
         },
         "pohar_pozice": null
+      },
+      "lkh_detail": {
+        "legy_o": 220,
+        "legy_v": 147,
+        "zapasy_v": 67,
+        "n95": 162,
+        "n133": 30,
+        "n170": 3,
+        "z6": 2,
+        "z5": 0,
+        "z4": 0,
+        "z3": 0
       }
     },
     {
@@ -618,6 +726,18 @@
         },
         "pohar_pozice": 70,
         "pohar_total": 521
+      },
+      "lkh_detail": {
+        "legy_o": 126,
+        "legy_v": 78,
+        "zapasy_v": 34,
+        "n95": 99,
+        "n133": 12,
+        "n170": 3,
+        "z6": 1,
+        "z5": 0,
+        "z4": 0,
+        "z3": 0
       }
     },
     {
@@ -646,6 +766,18 @@
           "winpct": null
         },
         "pohar_pozice": null
+      },
+      "lkh_detail": {
+        "legy_o": 208,
+        "legy_v": 108,
+        "zapasy_v": 44,
+        "n95": 123,
+        "n133": 15,
+        "n170": 0,
+        "z6": 0,
+        "z5": 0,
+        "z4": 0,
+        "z3": 0
       }
     },
     {
@@ -696,6 +828,18 @@
         },
         "pohar_pozice": 9,
         "pohar_total": 110
+      },
+      "lkh_detail": {
+        "legy_o": 183,
+        "legy_v": 90,
+        "zapasy_v": 40,
+        "n95": 110,
+        "n133": 12,
+        "n170": 1,
+        "z6": 0,
+        "z5": 0,
+        "z4": 0,
+        "z3": 0
       }
     },
     {
@@ -724,6 +868,18 @@
           "winpct": null
         },
         "pohar_pozice": null
+      },
+      "lkh_detail": {
+        "legy_o": 12,
+        "legy_v": 6,
+        "zapasy_v": 2,
+        "n95": 7,
+        "n133": 0,
+        "n170": 0,
+        "z6": 0,
+        "z5": 0,
+        "z4": 0,
+        "z3": 0
       }
     },
     {
@@ -761,6 +917,18 @@
           "winpct": 33
         },
         "pohar_pozice": null
+      },
+      "lkh_detail": {
+        "legy_o": 43,
+        "legy_v": 17,
+        "zapasy_v": 7,
+        "n95": 9,
+        "n133": 5,
+        "n170": 0,
+        "z6": 0,
+        "z5": 0,
+        "z4": 0,
+        "z3": 0
       }
     },
     {
@@ -789,6 +957,18 @@
           "winpct": 0
         },
         "pohar_pozice": null
+      },
+      "lkh_detail": {
+        "legy_o": 36,
+        "legy_v": 12,
+        "zapasy_v": 4,
+        "n95": 6,
+        "n133": 1,
+        "n170": 0,
+        "z6": 0,
+        "z5": 0,
+        "z4": 0,
+        "z3": 0
       }
     },
     {
@@ -817,6 +997,18 @@
           "winpct": null
         },
         "pohar_pozice": null
+      },
+      "lkh_detail": {
+        "legy_o": 67,
+        "legy_v": 21,
+        "zapasy_v": 7,
+        "n95": 24,
+        "n133": 4,
+        "n170": 0,
+        "z6": 0,
+        "z5": 0,
+        "z4": 0,
+        "z3": 0
       }
     },
     {
@@ -879,6 +1071,18 @@
         },
         "pohar_pozice": 82,
         "pohar_total": 521
+      },
+      "lkh_detail": {
+        "legy_o": 100,
+        "legy_v": 50,
+        "zapasy_v": 20,
+        "n95": 47,
+        "n133": 7,
+        "n170": 1,
+        "z6": 0,
+        "z5": 0,
+        "z4": 0,
+        "z3": 0
       }
     },
     {

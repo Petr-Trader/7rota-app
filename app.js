@@ -184,10 +184,27 @@ function openDetail(jmeno) {
   if (p.lkh == null) notes.push('Bez ligových dat — posuzuje se z turnajů (BT).');
   if (p.legy != null && p.legy < (params.lref || 120)) notes.push(`Málo odehraných legů (${p.legy}) → LKH méně prokázané (spolehlivostní faktor).`);
   $('dNote').textContent = notes.join(' ');
+  renderLkh(p);
   renderTurn(p);
   renderH2H(p);
   renderHistory(p);
   $('detail').classList.remove('hidden');
+}
+
+function renderLkh(p) {
+  const box = $('dLkh'), d = p.lkh_detail;
+  if (!d) { box.innerHTML = ''; return; }
+  const B = { n95: 10, n133: 20, n170: 30, z6: 40, z5: 80, z4: 120, z3: 200, legy_v: 50, zapasy_v: 70 };
+  const body = Object.keys(B).reduce((s, k) => s + (d[k] || 0) * B[k], 0);
+  const lwpct = d.legy_o ? Math.round(100 * d.legy_v / d.legy_o) : 0;
+  const zav = d.z6 + d.z5 + d.z4 + d.z3;
+  const r = (label, val) => `<div class="h2hrow"><span class="h2hn">${label}</span><span class="turnstat">${val}</span></div>`;
+  box.innerHTML = `<h3>LKH — z čeho se skládá (liga)</h3>`
+    + r('Legy odehrané / vyhrané', `${d.legy_o} / ${d.legy_v} (${lwpct}% výher legů)`)
+    + r('Zápasy vyhrané', d.zapasy_v)
+    + r('Náhozy 95+ / 133+ / 170+', `${d.n95} / ${d.n133} / ${d.n170}`)
+    + r('Zavření (6./5./4./3. kolo)', `${d.z6} / ${d.z5} / ${d.z4} / ${d.z3}`)
+    + `<div class="h2htot">LKH = <b>${body}</b> bodů / ${d.legy_o} legů = <b>${(body / d.legy_o).toFixed(1)}</b></div>`;
 }
 
 function renderTurn(p) {
