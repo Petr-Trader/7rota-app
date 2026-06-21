@@ -215,9 +215,12 @@ async function renderHistory(p) {
   // Náš roster: kompletní historie z team_history.json (sezóna → tým → liga).
   const hist = TEAM_HISTORY[p.jmeno];
   if (hist && hist.length) {
-    box.innerHTML = `<h3>Kariéra (týmy &amp; sezóny)</h3>`
-      + hist.map(h => `<div class="histrow"><b>${h.season}</b> · ${h.tym}`
-        + `<span class="histliga">${h.liga || ''}</span></div>`).join('');
+    box.innerHTML = `<h3>Kariéra (sezóna · tým · liga · LKH)</h3>`
+      + hist.map(h => h.pauza
+        ? `<div class="histrow pauza"><span><b>${h.season}</b> · — pauza / neregistrován —</span><span></span></div>`
+        : `<div class="histrow"><span><b>${h.season}</b> · ${h.tym}`
+          + `<span class="histliga"> ${h.liga || ''}</span></span>`
+          + `<span class="histlkh">${h.lkh != null ? 'LKH ' + h.lkh : ''}</span></div>`).join('');
     return;
   }
   // Kandidát / mimo roster: live z profilu (aktuální tým).

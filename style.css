@@ -111,3 +111,5 @@ td.name{cursor:pointer}
 .histrow{font-size:13px;padding:3px 0}
 .histrow{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
 .histliga{color:var(--mut);font-size:11px;white-space:nowrap}
+.histlkh{color:var(--teal);font-weight:600;font-size:12px;white-space:nowrap}
+.histrow.pauza{color:var(--mut);font-style:italic;opacity:.75}
