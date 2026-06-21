@@ -72,11 +72,18 @@ function reliab(p) {
 }
 
 function compute() {
-  // provizorní kandidáti zařazení do žebříčku (aktivní + má aspoň 1 srovnatelnou metriku)
-  const cands = loadCand().filter(c => c.active && (c.turnaje != null || c.lkh != null)).map(c => ({
-    jmeno: c.jmeno, tym: '?', kat: c.kat, lkh: c.lkh != null ? c.lkh : null, legy: c.legy != null ? c.legy : null,
-    turnaje: c.turnaje, bt: null, utkani: null, hral: null, isCand: true, klub: c.klub,
-  }));
+  // provizorní kandidáti zařazení do žebříčku (aktivní + má aspoň 1 srovnatelnou metriku).
+  // LKH/legy/kat dotáhneme z ligového indexu i pro dříve uložené kandidáty (robustní).
+  const cands = loadCand().filter(c => c.active).map(c => {
+    const li = LIGA_INDEX[c.jmeno] || {};
+    return {
+      jmeno: c.jmeno, tym: '?', kat: c.kat || li.kat || null,
+      lkh: c.lkh != null ? c.lkh : (li.lkh != null ? li.lkh : null),
+      legy: c.legy != null ? c.legy : (li.legy != null ? li.legy : null),
+      turnaje: c.turnaje != null ? c.turnaje : null,
+      bt: null, utkani: null, hral: null, isCand: true, klub: c.klub || li.tym,
+    };
+  }).filter(p => p.turnaje != null || p.lkh != null);
   const ps = DATA.players.concat(cands);
   const z = {};
   for (const m of METRICS) {
@@ -340,10 +347,14 @@ function renderCandidates() {
   box.innerHTML = '';
   for (const c of cands) {
     const s = c.stats;
+    const li = LIGA_INDEX[c.jmeno] || {};            // dotáhni LKH/ligu/tým z indexu i pro starší kandidáty
+    const lkh = c.lkh != null ? c.lkh : (li.lkh != null ? li.lkh : null);
+    const liga = c.liga || li.liga;
+    if (!c.klub && li.tym) c.klub = li.tym;
     const tb = c.turnaje != null ? `pohár ${c.turnaje} b.` : 'turnaje —';
     const winInfo = s ? `, ${s.winpct}% výher` : '';
-    const ligaInfo = c.lkh != null ? `${c.liga || 'liga ?'} · LKH ${c.lkh}` : 'liga —';
-    const rankable = c.turnaje != null || c.lkh != null;
+    const ligaInfo = lkh != null ? `${liga || 'liga ?'} · LKH ${lkh}` : 'liga —';
+    const rankable = c.turnaje != null || lkh != null;
     const d = document.createElement('div'); d.className = 'canditem';
     d.innerHTML = `<div style="flex:1">
         <b>${c.jmeno}</b> <span class="sub">${c.reg}${c.rok ? ' · *' + c.rok : ''}${c.kat ? ' · kat ' + c.kat : ''}</span>
