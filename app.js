@@ -7,7 +7,7 @@
 // návrh A = pořadí ≤ velikost A-týmu; ruční zámek přebíjí; vyřazený mimo.
 
 const METRICS = ['lkh', 'bt', 'turnaje'];
-const LS_PARAMS = '7rota_params';
+const LS_PARAMS = '7rota_params_v2';  // v2: data-grounded ligová korekce (% z reálných zápasů)
 const LS_OVR = '7rota_overrides';
 
 let DATA = null, params = null, overrides = {};
@@ -151,12 +151,14 @@ function renderLigaInputs() {
   const box = $('ligaBox'); box.style.display = params.ligaOn ? '' : 'none';
   const popis = DATA.liga_popis || {}; box.innerHTML = '';
   for (const k of Object.keys(params.ligaKor || {})) {
+    const pct = Math.round((params.ligaKor[k] - 1) * 100);  // ± % vůči 1.lize
     const w = document.createElement('label'); w.className = 'liga-item';
-    w.innerHTML = `<span>${popis[k] || k}</span><input type="number" step="0.01" min="0" data-k="${k}" value="${params.ligaKor[k]}">`;
+    w.innerHTML = `<span>${popis[k] || k}</span>`
+      + `<span class="pctwrap"><input type="number" step="1" data-k="${k}" value="${pct}" class="pctin">%</span>`;
     box.appendChild(w);
   }
   box.querySelectorAll('input').forEach(inp => inp.onchange = e => {
-    params.ligaKor[e.target.dataset.k] = +e.target.value || 0; saveParams(); render(); });
+    params.ligaKor[e.target.dataset.k] = 1 + (+e.target.value || 0) / 100; saveParams(); render(); });
 }
 
 function syncControls() {

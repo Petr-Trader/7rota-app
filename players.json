@@ -6,10 +6,10 @@
   },
   "a_team_size": 6,
   "liga_korekce": {
-    "A": 1.15,
+    "A": 1.04,
     "B": 1.0,
-    "C": 0.92,
-    "D": 0.85
+    "C": 0.76,
+    "D": 0.73
   },
   "liga_korekce_on": true,
   "liga_popis": {

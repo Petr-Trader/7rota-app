@@ -53,6 +53,8 @@ input[type=range]{width:100%;accent-color:var(--teal)}
 .liga-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px}
 .liga-item{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--mut);gap:6px;background:var(--bg);padding:5px 8px;border-radius:8px}
 .liga-item input{width:58px;padding:5px;border:1px solid var(--line);border-radius:7px;font-size:14px;text-align:right}
+.pctwrap{display:flex;align-items:center;gap:3px;color:var(--mut);font-size:13px}
+.pctin{width:52px;padding:5px;border:1px solid var(--line);border-radius:7px;font-size:14px;text-align:right}
 .legend{font-size:12px;color:var(--mut);margin-bottom:8px}
 table{width:100%;border-collapse:collapse}
 th,td{padding:7px 5px;text-align:center;border-bottom:1px solid var(--line);font-size:13px}
