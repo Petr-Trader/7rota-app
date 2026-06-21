@@ -168,9 +168,10 @@ function openDetail(jmeno) {
   if (!p) return;
   const total = (DATA.liga_zapasu && DATA.liga_zapasu[p.tym]) || 24;
   const liga = (DATA.liga_popis && DATA.liga_popis[p.kat]) || p.kat || '?';
-  $('dName').textContent = p.jmeno;
+  $('dInit').textContent = p.jmeno.split(' ').map(w => w[0] || '').slice(0, 2).join('');
+  $('dName').textContent = p.jmeno + (p.isCand ? ' ⟨kandidát⟩' : '');
   $('dSub').innerHTML = `${p.team ? `<span class="badge ${p.team.toLowerCase()}">${p.team}</span>` : ''} `
-    + `tým ${p.tym || '—'} · ${liga}` + (p.rank ? ` · pořadí #${p.rank}` : '');
+    + `tým ${p.klub || p.tym || '—'} · ${liga}` + (p.rank ? ` · pořadí #${p.rank}` : '');
   $('dStats').innerHTML =
     tile('Vážené skóre', p.score == null ? '—' : p.score.toFixed(2))
     + tile('LKH (liga)', p.lkh == null ? '—' : p.lkh.toFixed(1), p.legy != null ? `${p.legy} legů` : 'bez ligy')
@@ -183,7 +184,50 @@ function openDetail(jmeno) {
   if (p.lkh == null) notes.push('Bez ligových dat — posuzuje se z turnajů (BT).');
   if (p.legy != null && p.legy < (params.lref || 120)) notes.push(`Málo odehraných legů (${p.legy}) → LKH méně prokázané (spolehlivostní faktor).`);
   $('dNote').textContent = notes.join(' ');
+  renderH2H(p);
+  renderHistory(p);
   $('detail').classList.remove('hidden');
+}
+
+function renderH2H(p) {
+  const box = $('dH2H'); const hh = p.h2h || {};
+  const keys = Object.keys(hh);
+  if (!keys.length) {
+    box.innerHTML = `<h3>Vzájemná bilance na turnajích (vs naši hráči)</h3>`
+      + `<p class="hint">Žádné vzájemné zápasy v datech${p.isCand ? ' (kandidát — bilanci proti našim doplníme později)' : ''}.</p>`;
+    return;
+  }
+  let tv = 0, tp = 0, rows = '';
+  for (const opp of keys) {
+    const [v, l] = hh[opp]; tv += v; tp += l; const tot = v + l, pct = Math.round(100 * v / tot);
+    const cls = v > l ? 'win' : (v < l ? 'loss' : 'even');
+    rows += `<div class="h2hrow"><span class="h2hn">${opp}</span>`
+      + `<span class="h2hbar"><span class="${cls}" style="width:${pct}%"></span></span>`
+      + `<span class="h2hv ${cls}">${v}–${l}</span></div>`;
+  }
+  const tpct = Math.round(100 * tv / (tv + tp));
+  box.innerHTML = `<h3>Vzájemná bilance na turnajích (vs naši hráči)</h3>`
+    + `<div class="h2htot">Celkem <b>${tv}–${tp}</b> · ${tpct}% výher</div>${rows}`;
+}
+
+async function renderHistory(p) {
+  const box = $('dHistory');
+  if (!p.reg) { box.innerHTML = ''; return; }
+  box.innerHTML = `<h3>Historie (týmy &amp; sezóny)</h3><p class="hint">Načítám…</p>`;
+  try {
+    const html = await proxyGet(`https://turnaje.org/profily-hracu/${p.reg}`);
+    const seg = (html.match(/Družstva([\s\S]*?)(Platnost|<\/body)/) || [])[1] || '';
+    const txt = seg.replace(/<[^>]+>/g, '\n').replace(/&nbsp;/g, ' ');
+    const lines = txt.split('\n').map(s => s.trim()).filter(Boolean);
+    const teams = [];
+    for (let i = 0; i < lines.length; i++)
+      if (/^od /.test(lines[i]) && lines[i + 1]) teams.push(`${lines[i + 1]} (${lines[i]})`);
+    box.innerHTML = `<h3>Historie (týmy &amp; sezóny)</h3>`
+      + (teams.length ? teams.map(t => `<div class="histrow">${t}</div>`).join('')
+        : '<p class="hint">Historie týmů není v profilu k dispozici.</p>');
+  } catch {
+    box.innerHTML = `<h3>Historie</h3><p class="hint">Nepodařilo se načíst (jen online).</p>`;
+  }
 }
 
 function renderLigaInputs() {

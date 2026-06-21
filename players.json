@@ -34,7 +34,42 @@
       "turnaje": 2850,
       "bt": 0.83,
       "utkani": 24,
-      "hral": 24
+      "hral": 24,
+      "h2h": {
+        "Řečník Vilém": [
+          5,
+          3
+        ],
+        "Puková Jaroslava": [
+          3,
+          1
+        ],
+        "Zbořil Karel": [
+          3,
+          0
+        ],
+        "Bajtek Jindřich": [
+          1,
+          1
+        ],
+        "Hozman Stanislav": [
+          2,
+          0
+        ],
+        "Schraml Petr": [
+          2,
+          0
+        ],
+        "Kožíšek Jiří": [
+          1,
+          0
+        ],
+        "Majerčin David": [
+          1,
+          0
+        ]
+      },
+      "reg": "CZE001834"
     },
     {
       "jmeno": "Řečník Vilém",
@@ -45,7 +80,58 @@
       "turnaje": 3250,
       "bt": 1.21,
       "utkani": 23,
-      "hral": 23
+      "hral": 23,
+      "h2h": {
+        "Bajtek Jindřich": [
+          8,
+          5
+        ],
+        "Schraml Petr": [
+          6,
+          3
+        ],
+        "Kožíšek Jiří": [
+          6,
+          3
+        ],
+        "Vach Josef": [
+          3,
+          5
+        ],
+        "Puková Jaroslava": [
+          7,
+          0
+        ],
+        "Hozman Stanislav": [
+          6,
+          1
+        ],
+        "Zbořil Karel": [
+          5,
+          1
+        ],
+        "Velev Stanislav": [
+          2,
+          1
+        ],
+        "Majerčin David": [
+          3,
+          0
+        ],
+        "Procházka Lubomír": [
+          2,
+          0
+        ],
+        "Polák Michal": [
+          1,
+          0
+        ],
+        "Královič Martin": [
+          1,
+          0
+        ]
+      },
+      "reg": "CZE084595"
     },
     {
       "jmeno": "Bajtek Jindřich",
@@ -56,7 +142,46 @@
       "turnaje": 2750,
       "bt": 1.11,
       "utkani": 19,
-      "hral": 19
+      "hral": 19,
+      "h2h": {
+        "Řečník Vilém": [
+          5,
+          8
+        ],
+        "Kožíšek Jiří": [
+          7,
+          4
+        ],
+        "Schraml Petr": [
+          4,
+          3
+        ],
+        "Zbořil Karel": [
+          3,
+          4
+        ],
+        "Velev Stanislav": [
+          3,
+          0
+        ],
+        "Vach Josef": [
+          1,
+          1
+        ],
+        "Hozman Stanislav": [
+          1,
+          1
+        ],
+        "Polák Michal": [
+          1,
+          0
+        ],
+        "Majerčin David": [
+          1,
+          0
+        ]
+      },
+      "reg": "CZE073925"
     },
     {
       "jmeno": "Kožíšek Jiří",
@@ -67,7 +192,42 @@
       "turnaje": 2750,
       "bt": 1.08,
       "utkani": 21,
-      "hral": 21
+      "hral": 21,
+      "h2h": {
+        "Bajtek Jindřich": [
+          4,
+          7
+        ],
+        "Hozman Stanislav": [
+          7,
+          2
+        ],
+        "Řečník Vilém": [
+          3,
+          6
+        ],
+        "Zbořil Karel": [
+          4,
+          1
+        ],
+        "Schraml Petr": [
+          3,
+          2
+        ],
+        "Majerčin David": [
+          4,
+          0
+        ],
+        "Puková Jaroslava": [
+          2,
+          0
+        ],
+        "Vach Josef": [
+          0,
+          1
+        ]
+      },
+      "reg": "CZE070593"
     },
     {
       "jmeno": "Majerčin David",
@@ -78,7 +238,46 @@
       "turnaje": 2750,
       "bt": 0.12,
       "utkani": 15,
-      "hral": 10
+      "hral": 10,
+      "h2h": {
+        "Hozman Stanislav": [
+          6,
+          4
+        ],
+        "Kožíšek Jiří": [
+          0,
+          4
+        ],
+        "Řečník Vilém": [
+          0,
+          3
+        ],
+        "Schraml Petr": [
+          1,
+          2
+        ],
+        "Zbořil Karel": [
+          0,
+          3
+        ],
+        "Krykorka Milan": [
+          1,
+          0
+        ],
+        "Vach Josef": [
+          0,
+          1
+        ],
+        "Puková Jaroslava": [
+          1,
+          0
+        ],
+        "Bajtek Jindřich": [
+          0,
+          1
+        ]
+      },
+      "reg": "CZE020476"
     },
     {
       "jmeno": "Velev Stanislav",
@@ -89,7 +288,18 @@
       "turnaje": 750,
       "bt": 0.31,
       "utkani": 12,
-      "hral": 8
+      "hral": 8,
+      "h2h": {
+        "Řečník Vilém": [
+          1,
+          2
+        ],
+        "Bajtek Jindřich": [
+          0,
+          3
+        ]
+      },
+      "reg": "CZE059619"
     },
     {
       "jmeno": "Schraml Petr",
@@ -100,7 +310,46 @@
       "turnaje": 2250,
       "bt": 0.21,
       "utkani": 22,
-      "hral": 17
+      "hral": 17,
+      "h2h": {
+        "Řečník Vilém": [
+          3,
+          6
+        ],
+        "Bajtek Jindřich": [
+          3,
+          4
+        ],
+        "Zbořil Karel": [
+          2,
+          4
+        ],
+        "Hozman Stanislav": [
+          3,
+          2
+        ],
+        "Kožíšek Jiří": [
+          2,
+          3
+        ],
+        "Procházka Lubomír": [
+          3,
+          0
+        ],
+        "Majerčin David": [
+          2,
+          1
+        ],
+        "Vach Josef": [
+          0,
+          2
+        ],
+        "Královič Martin": [
+          1,
+          0
+        ]
+      },
+      "reg": "CZE063740"
     },
     {
       "jmeno": "Procházka Lubomír",
@@ -111,7 +360,30 @@
       "turnaje": 1050,
       "bt": -1.86,
       "utkani": 24,
-      "hral": 5
+      "hral": 5,
+      "h2h": {
+        "Schraml Petr": [
+          0,
+          3
+        ],
+        "Hozman Stanislav": [
+          0,
+          2
+        ],
+        "Řečník Vilém": [
+          0,
+          2
+        ],
+        "Puková Jaroslava": [
+          0,
+          1
+        ],
+        "Zbořil Karel": [
+          0,
+          1
+        ]
+      },
+      "reg": "CZE030947"
     },
     {
       "jmeno": "Královič Martin",
@@ -122,7 +394,22 @@
       "turnaje": null,
       "bt": -0.2,
       "utkani": 24,
-      "hral": 24
+      "hral": 24,
+      "h2h": {
+        "Řečník Vilém": [
+          0,
+          1
+        ],
+        "Zbořil Karel": [
+          1,
+          0
+        ],
+        "Schraml Petr": [
+          0,
+          1
+        ]
+      },
+      "reg": "CZE073050"
     },
     {
       "jmeno": "Zbořil Karel",
@@ -133,7 +420,46 @@
       "turnaje": 1950,
       "bt": 0.4,
       "utkani": 16,
-      "hral": 16
+      "hral": 16,
+      "h2h": {
+        "Bajtek Jindřich": [
+          4,
+          3
+        ],
+        "Řečník Vilém": [
+          1,
+          5
+        ],
+        "Schraml Petr": [
+          4,
+          2
+        ],
+        "Kožíšek Jiří": [
+          1,
+          4
+        ],
+        "Hozman Stanislav": [
+          3,
+          0
+        ],
+        "Vach Josef": [
+          0,
+          3
+        ],
+        "Majerčin David": [
+          3,
+          0
+        ],
+        "Královič Martin": [
+          0,
+          1
+        ],
+        "Procházka Lubomír": [
+          1,
+          0
+        ]
+      },
+      "reg": "CZE057352"
     },
     {
       "jmeno": "Hamšík Robert",
@@ -144,7 +470,9 @@
       "turnaje": null,
       "bt": null,
       "utkani": 24,
-      "hral": 24
+      "hral": 24,
+      "h2h": {},
+      "reg": "CZE059170"
     },
     {
       "jmeno": "Puková Jaroslava",
@@ -155,7 +483,30 @@
       "turnaje": 1650,
       "bt": -0.55,
       "utkani": 24,
-      "hral": 24
+      "hral": 24,
+      "h2h": {
+        "Řečník Vilém": [
+          0,
+          7
+        ],
+        "Vach Josef": [
+          1,
+          3
+        ],
+        "Kožíšek Jiří": [
+          0,
+          2
+        ],
+        "Procházka Lubomír": [
+          1,
+          0
+        ],
+        "Majerčin David": [
+          0,
+          1
+        ]
+      },
+      "reg": "CZE046245"
     },
     {
       "jmeno": "Moravec Zdeněk",
@@ -166,7 +517,9 @@
       "turnaje": null,
       "bt": null,
       "utkani": 6,
-      "hral": 5
+      "hral": 5,
+      "h2h": {},
+      "reg": "CZE009041"
     },
     {
       "jmeno": "Polák Michal",
@@ -177,7 +530,18 @@
       "turnaje": null,
       "bt": -0.34,
       "utkani": 17,
-      "hral": 14
+      "hral": 14,
+      "h2h": {
+        "Bajtek Jindřich": [
+          0,
+          1
+        ],
+        "Řečník Vilém": [
+          0,
+          1
+        ]
+      },
+      "reg": "CZE080513"
     },
     {
       "jmeno": "Hampeis Pavel",
@@ -188,7 +552,9 @@
       "turnaje": null,
       "bt": -1.39,
       "utkani": 13,
-      "hral": 9
+      "hral": 9,
+      "h2h": {},
+      "reg": "CZE060160"
     },
     {
       "jmeno": "Knotek Václav",
@@ -199,7 +565,9 @@
       "turnaje": null,
       "bt": null,
       "utkani": 17,
-      "hral": 17
+      "hral": 17,
+      "h2h": {},
+      "reg": "CZE029537"
     },
     {
       "jmeno": "Hozman Stanislav",
@@ -210,7 +578,42 @@
       "turnaje": 1850,
       "bt": -0.51,
       "utkani": 3,
-      "hral": 3
+      "hral": 3,
+      "h2h": {
+        "Majerčin David": [
+          4,
+          6
+        ],
+        "Kožíšek Jiří": [
+          2,
+          7
+        ],
+        "Řečník Vilém": [
+          1,
+          6
+        ],
+        "Schraml Petr": [
+          2,
+          3
+        ],
+        "Zbořil Karel": [
+          0,
+          3
+        ],
+        "Procházka Lubomír": [
+          2,
+          0
+        ],
+        "Vach Josef": [
+          0,
+          2
+        ],
+        "Bajtek Jindřich": [
+          1,
+          1
+        ]
+      },
+      "reg": "CZE043320"
     },
     {
       "jmeno": "Krykorka Milan",
@@ -221,7 +624,14 @@
       "turnaje": null,
       "bt": -0.42,
       "utkani": 0,
-      "hral": 0
+      "hral": 0,
+      "h2h": {
+        "Majerčin David": [
+          0,
+          1
+        ]
+      },
+      "reg": "CZE062053"
     }
   ]
 }
