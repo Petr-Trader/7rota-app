@@ -72,7 +72,12 @@ function reliab(p) {
 }
 
 function compute() {
-  const ps = DATA.players;
+  // provizorní kandidáti zařazení do žebříčku (jen ti s aktivní vlajkou + srovnatelnou metrikou)
+  const cands = loadCand().filter(c => c.active && c.turnaje != null).map(c => ({
+    jmeno: c.jmeno, tym: '?', kat: c.kat, lkh: null, legy: null,
+    turnaje: c.turnaje, bt: null, utkani: null, hral: null, isCand: true, klub: c.klub,
+  }));
+  const ps = DATA.players.concat(cands);
   const z = {};
   for (const m of METRICS) {
     const vals = ps.map(p => mval(p, m)).filter(v => v != null);
@@ -116,8 +121,10 @@ function render() {
     const tr = document.createElement('tr');
     if (p.excluded) tr.className = 'dim';
     if (p.lock) tr.classList.add('locked');
+    if (p.isCand) tr.classList.add('candrow');
     const badge = p.team ? `<span class="badge ${p.team.toLowerCase()}">${p.team}</span>` : '—';
-    const jl = p.jenLiga ? ' <span class="tag jl">jen liga</span>' : '';
+    const jl = p.isCand ? ' <span class="tag cand">KANDIDÁT</span>'
+      : (p.jenLiga ? ' <span class="tag jl">jen liga</span>' : '');
     const total = (DATA.liga_zapasu && DATA.liga_zapasu[p.tym]) || 24;
     const doch = p.utkani != null
       ? ` <span class="tag doch" title="na soupisce ${p.utkani}/${total}, reálně hrál ${p.hral}×">📋 ${p.utkani}/${total}</span>` : '';
@@ -271,6 +278,27 @@ async function fetchCandidateClub(reg) {
   } catch { return null; }
 }
 
+// Pohár body (= turnajová metrika srovnatelná s našimi hráči) + kat + klub
+async function fetchCandidatePohar(reg) {
+  for (const rank of ['64008', '63752']) {
+    try {
+      const html = await proxyGet(`https://www.sipky.org/?region=stc&page=poradi-hracu-v-zebricku&rank=${rank}&players_limit=5000`);
+      for (const tr of html.split('</tr>')) {
+        if (!tr.includes(reg)) continue;
+        const cells = [...tr.matchAll(/<td[^>]*>([\s\S]*?)<\/td>/g)]
+          .map(x => x[1].replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ').trim()).filter(Boolean);
+        const kat = cells.find(c => /^[A-D]$/.test(c)) || null;
+        const ri = cells.findIndex(c => c === reg);
+        const klub = ri >= 0 && cells[ri + 2] ? cells[ri + 2] : null;  // reg, kat, klub
+        let body = null;
+        for (let i = cells.length - 1; i >= 0; i--) { const d = cells[i].replace(/\s/g, ''); if (/^\d+$/.test(d)) { body = +d; break; } }
+        return { body, kat, klub };
+      }
+    } catch {}
+  }
+  return { body: null, kat: null, klub: null };
+}
+
 function renderResults(list) {
   const box = $('qResults'); box.innerHTML = '';
   if (!list.length) { box.innerHTML = '<p class="hint">Nic nenalezeno. Zkus jen příjmení, nebo celé jméno (Příjmení Jméno).</p>'; return; }
@@ -285,10 +313,12 @@ function renderResults(list) {
   box.querySelectorAll('.add').forEach(b => b.onclick = async (e) => {
     const btn = e.target; btn.disabled = true; btn.textContent = '…';
     const reg = btn.dataset.reg;
-    const [stats, klub] = await Promise.all([fetchCandidateStats(reg), fetchCandidateClub(reg)]);
+    const [stats, pohar] = await Promise.all([fetchCandidateStats(reg), fetchCandidatePohar(reg)]);
+    const klub = pohar.klub || await fetchCandidateClub(reg);
     const cands = loadCand();
     if (!cands.find(x => x.reg === reg))
-      cands.push({ reg, jmeno: btn.dataset.j, rok: btn.dataset.r, klub, stats });
+      cands.push({ reg, jmeno: btn.dataset.j, rok: btn.dataset.r, klub,
+        kat: pohar.kat, turnaje: pohar.body, stats, active: false });
     saveCand(cands); renderCandidates();
     btn.textContent = '✓ přidán';
   });
@@ -300,15 +330,25 @@ function renderCandidates() {
   box.innerHTML = '';
   for (const c of cands) {
     const s = c.stats;
-    const line = s ? `${s.winpct}% výher (${s.total} záp., ${s.tours} turn., sezóna ${s.season})` : 'bez turnajových dat';
+    const line = s ? `${s.winpct}% výher (${s.total} záp., ${s.tours} turn.)` : 'bez turnajových dat';
+    const tb = c.turnaje != null ? ` · pohár ${c.turnaje} b.` : ' · mimo náš pohár';
     const d = document.createElement('div'); d.className = 'canditem';
-    d.innerHTML = `<div><b>${c.jmeno}</b> <span class="sub">${c.reg}${c.rok ? ' · *' + c.rok : ''}</span>
-      <div class="sub2">${c.klub || 'klub —'} · ${line}</div></div>
+    d.innerHTML = `<div style="flex:1">
+        <b>${c.jmeno}</b> <span class="sub">${c.reg}${c.rok ? ' · *' + c.rok : ''}${c.kat ? ' · kat ' + c.kat : ''}</span>
+        <div class="sub2">${c.klub || 'klub —'} · ${line}${tb}</div>
+        <label class="candtoggle"><input type="checkbox" class="candAct" data-reg="${c.reg}"${c.active ? ' checked' : ''}>
+          zařadit do žebříčku (jako kandidát)</label>
+        ${c.turnaje == null ? '<div class="sub2">⚠️ není v našem poháru → nelze srovnat, do žebříčku se nezařadí</div>' : ''}
+      </div>
       <button class="xbtn on" data-reg="${c.reg}">✕</button>`;
     box.appendChild(d);
   }
+  box.querySelectorAll('.candAct').forEach(t => t.onchange = e => {
+    const cs = loadCand(); const c = cs.find(x => x.reg === e.target.dataset.reg);
+    if (c) { c.active = e.target.checked; saveCand(cs); render(); }
+  });
   box.querySelectorAll('.xbtn').forEach(b => b.onclick = (e) => {
-    saveCand(loadCand().filter(x => x.reg !== e.target.dataset.reg)); renderCandidates();
+    saveCand(loadCand().filter(x => x.reg !== e.target.dataset.reg)); renderCandidates(); render();
   });
 }
 
