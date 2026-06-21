@@ -114,3 +114,4 @@ td.name{cursor:pointer}
 .histlkh{color:var(--teal);font-weight:600;font-size:12px;white-space:nowrap}
 .histrow.pauza{color:var(--mut);font-style:italic;opacity:.75}
 .turnstat{font-size:12px;text-align:right;font-variant-numeric:tabular-nums}
+.dShare{width:100%;margin:10px 0 4px}

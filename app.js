@@ -188,7 +188,63 @@ function openDetail(jmeno) {
   renderTurn(p);
   renderH2H(p);
   renderHistory(p);
+  history.replaceState(null, '', '?p=' + encodeURIComponent(p.jmeno));
+  $('dShare').onclick = () => shareProfile(p);
   $('detail').classList.remove('hidden');
+}
+
+// Vygeneruje hezkou grafickou kartu profilu (canvas) pro sdílení.
+function drawProfileCard(p) {
+  const ts = p.turn_season, d = p.lkh_detail, S = 2;       // 2× pro retina ostrost
+  const W = 640, rows = [];
+  rows.push(['LKH (liga)', p.lkh != null ? String(p.lkh) : '—', d && d.her != null ? d.her + ' her' : '']);
+  rows.push(['Síla (BT)', p.bt != null ? p.bt.toFixed(2) : '—', 'vzájemné zápasy']);
+  if (ts && ts.pohar_pozice) rows.push(['Pohár pořadí', ts.pohar_pozice + '/' + ts.pohar_total, 'Středočeský pohár']);
+  if (ts && ts.cur) rows.push(['Aktuální sezóna', (ts.cur.turnaju || 0) + ' turn.', ts.cur.winpct != null ? ts.cur.winpct + '% výher' : '']);
+  if (ts && ts.last) rows.push(['Minulá sezóna', (ts.last.turnaju || 0) + ' turn.', ts.last.winpct != null ? ts.last.winpct + '% výher' : '']);
+  const H = 150 + rows.length * 64 + 56;
+  const c = document.createElement('canvas'); c.width = W * S; c.height = H * S;
+  const x = c.getContext('2d'); x.scale(S, S);
+  x.fillStyle = '#fff'; x.fillRect(0, 0, W, H);
+  // header
+  x.fillStyle = '#0f766e'; x.fillRect(0, 0, W, 120);
+  x.fillStyle = '#0b5b54'; x.beginPath(); x.arc(64, 60, 34, 0, 7); x.fill();
+  x.fillStyle = '#fff'; x.font = 'bold 30px system-ui,sans-serif'; x.textAlign = 'center';
+  x.fillText(p.jmeno.split(' ').map(w => w[0] || '').slice(0, 2).join(''), 64, 71);
+  x.textAlign = 'left'; x.font = 'bold 28px system-ui,sans-serif';
+  x.fillText(p.jmeno + (p.isCand ? ' (kandidát)' : ''), 116, 52);
+  x.font = '15px system-ui,sans-serif'; x.fillStyle = 'rgba(255,255,255,.85)';
+  const liga = (DATA.liga_popis && DATA.liga_popis[p.kat]) || p.kat || '';
+  x.fillText(`${p.team ? p.team + '-tým · ' : ''}${p.klub || p.tym || ''}${liga ? ' · ' + liga : ''}`, 116, 80);
+  // stat rows
+  let y = 150;
+  for (const [label, val, sub] of rows) {
+    x.fillStyle = '#f1f5f9'; roundRect(x, 20, y, W - 40, 52, 10); x.fill();
+    x.fillStyle = '#64748b'; x.font = '13px system-ui,sans-serif';
+    x.fillText(label.toUpperCase(), 36, y + 21);
+    x.fillStyle = '#0f172a'; x.font = 'bold 22px system-ui,sans-serif';
+    x.fillText(val, 36, y + 44);
+    if (sub) { x.fillStyle = '#64748b'; x.font = '14px system-ui,sans-serif'; x.textAlign = 'right'; x.fillText(sub, W - 36, y + 36); x.textAlign = 'left'; }
+    y += 64;
+  }
+  x.fillStyle = '#94a3b8'; x.font = '13px system-ui,sans-serif'; x.textAlign = 'center';
+  x.fillText('🎯 Sedmá rota — žebříček · ' + new Date().toLocaleDateString('cs'), W / 2, H - 24);
+  return c;
+}
+function roundRect(x, l, t, w, h, r) { x.beginPath(); x.moveTo(l + r, t); x.arcTo(l + w, t, l + w, t + h, r); x.arcTo(l + w, t + h, l, t + h, r); x.arcTo(l, t + h, l, t, r); x.arcTo(l, t, l + w, t, r); x.closePath(); }
+
+function shareProfile(p) {
+  const url = location.origin + location.pathname + '?p=' + encodeURIComponent(p.jmeno);
+  const canvas = drawProfileCard(p);
+  canvas.toBlob(async (blob) => {
+    const file = new File([blob], (p.jmeno.replace(/\s/g, '_')) + '.png', { type: 'image/png' });
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+      try { await navigator.share({ title: p.jmeno + ' — Sedmá rota', text: p.jmeno + ' — profil', files: [file] }); return; } catch { }
+    }
+    // fallback: stáhni obrázek
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob);
+    a.download = file.name; a.click();
+  }, 'image/png');
 }
 
 function renderLkh(p) {
@@ -323,8 +379,9 @@ function bind() {
   });
 
   // detail hráče
-  $('detailClose').onclick = () => $('detail').classList.add('hidden');
-  $('detail').onclick = e => { if (e.target.id === 'detail') $('detail').classList.add('hidden'); };
+  const closeDetail = () => { $('detail').classList.add('hidden'); history.replaceState(null, '', location.pathname); };
+  $('detailClose').onclick = closeDetail;
+  $('detail').onclick = e => { if (e.target.id === 'detail') closeDetail(); };
 
   // předvolby
   document.querySelectorAll('.preset').forEach(b => b.onclick = () => applyPreset(b.dataset.p));
@@ -483,6 +540,9 @@ async function init() {
   params = loadParams(); overrides = loadOverrides();
   $('meta').textContent = `${DATA.players.length} hráčů · A-tým ${DATA.a_team_size}`;
   syncControls(); bind(); bindSearch(); render(); renderCandidates();
+  // deep-link: ?p=<jmeno> otevre profil (pro sdilene odkazy)
+  const pq = new URLSearchParams(location.search).get('p');
+  if (pq && LAST[pq]) openDetail(pq);
   if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
 }
 init();
