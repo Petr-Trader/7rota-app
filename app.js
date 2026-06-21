@@ -175,7 +175,7 @@ function openDetail(jmeno) {
   $('dStats').innerHTML =
     tile('Vážené skóre', p.score == null ? '—' : p.score.toFixed(2))
     + tile('LKH (liga)', p.lkh == null ? '—' : p.lkh.toFixed(1), p.legy != null ? `${p.legy} legů` : 'bez ligy')
-    + tile('Pohár pořadí', (p.turn_season && p.turn_season.pohar_pozice) ? '#' + p.turn_season.pohar_pozice : '—', 'Středočeský pohár')
+    + tile('Pohár pořadí', (p.turn_season && p.turn_season.pohar_pozice) ? p.turn_season.pohar_pozice + '/' + p.turn_season.pohar_total : '—', 'Středočeský pohár (živé)')
     + tile('Síla (BT)', p.bt == null ? '—' : p.bt.toFixed(2), 'vzájemné zápasy')
     + tile('Docházka', p.utkani == null ? '—' : `${p.utkani}/${total}`,
         p.utkani == null ? (p.isCand ? 'kandidát (cizí klub)' : '—') : `reálně hrál ${p.hral}×`);
@@ -197,7 +197,9 @@ function renderTurn(p) {
     + `<span class="turnstat">${s && s.turnaju
       ? `${s.turnaju} turn. · ${s.winpct != null ? s.winpct + '% výher' : ''} (${s.v}–${s.p})`
       : '<span class="na">—</span>'}</span></div>`;
-  box.innerHTML = `<h3>Turnajová aktivita (Středočeský pohár)</h3>`
+  const pos = (ts.pohar_pozice && ts.pohar_total)
+    ? `<div class="h2htot">Pořadí v poháru (živé): <b>${ts.pohar_pozice}/${ts.pohar_total}</b></div>` : '';
+  box.innerHTML = `<h3>Turnajová aktivita (Středočeský pohár)</h3>${pos}`
     + row('Aktuální sezóna (od 1.6.)', ts.cur)
     + row('Minulá sezóna', ts.last);
 }

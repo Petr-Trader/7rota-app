@@ -83,7 +83,8 @@
           "p": 65,
           "winpct": 62
         },
-        "pohar_pozice": 17
+        "pohar_pozice": 17,
+        "pohar_total": 521
       }
     },
     {
@@ -160,7 +161,8 @@
           "p": 117,
           "winpct": 70
         },
-        "pohar_pozice": 3
+        "pohar_pozice": 3,
+        "pohar_total": 521
       }
     },
     {
@@ -225,7 +227,8 @@
           "p": 70,
           "winpct": 67
         },
-        "pohar_pozice": 21
+        "pohar_pozice": 21,
+        "pohar_total": 521
       }
     },
     {
@@ -286,7 +289,8 @@
           "p": 67,
           "winpct": 65
         },
-        "pohar_pozice": 21
+        "pohar_pozice": 21,
+        "pohar_total": 521
       }
     },
     {
@@ -351,7 +355,8 @@
           "p": 41,
           "winpct": 54
         },
-        "pohar_pozice": 21
+        "pohar_pozice": 21,
+        "pohar_total": 521
       }
     },
     {
@@ -388,7 +393,8 @@
           "p": 24,
           "winpct": 58
         },
-        "pohar_pozice": 268
+        "pohar_pozice": 268,
+        "pohar_total": 521
       }
     },
     {
@@ -453,7 +459,8 @@
           "p": 69,
           "winpct": 55
         },
-        "pohar_pozice": 47
+        "pohar_pozice": 47,
+        "pohar_total": 521
       }
     },
     {
@@ -502,7 +509,8 @@
           "p": 36,
           "winpct": 20
         },
-        "pohar_pozice": 192
+        "pohar_pozice": 192,
+        "pohar_total": 521
       }
     },
     {
@@ -608,7 +616,8 @@
           "p": 84,
           "winpct": 56
         },
-        "pohar_pozice": 70
+        "pohar_pozice": 70,
+        "pohar_total": 521
       }
     },
     {
@@ -685,7 +694,8 @@
           "p": 75,
           "winpct": 36
         },
-        "pohar_pozice": 9
+        "pohar_pozice": 9,
+        "pohar_total": 110
       }
     },
     {
@@ -867,7 +877,8 @@
           "p": 144,
           "winpct": 37
         },
-        "pohar_pozice": 82
+        "pohar_pozice": 82,
+        "pohar_total": 521
       }
     },
     {
