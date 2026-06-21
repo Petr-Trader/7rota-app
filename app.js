@@ -175,7 +175,7 @@ function openDetail(jmeno) {
   $('dStats').innerHTML =
     tile('Vážené skóre', p.score == null ? '—' : p.score.toFixed(2))
     + tile('LKH (liga)', p.lkh == null ? '—' : p.lkh.toFixed(1), p.legy != null ? `${p.legy} legů` : 'bez ligy')
-    + tile('Turnaje', p.turnaje == null ? '—' : p.turnaje, p.turnaje == null ? 'nehraje pohár' : 'Středočeský pohár')
+    + tile('Pohár (body)', p.turnaje == null ? '—' : p.turnaje, p.turnaje == null ? 'nehraje pohár' : 'Středočeský pohár — body, ne počet')
     + tile('Síla (BT)', p.bt == null ? '—' : p.bt.toFixed(2), 'vzájemné zápasy')
     + tile('Docházka', p.utkani == null ? '—' : `${p.utkani}/${total}`,
         p.utkani == null ? (p.isCand ? 'kandidát (cizí klub)' : '—') : `reálně hrál ${p.hral}×`);
