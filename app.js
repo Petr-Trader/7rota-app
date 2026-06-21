@@ -10,7 +10,7 @@ const METRICS = ['lkh', 'bt', 'turnaje'];
 const LS_PARAMS = '7rota_params_v2';  // v2: data-grounded ligová korekce (% z reálných zápasů)
 const LS_OVR = '7rota_overrides';
 
-let DATA = null, params = null, overrides = {}, LIGA_INDEX = {};
+let DATA = null, params = null, overrides = {}, LIGA_INDEX = {}, TEAM_HISTORY = {};
 const $ = (id) => document.getElementById(id);
 
 const mean = (a) => a.reduce((s, x) => s + x, 0) / a.length;
@@ -212,19 +212,27 @@ function renderH2H(p) {
 
 async function renderHistory(p) {
   const box = $('dHistory');
+  // Náš roster: kompletní historie z team_history.json (sezóna → tým → liga).
+  const hist = TEAM_HISTORY[p.jmeno];
+  if (hist && hist.length) {
+    box.innerHTML = `<h3>Kariéra (týmy &amp; sezóny)</h3>`
+      + hist.map(h => `<div class="histrow"><b>${h.season}</b> · ${h.tym}`
+        + `<span class="histliga">${h.liga || ''}</span></div>`).join('');
+    return;
+  }
+  // Kandidát / mimo roster: live z profilu (aktuální tým).
   if (!p.reg) { box.innerHTML = ''; return; }
-  box.innerHTML = `<h3>Historie (týmy &amp; sezóny)</h3><p class="hint">Načítám…</p>`;
+  box.innerHTML = `<h3>Historie</h3><p class="hint">Načítám…</p>`;
   try {
     const html = await proxyGet(`https://turnaje.org/profily-hracu/${p.reg}`);
     const seg = (html.match(/Družstva([\s\S]*?)(Platnost|<\/body)/) || [])[1] || '';
-    const txt = seg.replace(/<[^>]+>/g, '\n').replace(/&nbsp;/g, ' ');
-    const lines = txt.split('\n').map(s => s.trim()).filter(Boolean);
+    const lines = seg.replace(/<[^>]+>/g, '\n').replace(/&nbsp;/g, ' ').split('\n').map(s => s.trim()).filter(Boolean);
     const teams = [];
     for (let i = 0; i < lines.length; i++)
       if (/^od /.test(lines[i]) && lines[i + 1]) teams.push(`${lines[i + 1]} (${lines[i]})`);
-    box.innerHTML = `<h3>Historie (týmy &amp; sezóny)</h3>`
+    box.innerHTML = `<h3>Aktuální tým</h3>`
       + (teams.length ? teams.map(t => `<div class="histrow">${t}</div>`).join('')
-        : '<p class="hint">Historie týmů není v profilu k dispozici.</p>');
+        : '<p class="hint">Tým není v profilu k dispozici.</p>');
   } catch {
     box.innerHTML = `<h3>Historie</h3><p class="hint">Nepodařilo se načíst (jen online).</p>`;
   }
@@ -435,6 +443,7 @@ function bindSearch() {
 async function init() {
   DATA = await (await fetch('players.json', { cache: 'no-store' })).json();
   LIGA_INDEX = await fetch('liga_index.json').then(r => r.ok ? r.json() : {}).catch(() => ({}));
+  TEAM_HISTORY = await fetch('team_history.json').then(r => r.ok ? r.json() : {}).catch(() => ({}));
   params = loadParams(); overrides = loadOverrides();
   $('meta').textContent = `${DATA.players.length} hráčů · A-tým ${DATA.a_team_size}`;
   syncControls(); bind(); bindSearch(); render(); renderCandidates();

@@ -109,3 +109,5 @@ td.name{cursor:pointer}
 .h2hv{flex:0 0 46px;text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
 .h2hv.win{color:var(--a)} .h2hv.loss{color:#dc2626}
 .histrow{font-size:13px;padding:3px 0}
+.histrow{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.histliga{color:var(--mut);font-size:11px;white-space:nowrap}
