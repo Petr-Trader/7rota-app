@@ -193,45 +193,61 @@ function openDetail(jmeno) {
   $('detail').classList.remove('hidden');
 }
 
-// Vygeneruje hezkou grafickou kartu profilu (canvas) pro sdílení.
+// Vygeneruje grafickou kartu profilu (canvas) pro sdílení — pro tymovou poradu.
 function drawProfileCard(p) {
-  const ts = p.turn_season, d = p.lkh_detail, S = 2;       // 2× pro retina ostrost
-  const W = 640, rows = [];
-  rows.push(['LKH (liga)', p.lkh != null ? String(p.lkh) : '—', d && d.her != null ? d.her + ' her' : '']);
-  rows.push(['Síla (BT)', p.bt != null ? p.bt.toFixed(2) : '—', 'vzájemné zápasy']);
-  if (ts && ts.pohar_pozice) rows.push(['Pohár pořadí', ts.pohar_pozice + '/' + ts.pohar_total, 'Středočeský pohár']);
-  if (ts && ts.cur) rows.push(['Aktuální sezóna', (ts.cur.turnaju || 0) + ' turn.', ts.cur.winpct != null ? ts.cur.winpct + '% výher' : '']);
-  if (ts && ts.last) rows.push(['Minulá sezóna', (ts.last.turnaju || 0) + ' turn.', ts.last.winpct != null ? ts.last.winpct + '% výher' : '']);
-  const H = 150 + rows.length * 64 + 56;
+  const ts = p.turn_season, d = p.lkh_detail, S = 2;
+  const W = 660, TEAL = '#0f766e', DARK = '#0f172a', MUT = '#64748b';
+  // aktualni liga z historie (NE z kat — kat je kategorie hrace, ne liga)
+  const hist = TEAM_HISTORY[p.jmeno] || [];
+  const cur = hist.find(h => !h.pauza);
+  const ligaTxt = cur ? cur.liga : ((DATA.liga_popis && DATA.liga_popis[p.kat]) || '');
+  // radky (label, hodnota, sub)
+  const rows = [];
+  if (ts && ts.cur) rows.push(['Aktuální sezóna (turnaje)', (ts.cur.turnaju || 0) + ' her', ts.cur.winpct != null ? ts.cur.winpct + '% výher' : '']);
+  if (ts && ts.last) rows.push(['Minulá sezóna (turnaje)', (ts.last.turnaju || 0) + ' her', ts.last.winpct != null ? ts.last.winpct + '% výher' : '']);
+  if (d && d.her != null) rows.push(['Liga — odehráno', d.her + ' her', `${Math.round(100 * d.legy_v / d.legy_o)}% výher legů`]);
+  const HEAD = 150, HERO = 96, H = HEAD + HERO + 20 + rows.length * 60 + 54;
   const c = document.createElement('canvas'); c.width = W * S; c.height = H * S;
   const x = c.getContext('2d'); x.scale(S, S);
+  const RR = (l, t, w, h, r) => { x.beginPath(); x.moveTo(l + r, t); x.arcTo(l + w, t, l + w, t + h, r); x.arcTo(l + w, t + h, l, t + h, r); x.arcTo(l, t + h, l, t, r); x.arcTo(l, t, l + w, t, r); x.closePath(); };
   x.fillStyle = '#fff'; x.fillRect(0, 0, W, H);
-  // header
-  x.fillStyle = '#0f766e'; x.fillRect(0, 0, W, 120);
-  x.fillStyle = '#0b5b54'; x.beginPath(); x.arc(64, 60, 34, 0, 7); x.fill();
-  x.fillStyle = '#fff'; x.font = 'bold 30px system-ui,sans-serif'; x.textAlign = 'center';
-  x.fillText(p.jmeno.split(' ').map(w => w[0] || '').slice(0, 2).join(''), 64, 71);
-  x.textAlign = 'left'; x.font = 'bold 28px system-ui,sans-serif';
-  x.fillText(p.jmeno + (p.isCand ? ' (kandidát)' : ''), 116, 52);
-  x.font = '15px system-ui,sans-serif'; x.fillStyle = 'rgba(255,255,255,.85)';
-  const liga = (DATA.liga_popis && DATA.liga_popis[p.kat]) || p.kat || '';
-  x.fillText(`${p.team ? p.team + '-tým · ' : ''}${p.klub || p.tym || ''}${liga ? ' · ' + liga : ''}`, 116, 80);
-  // stat rows
-  let y = 150;
+  // HEADER
+  x.fillStyle = TEAL; x.fillRect(0, 0, W, HEAD);
+  x.fillStyle = '#0b5b54'; x.beginPath(); x.arc(70, 70, 40, 0, 7); x.fill();
+  x.fillStyle = '#fff'; x.font = 'bold 34px system-ui,sans-serif'; x.textAlign = 'center';
+  x.fillText(p.jmeno.split(' ').map(w => w[0] || '').slice(0, 2).join(''), 70, 83);
+  x.textAlign = 'left'; x.font = 'bold 30px system-ui,sans-serif';
+  x.fillText(p.jmeno + (p.isCand ? ' ⟨kandidát⟩' : ''), 128, 62);
+  x.font = '16px system-ui,sans-serif'; x.fillStyle = 'rgba(255,255,255,.88)';
+  x.fillText(`${p.klub || p.tym || ''}${ligaTxt ? ' · ' + ligaTxt : ''}`, 128, 92);
+  if (p.rank && p.team) { // chip s poradim v nasem zebricku
+    x.fillStyle = p.team === 'A' ? '#15803d' : '#1d4ed8'; RR(128, 108, 168, 28, 14); x.fill();
+    x.fillStyle = '#fff'; x.font = 'bold 14px system-ui,sans-serif';
+    x.fillText(`${p.team}-tým · #${p.rank} v žebříčku`, 142, 127);
+  }
+  // HERO — 2 velke staty (LKH + Pohar poradi)
+  const hero = (l, t, lab, val, sub) => {
+    x.fillStyle = '#f1f5f9'; RR(l, t, (W - 60) / 2, HERO, 14); x.fill();
+    x.fillStyle = MUT; x.font = '13px system-ui,sans-serif'; x.fillText(lab.toUpperCase(), l + 18, t + 26);
+    x.fillStyle = TEAL; x.font = 'bold 38px system-ui,sans-serif'; x.fillText(val, l + 18, t + 66);
+    if (sub) { x.fillStyle = MUT; x.font = '13px system-ui,sans-serif'; x.fillText(sub, l + 18, t + 86); }
+  };
+  let y = HEAD + 18;
+  hero(20, y, 'LKH (liga)', p.lkh != null ? String(p.lkh) : '—', p.bt != null ? 'Síla BT ' + p.bt.toFixed(2) : '');
+  hero(40 + (W - 60) / 2, y, 'Pohár pořadí', ts && ts.pohar_pozice ? ts.pohar_pozice + '/' + ts.pohar_total : '—', 'Středočeský pohár');
+  y += HERO + 20;
+  // RADKY
   for (const [label, val, sub] of rows) {
-    x.fillStyle = '#f1f5f9'; roundRect(x, 20, y, W - 40, 52, 10); x.fill();
-    x.fillStyle = '#64748b'; x.font = '13px system-ui,sans-serif';
-    x.fillText(label.toUpperCase(), 36, y + 21);
-    x.fillStyle = '#0f172a'; x.font = 'bold 22px system-ui,sans-serif';
-    x.fillText(val, 36, y + 44);
-    if (sub) { x.fillStyle = '#64748b'; x.font = '14px system-ui,sans-serif'; x.textAlign = 'right'; x.fillText(sub, W - 36, y + 36); x.textAlign = 'left'; }
-    y += 64;
+    x.fillStyle = '#f8fafc'; RR(20, y, W - 40, 50, 10); x.fill();
+    x.fillStyle = MUT; x.font = '13px system-ui,sans-serif'; x.fillText(label.toUpperCase(), 36, y + 20);
+    x.fillStyle = DARK; x.font = 'bold 21px system-ui,sans-serif'; x.fillText(val, 36, y + 42);
+    if (sub) { x.fillStyle = TEAL; x.font = 'bold 16px system-ui,sans-serif'; x.textAlign = 'right'; x.fillText(sub, W - 36, y + 34); x.textAlign = 'left'; }
+    y += 60;
   }
   x.fillStyle = '#94a3b8'; x.font = '13px system-ui,sans-serif'; x.textAlign = 'center';
-  x.fillText('🎯 Sedmá rota — žebříček · ' + new Date().toLocaleDateString('cs'), W / 2, H - 24);
+  x.fillText('🎯 Sedmá rota Praha — statistický asistent · ' + new Date().toLocaleDateString('cs'), W / 2, H - 22);
   return c;
 }
-function roundRect(x, l, t, w, h, r) { x.beginPath(); x.moveTo(l + r, t); x.arcTo(l + w, t, l + w, t + h, r); x.arcTo(l + w, t + h, l, t + h, r); x.arcTo(l, t + h, l, t, r); x.arcTo(l, t, l + w, t, r); x.closePath(); }
 
 function shareProfile(p) {
   const url = location.origin + location.pathname + '?p=' + encodeURIComponent(p.jmeno);
