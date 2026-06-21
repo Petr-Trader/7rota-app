@@ -1,5 +1,5 @@
 // Service worker — offline cache app shellu + network-first pro data.
-const CACHE = '7rota-v5';
+const CACHE = '7rota-v6';
 const SHELL = ['./', 'index.html', 'style.css', 'app.js', 'manifest.json', 'icon.svg'];
 
 self.addEventListener('install', e => {

@@ -198,11 +198,106 @@ function bind() {
   $('detail').onclick = e => { if (e.target.id === 'detail') $('detail').classList.add('hidden'); };
 }
 
+// ---- B: Přidat hráče (kandidáti přes Cloudflare proxy) ----
+const WORKER = 'https://7rota-proxy.schramlp-1a4.workers.dev/?url=';
+const LS_CAND = '7rota_candidates';
+const SEARCH_TID = '110856';  // anchor turnaj (all=1 hledá globálně)
+
+const proxyGet = (target) => fetch(WORKER + encodeURIComponent(target)).then(r => r.text());
+const loadCand = () => { try { return JSON.parse(localStorage.getItem(LS_CAND)) || []; } catch { return []; } };
+const saveCand = (a) => localStorage.setItem(LS_CAND, JSON.stringify(a));
+
+async function searchPlayers(name) {
+  const url = `https://turnaje.org/modules/varan/ajax/ajaxSearchPlayer.php?tid=${SEARCH_TID}&all=1&term=${encodeURIComponent(name)}`;
+  const txt = await proxyGet(url);
+  let arr; try { arr = JSON.parse(txt); } catch { return []; }
+  return (arr || []).map(o => {
+    const parts = (o.label || '').split('|').map(s => s.trim());
+    return { reg: o.id, jmeno: o.name || parts[0] || '', rok: parts[2] || '' };
+  });
+}
+
+async function fetchCandidateStats(reg) {
+  for (const season of ['2026', '2025', '2024']) {
+    const url = `https://turnaje.org/modules/playerprofile/playerprofile.php?getstats=season&season=${season}&rn=${reg}&couples=false`;
+    const txt = await proxyGet(url);
+    if (txt.trim().startsWith('{')) {
+      try {
+        const s = JSON.parse(txt);
+        if (s.total) return { season, total: s.total, wins: s.wins,
+          winpct: Math.round(100 * s.wins / s.total), tours: s.totalTours,
+          m1: s.firstPlacesCount, m2: s.secondPlacesCount, m3: s.thirdPlacesCount };
+      } catch {}
+    }
+  }
+  return null;
+}
+
+async function fetchCandidateClub(reg) {
+  try {
+    const html = await proxyGet(`https://turnaje.org/profily-hracu/${reg}`);
+    const txt = html.replace(/<[^>]+>/g, ' | ').replace(/(\s*\|\s*)+/g, ' | ');
+    const m = txt.match(/Klub \| ([^|]+)/);
+    return m ? m[1].trim() : null;
+  } catch { return null; }
+}
+
+function renderResults(list) {
+  const box = $('qResults'); box.innerHTML = '';
+  if (!list.length) { box.innerHTML = '<p class="hint">Nic nenalezeno.</p>'; return; }
+  for (const c of list) {
+    const d = document.createElement('div'); d.className = 'qitem';
+    d.innerHTML = `<div><b>${c.jmeno}</b><span class="sub">${c.reg}${c.rok ? ' · *' + c.rok : ''}</span></div>
+      <button class="btn small add" data-reg="${c.reg}" data-j="${c.jmeno}" data-r="${c.rok}">Přidat</button>`;
+    box.appendChild(d);
+  }
+  box.querySelectorAll('.add').forEach(b => b.onclick = async (e) => {
+    const btn = e.target; btn.disabled = true; btn.textContent = '…';
+    const reg = btn.dataset.reg;
+    const [stats, klub] = await Promise.all([fetchCandidateStats(reg), fetchCandidateClub(reg)]);
+    const cands = loadCand();
+    if (!cands.find(x => x.reg === reg))
+      cands.push({ reg, jmeno: btn.dataset.j, rok: btn.dataset.r, klub, stats });
+    saveCand(cands); renderCandidates();
+    btn.textContent = '✓ přidán';
+  });
+}
+
+function renderCandidates() {
+  const box = $('candList'), cands = loadCand();
+  $('candEmpty').style.display = cands.length ? 'none' : '';
+  box.innerHTML = '';
+  for (const c of cands) {
+    const s = c.stats;
+    const line = s ? `${s.winpct}% výher (${s.total} záp., ${s.tours} turn., sezóna ${s.season})` : 'bez turnajových dat';
+    const d = document.createElement('div'); d.className = 'canditem';
+    d.innerHTML = `<div><b>${c.jmeno}</b> <span class="sub">${c.reg}${c.rok ? ' · *' + c.rok : ''}</span>
+      <div class="sub2">${c.klub || 'klub —'} · ${line}</div></div>
+      <button class="xbtn on" data-reg="${c.reg}">✕</button>`;
+    box.appendChild(d);
+  }
+  box.querySelectorAll('.xbtn').forEach(b => b.onclick = (e) => {
+    saveCand(loadCand().filter(x => x.reg !== e.target.dataset.reg)); renderCandidates();
+  });
+}
+
+function bindSearch() {
+  const run = async () => {
+    const q = $('qName').value.trim();
+    if (q.length < 3) { $('qResults').innerHTML = '<p class="hint">Zadej aspoň 3 znaky.</p>'; return; }
+    $('qResults').innerHTML = '<p class="hint">Hledám…</p>';
+    try { renderResults(await searchPlayers(q)); }
+    catch (err) { $('qResults').innerHTML = '<p class="hint">Chyba spojení (proxy). Zkus znovu.</p>'; }
+  };
+  $('qBtn').onclick = run;
+  $('qName').onkeydown = (e) => { if (e.key === 'Enter') run(); };
+}
+
 async function init() {
   DATA = await (await fetch('players.json', { cache: 'no-store' })).json();
   params = loadParams(); overrides = loadOverrides();
   $('meta').textContent = `${DATA.players.length} hráčů · A-tým ${DATA.a_team_size}`;
-  syncControls(); bind(); render();
+  syncControls(); bind(); bindSearch(); render(); renderCandidates();
   if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
 }
 init();

@@ -19,8 +19,9 @@
 
 <nav id="menu" class="menu hidden">
   <button class="menuItem" data-view="zebricek">📊 Žebříček &amp; rozřazení A/B</button>
+  <button class="menuItem" data-view="pridat">➕ Přidat hráče (kandidáti)</button>
   <button class="menuItem" data-view="nastaveni">⚙️ Nastavení (váhy, korekce)</button>
-  <button class="menuItem disabled" disabled>👤 Detail hráče &amp; forma <span class="soon">brzy</span></button>
+  <button class="menuItem disabled" disabled>👤 Detail hráče = klikni na jméno v žebříčku</button>
   <button class="menuItem disabled" disabled>🆚 Sestava vs. soupeř <span class="soon">brzy</span></button>
 </nav>
 <div id="scrim" class="scrim hidden"></div>
@@ -76,6 +77,25 @@
 
     <section class="card">
       <button id="reset" class="btn">Obnovit výchozí</button>
+    </section>
+  </section>
+
+  <!-- VIEW: PŘIDAT HRÁČE (kandidáti na přestup) -->
+  <section id="view-pridat" class="view hidden">
+    <section class="card">
+      <h2>Vyhledat hráče v USO</h2>
+      <div class="searchrow">
+        <input type="text" id="qName" placeholder="příjmení nebo jméno (min. 3 znaky)" autocomplete="off">
+        <button id="qBtn" class="btn small">Hledat</button>
+      </div>
+      <p class="hint">Prohledá VŠECHNY hráče USO (přes náš zabezpečený proxy). Zobrazí CZE číslo + rok narození, ať poznáš toho správného.</p>
+      <div id="qResults" class="qresults"></div>
+    </section>
+
+    <section class="card">
+      <h2>Naši kandidáti</h2>
+      <div id="candList" class="candlist"></div>
+      <p class="hint" id="candEmpty">Zatím žádní. Vyhledej hráče výše a přidej ho. Uloží se v appce (jen u tebe).</p>
     </section>
   </section>
 </main>
