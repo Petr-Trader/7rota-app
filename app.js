@@ -10,7 +10,7 @@ const METRICS = ['lkh', 'bt', 'turnaje'];
 const LS_PARAMS = '7rota_params_v2';  // v2: data-grounded ligová korekce (% z reálných zápasů)
 const LS_OVR = '7rota_overrides';
 
-let DATA = null, params = null, overrides = {};
+let DATA = null, params = null, overrides = {}, LIGA_INDEX = {};
 const $ = (id) => document.getElementById(id);
 
 const mean = (a) => a.reduce((s, x) => s + x, 0) / a.length;
@@ -72,9 +72,9 @@ function reliab(p) {
 }
 
 function compute() {
-  // provizorní kandidáti zařazení do žebříčku (jen ti s aktivní vlajkou + srovnatelnou metrikou)
-  const cands = loadCand().filter(c => c.active && c.turnaje != null).map(c => ({
-    jmeno: c.jmeno, tym: '?', kat: c.kat, lkh: null, legy: null,
+  // provizorní kandidáti zařazení do žebříčku (aktivní + má aspoň 1 srovnatelnou metriku)
+  const cands = loadCand().filter(c => c.active && (c.turnaje != null || c.lkh != null)).map(c => ({
+    jmeno: c.jmeno, tym: '?', kat: c.kat, lkh: c.lkh != null ? c.lkh : null, legy: c.legy != null ? c.legy : null,
     turnaje: c.turnaje, bt: null, utkani: null, hral: null, isCand: true, klub: c.klub,
   }));
   const ps = DATA.players.concat(cands);
@@ -169,7 +169,8 @@ function openDetail(jmeno) {
     + tile('LKH (liga)', p.lkh == null ? '—' : p.lkh.toFixed(1), p.legy != null ? `${p.legy} legů` : 'bez ligy')
     + tile('Turnaje', p.turnaje == null ? '—' : p.turnaje, p.turnaje == null ? 'nehraje pohár' : 'Středočeský pohár')
     + tile('Síla (BT)', p.bt == null ? '—' : p.bt.toFixed(2), 'vzájemné zápasy')
-    + tile('Docházka', `${p.utkani}/${total}`, `reálně hrál ${p.hral}×`);
+    + tile('Docházka', p.utkani == null ? '—' : `${p.utkani}/${total}`,
+        p.utkani == null ? (p.isCand ? 'kandidát (cizí klub)' : '—') : `reálně hrál ${p.hral}×`);
   const notes = [];
   if (p.jenLiga) notes.push('„Jen liga" — nehraje turnaje, soudí se hlavně z LKH.');
   if (p.lkh == null) notes.push('Bez ligových dat — posuzuje se z turnajů (BT).');
@@ -314,11 +315,13 @@ function renderResults(list) {
     const btn = e.target; btn.disabled = true; btn.textContent = '…';
     const reg = btn.dataset.reg;
     const [stats, pohar] = await Promise.all([fetchCandidateStats(reg), fetchCandidatePohar(reg)]);
-    const klub = pohar.klub || await fetchCandidateClub(reg);
+    const li = LIGA_INDEX[btn.dataset.j] || null;           // tým + liga + LKH z ligového indexu
+    const klub = (li && li.tym) || pohar.klub || await fetchCandidateClub(reg);
     const cands = loadCand();
     if (!cands.find(x => x.reg === reg))
       cands.push({ reg, jmeno: btn.dataset.j, rok: btn.dataset.r, klub,
-        kat: pohar.kat, turnaje: pohar.body, stats, active: false });
+        kat: (li && li.kat) || pohar.kat, turnaje: pohar.body, stats, active: false,
+        lkh: li ? li.lkh : null, legy: li ? li.legy : null, liga: li ? li.liga : null });
     saveCand(cands); renderCandidates();
     btn.textContent = '✓ přidán';
   });
@@ -330,15 +333,18 @@ function renderCandidates() {
   box.innerHTML = '';
   for (const c of cands) {
     const s = c.stats;
-    const line = s ? `${s.winpct}% výher (${s.total} záp., ${s.tours} turn.)` : 'bez turnajových dat';
-    const tb = c.turnaje != null ? ` · pohár ${c.turnaje} b.` : ' · mimo náš pohár';
+    const tb = c.turnaje != null ? `pohár ${c.turnaje} b.` : 'turnaje —';
+    const winInfo = s ? `, ${s.winpct}% výher` : '';
+    const ligaInfo = c.lkh != null ? `${c.liga || 'liga ?'} · LKH ${c.lkh}` : 'liga —';
+    const rankable = c.turnaje != null || c.lkh != null;
     const d = document.createElement('div'); d.className = 'canditem';
     d.innerHTML = `<div style="flex:1">
         <b>${c.jmeno}</b> <span class="sub">${c.reg}${c.rok ? ' · *' + c.rok : ''}${c.kat ? ' · kat ' + c.kat : ''}</span>
-        <div class="sub2">${c.klub || 'klub —'} · ${line}${tb}</div>
+        <div class="sub2">${c.klub || 'klub —'}</div>
+        <div class="sub2">${ligaInfo} · ${tb}${winInfo}</div>
         <label class="candtoggle"><input type="checkbox" class="candAct" data-reg="${c.reg}"${c.active ? ' checked' : ''}>
           zařadit do žebříčku (jako kandidát)</label>
-        ${c.turnaje == null ? '<div class="sub2">⚠️ není v našem poháru → nelze srovnat, do žebříčku se nezařadí</div>' : ''}
+        ${!rankable ? '<div class="sub2">⚠️ bez ligy i turnajů → nelze srovnat, do žebříčku se nezařadí</div>' : ''}
       </div>
       <button class="xbtn on" data-reg="${c.reg}">✕</button>`;
     box.appendChild(d);
@@ -366,6 +372,7 @@ function bindSearch() {
 
 async function init() {
   DATA = await (await fetch('players.json', { cache: 'no-store' })).json();
+  LIGA_INDEX = await fetch('liga_index.json').then(r => r.ok ? r.json() : {}).catch(() => ({}));
   params = loadParams(); overrides = loadOverrides();
   $('meta').textContent = `${DATA.players.length} hráčů · A-tým ${DATA.a_team_size}`;
   syncControls(); bind(); bindSearch(); render(); renderCandidates();
