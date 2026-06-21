@@ -273,7 +273,9 @@ async function fetchCandidateClub(reg) {
 
 function renderResults(list) {
   const box = $('qResults'); box.innerHTML = '';
-  if (!list.length) { box.innerHTML = '<p class="hint">Nic nenalezeno.</p>'; return; }
+  if (!list.length) { box.innerHTML = '<p class="hint">Nic nenalezeno. Zkus jen příjmení, nebo celé jméno (Příjmení Jméno).</p>'; return; }
+  if (list.length >= 20)
+    box.innerHTML = '<p class="hint">⚠️ Zobrazeno prvních 20. Pokud hráče nevidíš, <b>zpřesni dotaz</b> — napiš celé jméno (Příjmení Jméno), např. „Andr Jan".</p>';
   for (const c of list) {
     const d = document.createElement('div'); d.className = 'qitem';
     d.innerHTML = `<div><b>${c.jmeno}</b><span class="sub">${c.reg}${c.rok ? ' · *' + c.rok : ''}</span></div>
