@@ -559,6 +559,12 @@ async function init() {
   // deep-link: ?p=<jmeno> otevre profil (pro sdilene odkazy)
   const pq = new URLSearchParams(location.search).get('p');
   if (pq && LAST[pq]) openDetail(pq);
-  if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js').then(reg => reg.update()).catch(() => {});
+    let reloaded = false;
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (!reloaded) { reloaded = true; location.reload(); }   // nový SW převzal -> načti nejnovější
+    });
+  }
 }
 init();

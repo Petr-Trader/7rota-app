@@ -1,5 +1,6 @@
-// Service worker — offline cache app shellu + network-first pro data.
-const CACHE = '7rota-v23';
+// Service worker — NETWORK-FIRST (online vždy stáhne nejnovější kód/data,
+// cache je jen offline fallback). Řeší "appka servíruje starou verzi".
+const CACHE = '7rota-v24';
 const SHELL = ['./', 'index.html', 'style.css', 'app.js', 'manifest.json', 'icon.svg'];
 
 self.addEventListener('install', e => {
@@ -12,17 +13,12 @@ self.addEventListener('activate', e => {
   self.clients.claim();
 });
 self.addEventListener('fetch', e => {
-  const url = new URL(e.request.url);
-  if (url.pathname.endsWith('players.json')) {
-    // data: network-first, fallback cache (cerstva data kdyz je sit)
-    e.respondWith(
-      fetch(e.request).then(r => {
-        const cp = r.clone();
-        caches.open(CACHE).then(c => c.put(e.request, cp));
-        return r;
-      }).catch(() => caches.match(e.request)));
-  } else {
-    // shell: cache-first
-    e.respondWith(caches.match(e.request).then(r => r || fetch(e.request)));
-  }
+  if (e.request.method !== 'GET') return;
+  e.respondWith(
+    fetch(e.request).then(r => {
+      const cp = r.clone();
+      caches.open(CACHE).then(c => c.put(e.request, cp));
+      return r;
+    }).catch(() => caches.match(e.request))
+  );
 });
