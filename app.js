@@ -175,7 +175,7 @@ function openDetail(jmeno) {
   $('dStats').innerHTML =
     tile('Vážené skóre', p.score == null ? '—' : p.score.toFixed(2))
     + tile('LKH (liga)', p.lkh == null ? '—' : p.lkh.toFixed(1), p.legy != null ? `${p.legy} legů` : 'bez ligy')
-    + tile('Pohár (body)', p.turnaje == null ? '—' : p.turnaje, p.turnaje == null ? 'nehraje pohár' : 'Středočeský pohár — body, ne počet')
+    + tile('Pohár pořadí', (p.turn_season && p.turn_season.pohar_pozice) ? '#' + p.turn_season.pohar_pozice : '—', 'Středočeský pohár')
     + tile('Síla (BT)', p.bt == null ? '—' : p.bt.toFixed(2), 'vzájemné zápasy')
     + tile('Docházka', p.utkani == null ? '—' : `${p.utkani}/${total}`,
         p.utkani == null ? (p.isCand ? 'kandidát (cizí klub)' : '—') : `reálně hrál ${p.hral}×`);
@@ -184,9 +184,22 @@ function openDetail(jmeno) {
   if (p.lkh == null) notes.push('Bez ligových dat — posuzuje se z turnajů (BT).');
   if (p.legy != null && p.legy < (params.lref || 120)) notes.push(`Málo odehraných legů (${p.legy}) → LKH méně prokázané (spolehlivostní faktor).`);
   $('dNote').textContent = notes.join(' ');
+  renderTurn(p);
   renderH2H(p);
   renderHistory(p);
   $('detail').classList.remove('hidden');
+}
+
+function renderTurn(p) {
+  const box = $('dTurn'), ts = p.turn_season;
+  if (!ts) { box.innerHTML = ''; return; }
+  const row = (label, s) => `<div class="h2hrow"><span class="h2hn">${label}</span>`
+    + `<span class="turnstat">${s && s.turnaju
+      ? `${s.turnaju} turn. · ${s.winpct != null ? s.winpct + '% výher' : ''} (${s.v}–${s.p})`
+      : '<span class="na">—</span>'}</span></div>`;
+  box.innerHTML = `<h3>Turnajová aktivita (Středočeský pohár)</h3>`
+    + row('Aktuální sezóna (od 1.6.)', ts.cur)
+    + row('Minulá sezóna', ts.last);
 }
 
 function renderH2H(p) {

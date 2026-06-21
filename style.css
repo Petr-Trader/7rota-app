@@ -113,3 +113,4 @@ td.name{cursor:pointer}
 .histliga{color:var(--mut);font-size:11px;white-space:nowrap}
 .histlkh{color:var(--teal);font-weight:600;font-size:12px;white-space:nowrap}
 .histrow.pauza{color:var(--mut);font-style:italic;opacity:.75}
+.turnstat{font-size:12px;text-align:right;font-variant-numeric:tabular-nums}

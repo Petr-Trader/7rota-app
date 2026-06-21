@@ -69,7 +69,22 @@
           0
         ]
       },
-      "reg": "CZE001834"
+      "reg": "CZE001834",
+      "turn_season": {
+        "cur": {
+          "turnaju": 9,
+          "v": 33,
+          "p": 15,
+          "winpct": 69
+        },
+        "last": {
+          "turnaju": 35,
+          "v": 106,
+          "p": 65,
+          "winpct": 62
+        },
+        "pohar_pozice": 17
+      }
     },
     {
       "jmeno": "Řečník Vilém",
@@ -131,7 +146,22 @@
           0
         ]
       },
-      "reg": "CZE084595"
+      "reg": "CZE084595",
+      "turn_season": {
+        "cur": {
+          "turnaju": 6,
+          "v": 20,
+          "p": 9,
+          "winpct": 69
+        },
+        "last": {
+          "turnaju": 71,
+          "v": 271,
+          "p": 117,
+          "winpct": 70
+        },
+        "pohar_pozice": 3
+      }
     },
     {
       "jmeno": "Bajtek Jindřich",
@@ -181,7 +211,22 @@
           0
         ]
       },
-      "reg": "CZE073925"
+      "reg": "CZE073925",
+      "turn_season": {
+        "cur": {
+          "turnaju": 4,
+          "v": 12,
+          "p": 8,
+          "winpct": 60
+        },
+        "last": {
+          "turnaju": 39,
+          "v": 139,
+          "p": 70,
+          "winpct": 67
+        },
+        "pohar_pozice": 21
+      }
     },
     {
       "jmeno": "Kožíšek Jiří",
@@ -227,7 +272,22 @@
           1
         ]
       },
-      "reg": "CZE070593"
+      "reg": "CZE070593",
+      "turn_season": {
+        "cur": {
+          "turnaju": 4,
+          "v": 15,
+          "p": 4,
+          "winpct": 79
+        },
+        "last": {
+          "turnaju": 36,
+          "v": 125,
+          "p": 67,
+          "winpct": 65
+        },
+        "pohar_pozice": 21
+      }
     },
     {
       "jmeno": "Majerčin David",
@@ -277,7 +337,22 @@
           1
         ]
       },
-      "reg": "CZE020476"
+      "reg": "CZE020476",
+      "turn_season": {
+        "cur": {
+          "turnaju": 6,
+          "v": 18,
+          "p": 12,
+          "winpct": 60
+        },
+        "last": {
+          "turnaju": 21,
+          "v": 49,
+          "p": 41,
+          "winpct": 54
+        },
+        "pohar_pozice": 21
+      }
     },
     {
       "jmeno": "Velev Stanislav",
@@ -299,7 +374,22 @@
           3
         ]
       },
-      "reg": "CZE059619"
+      "reg": "CZE059619",
+      "turn_season": {
+        "cur": {
+          "turnaju": 1,
+          "v": 4,
+          "p": 2,
+          "winpct": 67
+        },
+        "last": {
+          "turnaju": 12,
+          "v": 33,
+          "p": 24,
+          "winpct": 58
+        },
+        "pohar_pozice": 268
+      }
     },
     {
       "jmeno": "Schraml Petr",
@@ -349,7 +439,22 @@
           0
         ]
       },
-      "reg": "CZE063740"
+      "reg": "CZE063740",
+      "turn_season": {
+        "cur": {
+          "turnaju": 4,
+          "v": 11,
+          "p": 8,
+          "winpct": 58
+        },
+        "last": {
+          "turnaju": 36,
+          "v": 86,
+          "p": 69,
+          "winpct": 55
+        },
+        "pohar_pozice": 47
+      }
     },
     {
       "jmeno": "Procházka Lubomír",
@@ -383,7 +488,22 @@
           1
         ]
       },
-      "reg": "CZE030947"
+      "reg": "CZE030947",
+      "turn_season": {
+        "cur": {
+          "turnaju": 3,
+          "v": 1,
+          "p": 6,
+          "winpct": 14
+        },
+        "last": {
+          "turnaju": 18,
+          "v": 9,
+          "p": 36,
+          "winpct": 20
+        },
+        "pohar_pozice": 192
+      }
     },
     {
       "jmeno": "Královič Martin",
@@ -409,7 +529,22 @@
           1
         ]
       },
-      "reg": "CZE073050"
+      "reg": "CZE073050",
+      "turn_season": {
+        "cur": {
+          "turnaju": 0,
+          "v": 0,
+          "p": 0,
+          "winpct": null
+        },
+        "last": {
+          "turnaju": 4,
+          "v": 6,
+          "p": 8,
+          "winpct": 43
+        },
+        "pohar_pozice": null
+      }
     },
     {
       "jmeno": "Zbořil Karel",
@@ -459,7 +594,22 @@
           0
         ]
       },
-      "reg": "CZE057352"
+      "reg": "CZE057352",
+      "turn_season": {
+        "cur": {
+          "turnaju": 7,
+          "v": 18,
+          "p": 14,
+          "winpct": 56
+        },
+        "last": {
+          "turnaju": 45,
+          "v": 105,
+          "p": 84,
+          "winpct": 56
+        },
+        "pohar_pozice": 70
+      }
     },
     {
       "jmeno": "Hamšík Robert",
@@ -472,7 +622,22 @@
       "utkani": 24,
       "hral": 24,
       "h2h": {},
-      "reg": "CZE059170"
+      "reg": "CZE059170",
+      "turn_season": {
+        "cur": {
+          "turnaju": 0,
+          "v": 0,
+          "p": 0,
+          "winpct": null
+        },
+        "last": {
+          "turnaju": 0,
+          "v": 0,
+          "p": 0,
+          "winpct": null
+        },
+        "pohar_pozice": null
+      }
     },
     {
       "jmeno": "Puková Jaroslava",
@@ -506,7 +671,22 @@
           1
         ]
       },
-      "reg": "CZE046245"
+      "reg": "CZE046245",
+      "turn_season": {
+        "cur": {
+          "turnaju": 6,
+          "v": 8,
+          "p": 12,
+          "winpct": 40
+        },
+        "last": {
+          "turnaju": 37,
+          "v": 43,
+          "p": 75,
+          "winpct": 36
+        },
+        "pohar_pozice": 9
+      }
     },
     {
       "jmeno": "Moravec Zdeněk",
@@ -519,7 +699,22 @@
       "utkani": 6,
       "hral": 5,
       "h2h": {},
-      "reg": "CZE009041"
+      "reg": "CZE009041",
+      "turn_season": {
+        "cur": {
+          "turnaju": 0,
+          "v": 0,
+          "p": 0,
+          "winpct": null
+        },
+        "last": {
+          "turnaju": 0,
+          "v": 0,
+          "p": 0,
+          "winpct": null
+        },
+        "pohar_pozice": null
+      }
     },
     {
       "jmeno": "Polák Michal",
@@ -541,7 +736,22 @@
           1
         ]
       },
-      "reg": "CZE080513"
+      "reg": "CZE080513",
+      "turn_season": {
+        "cur": {
+          "turnaju": 0,
+          "v": 0,
+          "p": 0,
+          "winpct": null
+        },
+        "last": {
+          "turnaju": 1,
+          "v": 1,
+          "p": 2,
+          "winpct": 33
+        },
+        "pohar_pozice": null
+      }
     },
     {
       "jmeno": "Hampeis Pavel",
@@ -554,7 +764,22 @@
       "utkani": 13,
       "hral": 9,
       "h2h": {},
-      "reg": "CZE060160"
+      "reg": "CZE060160",
+      "turn_season": {
+        "cur": {
+          "turnaju": 0,
+          "v": 0,
+          "p": 0,
+          "winpct": null
+        },
+        "last": {
+          "turnaju": 1,
+          "v": 0,
+          "p": 2,
+          "winpct": 0
+        },
+        "pohar_pozice": null
+      }
     },
     {
       "jmeno": "Knotek Václav",
@@ -567,7 +792,22 @@
       "utkani": 17,
       "hral": 17,
       "h2h": {},
-      "reg": "CZE029537"
+      "reg": "CZE029537",
+      "turn_season": {
+        "cur": {
+          "turnaju": 0,
+          "v": 0,
+          "p": 0,
+          "winpct": null
+        },
+        "last": {
+          "turnaju": 0,
+          "v": 0,
+          "p": 0,
+          "winpct": null
+        },
+        "pohar_pozice": null
+      }
     },
     {
       "jmeno": "Hozman Stanislav",
@@ -613,7 +853,22 @@
           1
         ]
       },
-      "reg": "CZE043320"
+      "reg": "CZE043320",
+      "turn_season": {
+        "cur": {
+          "turnaju": 10,
+          "v": 14,
+          "p": 20,
+          "winpct": 41
+        },
+        "last": {
+          "turnaju": 72,
+          "v": 86,
+          "p": 144,
+          "winpct": 37
+        },
+        "pohar_pozice": 82
+      }
     },
     {
       "jmeno": "Krykorka Milan",
@@ -631,7 +886,22 @@
           1
         ]
       },
-      "reg": "CZE062053"
+      "reg": "CZE062053",
+      "turn_season": {
+        "cur": {
+          "turnaju": 0,
+          "v": 0,
+          "p": 0,
+          "winpct": null
+        },
+        "last": {
+          "turnaju": 1,
+          "v": 1,
+          "p": 2,
+          "winpct": 33
+        },
+        "pohar_pozice": null
+      }
     }
   ]
 }
