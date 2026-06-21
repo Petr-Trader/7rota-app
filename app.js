@@ -240,7 +240,14 @@ const WORKER = 'https://7rota-proxy.schramlp-1a4.workers.dev/?url=';
 const LS_CAND = '7rota_candidates';
 const SEARCH_TID = '110856';  // anchor turnaj (all=1 hledá globálně)
 
-const proxyGet = (target) => fetch(WORKER + encodeURIComponent(target)).then(r => r.text());
+// sipky.org je v kódování windows-1250 (cp1250) — dekóduj správně, jinak mojibake (�).
+// turnaje.org je UTF-8.
+async function proxyGet(target) {
+  const r = await fetch(WORKER + encodeURIComponent(target));
+  const buf = await r.arrayBuffer();
+  const cp = target.includes('sipky.org') ? 'windows-1250' : 'utf-8';
+  return new TextDecoder(cp).decode(buf);
+}
 const loadCand = () => { try { return JSON.parse(localStorage.getItem(LS_CAND)) || []; } catch { return []; } };
 const saveCand = (a) => localStorage.setItem(LS_CAND, JSON.stringify(a));
 
