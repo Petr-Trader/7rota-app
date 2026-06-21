@@ -200,6 +200,7 @@ function renderLkh(p) {
   const zav = d.z6 + d.z5 + d.z4 + d.z3;
   const r = (label, val) => `<div class="h2hrow"><span class="h2hn">${label}</span><span class="turnstat">${val}</span></div>`;
   box.innerHTML = `<h3>LKH — z čeho se skládá (liga)</h3>`
+    + (d.her != null ? r('Her zahráno', `${d.her} <span class="na">(1 hra = best of 3 legy)</span>`) : '')
     + r('Legy odehrané / vyhrané', `${d.legy_o} / ${d.legy_v} (${lwpct}% výher legů)`)
     + r('Zápasy vyhrané', d.zapasy_v)
     + r('Náhozy 95+ / 133+ / 170+', `${d.n95} / ${d.n133} / ${d.n170}`)
