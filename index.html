@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0f766e">
+<title>Sedmá rota — žebříček</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>🎯 Sedmá rota — žebříček</h1>
+  <p id="meta" class="meta"></p>
+</header>
+
+<main>
+  <section class="card" id="controls">
+    <h2>Parametry <button id="toggleCtl" class="link">skrýt</button></h2>
+    <div id="ctlBody">
+      <div class="slider">
+        <label>Váha LKH <output id="wLkhOut"></output></label>
+        <input type="range" id="wLkh" min="0" max="1" step="0.05">
+      </div>
+      <div class="slider">
+        <label>Váha Vzájemná síla (BT) <output id="wBtOut"></output></label>
+        <input type="range" id="wBt" min="0" max="1" step="0.05">
+      </div>
+      <div class="slider">
+        <label>Váha Turnaje <output id="wTurnOut"></output></label>
+        <input type="range" id="wTurn" min="0" max="1" step="0.05">
+      </div>
+      <div class="row">
+        <label>Velikost A-týmu</label>
+        <input type="number" id="aSize" min="1" max="20" class="num">
+        <button id="reset" class="link">výchozí</button>
+      </div>
+      <p class="hint">Váhy se normalizují — nemusí dát dohromady 1. LKH/Turnaje/BT jsou pevná data (USO + náš výpočet), měníš jen váhy, zámky a vyřazení.</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="legend"><span class="badge a">A</span> A-tým &nbsp; <span class="badge b">B</span> B-tým &nbsp; <span class="muted">— vyřazen</span></div>
+    <table id="tbl">
+      <thead>
+        <tr>
+          <th>#</th><th class="l">Hráč</th><th>Návrh</th><th>Skóre</th>
+          <th>LKH</th><th>Turn.</th><th>BT</th><th>🔒</th><th>✕</th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </section>
+</main>
+
+<footer>
+  <p>Data generována z pipeline 7rota · <span id="gen"></span></p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
