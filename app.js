@@ -11,6 +11,7 @@ const LS_PARAMS = '7rota_params_v2';  // v2: data-grounded ligová korekce (% z 
 const LS_OVR = '7rota_overrides';
 
 let DATA = null, params = null, overrides = {}, LIGA_INDEX = {}, TEAM_HISTORY = {};
+let SCOUT = null, scoutTeam = null;   // scouting: rozpis + soupeři (index otevřeného týmu)
 const $ = (id) => document.getElementById(id);
 
 const mean = (a) => a.reduce((s, x) => s + x, 0) / a.length;
@@ -156,6 +157,7 @@ function render() {
     const o = ovr(e.target.dataset.n); o.excluded = !o.excluded; saveOverrides(); render(); });
   LAST = {}; rows.forEach(p => LAST[p.jmeno] = p);
   tb.querySelectorAll('td.name').forEach(td => td.onclick = () => openDetail(td.textContent));
+  renderScout();   // scouting listy sdílejí ligovou korekci se žebříčkem → re-render při změně params
 }
 
 let LAST = {};
@@ -399,6 +401,11 @@ function bind() {
   $('detailClose').onclick = closeDetail;
   $('detail').onclick = e => { if (e.target.id === 'detail') closeDetail(); };
 
+  // detail týmu / soupeře
+  const closeTeam = () => { $('teamDetail').classList.add('hidden'); scoutTeam = null; };
+  $('teamDetailClose').onclick = closeTeam;
+  $('teamDetail').onclick = e => { if (e.target.id === 'teamDetail') closeTeam(); };
+
   // předvolby
   document.querySelectorAll('.preset').forEach(b => b.onclick = () => applyPreset(b.dataset.p));
 }
@@ -549,10 +556,120 @@ function bindSearch() {
   $('qName').onkeydown = (e) => { if (e.key === 'Enter') run(); };
 }
 
+// ================= SCOUTING (Rozpis + Soupeři) =================
+// Data: scout.json (rozpis + týmy vč. našeho, per hráč {lkh, kat, legy, turnaje}).
+// Síla = LKH po STEJNÉ ligové korekci jako žebříček (params.ligaKor[kat]) → předvolba
+// (Mírná/Vyvážená/Plná) ovlivní i scouting. Naše liga = kat B (1. liga) = baseline.
+const escH = (s) => ('' + (s == null ? '' : s)).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+function oppLkh(pl) {
+  if (pl.lkh == null) return null;
+  if (params.ligaOn && pl.kat && params.ligaKor[pl.kat] != null) return pl.lkh * params.ligaKor[pl.kat];
+  return pl.lkh;
+}
+function teamStrength(t) {
+  const adj = t.hraci.map(oppLkh).filter(v => v != null);
+  return { top: adj.length ? Math.max(...adj) : 0, strong: adj.filter(v => v >= 70).length };
+}
+const dangerCol = (v) => v >= 90 ? '#dc2626' : v >= 70 ? '#b8791a' : 'var(--teal)';
+const katLiga = (kat) => (DATA.liga_popis && DATA.liga_popis[kat]) || kat || '?';
+const crossKat = (kat) => (!kat || kat === 'B') ? null : ((kat === 'C' || kat === 'D') ? 'low' : 'high');
+const normTeam = (s) => ('' + s).replace(/\s*Praha\s*/g, ' ').replace(/\s+/g, ' ').trim().toLowerCase();
+const teamIdxByShort = (short) => SCOUT ? SCOUT.teams.findIndex(t => normTeam(t.nazev) === normTeam(short)) : -1;
+
+function renderRozpis() {
+  const box = $('rozpisList'); if (!box || !SCOUT) return;
+  box.innerHTML = SCOUT.rozpis.map((m, i) => {
+    const dm = m.datum.split('.'); const next = i === 0 ? ' <span class="rz-next">PŘÍŠTÍ</span>' : '';
+    return `<button class="rz-row" data-i="${teamIdxByShort(m.souper)}">
+      <span class="rz-date"><b>${dm[0]}.${dm[1]}.</b><small>${m.den}</small></span>
+      <span class="rz-main"><span class="rz-opp">${escH(m.souper)}${next}</span>
+        <span class="rz-meta">${m.cas} · ${escH(m.hala)}</span></span>
+      <span class="rz-ha ${m.doma ? 'h' : 'a'}">${m.doma ? 'DOMA' : 'VENKU'}</span></button>`;
+  }).join('');
+  box.querySelectorAll('.rz-row').forEach(b => b.onclick = () => openTeam(+b.dataset.i));
+}
+
+function teamCard(t) {
+  const i = SCOUT.teams.indexOf(t), s = teamStrength(t);
+  const meta = t.us ? `1. liga A · ${s.strong} opor (síla ≥ 70)`
+    : `${t.novy ? 'nový · z ' + (t.lonska_liga || '?') : 'v lize i loni'} · ${s.strong} silných`;
+  const col = t.us ? 'var(--teal)' : dangerCol(s.top);
+  return `<button class="tm-row${t.us ? ' us' : ''}" data-i="${i}">
+    <span class="tm-dot" style="background:${col}"></span>
+    <span class="tm-main"><span class="tm-name">${escH(t.nazev)}${t.us ? ' <span class="tm-badge">MŮJ TÝM</span>' : ''}</span>
+      <span class="tm-meta">${meta}</span></span>
+    <span class="tm-str"><b style="color:${col}">${s.top ? Math.round(s.top) : '–'}</b><small>síla</small></span></button>`;
+}
+function renderSouperiList() {
+  const box = $('souperiList'); if (!box || !SCOUT) return;
+  const us = SCOUT.teams.find(t => t.us);
+  const opp = SCOUT.teams.filter(t => !t.us).sort((a, b) => teamStrength(b).top - teamStrength(a).top);
+  let h = '';
+  if (us) h += `<div class="scout-eyebrow">Můj tým</div>` + teamCard(us);
+  h += `<div class="scout-eyebrow">Soupeři · ${opp.length} týmů</div>` + opp.map(teamCard).join('');
+  box.innerHTML = h;
+  box.querySelectorAll('.tm-row').forEach(b => b.onclick = () => openTeam(+b.dataset.i));
+}
+
+function openTeam(i) { if (i == null || i < 0) return; scoutTeam = i; renderTeamDetail(); $('teamDetail').classList.remove('hidden'); }
+function renderTeamDetail() {
+  if (scoutTeam == null) return; const t = SCOUT.teams[scoutTeam]; const s = teamStrength(t);
+  const players = [...t.hraci].sort((a, b) => (oppLkh(b) ?? -1) - (oppLkh(a) ?? -1));
+  const max = Math.max(60, s.top);
+  const dangers = players.filter(p => oppLkh(p) != null && oppLkh(p) >= 70);
+  const jenLiga = players.filter(p => p.lkh != null && p.turnaje == null).length;
+  const crossN = players.filter(p => crossKat(p.kat)).length;
+  let h = `<div class="td-head"><h2>${escH(t.nazev)}</h2><div class="td-tags">`;
+  if (t.us) {
+    h += `<span class="td-tag lvl">MŮJ TÝM · 1. liga A</span><span class="td-tag">${s.strong} opor (síla ≥ 70)</span>`;
+  } else {
+    h += t.novy ? `<span class="td-tag new">NOVÝ · z ${escH(t.lonska_liga || '?')}</span>` : `<span class="td-tag lvl">v 1. lize i loni</span>`;
+    if (s.top >= 90) h += `<span class="td-tag danger">⚠️ elitní hráč</span>`;
+    h += `<span class="td-tag">${s.strong} hrozeb (síla ≥ 70)</span>`;
+  }
+  h += `</div></div>`;
+  if (dangers.length) {
+    const names = dangers.slice(0, 3).map(p => `<b>${escH(p.jmeno)}</b> (${Math.round(oppLkh(p))})`).join(', ');
+    h += `<div class="td-note">${t.us ? '💪 <b>Naše opory:</b>' : '🎯 <b>Pozor na:</b>'} ${names}${dangers.length > 3 ? ' a další' : ''}.`
+      + (jenLiga ? ` ${jenLiga} hráčů hraje jen ligu (bez turnajů).` : '') + `</div>`;
+  }
+  if (crossN) h += `<div class="td-note">🔀 <b>${crossN} z jiné ligy:</b> LKH přepočteno na 1. ligu dle nastavené korekce (Nastavení). Řazení i hrozby počítám z přepočtu.</div>`;
+  h += `<div class="scout-eyebrow">Soupiska dle síly</div><div class="td-plist">`;
+  players.forEach((p, idx) => {
+    const a = oppLkh(p); const w = a != null ? Math.max(4, Math.round(a / max * 100)) : 0;
+    const col = a >= 90 ? '#dc2626' : a >= 70 ? '#b8791a' : 'var(--teal)';
+    const cc = crossKat(p.kat);
+    const chips = (t.transfers && t.transfers.prisli.includes(p.jmeno) ? '<span class="pchip in">↑ přišel</span>' : '')
+      + (cc ? `<span class="pchip ${cc}">${escH(katLiga(p.kat))}</span>` : '')
+      + (p.lkh != null && p.turnaje == null ? '<span class="pchip jl">jen liga</span>' : '')
+      + (p.lkh == null ? '<span class="pchip jl">bez dat</span>' : '');
+    h += `<div class="pl-row"><span class="pl-rank">${idx + 1}</span>
+      <span class="pl-main"><span class="pl-name">${escH(p.jmeno)} ${chips}</span>
+        <span class="pl-bar"><i style="width:${w}%;background:${col}"></i></span></span>
+      <span class="pl-lkh"><b>${p.lkh != null ? Math.round(p.lkh) : '–'}</b><small>LKH</small>${cc ? `<span class="pl-adj">≈${Math.round(a)}</span>` : ''}</span></div>`;
+  });
+  h += `</div>`;
+  if (t.transfers && (t.transfers.prisli.length || t.transfers.odesli.length)) {
+    h += `<div class="scout-eyebrow">Přestupy oproti loňsku</div><div class="td-tr">`;
+    t.transfers.prisli.forEach(n => h += `<div class="tr-l in">↑ přišel ${escH(n)}</div>`);
+    t.transfers.odesli.forEach(n => h += `<div class="tr-l out">↓ odešel ${escH(n)}</div>`);
+    h += `</div>`;
+  }
+  h += `<p class="hint">Síla = LKH po ligové korekci (mění se dle předvolby v Nastavení). ≈ = přepočet na 1. ligu · <b style="color:#dc2626">≥90 elita</b> · <b style="color:#b8791a">≥70 silný</b>.</p>`;
+  $('tdBody').innerHTML = h;
+}
+function renderScout() {
+  if (!SCOUT) return;
+  renderRozpis(); renderSouperiList();
+  if (scoutTeam != null && !$('teamDetail').classList.contains('hidden')) renderTeamDetail();
+}
+
 async function init() {
   DATA = await (await fetch('players.json', { cache: 'no-store' })).json();
   LIGA_INDEX = await fetch('liga_index.json').then(r => r.ok ? r.json() : {}).catch(() => ({}));
   TEAM_HISTORY = await fetch('team_history.json').then(r => r.ok ? r.json() : {}).catch(() => ({}));
+  SCOUT = await fetch('scout.json').then(r => r.ok ? r.json() : null).catch(() => null);
   params = loadParams(); overrides = loadOverrides();
   $('meta').textContent = `${DATA.players.length} hráčů · A-tým ${DATA.a_team_size}`;
   syncControls(); bind(); bindSearch(); render(); renderCandidates();

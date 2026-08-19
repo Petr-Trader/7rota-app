@@ -1,6 +1,6 @@
 // Service worker — NETWORK-FIRST (online vždy stáhne nejnovější kód/data,
 // cache je jen offline fallback). Řeší "appka servíruje starou verzi".
-const CACHE = '7rota-v24';
+const CACHE = '7rota-v25';
 const SHELL = ['./', 'index.html', 'style.css', 'app.js', 'manifest.json', 'icon.svg'];
 
 self.addEventListener('install', e => {

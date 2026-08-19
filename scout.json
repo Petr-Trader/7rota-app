@@ -1,0 +1,1287 @@
+{
+ "season": "2026/27",
+ "league": "1. liga A",
+ "klub": "Sedmá rota Praha",
+ "generated": "2026-08-19",
+ "rozpis": [
+  {
+   "k": 1,
+   "den": "Ne",
+   "datum": "6.9.2026",
+   "cas": "18:00",
+   "doma": false,
+   "souper": "Horní Rozptyly X",
+   "hala": "Bar Chrpa, Praha 4"
+  },
+  {
+   "k": 2,
+   "den": "Ne",
+   "datum": "20.9.2026",
+   "cas": "18:00",
+   "doma": true,
+   "souper": "Hyeny",
+   "hala": "Pivnice Pipkin, Praha 4"
+  },
+  {
+   "k": 3,
+   "den": "Út",
+   "datum": "22.9.2026",
+   "cas": "19:00",
+   "doma": false,
+   "souper": "Nepřátelé bobří hráze",
+   "hala": "Bar Devítka, Praha 9"
+  },
+  {
+   "k": 4,
+   "den": "Ne",
+   "datum": "11.10.2026",
+   "cas": "18:00",
+   "doma": true,
+   "souper": "Brilliant darts",
+   "hala": "Pivnice Pipkin, Praha 4"
+  },
+  {
+   "k": 5,
+   "den": "Ne",
+   "datum": "18.10.2026",
+   "cas": "18:00",
+   "doma": false,
+   "souper": "Amatéři Písnice",
+   "hala": "Pivnice Pipkin, Praha 4"
+  },
+  {
+   "k": 6,
+   "den": "Ne",
+   "datum": "25.10.2026",
+   "cas": "18:00",
+   "doma": true,
+   "souper": "Maniac Darts",
+   "hala": "Pivnice Pipkin, Praha 4"
+  },
+  {
+   "k": 7,
+   "den": "Ne",
+   "datum": "8.11.2026",
+   "cas": "18:00",
+   "doma": false,
+   "souper": "Rychlý hroty",
+   "hala": "Sportbar Hostivař Darts Club, Praha 10"
+  },
+  {
+   "k": 8,
+   "den": "Ne",
+   "datum": "15.11.2026",
+   "cas": "18:00",
+   "doma": true,
+   "souper": "Plzeňka B",
+   "hala": "Pivnice Pipkin, Praha 4"
+  },
+  {
+   "k": 9,
+   "den": "Ne",
+   "datum": "22.11.2026",
+   "cas": "18:00",
+   "doma": false,
+   "souper": "Louže DC",
+   "hala": "Louže, Praha 2"
+  },
+  {
+   "k": 10,
+   "den": "Ne",
+   "datum": "29.11.2026",
+   "cas": "18:00",
+   "doma": true,
+   "souper": "I AM 180",
+   "hala": "Pivnice Pipkin, Praha 4"
+  },
+  {
+   "k": 11,
+   "den": "Ne",
+   "datum": "6.12.2026",
+   "cas": "18:00",
+   "doma": false,
+   "souper": "Sgt. Pepik's Band B",
+   "hala": "Restaurace Alfa, Praha 4"
+  },
+  {
+   "k": 12,
+   "den": "Út",
+   "datum": "8.12.2026",
+   "cas": "19:00",
+   "doma": false,
+   "souper": "Šipky Kbely",
+   "hala": "Zastávka U hřiště, Praha 9"
+  },
+  {
+   "k": 13,
+   "den": "Ne",
+   "datum": "20.12.2026",
+   "cas": "18:00",
+   "doma": true,
+   "souper": "Horní Rozptyly",
+   "hala": "Pivnice Pipkin, Praha 4"
+  },
+  {
+   "k": 14,
+   "den": "Ne",
+   "datum": "17.1.2027",
+   "cas": "18:00",
+   "doma": true,
+   "souper": "Horní Rozptyly X",
+   "hala": "Pivnice Pipkin, Praha 4"
+  },
+  {
+   "k": 15,
+   "den": "Ne",
+   "datum": "24.1.2027",
+   "cas": "18:00",
+   "doma": false,
+   "souper": "Hyeny",
+   "hala": "Klub AJETO P.M.P., Praha 7"
+  },
+  {
+   "k": 16,
+   "den": "Ne",
+   "datum": "31.1.2027",
+   "cas": "18:00",
+   "doma": true,
+   "souper": "Nepřátelé bobří hráze",
+   "hala": "Pivnice Pipkin, Praha 4"
+  },
+  {
+   "k": 17,
+   "den": "Ne",
+   "datum": "7.2.2027",
+   "cas": "18:00",
+   "doma": false,
+   "souper": "Brilliant darts",
+   "hala": "Restaurace Alfa, Praha 4"
+  },
+  {
+   "k": 18,
+   "den": "Ne",
+   "datum": "14.2.2027",
+   "cas": "18:00",
+   "doma": true,
+   "souper": "Amatéři Písnice",
+   "hala": "Pivnice Pipkin, Praha 4"
+  },
+  {
+   "k": 19,
+   "den": "Ne",
+   "datum": "28.2.2027",
+   "cas": "18:00",
+   "doma": false,
+   "souper": "Maniac Darts",
+   "hala": "Restaurace Club Troja, Praha 8"
+  },
+  {
+   "k": 20,
+   "den": "Ne",
+   "datum": "7.3.2027",
+   "cas": "18:00",
+   "doma": true,
+   "souper": "Rychlý hroty",
+   "hala": "Pivnice Pipkin, Praha 4"
+  },
+  {
+   "k": 21,
+   "den": "Ne",
+   "datum": "14.3.2027",
+   "cas": "18:00",
+   "doma": false,
+   "souper": "Plzeňka B",
+   "hala": "Plzeňka, Praha 9"
+  },
+  {
+   "k": 22,
+   "den": "Ne",
+   "datum": "4.4.2027",
+   "cas": "18:00",
+   "doma": true,
+   "souper": "Louže DC",
+   "hala": "Pivnice Pipkin, Praha 4"
+  },
+  {
+   "k": 23,
+   "den": "Ne",
+   "datum": "11.4.2027",
+   "cas": "17:00",
+   "doma": false,
+   "souper": "I AM 180",
+   "hala": "Bulls Restaurant, Praha 5"
+  },
+  {
+   "k": 24,
+   "den": "Ne",
+   "datum": "18.4.2027",
+   "cas": "18:00",
+   "doma": true,
+   "souper": "Sgt. Pepik's Band B",
+   "hala": "Pivnice Pipkin, Praha 4"
+  },
+  {
+   "k": 25,
+   "den": "Ne",
+   "datum": "9.5.2027",
+   "cas": "18:00",
+   "doma": true,
+   "souper": "Šipky Kbely",
+   "hala": "Pivnice Pipkin, Praha 4"
+  },
+  {
+   "k": 26,
+   "den": "Ne",
+   "datum": "2.5.2027",
+   "cas": "18:00",
+   "doma": false,
+   "souper": "Horní Rozptyly",
+   "hala": "Bar Chrpa, Praha 4"
+  }
+ ],
+ "teams": [
+  {
+   "nazev": "Sedmá rota Praha",
+   "novy": false,
+   "lonska_liga": "1. liga A",
+   "transfers": {
+    "prisli": [
+     "Hamšík Robert",
+     "Královič Martin",
+     "Zbořil Karel"
+    ],
+    "odesli": [
+     "Kožíšek Jiří",
+     "Vach Josef",
+     "Velev Stanislav",
+     "Řečník Vilém"
+    ]
+   },
+   "hraci": [
+    {
+     "jmeno": "Královič Martin",
+     "lkh": 65.6,
+     "kat": "D",
+     "liga": "3. liga N",
+     "legy": 220,
+     "turnaje": 900
+    },
+    {
+     "jmeno": "Bajtek Jindřich",
+     "lkh": 62.6,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 165,
+     "turnaje": 12550
+    },
+    {
+     "jmeno": "Zbořil Karel",
+     "lkh": 60.6,
+     "kat": "D",
+     "liga": "3. liga N",
+     "legy": 126,
+     "turnaje": 8550
+    },
+    {
+     "jmeno": "Majerčin David",
+     "lkh": 56.6,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 53,
+     "turnaje": 6350
+    },
+    {
+     "jmeno": "Hamšík Robert",
+     "lkh": 48.1,
+     "kat": "D",
+     "liga": "3. liga N",
+     "legy": 208,
+     "turnaje": null
+    },
+    {
+     "jmeno": "Schraml Petr",
+     "lkh": 38.0,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 97,
+     "turnaje": 8800
+    },
+    {
+     "jmeno": "Procházka Lubomír",
+     "lkh": 16.0,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 10,
+     "turnaje": 2100
+    },
+    {
+     "jmeno": "Krykorka Milan",
+     "lkh": null,
+     "kat": null,
+     "liga": null,
+     "legy": null,
+     "turnaje": null
+    }
+   ],
+   "us": true
+  },
+  {
+   "nazev": "Amatéři Písnice",
+   "novy": false,
+   "lonska_liga": "1. liga A",
+   "transfers": {
+    "prisli": [],
+    "odesli": [
+     "Adámek Jaroslav",
+     "Novák Vladimír"
+    ]
+   },
+   "hraci": [
+    {
+     "jmeno": "Neužil Miroslav",
+     "lkh": 80.3,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 208,
+     "turnaje": 9150
+    },
+    {
+     "jmeno": "Kopač Miroslav",
+     "lkh": 59.2,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 211,
+     "turnaje": null
+    },
+    {
+     "jmeno": "Semrád Filip",
+     "lkh": 51.2,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 24,
+     "turnaje": 1000
+    },
+    {
+     "jmeno": "Bláha Petr",
+     "lkh": 49.6,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 217,
+     "turnaje": 8450
+    },
+    {
+     "jmeno": "Novák David",
+     "lkh": 45.7,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 148,
+     "turnaje": null
+    },
+    {
+     "jmeno": "Lexová Natálie",
+     "lkh": null,
+     "kat": null,
+     "liga": null,
+     "legy": null,
+     "turnaje": null
+    }
+   ]
+  },
+  {
+   "nazev": "Brilliant darts Praha",
+   "novy": false,
+   "lonska_liga": "1. liga A",
+   "transfers": {
+    "prisli": [
+     "Henner Martin"
+    ],
+    "odesli": [
+     "Mošnička Martin",
+     "Široký Michal"
+    ]
+   },
+   "hraci": [
+    {
+     "jmeno": "Nová Tereza",
+     "lkh": 63.2,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 112,
+     "turnaje": 8850
+    },
+    {
+     "jmeno": "Henner Martin",
+     "lkh": 61.5,
+     "kat": "D",
+     "liga": "3. liga N",
+     "legy": 170,
+     "turnaje": 7550
+    },
+    {
+     "jmeno": "Shíbal Petr",
+     "lkh": 59.1,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 211,
+     "turnaje": 1900
+    },
+    {
+     "jmeno": "Homola Jiří",
+     "lkh": 58.3,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 213,
+     "turnaje": 3500
+    },
+    {
+     "jmeno": "Pfleger Michal",
+     "lkh": 49.1,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 223,
+     "turnaje": 10550
+    },
+    {
+     "jmeno": "Korčáková Renáta",
+     "lkh": 36.8,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 129,
+     "turnaje": 6500
+    }
+   ]
+  },
+  {
+   "nazev": "Horní Rozptyly Praha",
+   "novy": false,
+   "lonska_liga": "1. liga A",
+   "transfers": {
+    "prisli": [
+     "Nemeš Jan"
+    ],
+    "odesli": []
+   },
+   "hraci": [
+    {
+     "jmeno": "Strbáček Stanislav",
+     "lkh": 98.4,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 188,
+     "turnaje": 10300
+    },
+    {
+     "jmeno": "Nemeš Jan",
+     "lkh": 81.0,
+     "kat": "C",
+     "liga": "2. liga C",
+     "legy": 183,
+     "turnaje": 11600
+    },
+    {
+     "jmeno": "Linek Adam",
+     "lkh": 66.1,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 158,
+     "turnaje": null
+    },
+    {
+     "jmeno": "Bartek David",
+     "lkh": 61.2,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 136,
+     "turnaje": 8000
+    },
+    {
+     "jmeno": "Prokeš Radek",
+     "lkh": 52.1,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 183,
+     "turnaje": 8550
+    },
+    {
+     "jmeno": "Pavlát Radek",
+     "lkh": 27.4,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 140,
+     "turnaje": 600
+    },
+    {
+     "jmeno": "Bárta Daniel",
+     "lkh": 25.3,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 81,
+     "turnaje": null
+    },
+    {
+     "jmeno": "Murín Milan",
+     "lkh": 15.2,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 31,
+     "turnaje": 3200
+    }
+   ]
+  },
+  {
+   "nazev": "Horní Rozptyly Praha X",
+   "novy": false,
+   "lonska_liga": "1. liga A",
+   "transfers": {
+    "prisli": [],
+    "odesli": []
+   },
+   "hraci": [
+    {
+     "jmeno": "Kameník Tomáš",
+     "lkh": 64.7,
+     "kat": "D",
+     "liga": "3. liga L",
+     "legy": 87,
+     "turnaje": 4500
+    },
+    {
+     "jmeno": "Gutvirt Petr",
+     "lkh": 48.8,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 207,
+     "turnaje": 11450
+    },
+    {
+     "jmeno": "Kopecký Jiří",
+     "lkh": 48.3,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 223,
+     "turnaje": 350
+    },
+    {
+     "jmeno": "Přibyl Robert",
+     "lkh": 38.3,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 145,
+     "turnaje": 5400
+    },
+    {
+     "jmeno": "Dobiášovský Petr",
+     "lkh": 35.3,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 150,
+     "turnaje": null
+    },
+    {
+     "jmeno": "Hladík Tomáš",
+     "lkh": 34.3,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 76,
+     "turnaje": 1350
+    },
+    {
+     "jmeno": "Davídek David",
+     "lkh": 32.4,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 103,
+     "turnaje": 6650
+    },
+    {
+     "jmeno": "Murín Milan",
+     "lkh": 15.2,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 31,
+     "turnaje": 3200
+    }
+   ]
+  },
+  {
+   "nazev": "Hyeny Praha",
+   "novy": true,
+   "lonska_liga": "2. liga B",
+   "transfers": {
+    "prisli": [
+     "Jirkalová Milena"
+    ],
+    "odesli": []
+   },
+   "hraci": [
+    {
+     "jmeno": "Veselý Martin",
+     "lkh": 72.0,
+     "kat": "C",
+     "liga": "2. liga B",
+     "legy": 223,
+     "turnaje": 7000
+    },
+    {
+     "jmeno": "Dvořák Radek",
+     "lkh": 71.9,
+     "kat": "C",
+     "liga": "2. liga B",
+     "legy": 195,
+     "turnaje": 350
+    },
+    {
+     "jmeno": "Hocek Jakub",
+     "lkh": 67.0,
+     "kat": "C",
+     "liga": "2. liga B",
+     "legy": 205,
+     "turnaje": 450
+    },
+    {
+     "jmeno": "Vadocky Daniel",
+     "lkh": 64.2,
+     "kat": "C",
+     "liga": "2. liga B",
+     "legy": 144,
+     "turnaje": 9650
+    },
+    {
+     "jmeno": "Bubla Martin",
+     "lkh": 44.4,
+     "kat": "C",
+     "liga": "2. liga B",
+     "legy": 117,
+     "turnaje": 350
+    },
+    {
+     "jmeno": "Buršíková Tamara",
+     "lkh": 27.7,
+     "kat": "C",
+     "liga": "2. liga B",
+     "legy": 30,
+     "turnaje": 350
+    },
+    {
+     "jmeno": "Jirkalová Milena",
+     "lkh": null,
+     "kat": null,
+     "liga": null,
+     "legy": null,
+     "turnaje": 500
+    }
+   ]
+  },
+  {
+   "nazev": "I AM 180 Praha",
+   "novy": true,
+   "lonska_liga": "2. liga C",
+   "transfers": {
+    "prisli": [
+     "Tůma Marek"
+    ],
+    "odesli": []
+   },
+   "hraci": [
+    {
+     "jmeno": "Tůma Marek",
+     "lkh": 82.5,
+     "kat": "C",
+     "liga": "2. liga C",
+     "legy": 201,
+     "turnaje": null
+    },
+    {
+     "jmeno": "Skalický Michal",
+     "lkh": 77.1,
+     "kat": "C",
+     "liga": "2. liga C",
+     "legy": 199,
+     "turnaje": 13250
+    },
+    {
+     "jmeno": "Drlík Tomáš",
+     "lkh": 69.6,
+     "kat": "C",
+     "liga": "2. liga C",
+     "legy": 214,
+     "turnaje": 4750
+    },
+    {
+     "jmeno": "Stanko Jindřich",
+     "lkh": 63.4,
+     "kat": "C",
+     "liga": "2. liga C",
+     "legy": 215,
+     "turnaje": 4150
+    },
+    {
+     "jmeno": "Cirkovský Jaroslav",
+     "lkh": 54.4,
+     "kat": "C",
+     "liga": "2. liga C",
+     "legy": 228,
+     "turnaje": 5050
+    },
+    {
+     "jmeno": "Vokřálová Petra",
+     "lkh": 40.9,
+     "kat": "C",
+     "liga": "2. liga C",
+     "legy": 33,
+     "turnaje": 3150
+    },
+    {
+     "jmeno": "Mayer Marián",
+     "lkh": 38.4,
+     "kat": "C",
+     "liga": "2. liga C",
+     "legy": 37,
+     "turnaje": 900
+    },
+    {
+     "jmeno": "Šiman Martin",
+     "lkh": 35.9,
+     "kat": "C",
+     "liga": "2. liga C",
+     "legy": 54,
+     "turnaje": null
+    },
+    {
+     "jmeno": "Bečvář David",
+     "lkh": 9.3,
+     "kat": "C",
+     "liga": "2. liga C",
+     "legy": 27,
+     "turnaje": 2800
+    }
+   ]
+  },
+  {
+   "nazev": "Louže DC Praha",
+   "novy": true,
+   "lonska_liga": "2. liga A",
+   "transfers": {
+    "prisli": [
+     "Brzobohatý Jiří",
+     "Lang Jan"
+    ],
+    "odesli": [
+     "Smetana Miroslav"
+    ]
+   },
+   "hraci": [
+    {
+     "jmeno": "Jakl Antonín",
+     "lkh": 68.8,
+     "kat": "C",
+     "liga": "2. liga A",
+     "legy": 217,
+     "turnaje": null
+    },
+    {
+     "jmeno": "Dvořák Leoš",
+     "lkh": 59.5,
+     "kat": "C",
+     "liga": "2. liga A",
+     "legy": 217,
+     "turnaje": 900
+    },
+    {
+     "jmeno": "Dvořák Robert",
+     "lkh": 53.7,
+     "kat": "C",
+     "liga": "2. liga A",
+     "legy": 57,
+     "turnaje": null
+    },
+    {
+     "jmeno": "Janků Petr",
+     "lkh": 52.5,
+     "kat": "C",
+     "liga": "2. liga A",
+     "legy": 177,
+     "turnaje": null
+    },
+    {
+     "jmeno": "Jelínek Marek",
+     "lkh": 43.7,
+     "kat": "C",
+     "liga": "2. liga A",
+     "legy": 141,
+     "turnaje": null
+    },
+    {
+     "jmeno": "Brzobohatý Jiří",
+     "lkh": null,
+     "kat": null,
+     "liga": null,
+     "legy": null,
+     "turnaje": null
+    },
+    {
+     "jmeno": "Lang Jan",
+     "lkh": null,
+     "kat": null,
+     "liga": null,
+     "legy": null,
+     "turnaje": null
+    }
+   ]
+  },
+  {
+   "nazev": "Maniac Darts Praha",
+   "novy": true,
+   "lonska_liga": "2. liga D",
+   "transfers": {
+    "prisli": [],
+    "odesli": []
+   },
+   "hraci": [
+    {
+     "jmeno": "Smutný Jiří",
+     "lkh": 127.6,
+     "kat": "C",
+     "liga": "2. liga D",
+     "legy": 42,
+     "turnaje": null
+    },
+    {
+     "jmeno": "Šarman René",
+     "lkh": 77.7,
+     "kat": "C",
+     "liga": "2. liga D",
+     "legy": 250,
+     "turnaje": null
+    },
+    {
+     "jmeno": "Vopálka Martin",
+     "lkh": 72.9,
+     "kat": "C",
+     "liga": "2. liga D",
+     "legy": 91,
+     "turnaje": null
+    },
+    {
+     "jmeno": "Machač Ladislav",
+     "lkh": 57.5,
+     "kat": "C",
+     "liga": "2. liga D",
+     "legy": 230,
+     "turnaje": null
+    },
+    {
+     "jmeno": "Nečas Václav",
+     "lkh": 44.4,
+     "kat": "C",
+     "liga": "2. liga D",
+     "legy": 154,
+     "turnaje": null
+    },
+    {
+     "jmeno": "Zdražil Jan",
+     "lkh": 41.3,
+     "kat": "C",
+     "liga": "2. liga D",
+     "legy": 165,
+     "turnaje": null
+    },
+    {
+     "jmeno": "Hofinger Josef",
+     "lkh": 23.8,
+     "kat": "C",
+     "liga": "2. liga D",
+     "legy": 63,
+     "turnaje": null
+    }
+   ]
+  },
+  {
+   "nazev": "Nepřátelé bobří hráze Praha",
+   "novy": true,
+   "lonska_liga": "2. liga D",
+   "transfers": {
+    "prisli": [
+     "Fiala Stanislav",
+     "Kuča Jan"
+    ],
+    "odesli": [
+     "Maleček Ondřej",
+     "Vojík Vojtěch"
+    ]
+   },
+   "hraci": [
+    {
+     "jmeno": "Kuča Jan",
+     "lkh": 76.9,
+     "kat": "D",
+     "liga": "3. liga K",
+     "legy": 115,
+     "turnaje": 8750
+    },
+    {
+     "jmeno": "Štola Ondřej",
+     "lkh": 76.5,
+     "kat": "C",
+     "liga": "2. liga D",
+     "legy": 192,
+     "turnaje": 350
+    },
+    {
+     "jmeno": "Lébl Martin",
+     "lkh": 75.5,
+     "kat": "C",
+     "liga": "2. liga D",
+     "legy": 211,
+     "turnaje": null
+    },
+    {
+     "jmeno": "Dafčík Zdeněk",
+     "lkh": 56.7,
+     "kat": "C",
+     "liga": "2. liga D",
+     "legy": 114,
+     "turnaje": null
+    },
+    {
+     "jmeno": "Menšík Ladislav",
+     "lkh": 48.0,
+     "kat": "C",
+     "liga": "2. liga D",
+     "legy": 171,
+     "turnaje": null
+    },
+    {
+     "jmeno": "Dorko Miroslav",
+     "lkh": 39.6,
+     "kat": "C",
+     "liga": "2. liga D",
+     "legy": 27,
+     "turnaje": 250
+    },
+    {
+     "jmeno": "Fiala Stanislav",
+     "lkh": null,
+     "kat": null,
+     "liga": null,
+     "legy": null,
+     "turnaje": null
+    }
+   ]
+  },
+  {
+   "nazev": "Plzeňka Praha B",
+   "novy": false,
+   "lonska_liga": "1. liga A",
+   "transfers": {
+    "prisli": [],
+    "odesli": []
+   },
+   "hraci": [
+    {
+     "jmeno": "Hruška Petr",
+     "lkh": 72.9,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 206,
+     "turnaje": 8300
+    },
+    {
+     "jmeno": "Říha Josef",
+     "lkh": 71.9,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 227,
+     "turnaje": 2250
+    },
+    {
+     "jmeno": "Buřič Jan",
+     "lkh": 60.0,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 228,
+     "turnaje": 3300
+    },
+    {
+     "jmeno": "Lochner František",
+     "lkh": 44.4,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 54,
+     "turnaje": 3500
+    },
+    {
+     "jmeno": "Navrátil Zdeněk",
+     "lkh": 38.8,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 184,
+     "turnaje": null
+    },
+    {
+     "jmeno": "Key Jay",
+     "lkh": 33.4,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 29,
+     "turnaje": null
+    },
+    {
+     "jmeno": "Faltejsek Libor",
+     "lkh": 21.7,
+     "kat": "A",
+     "liga": "Extraliga VÝCHOD",
+     "legy": 6,
+     "turnaje": 2500
+    },
+    {
+     "jmeno": "Buřičová Hana",
+     "lkh": 2.5,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 4,
+     "turnaje": 1100
+    }
+   ]
+  },
+  {
+   "nazev": "Rychlý hroty Praha",
+   "novy": true,
+   "lonska_liga": "2. liga C",
+   "transfers": {
+    "prisli": [],
+    "odesli": [
+     "Rezek Adam"
+    ]
+   },
+   "hraci": [
+    {
+     "jmeno": "Fiala Václav",
+     "lkh": 66.0,
+     "kat": "C",
+     "liga": "2. liga C",
+     "legy": 213,
+     "turnaje": 350
+    },
+    {
+     "jmeno": "Ondrik Lubomír",
+     "lkh": 62.2,
+     "kat": "C",
+     "liga": "2. liga C",
+     "legy": 210,
+     "turnaje": 1800
+    },
+    {
+     "jmeno": "Houdek Oto",
+     "lkh": 59.0,
+     "kat": "C",
+     "liga": "2. liga C",
+     "legy": 205,
+     "turnaje": 450
+    },
+    {
+     "jmeno": "Mertl Michal",
+     "lkh": 48.3,
+     "kat": "C",
+     "liga": "2. liga C",
+     "legy": 60,
+     "turnaje": 1000
+    },
+    {
+     "jmeno": "Forman Bohumil",
+     "lkh": 44.9,
+     "kat": "C",
+     "liga": "2. liga C",
+     "legy": 71,
+     "turnaje": 5650
+    },
+    {
+     "jmeno": "Havlová Marie",
+     "lkh": 34.4,
+     "kat": "C",
+     "liga": "2. liga C",
+     "legy": 78,
+     "turnaje": 2250
+    },
+    {
+     "jmeno": "Šlehofr David",
+     "lkh": 13.2,
+     "kat": "C",
+     "liga": "2. liga C",
+     "legy": 65,
+     "turnaje": 4150
+    },
+    {
+     "jmeno": "Černohorský Miroslav",
+     "lkh": 1.7,
+     "kat": "C",
+     "liga": "2. liga C",
+     "legy": 6,
+     "turnaje": 350
+    }
+   ]
+  },
+  {
+   "nazev": "Sgt. Pepik's Band Praha B",
+   "novy": false,
+   "lonska_liga": "1. liga A",
+   "transfers": {
+    "prisli": [
+     "Krušina Lukáš"
+    ],
+    "odesli": []
+   },
+   "hraci": [
+    {
+     "jmeno": "Chuchel Martin",
+     "lkh": 72.4,
+     "kat": "D",
+     "liga": "3. liga C",
+     "legy": 108,
+     "turnaje": 5050
+    },
+    {
+     "jmeno": "Krušina Lukáš",
+     "lkh": 67.7,
+     "kat": "C",
+     "liga": "2. liga C",
+     "legy": 236,
+     "turnaje": 2450
+    },
+    {
+     "jmeno": "Hradský Pavel",
+     "lkh": 66.0,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 229,
+     "turnaje": null
+    },
+    {
+     "jmeno": "Kaněra Zdeněk",
+     "lkh": 64.7,
+     "kat": "D",
+     "liga": "3. liga B",
+     "legy": 116,
+     "turnaje": 9350
+    },
+    {
+     "jmeno": "Gaper Tomáš",
+     "lkh": 58.2,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 217,
+     "turnaje": 4700
+    },
+    {
+     "jmeno": "Rysová Karolína",
+     "lkh": 50.0,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 5,
+     "turnaje": null
+    },
+    {
+     "jmeno": "Siuda Daniel",
+     "lkh": 40.6,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 143,
+     "turnaje": 1600
+    },
+    {
+     "jmeno": "Hlavatý Tomáš",
+     "lkh": 35.0,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 76,
+     "turnaje": null
+    },
+    {
+     "jmeno": "Šnejdarová Jitka",
+     "lkh": 28.8,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 109,
+     "turnaje": 4050
+    }
+   ]
+  },
+  {
+   "nazev": "Šipky Kbely",
+   "novy": false,
+   "lonska_liga": "1. liga A",
+   "transfers": {
+    "prisli": [],
+    "odesli": [
+     "Nový Jan"
+    ]
+   },
+   "hraci": [
+    {
+     "jmeno": "Celler Miroslav",
+     "lkh": 68.2,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 226,
+     "turnaje": null
+    },
+    {
+     "jmeno": "Javornický Josef",
+     "lkh": 65.5,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 174,
+     "turnaje": 10950
+    },
+    {
+     "jmeno": "Stiborek David",
+     "lkh": 52.6,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 159,
+     "turnaje": 350
+    },
+    {
+     "jmeno": "Řepa Michal",
+     "lkh": 44.2,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 100,
+     "turnaje": 1300
+    },
+    {
+     "jmeno": "Vostárek Martin",
+     "lkh": 41.9,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 88,
+     "turnaje": null
+    },
+    {
+     "jmeno": "Zerzán Miloš",
+     "lkh": 38.9,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 171,
+     "turnaje": 2800
+    },
+    {
+     "jmeno": "Vent Lukáš",
+     "lkh": 33.8,
+     "kat": "D",
+     "liga": "3. liga K",
+     "legy": 121,
+     "turnaje": null
+    },
+    {
+     "jmeno": "Kučera Dušan",
+     "lkh": 33.8,
+     "kat": "B",
+     "liga": "1. liga A",
+     "legy": 8,
+     "turnaje": null
+    }
+   ]
+  }
+ ]
+}

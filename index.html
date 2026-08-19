@@ -19,10 +19,11 @@
 
 <nav id="menu" class="menu hidden">
   <button class="menuItem" data-view="zebricek">📊 Žebříček &amp; rozřazení A/B</button>
+  <button class="menuItem" data-view="rozpis">📅 Rozpis zápasů</button>
+  <button class="menuItem" data-view="souperi">🎯 Soupeři (scouting)</button>
   <button class="menuItem" data-view="pridat">➕ Přidat hráče (kandidáti)</button>
   <button class="menuItem" data-view="nastaveni">⚙️ Nastavení (váhy, korekce)</button>
   <button class="menuItem disabled" disabled>👤 Detail hráče = klikni na jméno v žebříčku</button>
-  <button class="menuItem disabled" disabled>🆚 Sestava vs. soupeř <span class="soon">brzy</span></button>
 </nav>
 <div id="scrim" class="scrim hidden"></div>
 
@@ -42,6 +43,22 @@
         </thead>
         <tbody id="rows"></tbody>
       </table>
+    </div>
+  </section>
+
+  <!-- VIEW: ROZPIS ZÁPASŮ -->
+  <section id="view-rozpis" class="view hidden">
+    <div class="card">
+      <div class="scout-head"><h2>Rozpis zápasů</h2><span class="hint2">1. liga A · 2026/27</span></div>
+      <div id="rozpisList" class="scout-list"></div>
+    </div>
+  </section>
+
+  <!-- VIEW: SOUPEŘI (scouting) -->
+  <section id="view-souperi" class="view hidden">
+    <div class="card">
+      <div class="scout-head"><h2>Týmy v lize</h2><span class="hint2">síla = LKH po lig. korekci</span></div>
+      <div id="souperiList" class="scout-list"></div>
     </div>
   </section>
 
@@ -124,6 +141,14 @@
     <div id="dH2H" class="dsection"></div>
     <div id="dHistory" class="dsection"></div>
     <p class="hint" id="dNote"></p>
+  </div>
+</div>
+
+<!-- DETAIL TÝMU / SOUPEŘE (otevře se z Rozpisu nebo Soupeřů) -->
+<div id="teamDetail" class="detail-overlay hidden">
+  <div class="detail-card">
+    <button id="teamDetailClose" class="detailClose" aria-label="zavřít">✕</button>
+    <div id="tdBody"></div>
   </div>
 </div>
 
