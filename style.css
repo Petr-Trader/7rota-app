@@ -165,3 +165,58 @@ td.name{cursor:pointer}
 .pchip.low{background:#fef3c7;color:#92400e} .pchip.high{background:#dcfce7;color:#0f766e}
 .td-tr{font-size:12.5px}
 .tr-l{padding:2px 0} .tr-l.in{color:#15803d;font-weight:600} .tr-l.out{color:var(--mut)}
+
+/* ---- SIMULÁTOR ZÁPASU ---- */
+.sim-eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--mut);font-weight:700;margin:12px 2px 7px}
+.sim-chips{display:flex;gap:8px;overflow-x:auto;padding:2px 2px 8px}
+.sim-chip{flex:none;background:var(--card);border:1px solid var(--line);border-radius:11px;padding:8px 10px;cursor:pointer;text-align:left;font:inherit;color:inherit;min-width:110px}
+.sim-chip.on{border-color:var(--teal);box-shadow:0 0 0 1px var(--teal)}
+.sc-d{display:block;font-size:11px;color:var(--mut)}
+.sc-o{display:block;font-size:13px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:1px;max-width:120px}
+.sc-ha{display:inline-block;font-size:10px;font-weight:800;padding:0 5px;border-radius:6px;margin-top:3px}
+.sc-ha.h{background:#dcfce7;color:#15803d} .sc-ha.a{background:#e0f2fe;color:#075985}
+.sim-pred{display:flex;align-items:center;gap:14px;margin-top:4px}
+.sim-psc{flex:none;text-align:center}
+.sim-psc .v{font-size:28px;font-weight:800;font-variant-numeric:tabular-nums}
+.sim-psc .l{font-size:10px;color:var(--mut);text-transform:uppercase}
+.sim-pbwrap{flex:1}
+.sim-pbar{height:24px;border-radius:8px;overflow:hidden;display:flex;font-size:11px;font-weight:800;color:#fff}
+.sim-pbar .w{background:var(--teal);display:flex;align-items:center;padding-left:8px;min-width:30px}
+.sim-pbar .t{background:var(--mut);display:flex;align-items:center;justify-content:center;min-width:18px}
+.sim-pbar .l{background:#b91c1c;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;min-width:30px}
+.sim-plab{display:flex;justify-content:space-between;font-size:11px;color:var(--mut);margin-top:3px}
+.sim-callout{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.sim-co{flex:1;min-width:150px;background:var(--bg);border-radius:9px;padding:8px 10px;font-size:12px}
+.sim-co b{display:block;font-size:11px;text-transform:uppercase;margin-bottom:1px}
+.sim-co.warn b{color:#dc2626} .sim-co.arm b{color:var(--a)}
+.sim-wt{margin-top:12px}
+.sim-wt label{display:flex;justify-content:space-between;font-size:12px;color:var(--mut);margin-bottom:2px}
+.sim-wt output{color:var(--teal);font-weight:600}
+.sim-wt input[type=range]{width:100%;accent-color:var(--teal)}
+.sim-cols{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sim-colh{font-size:12px;font-weight:800;margin-bottom:4px}
+.sim-colh.us{color:var(--teal)} .sim-colh.opp{color:var(--mut)}
+.sim-pl{display:flex;align-items:center;gap:7px;padding:6px 2px;border-bottom:1px solid var(--line);cursor:pointer;user-select:none}
+.sim-pl:last-child{border-bottom:0}
+.sim-pl.off{opacity:.42}
+.sim-cb{flex:none;width:17px;height:17px;border-radius:5px;border:1.5px solid var(--line);display:grid;place-items:center;font-size:11px;color:#fff}
+.sim-pl.on .sim-cb{background:var(--teal);border-color:var(--teal)}
+.sim-pi{flex:1;min-width:0}
+.sim-pn{display:block;font-size:12.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sim-ps{display:flex;align-items:center;gap:5px;font-size:10px;color:var(--mut)}
+.sim-src{font-size:8.5px;font-weight:700;padding:0 3px;border-radius:3px;background:var(--bg);color:var(--mut)}
+.sim-src.liga{background:#fef3c7;color:#92400e}
+.sim-fdot{width:6px;height:6px;border-radius:50%;display:inline-block}
+.sim-pr{flex:none;font-size:14px;font-weight:800;font-variant-numeric:tabular-nums}
+.sim-gwrap{overflow-x:auto}
+table.sim-grid{border-collapse:collapse;width:100%;font-size:11px}
+table.sim-grid th,table.sim-grid td{padding:4px 3px;text-align:center;border:1px solid var(--line)}
+table.sim-grid th{font-weight:700;color:var(--mut);font-size:10px}
+table.sim-grid th.sim-corner{background:var(--bg)}
+table.sim-grid td.sim-g{font-weight:800;font-variant-numeric:tabular-nums;color:#fff}
+table.sim-grid .sim-rn{text-align:left;font-weight:700;font-size:10.5px;white-space:nowrap;max-width:78px;overflow:hidden;text-overflow:ellipsis}
+.sim-legend{font-size:11px;color:var(--mut);margin-top:8px;display:flex;gap:12px;flex-wrap:wrap}
+.sim-legend i{display:inline-block;width:11px;height:11px;border-radius:3px;vertical-align:-1px;margin-right:3px}
+.sim-dbl{font-size:13px;margin-top:2px}
+.sim-dbl-r{padding:3px 0}
+.sim-pstr{color:var(--teal);font-weight:700;font-size:12px}

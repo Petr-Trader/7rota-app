@@ -406,6 +406,14 @@ function bind() {
   $('teamDetailClose').onclick = closeTeam;
   $('teamDetail').onclick = e => { if (e.target.id === 'teamDetail') closeTeam(); };
 
+  // simulátor — váha turnaj/liga
+  const swt = $('simWT');
+  if (swt) {
+    const lab = () => { $('simWTout').textContent = `${Math.round(simWT * 100)}% turnaj / ${Math.round((1 - simWT) * 100)}% liga`; };
+    swt.value = simWT; lab();
+    swt.oninput = e => { simWT = +e.target.value; lab(); renderSim(); };
+  }
+
   // předvolby
   document.querySelectorAll('.preset').forEach(b => b.onclick = () => applyPreset(b.dataset.p));
 }
@@ -665,14 +673,110 @@ function renderScout() {
   if (scoutTeam != null && !$('teamDetail').classList.contains('hidden')) renderTeamDetail();
 }
 
+// ================= SIMULÁTOR ZÁPASU =================
+// Predikce z BLENDU: turnajový rating (rt, recency-vážený z 64k zápasů) + ligové
+// LKH-implikované (rl). Váha simWT laditelná sliderem (0=jen liga, 1=jen turnaj).
+let SIM = null, simMatch = 0, simSel = { us: new Set(), opp: new Set() }, simWT = 0.5;
+const simWp = (ra, rb) => 1 / (1 + Math.pow(10, (rb - ra) / 400));
+function effR(h) {
+  if (h.rt != null && h.rl != null) return Math.round(simWT * h.rt + (1 - simWT) * h.rl);
+  return h.rt != null ? h.rt : h.rl;
+}
+const simFcol = (f) => f == null ? 'var(--mut)' : f >= 60 ? 'var(--a)' : f <= 40 ? '#dc2626' : '#b8791a';
+const simShort = (n) => ('' + n).split(' ')[0];
+const simNorm = (s) => ('' + s).replace(/\s*Praha\s*/g, ' ').replace(/\s+/g, ' ').trim().toLowerCase();
+const simUsTeam = () => SIM.teams.find(t => t.us);
+const simOppTeam = () => SIM.teams.find(t => simNorm(t.n) === simNorm(SIM.rozpis[simMatch].s));
+const simRated = (team) => team.hraci.filter(h => effR(h) != null);
+function simInitSel() {
+  const top = (team) => simRated(team).slice().sort((a, b) => effR(b) - effR(a)).slice(0, 4).map(h => h.j);
+  simSel.us = new Set(top(simUsTeam())); simSel.opp = new Set(top(simOppTeam()));
+}
+const simChosen = (team, who) => simRated(team).filter(h => simSel[who].has(h.j)).sort((a, b) => effR(b) - effR(a)).slice(0, 4);
+
+function renderSimChips() {
+  const box = $('simChips'); if (!box || !SIM) return;
+  box.innerHTML = SIM.rozpis.map((m, i) => {
+    const dm = m.dt.split('.');
+    return `<button class="sim-chip${i === simMatch ? ' on' : ''}" data-i="${i}">
+      <span class="sc-d">${m.den} ${dm[0]}.${dm[1]}.</span>
+      <span class="sc-o">${escH(m.s)}</span>
+      <span class="sc-ha ${m.doma ? 'h' : 'a'}">${m.doma ? 'DOMA' : 'VENKU'}</span></button>`;
+  }).join('');
+  box.querySelectorAll('.sim-chip').forEach(c => c.onclick = () => { simMatch = +c.dataset.i; simInitSel(); renderSim(); });
+}
+function simPlayerRow(h, who) {
+  const on = simSel[who].has(h.j), r = effR(h);
+  const conf = h.rt != null ? 'N' + h.eN : 'z ligy';
+  return `<div class="sim-pl${on ? ' on' : ' off'}" data-who="${who}" data-j="${escH(h.j)}">
+    <span class="sim-cb">${on ? '✓' : ''}</span>
+    <span class="sim-pi"><span class="sim-pn">${escH(h.j)}</span>
+      <span class="sim-ps"><span class="sim-src${h.rt != null ? '' : ' liga'}">${conf}</span>${h.f != null ? `<span class="sim-fdot" style="background:${simFcol(h.f)}"></span>${h.f}%` : ''}</span></span>
+    <span class="sim-pr">${r == null ? '–' : r}</span></div>`;
+}
+function renderSimLineups() {
+  const opp = simOppTeam();
+  $('simOppName').textContent = '🔴 ' + opp.n.replace(' Praha', '');
+  $('simUs').innerHTML = simRated(simUsTeam()).sort((a, b) => effR(b) - effR(a)).map(h => simPlayerRow(h, 'us')).join('');
+  $('simOpp').innerHTML = simRated(opp).sort((a, b) => effR(b) - effR(a)).map(h => simPlayerRow(h, 'opp')).join('');
+  document.querySelectorAll('.sim-pl').forEach(p => p.onclick = () => {
+    const w = p.dataset.who, j = p.dataset.j; simSel[w].has(j) ? simSel[w].delete(j) : simSel[w].add(j); renderSim();
+  });
+}
+const simGcol = (p) => p >= 55 ? `rgba(21,128,61,${0.4 + (p - 55) / 110})` : p <= 45 ? `rgba(220,38,38,${0.4 + (45 - p) / 110})` : 'var(--mut)';
+function renderSimGrid() {
+  const us = simChosen(simUsTeam(), 'us'), opp = simChosen(simOppTeam(), 'opp'), g = $('simGrid');
+  if (!us.length || !opp.length) { g.innerHTML = `<tr><td class="sim-rn">Vyber aspoň 1 hráče na každé straně.</td></tr>`; return; }
+  let h = `<tr><th class="sim-corner">my / soupeř</th>${opp.map(o => `<th>${escH(simShort(o.j))}</th>`).join('')}</tr>`;
+  us.forEach(u => { h += `<tr><td class="sim-rn">${escH(simShort(u.j))}</td>` + opp.map(o => { const p = Math.round(simWp(effR(u), effR(o)) * 100); return `<td class="sim-g" style="background:${simGcol(p)}">${p}</td>`; }).join('') + `</tr>`; });
+  g.innerHTML = h;
+}
+function simPoisson(ps) { let d = [1]; for (const p of ps) { const nd = new Array(d.length + 1).fill(0); for (let i = 0; i < d.length; i++) { nd[i] += d[i] * (1 - p); nd[i + 1] += d[i] * p; } d = nd; } return d; }
+function renderSimPred() {
+  const us = simChosen(simUsTeam(), 'us'), opp = simChosen(simOppTeam(), 'opp'), box = $('simPred');
+  if (us.length < 1 || opp.length < 1) { box.innerHTML = '<p class="hint">Vyber hráče v sestavách níže.</p>'; return; }
+  const sp = []; us.forEach(u => opp.forEach(o => sp.push(simWp(effR(u), effR(o)))));
+  const uP = us.slice(0, 2).reduce((s, x) => s + effR(x), 0) / Math.min(2, us.length);
+  const oP = opp.slice(0, 2).reduce((s, x) => s + effR(x), 0) / Math.min(2, opp.length);
+  const all = sp.concat([simWp(uP, oP), simWp(uP, oP)]);
+  const exp = all.reduce((s, x) => s + x, 0), tot = all.length, dist = simPoisson(all), half = tot / 2;
+  let pw = 0, pt = 0, pl = 0; dist.forEach((v, i) => { i > half ? pw += v : i === half ? pt += v : pl += v; });
+  const W = Math.round(pw * 100), T = Math.round(pt * 100), L = Math.round(pl * 100);
+  const oppTop = opp[0]; let best = { p: -1 }; us.forEach(u => opp.forEach(o => { const p = simWp(effR(u), effR(o)); if (p > best.p) best = { p, u: u.j, o: o.j }; }));
+  box.innerHTML = `<div class="sim-pred">
+    <div class="sim-psc"><div class="v">${exp.toFixed(1)}<span style="color:var(--mut)">:</span>${(tot - exp).toFixed(1)}</div><div class="l">očekávané skóre / ${tot}</div></div>
+    <div class="sim-pbwrap"><div class="sim-pbar"><div class="w" style="width:${W}%">${W > 12 ? W + '%' : ''}</div><div class="t" style="width:${T}%">${T > 8 ? T + '%' : ''}</div><div class="l" style="width:${L}%">${L > 12 ? L + '%' : ''}</div></div>
+      <div class="sim-plab"><span>výhra</span><span>remíza</span><span>prohra</span></div></div></div>
+    <div class="sim-callout">
+      <div class="sim-co warn"><b>⚠️ Pozor na</b>${escH(oppTop.j)} · ${effR(oppTop)}${oppTop.f != null ? ` · forma ${oppTop.f}%` : ''}</div>
+      <div class="sim-co arm"><b>💪 Naše zbraň</b>${escH(simShort(best.u))} vs ${escH(simShort(best.o))} · ${Math.round(best.p * 100)}% pro nás</div></div>`;
+}
+function renderSimDoubles() {
+  const box = $('simDoubles'); if (!box) return; const us = simChosen(simUsTeam(), 'us');
+  if (us.length < 4) { box.innerHTML = '<div class="hint" style="margin-top:10px">Pro návrh dvojic vyber 4 hráče v naší sestavě.</div>'; return; }
+  const [d1, d2, d3, d4] = us;
+  const pair = (x, y) => `${escH(simShort(x.j))} + ${escH(simShort(y.j))} <span class="sim-pstr">~${Math.round((effR(x) + effR(y)) / 2)}</span>`;
+  box.innerHTML = `<div class="sim-eyebrow" style="margin-top:14px">Doporučené dvojice (dle pravidel)</div>
+    <div class="sim-dbl"><div class="sim-dbl-r"><b>501:</b> ${pair(d1, d2)} · ${pair(d3, d4)}</div>
+    <div class="sim-dbl-r"><b>Cricket:</b> ${pair(d1, d3)} · ${pair(d2, d4)}</div></div>
+    <p class="hint">Páry dle rotace UŠO (501: D1+D2 / D3+D4, Cricket: D1+D3 / D2+D4). Síla = průměr ratingu; souhra dvojic se zatím nemodeluje.</p>`;
+}
+function renderSim() {
+  if (!SIM) return;
+  renderSimChips(); renderSimLineups(); renderSimGrid(); renderSimPred(); renderSimDoubles();
+}
+
 async function init() {
   DATA = await (await fetch('players.json', { cache: 'no-store' })).json();
   LIGA_INDEX = await fetch('liga_index.json').then(r => r.ok ? r.json() : {}).catch(() => ({}));
   TEAM_HISTORY = await fetch('team_history.json').then(r => r.ok ? r.json() : {}).catch(() => ({}));
   SCOUT = await fetch('scout.json').then(r => r.ok ? r.json() : null).catch(() => null);
+  SIM = await fetch('sim_data.json').then(r => r.ok ? r.json() : null).catch(() => null);
+  if (SIM && SIM.wT_default != null) simWT = SIM.wT_default;
   params = loadParams(); overrides = loadOverrides();
   $('meta').textContent = `${DATA.players.length} hráčů · A-tým ${DATA.a_team_size}`;
   syncControls(); bind(); bindSearch(); render(); renderCandidates();
+  if (SIM) { simInitSel(); renderSim(); }
   // deep-link: ?p=<jmeno> otevre profil (pro sdilene odkazy)
   const pq = new URLSearchParams(location.search).get('p');
   if (pq && LAST[pq]) openDetail(pq);

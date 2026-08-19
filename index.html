@@ -21,6 +21,7 @@
   <button class="menuItem" data-view="zebricek">📊 Žebříček &amp; rozřazení A/B</button>
   <button class="menuItem" data-view="rozpis">📅 Rozpis zápasů</button>
   <button class="menuItem" data-view="souperi">🎯 Soupeři (scouting)</button>
+  <button class="menuItem" data-view="simulator">🎲 Simulátor zápasu</button>
   <button class="menuItem" data-view="pridat">➕ Přidat hráče (kandidáti)</button>
   <button class="menuItem" data-view="nastaveni">⚙️ Nastavení (váhy, korekce)</button>
   <button class="menuItem disabled" disabled>👤 Detail hráče = klikni na jméno v žebříčku</button>
@@ -59,6 +60,32 @@
     <div class="card">
       <div class="scout-head"><h2>Týmy v lize</h2><span class="hint2">síla = LKH po lig. korekci</span></div>
       <div id="souperiList" class="scout-list"></div>
+    </div>
+  </section>
+
+  <!-- VIEW: SIMULÁTOR ZÁPASU -->
+  <section id="view-simulator" class="view hidden">
+    <div class="card">
+      <div class="scout-head"><h2>Simulátor zápasu</h2><span class="hint2">predikce z ratingu</span></div>
+      <div class="sim-eyebrow">Vyber zápas</div>
+      <div id="simChips" class="sim-chips"></div>
+      <div id="simPred"></div>
+      <div class="sim-wt"><label>Váha ratingu: <output id="simWTout"></output></label>
+        <input type="range" id="simWT" min="0" max="1" step="0.1"></div>
+    </div>
+    <div class="card">
+      <div class="sim-eyebrow">Sestavy <span class="hint2">(ťukni = přehoď hráče)</span></div>
+      <div class="sim-cols">
+        <div><div class="sim-colh us">🟢 My</div><div id="simUs"></div></div>
+        <div><div class="sim-colh opp" id="simOppName">Soupeř</div><div id="simOpp"></div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="sim-eyebrow">Souboje 1v1 (šance našich)</div>
+      <div class="sim-gwrap"><table class="sim-grid" id="simGrid"></table></div>
+      <div class="sim-legend"><span><i style="background:var(--a)"></i>naše výhoda</span> <span><i style="background:var(--mut)"></i>vyrovnané</span> <span><i style="background:#dc2626"></i>jejich výhoda</span></div>
+      <div id="simDoubles"></div>
+      <p class="hint">Číslo v buňce = % šance našeho hráče (řádek) porazit jejich (sloupec). Rating = blend turnajové síly (64k zápasů, 3,75 roku, recency-vážené) + ligového LKH; posuvník mění poměr. Zjednodušený model (16 singlů + 2 čtyřhry, bez náhradníků) — na porovnání sestav.</p>
     </div>
   </section>
 
