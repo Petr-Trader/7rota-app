@@ -2,7 +2,7 @@
  "season": "2026/27",
  "league": "1. liga A",
  "klub": "Sedmá rota Praha",
- "generated": "2026-08-19",
+ "generated": "2026-08-20",
  "rozpis": [
   {
    "k": 1,
@@ -288,7 +288,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 53,
-     "turnaje": 6350
+     "turnaje": 6550
     },
     {
      "jmeno": "Hamšík Robert",
@@ -304,7 +304,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 97,
-     "turnaje": 8800
+     "turnaje": 9250
     },
     {
      "jmeno": "Procházka Lubomír",
@@ -1101,7 +1101,7 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 78,
-     "turnaje": 2250
+     "turnaje": 2600
     },
     {
      "jmeno": "Šlehofr David",
