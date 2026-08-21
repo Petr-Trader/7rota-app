@@ -2,7 +2,7 @@
  "season": "2026/27",
  "league": "1. liga A",
  "klub": "Sedmá rota Praha",
- "generated": "2026-08-20",
+ "generated": "2026-08-21",
  "rozpis": [
   {
    "k": 1,
@@ -1093,7 +1093,7 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 71,
-     "turnaje": 5650
+     "turnaje": 6500
     },
     {
      "jmeno": "Havlová Marie",
@@ -1138,7 +1138,7 @@
      "kat": "D",
      "liga": "3. liga C",
      "legy": 108,
-     "turnaje": 5050
+     "turnaje": 5800
     },
     {
      "jmeno": "Krušina Lukáš",
@@ -1170,7 +1170,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 217,
-     "turnaje": 4700
+     "turnaje": 5850
     },
     {
      "jmeno": "Rysová Karolína",
