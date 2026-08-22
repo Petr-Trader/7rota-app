@@ -2,7 +2,7 @@
  "season": "2026/27",
  "league": "1. liga A",
  "klub": "Sedmá rota Praha",
- "generated": "2026-08-21",
+ "generated": "2026-08-22",
  "rozpis": [
   {
    "k": 1,
@@ -280,7 +280,7 @@
      "kat": "D",
      "liga": "3. liga N",
      "legy": 126,
-     "turnaje": 8550
+     "turnaje": 8650
     },
     {
      "jmeno": "Majerčin David",
@@ -500,7 +500,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 183,
-     "turnaje": 8550
+     "turnaje": 9050
     },
     {
      "jmeno": "Pavlát Radek",
@@ -705,7 +705,7 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 214,
-     "turnaje": 4750
+     "turnaje": 5300
     },
     {
      "jmeno": "Stanko Jindřich",
@@ -721,7 +721,7 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 228,
-     "turnaje": 5050
+     "turnaje": 5300
     },
     {
      "jmeno": "Vokřálová Petra",
@@ -729,7 +729,7 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 33,
-     "turnaje": 3150
+     "turnaje": 3400
     },
     {
      "jmeno": "Mayer Marián",
@@ -1085,7 +1085,7 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 60,
-     "turnaje": 1000
+     "turnaje": 1750
     },
     {
      "jmeno": "Forman Bohumil",
