@@ -2,7 +2,7 @@
  "season": "2026/27",
  "league": "1. liga A",
  "klub": "Sedmá rota Praha",
- "generated": "2026-08-22",
+ "generated": "2026-08-23",
  "rozpis": [
   {
    "k": 1,
@@ -407,7 +407,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 112,
-     "turnaje": 8850
+     "turnaje": 9250
     },
     {
      "jmeno": "Henner Martin",
@@ -415,7 +415,7 @@
      "kat": "D",
      "liga": "3. liga N",
      "legy": 170,
-     "turnaje": 7550
+     "turnaje": 7650
     },
     {
      "jmeno": "Shíbal Petr",
@@ -447,7 +447,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 129,
-     "turnaje": 6500
+     "turnaje": 7350
     }
    ]
   },
@@ -620,7 +620,7 @@
      "kat": "C",
      "liga": "2. liga B",
      "legy": 223,
-     "turnaje": 7000
+     "turnaje": 7650
     },
     {
      "jmeno": "Dvořák Radek",
@@ -628,7 +628,7 @@
      "kat": "C",
      "liga": "2. liga B",
      "legy": 195,
-     "turnaje": 350
+     "turnaje": 2250
     },
     {
      "jmeno": "Hocek Jakub",
@@ -697,7 +697,7 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 199,
-     "turnaje": 13250
+     "turnaje": 13850
     },
     {
      "jmeno": "Drlík Tomáš",
@@ -984,7 +984,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 206,
-     "turnaje": 8300
+     "turnaje": 9250
     },
     {
      "jmeno": "Říha Josef",
@@ -1008,7 +1008,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 54,
-     "turnaje": 3500
+     "turnaje": 4150
     },
     {
      "jmeno": "Navrátil Zdeněk",
@@ -1040,7 +1040,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 4,
-     "turnaje": 1100
+     "turnaje": 1450
     }
    ]
   },
@@ -1202,7 +1202,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 109,
-     "turnaje": 4050
+     "turnaje": 4600
     }
    ]
   },
