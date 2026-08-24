@@ -2,7 +2,7 @@
  "season": "2026/27",
  "league": "1. liga A",
  "klub": "Sedmá rota Praha",
- "generated": "2026-08-23",
+ "generated": "2026-08-24",
  "rozpis": [
   {
    "k": 1,
@@ -583,7 +583,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 76,
-     "turnaje": 1350
+     "turnaje": 1900
     },
     {
      "jmeno": "Davídek David",
@@ -917,7 +917,7 @@
      "kat": "D",
      "liga": "3. liga K",
      "legy": 115,
-     "turnaje": 8750
+     "turnaje": 9050
     },
     {
      "jmeno": "Štola Ondřej",
@@ -1138,7 +1138,7 @@
      "kat": "D",
      "liga": "3. liga C",
      "legy": 108,
-     "turnaje": 5800
+     "turnaje": 6600
     },
     {
      "jmeno": "Krušina Lukáš",
@@ -1170,7 +1170,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 217,
-     "turnaje": 5850
+     "turnaje": 6350
     },
     {
      "jmeno": "Rysová Karolína",
@@ -1202,7 +1202,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 109,
-     "turnaje": 4600
+     "turnaje": 4850
     }
    ]
   },
