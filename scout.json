@@ -2,7 +2,7 @@
  "season": "2026/27",
  "league": "1. liga A",
  "klub": "Sedmá rota Praha",
- "generated": "2026-08-26",
+ "generated": "2026-08-27",
  "rozpis": [
   {
    "k": 1,
@@ -272,7 +272,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 165,
-     "turnaje": 13450
+     "turnaje": 13650
     },
     {
      "jmeno": "Zbořil Karel",
@@ -343,7 +343,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 208,
-     "turnaje": 9150
+     "turnaje": 10650
     },
     {
      "jmeno": "Kopač Miroslav",
@@ -551,7 +551,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 207,
-     "turnaje": 11450
+     "turnaje": 13150
     },
     {
      "jmeno": "Kopecký Jiří",
@@ -1231,7 +1231,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 174,
-     "turnaje": 10950
+     "turnaje": 11850
     },
     {
      "jmeno": "Stiborek David",
@@ -1263,7 +1263,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 171,
-     "turnaje": 2800
+     "turnaje": 3500
     },
     {
      "jmeno": "Vent Lukáš",
