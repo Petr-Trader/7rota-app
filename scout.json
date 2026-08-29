@@ -2,7 +2,7 @@
  "season": "2026/27",
  "league": "1. liga A",
  "klub": "Sedmá rota Praha",
- "generated": "2026-08-28",
+ "generated": "2026-08-29",
  "rozpis": [
   {
    "k": 1,
@@ -431,7 +431,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 213,
-     "turnaje": 4000
+     "turnaje": 4400
     },
     {
      "jmeno": "Pfleger Michal",
@@ -447,7 +447,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 129,
-     "turnaje": 7350
+     "turnaje": 7850
     }
    ]
   },
@@ -591,7 +591,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 103,
-     "turnaje": 7350
+     "turnaje": 7850
     },
     {
      "jmeno": "Murín Milan",
@@ -903,7 +903,8 @@
    "transfers": {
     "prisli": [
      "Fiala Stanislav",
-     "Kuča Jan"
+     "Kuča Jan",
+     "Reichman Jakub"
     ],
     "odesli": [
      "Maleček Ondřej",
@@ -961,6 +962,14 @@
     },
     {
      "jmeno": "Fiala Stanislav",
+     "lkh": null,
+     "kat": null,
+     "liga": null,
+     "legy": null,
+     "turnaje": null
+    },
+    {
+     "jmeno": "Reichman Jakub",
      "lkh": null,
      "kat": null,
      "liga": null,
@@ -1032,7 +1041,7 @@
      "kat": "A",
      "liga": "Extraliga VÝCHOD",
      "legy": 6,
-     "turnaje": 2500
+     "turnaje": 3400
     },
     {
      "jmeno": "Buřičová Hana",
