@@ -2,7 +2,7 @@
  "season": "2026/27",
  "league": "1. liga A",
  "klub": "Sedmá rota Praha",
- "generated": "2026-08-31",
+ "generated": "2026-09-01",
  "rozpis": [
   {
    "k": 1,
@@ -468,7 +468,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 188,
-     "turnaje": 12400
+     "turnaje": 12500
     },
     {
      "jmeno": "Nemeš Jan",
@@ -476,7 +476,7 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 183,
-     "turnaje": 11600
+     "turnaje": 12000
     },
     {
      "jmeno": "Linek Adam",
@@ -492,7 +492,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 136,
-     "turnaje": 8000
+     "turnaje": 8200
     },
     {
      "jmeno": "Prokeš Radek",
@@ -524,7 +524,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 31,
-     "turnaje": 4100
+     "turnaje": 4350
     }
    ]
   },
@@ -599,7 +599,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 31,
-     "turnaje": 4100
+     "turnaje": 4350
     }
    ]
   },
@@ -680,7 +680,9 @@
     "prisli": [
      "Tůma Marek"
     ],
-    "odesli": []
+    "odesli": [
+     "Skalický Michal"
+    ]
    },
    "hraci": [
     {
@@ -690,14 +692,6 @@
      "liga": "2. liga C",
      "legy": 201,
      "turnaje": null
-    },
-    {
-     "jmeno": "Skalický Michal",
-     "lkh": 77.1,
-     "kat": "C",
-     "liga": "2. liga C",
-     "legy": 199,
-     "turnaje": 15750
     },
     {
      "jmeno": "Drlík Tomáš",
