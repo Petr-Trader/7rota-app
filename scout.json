@@ -2,7 +2,7 @@
  "season": "2026/27",
  "league": "1. liga A",
  "klub": "Sedmá rota Praha",
- "generated": "2026-09-01",
+ "generated": "2026-09-02",
  "rozpis": [
   {
    "k": 1,
@@ -407,7 +407,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 112,
-     "turnaje": 10950
+     "turnaje": 11400
     },
     {
      "jmeno": "Henner Martin",
@@ -447,7 +447,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 129,
-     "turnaje": 7850
+     "turnaje": 8200
     }
    ]
   },
@@ -551,7 +551,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 207,
-     "turnaje": 13150
+     "turnaje": 13900
     },
     {
      "jmeno": "Kopecký Jiří",
@@ -758,6 +758,7 @@
    "transfers": {
     "prisli": [
      "Brzobohatý Jiří",
+     "Jelínek David",
      "Lang Jan"
     ],
     "odesli": [
@@ -807,6 +808,14 @@
     },
     {
      "jmeno": "Brzobohatý Jiří",
+     "lkh": null,
+     "kat": null,
+     "liga": null,
+     "legy": null,
+     "turnaje": null
+    },
+    {
+     "jmeno": "Jelínek David",
      "lkh": null,
      "kat": null,
      "liga": null,
