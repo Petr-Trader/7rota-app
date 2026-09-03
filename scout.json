@@ -2,7 +2,7 @@
  "season": "2026/27",
  "league": "1. liga A",
  "klub": "Sedmá rota Praha",
- "generated": "2026-09-02",
+ "generated": "2026-09-03",
  "rozpis": [
   {
    "k": 1,
@@ -272,7 +272,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 165,
-     "turnaje": 14450
+     "turnaje": 15500
     },
     {
      "jmeno": "Zbořil Karel",
@@ -280,7 +280,7 @@
      "kat": "D",
      "liga": "3. liga N",
      "legy": 126,
-     "turnaje": 9750
+     "turnaje": 10400
     },
     {
      "jmeno": "Majerčin David",
@@ -304,7 +304,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 97,
-     "turnaje": 9250
+     "turnaje": 10100
     },
     {
      "jmeno": "Procházka Lubomír",
@@ -320,7 +320,7 @@
      "kat": null,
      "liga": null,
      "legy": null,
-     "turnaje": null
+     "turnaje": 750
     }
    ],
    "us": true
@@ -415,7 +415,7 @@
      "kat": "D",
      "liga": "3. liga N",
      "legy": 170,
-     "turnaje": 9150
+     "turnaje": 9700
     },
     {
      "jmeno": "Shíbal Petr",
