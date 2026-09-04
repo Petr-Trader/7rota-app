@@ -2,7 +2,7 @@
  "season": "2026/27",
  "league": "1. liga A",
  "klub": "Sedmá rota Praha",
- "generated": "2026-09-03",
+ "generated": "2026-09-04",
  "rozpis": [
   {
    "k": 1,
@@ -272,7 +272,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 165,
-     "turnaje": 15500
+     "turnaje": 16150
     },
     {
      "jmeno": "Zbořil Karel",
@@ -367,7 +367,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 217,
-     "turnaje": 9550
+     "turnaje": 10400
     },
     {
      "jmeno": "Novák David",
@@ -439,7 +439,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 223,
-     "turnaje": 12050
+     "turnaje": 12500
     },
     {
      "jmeno": "Korčáková Renáta",
@@ -644,7 +644,7 @@
      "kat": "C",
      "liga": "2. liga B",
      "legy": 144,
-     "turnaje": 9650
+     "turnaje": 10500
     },
     {
      "jmeno": "Bubla Martin",
@@ -707,7 +707,7 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 215,
-     "turnaje": 5250
+     "turnaje": 5800
     },
     {
      "jmeno": "Cirkovský Jaroslav",
@@ -715,7 +715,7 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 228,
-     "turnaje": 6800
+     "turnaje": 7550
     },
     {
      "jmeno": "Vokřálová Petra",
@@ -723,7 +723,7 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 33,
-     "turnaje": 4300
+     "turnaje": 4750
     },
     {
      "jmeno": "Mayer Marián",
@@ -1182,7 +1182,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 217,
-     "turnaje": 6350
+     "turnaje": 7200
     },
     {
      "jmeno": "Rysová Karolína",
