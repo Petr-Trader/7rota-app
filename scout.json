@@ -2,7 +2,7 @@
  "season": "2026/27",
  "league": "1. liga A",
  "klub": "Sedmá rota Praha",
- "generated": "2026-09-04",
+ "generated": "2026-09-05",
  "rozpis": [
   {
    "k": 1,
@@ -280,7 +280,7 @@
      "kat": "D",
      "liga": "3. liga N",
      "legy": 126,
-     "turnaje": 10400
+     "turnaje": 10750
     },
     {
      "jmeno": "Majerčin David",
@@ -439,7 +439,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 223,
-     "turnaje": 12500
+     "turnaje": 12850
     },
     {
      "jmeno": "Korčáková Renáta",
@@ -591,7 +591,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 103,
-     "turnaje": 7850
+     "turnaje": 8900
     },
     {
      "jmeno": "Murín Milan",
