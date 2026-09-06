@@ -925,9 +925,15 @@ function renderSimClutch() {
       <td class="cl-vs ${wpc}">${wp != null ? wp + '%' : ''}</td>
       <td class="cl-opp">${o ? escH(simShort(o.j)) + ` <span class="cl-r">${effR(o)}</span>` : '–'} <span class="cl-mvs">${up}${dn}</span></td></tr>`;
   }
+  const subs = us.slice(4).filter(Boolean);
+  const worst = [];
+  for (let i = 0; i < 4; i++) { const u = us[i], o = opp[i]; if (u && o) worst.push({ g: [18, 17, 16, 15][i], p: Math.round(simWp(effR(u), effR(o)) * 100) }); }
+  const wg = worst.filter(x => x.p < 45).sort((a, b) => a.p - b.p)[0];
+  const subNote = `<div class="sub-note">💡 <b>Legální trik „silní na konec" (pravidla I.19-21):</b> odhalení sestav je simultánní (nereaguješ předem), ale během zápasu smíš hráče <b>vystřídat</b> dovnitř na pozdější singly jeho pozice — až uvidíš jejich sestavu na kříži. Cíl: dostat našeho silného proti jejich slabšímu v rozhodující hře. Vystřídaný se vrací jen na svou pozici.${wg ? ` <b>Dnes:</b> hra ${wg.g} je nevýhodná (${wg.p} %) — tam zvaž střídání, až uvidíš, koho postaví.` : ''}${subs.length ? ` Náhradníci: ${subs.map(s => simShort(s.j)).join(', ')}.` : ''}</div>`;
   box.innerHTML = `<div class="sim-eyebrow" style="margin-top:14px">🔑 Rozhodující souboje (pozdní hry 15-18)</div>
     <p class="hint" style="margin:2px 0 6px">Naše pozice vs jejich pozice v rozhodujících hrách (% = šance našeho). Soupeře řadím dle síly na jejich rozhodující pozice; <b>▲▼ u soupeře</b> přehodíš, když znáš/odhadneš jejich sestavu.</p>
-    <table class="cl-tbl"><thead><tr><th>Hra</th><th>My</th><th>%</th><th>Soupeř</th></tr></thead><tbody>${rows}</tbody></table>`;
+    <table class="cl-tbl"><thead><tr><th>Hra</th><th>My</th><th>%</th><th>Soupeř</th></tr></thead><tbody>${rows}</tbody></table>
+    ${subNote}`;
   box.querySelectorAll('.cl-mv').forEach(b => b.onclick = () => {
     const i = +b.dataset.i, j = b.dataset.d === 'up' ? i - 1 : i + 1;
     const arr = opp.map(h => h.j);[arr[i], arr[j]] = [arr[j], arr[i]];

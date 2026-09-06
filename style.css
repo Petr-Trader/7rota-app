@@ -293,3 +293,6 @@ table.sim-grid .sim-rn{text-align:left;font-weight:700;font-size:10.5px;white-sp
 .cl-vs.cl-t{color:var(--mut)}
 .cl-mvs{white-space:nowrap;display:inline-block}
 .cl-mv{background:var(--bg);border:1px solid var(--line);border-radius:5px;width:22px;height:22px;font-size:10px;cursor:pointer;color:var(--txt);padding:0;margin-left:1px}
+a.menuItem{display:block;text-decoration:none;color:inherit;box-sizing:border-box}
+.sub-note{margin-top:8px;font-size:12px;background:rgba(29,78,216,.06);border:1px solid var(--line);border-radius:8px;padding:8px 10px;line-height:1.5}
+.sub-note b{color:var(--b)}
