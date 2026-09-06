@@ -677,6 +677,8 @@ function renderScout() {
 // Predikce z BLENDU: turnajový rating (rt, recency-vážený z 64k zápasů) + ligové
 // LKH-implikované (rl). Váha simWT laditelná sliderem (0=jen liga, 1=jen turnaj).
 let SIM = null, simMatch = 0, simSel = { us: new Set(), opp: new Set() }, simWT = 0.5;
+let simTactic = 'A';   // A=clutch (silni na konec), B=rychly start, C=zkusenost (osvedceni do ohne)
+let simOrder = null;   // rucni override poradi (pole jmen); null = auto dle taktiky
 const simWp = (ra, rb) => 1 / (1 + Math.pow(10, (rb - ra) / 400));
 function effR(h) {
   if (h.rt != null && h.rl != null) return Math.round(simWT * h.rt + (1 - simWT) * h.rl);
@@ -759,40 +761,92 @@ function renderSimPred() {
       <div class="sim-co warn"><b>⚠️ Pozor na</b>${escH(oppTop.j)} · ${effR(oppTop)}${oppTop.f != null ? ` · forma ${oppTop.f}%` : ''}</div>
       <div class="sim-co arm"><b>💪 Naše zbraň</b>${escH(simShort(best.u))} vs ${escH(simShort(best.o))} · ${Math.round(best.p * 100)}% pro nás</div></div>`;
 }
+// F3: optimalizace paru na double + cricket (2 parove hry). Enumeruje rozdeleni top-4 do 2 paru.
 function renderSimDoubles() {
-  const box = $('simDoubles'); if (!box) return; const us = simChosen(simUsTeam(), 'us');
-  if (us.length < 4) { box.innerHTML = '<div class="hint" style="margin-top:10px">Pro návrh dvojic vyber 4 hráče v naší sestavě.</div>'; return; }
-  const [d1, d2, d3, d4] = us;
-  const pair = (x, y) => `${escH(simShort(x.j))} + ${escH(simShort(y.j))} <span class="sim-pstr">~${Math.round((effR(x) + effR(y)) / 2)}</span>`;
-  box.innerHTML = `<div class="sim-eyebrow" style="margin-top:14px">Doporučené dvojice (dle pravidel)</div>
-    <div class="sim-dbl"><div class="sim-dbl-r"><b>501:</b> ${pair(d1, d2)} · ${pair(d3, d4)}</div>
-    <div class="sim-dbl-r"><b>Cricket:</b> ${pair(d1, d3)} · ${pair(d2, d4)}</div></div>
-    <p class="hint">Páry dle rotace UŠO (501: D1+D2 / D3+D4, Cricket: D1+D3 / D2+D4). Síla = průměr ratingu; souhra dvojic se zatím nemodeluje.</p>`;
+  const box = $('simDoubles'); if (!box) return;
+  const us = simChosen(simUsTeam(), 'us'), opp = simChosen(simOppTeam(), 'opp');
+  if (us.length < 2) { box.innerHTML = '<div class="hint" style="margin-top:10px">Pro páry vyber aspoň 2 hráče v naší sestavě.</div>'; return; }
+  const oppPairR = opp.length >= 2 ? (effR(opp[0]) + effR(opp[1])) / 2 : (opp.length ? effR(opp[0]) : 1200);
+  const pr = (x, y) => (effR(x) + effR(y)) / 2;
+  const wp = (x, y) => Math.round(simWp(pr(x, y), oppPairR) * 100);
+  const nm = (x, y) => `${escH(simShort(x.j))} + ${escH(simShort(y.j))} <span class="sim-pstr">~${Math.round(pr(x, y))} · ${wp(x, y)}%</span>`;
+  const p = us.slice(0, 4);
+  let bal = null;
+  if (p.length >= 4) {
+    [[[0, 1], [2, 3]], [[0, 2], [1, 3]], [[0, 3], [1, 2]]].forEach(sp => {
+      const exp = simWp(pr(p[sp[0][0]], p[sp[0][1]]), oppPairR) + simWp(pr(p[sp[1][0]], p[sp[1][1]]), oppPairR);
+      if (!bal || exp > bal.exp) bal = { exp, a: [p[sp[0][0]], p[sp[0][1]]], b: [p[sp[1][0]], p[sp[1][1]]] };
+    });
+  }
+  box.innerHTML = `<div class="sim-eyebrow" style="margin-top:14px">Optimalizace párů (double + cricket)</div>
+    <div class="sim-dbl">
+      ${bal ? `<div class="sim-dbl-r"><b>⚖️ Vyvážené (max. součet výher):</b><br>${nm(bal.a[0], bal.a[1])}<br>${nm(bal.b[0], bal.b[1])}</div>` : ''}
+      ${p.length >= 2 ? `<div class="sim-dbl-r" style="margin-top:7px"><b>💪 Silný pár (urvi 1 jistě):</b><br>${nm(p[0], p[1])}${p.length >= 4 ? `<br><span class="hint2">druhý pár:</span> ${nm(p[2], p[3])}` : ''}</div>` : ''}
+    </div>
+    <p class="hint">% = šance páru porazit jejich průměrný pár (~${Math.round(oppPairR)}). <b>Vyvážené</b> = rozdělí sílu, maximalizuje očekávaný součet obou párovek. <b>Silný pár</b> = 2 nejsilnější spolu (jistota jedné výhry, druhá slabší). Síla = průměr ratingu; souhra se zatím nemodeluje.</p>`;
 }
-// F3: doporucena sestava — dostupni hraci na pozice tak, aby nejsilnejsi hrali pozdni rozhodujici hry.
+// F3 taktiky: skore, dle ktereho hraci dostavaji rozhodujici pozice.
+const TACTICS = {
+  A: { nm: 'Rating', desc: 'Nejsilnější dle ratingu jdou na rozhodující pozdní hry.' },
+  B: { nm: 'Forma', desc: 'Váží aktuální formu — kdo je teď rozehraný, jde do rozhodujících her.' },
+  C: { nm: 'Zkušenost', desc: 'Osvědčení do ohně: nováčky (bez ligy / malý vzorek) posune z rozhodujících her, ať se zapracují v raných.' },
+};
+function tacScore(h) {
+  const base = effR(h);
+  if (base == null) return -1e9;
+  if (simTactic === 'B') return base + (h.f != null ? (h.f - 50) * 2.5 : 0);
+  if (simTactic === 'C') {
+    let pen = 0;
+    if (h.rl == null) pen += 70;                 // nema ligove LKH = novy/nejisty
+    if (h.rt == null) pen += 40;                 // nehraje turnaje = maly vzorek
+    if (h.eN != null && h.eN < 12) pen += 35;    // maly turnajovy vzorek
+    return base - pen;
+  }
+  return base;
+}
+// F3: doporucena sestava — dostupni na pozice dle taktiky, nejlepsi -> pozdni rozhodujici hry + rucni override (sipky).
 function renderSimRec() {
   const box = $('simRec'); if (!box || !SIM) return;
-  const us = simRated(simUsTeam()).filter(h => simSel.us.has(h.j)).sort((a, b) => effR(b) - effR(a));
+  const avail = simRated(simUsTeam()).filter(h => simSel.us.has(h.j));
   const pg = posGames(), away = !(SIM.rozpis[simMatch] && SIM.rozpis[simMatch].doma), side = away ? 'H' : 'D';
-  if (us.length < 1) {
+  if (avail.length < 1) {
     box.innerHTML = `<div class="sim-eyebrow" style="margin-top:14px">📋 Doporučená sestava</div>
       <p class="hint">Ťukni na naše hráče výše = kdo dnes hraje. Z dostupných ti sestavím pozice.</p>`;
     return;
   }
-  const posOrder = [4, 3, 2, 1];  // nejsilnejsi -> pozice 4 (posledni hra 18), pak 3 (17), 2 (16), 1 (15)
+  const auto = avail.slice().sort((a, b) => tacScore(b) - tacScore(a));
+  const order = simOrder
+    ? simOrder.map(j => avail.find(h => h.j === j)).filter(Boolean).concat(auto.filter(h => !simOrder.includes(h.j)))
+    : auto;
+  const posOrder = [4, 3, 2, 1];  // nejlepsi slot -> pozice 4 (posledni hra 18)
+  const tabs = Object.entries(TACTICS).map(([k, t]) =>
+    `<button class="tac-btn${simTactic === k ? ' on' : ''}" data-tac="${k}">${t.nm}</button>`).join('');
   let rows = '';
-  us.forEach((h, i) => {
+  order.forEach((h, i) => {
     const core = i < 4, pos = core ? posOrder[i] : i + 1;
     const games = core ? pg[pos] : null, lastG = games ? games[games.length - 1] : null;
     const gtxt = games ? games.map(g => DECISIVE.has(g) ? `<b class="rec-dec">${g}</b>` : g).join(' · ')
       : '<span class="rec-subnote">čtyřhry + střídání</span>';
+    const up = i > 0 ? `<button class="rec-mv" data-mv="up" data-i="${i}">▲</button>` : '<span class="rec-mvx"></span>';
+    const dn = i < order.length - 1 ? `<button class="rec-mv" data-mv="dn" data-i="${i}">▼</button>` : '<span class="rec-mvx"></span>';
     rows += `<tr class="${core ? 'rec-core' : 'rec-sub'}"><td class="rec-pos">${side}${pos}</td>
-      <td class="rec-nm">${escH(simShort(h.j))} <span class="rec-r">${effR(h)}</span>${core && DECISIVE.has(lastG) ? `<span class="rec-badge">🔑 hra ${lastG}</span>` : ''}</td>
-      <td class="rec-g">${gtxt}</td></tr>`;
+      <td class="rec-nm">${escH(simShort(h.j))} <span class="rec-r">${effR(h)}${h.f != null ? ` · ${h.f}%` : ''}</span>${core && DECISIVE.has(lastG) ? `<span class="rec-badge">🔑 hra ${lastG}</span>` : ''}</td>
+      <td class="rec-g">${gtxt}</td><td class="rec-mvwrap">${up}${dn}</td></tr>`;
   });
-  box.innerHTML = `<div class="sim-eyebrow" style="margin-top:14px">📋 Doporučená sestava <span class="hint2">(${us.length} hráčů · ${away ? 'venku' : 'doma'})</span></div>
-    <p class="hint" style="margin:4px 0 8px">Nejsilnější dostupní na pozice, jejichž poslední hra je nejpozději — tví nejlepší rozhodují konec utkání. Jádro 1-4 hraje singly, náhradníci čtyřhry + střídání.</p>
-    <table class="rec-tbl"><thead><tr><th>Poz</th><th>Hráč (rating)</th><th>Singly hry</th></tr></thead><tbody>${rows}</tbody></table>`;
+  box.innerHTML = `<div class="sim-eyebrow" style="margin-top:14px">📋 Doporučená sestava <span class="hint2">(${avail.length} hráčů · ${away ? 'venku' : 'doma'})</span></div>
+    <div class="tac-row">${tabs}${simOrder ? '<button class="tac-btn reset" data-tac="_reset">↺ auto</button>' : ''}</div>
+    <p class="hint" style="margin:2px 0 8px">${TACTICS[simTactic].desc} Nejlepší → pozice s nejpozdější (rozhodující) hrou. Šipkami ▲▼ přehodíš ručně.</p>
+    <table class="rec-tbl"><thead><tr><th>Poz</th><th>Hráč (rating · forma)</th><th>Singly hry</th><th></th></tr></thead><tbody>${rows}</tbody></table>`;
+  box.querySelectorAll('.tac-btn').forEach(b => b.onclick = () => {
+    const t = b.dataset.tac;
+    if (t === '_reset') simOrder = null; else { simTactic = t; simOrder = null; }
+    renderSim();
+  });
+  box.querySelectorAll('.rec-mv').forEach(b => b.onclick = () => {
+    const i = +b.dataset.i, j = b.dataset.mv === 'up' ? i - 1 : i + 1;
+    const arr = order.map(h => h.j);[arr[i], arr[j]] = [arr[j], arr[i]];
+    simOrder = arr; renderSim();
+  });
 }
 function renderSim() {
   if (!SIM) return;
