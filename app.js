@@ -394,6 +394,7 @@ function bind() {
     const v = b.dataset.view;
     document.querySelectorAll('.view').forEach(s => s.classList.toggle('hidden', s.id !== 'view-' + v));
     toggleMenu(false);
+    if (v === 'archiv') renderArchiv();
   });
 
   // detail hráče
@@ -836,7 +837,8 @@ function renderSimRec() {
   box.innerHTML = `<div class="sim-eyebrow" style="margin-top:14px">📋 Doporučená sestava <span class="hint2">(${avail.length} hráčů · ${away ? 'venku' : 'doma'})</span></div>
     <div class="tac-row">${tabs}${simOrder ? '<button class="tac-btn reset" data-tac="_reset">↺ auto</button>' : ''}</div>
     <p class="hint" style="margin:2px 0 8px">${TACTICS[simTactic].desc} Nejlepší → pozice s nejpozdější (rozhodující) hrou. Šipkami ▲▼ přehodíš ručně.</p>
-    <table class="rec-tbl"><thead><tr><th>Poz</th><th>Hráč (rating · forma)</th><th>Singly hry</th><th></th></tr></thead><tbody>${rows}</tbody></table>`;
+    <table class="rec-tbl"><thead><tr><th>Poz</th><th>Hráč (rating · forma)</th><th>Singly hry</th><th></th></tr></thead><tbody>${rows}</tbody></table>
+    <button id="simSaveBtn" class="save-btn">💾 Uložit sestavu do archivu</button>`;
   box.querySelectorAll('.tac-btn').forEach(b => b.onclick = () => {
     const t = b.dataset.tac;
     if (t === '_reset') simOrder = null; else { simTactic = t; simOrder = null; }
@@ -847,10 +849,63 @@ function renderSimRec() {
     const arr = order.map(h => h.j);[arr[i], arr[j]] = [arr[j], arr[i]];
     simOrder = arr; renderSim();
   });
+  const sb = $('simSaveBtn'); if (sb) sb.onclick = saveLineup;
 }
 function renderSim() {
   if (!SIM) return;
   renderSimChips(); renderSimLineups(); renderSimRec(); renderSimGrid(); renderSimPred(); renderSimDoubles();
+}
+
+// ===== ARCHIV SESTAV (ulozeni F3 sestavy + vysledek zapasu, localStorage) =====
+const ARCHIV_KEY = '7rota-archiv';
+function loadArchiv() { try { return JSON.parse(localStorage.getItem(ARCHIV_KEY) || '[]'); } catch { return []; } }
+function saveArchiv(a) { try { localStorage.setItem(ARCHIV_KEY, JSON.stringify(a)); } catch { } }
+function saveLineup() {
+  if (!SIM) return;
+  const m = SIM.rozpis[simMatch];
+  const avail = simRated(simUsTeam()).filter(h => simSel.us.has(h.j));
+  const auto = avail.slice().sort((a, b) => tacScore(b) - tacScore(a));
+  const order = simOrder ? simOrder.map(j => avail.find(h => h.j === j)).filter(Boolean).concat(auto.filter(h => !simOrder.includes(h.j))) : auto;
+  const away = !m.doma, side = away ? 'H' : 'D', posOrder = [4, 3, 2, 1];
+  const lineup = order.map((h, i) => { const core = i < 4; return { pos: side + (core ? posOrder[i] : i + 1), jmeno: h.j, rating: effR(h), core }; });
+  const arr = loadArchiv();
+  arr.unshift({ id: Date.now(), date: m.datum || m.dt, souper: m.souper || m.s, doma: m.doma, tactic: simTactic, lineup, saved_at: new Date().toISOString(), result: null });
+  saveArchiv(arr);
+  const btn = $('simSaveBtn'); if (btn) { btn.textContent = '✓ Uloženo do archivu'; btn.disabled = true; setTimeout(renderSimRec, 1600); }
+}
+function renderArchiv() {
+  const box = $('archivList'); if (!box) return;
+  const arr = loadArchiv();
+  if (!arr.length) { box.innerHTML = '<p class="hint">Zatím nic uloženého. V Simulátoru → Doporučená sestava dej „💾 Uložit sestavu", a po zápase sem zadáš výsledek.</p>'; return; }
+  const stat = {};
+  arr.forEach(a => { if (a.result && a.result.vysledek) { const t = a.tactic; (stat[t] = stat[t] || { V: 0, P: 0, R: 0 })[a.result.vysledek]++; } });
+  let statHtml = Object.entries(stat).map(([t, s]) => {
+    const n = s.V + s.P + s.R; return `<span class="arch-stat">${(TACTICS[t] || {}).nm || t}: ${s.V}–${s.P}${s.R ? '–' + s.R : ''} <b>${Math.round(s.V / n * 100)}%</b></span>`;
+  }).join('');
+  const short = (n) => ('' + n).split(' ')[0];
+  const rows = arr.map(a => {
+    const r = a.result;
+    const lu = a.lineup.map(p => `<span class="${p.core ? 'arch-core' : 'arch-sub'}">${p.pos} ${escH(short(p.jmeno))}</span>`).join(' ');
+    const res = r ? `<div class="arch-res ${r.vysledek === 'V' ? 'w' : r.vysledek === 'P' ? 'l' : 't'}"><b>${r.vysledek === 'V' ? '✅ Výhra' : r.vysledek === 'P' ? '❌ Prohra' : '➖ Remíza'}</b>${r.skore ? ' ' + escH(r.skore) : ''}${r.poznamka ? ' · ' + escH(r.poznamka) : ''} <button class="arch-clr" data-id="${a.id}">upravit</button></div>`
+      : `<div class="arch-entry">Výsledek: <button class="arch-rbtn" data-id="${a.id}" data-r="V">✅ Výhra</button><button class="arch-rbtn" data-id="${a.id}" data-r="P">❌ Prohra</button><button class="arch-rbtn" data-id="${a.id}" data-r="R">➖ Remíza</button></div>`;
+    return `<div class="arch-item"><div class="arch-head"><b>${escH(a.souper)}</b> <span class="hint2">${a.date} · ${a.doma ? 'doma' : 'venku'} · ${(TACTICS[a.tactic] || {}).nm || a.tactic}</span><button class="arch-del" data-id="${a.id}">✕</button></div>
+      <div class="arch-lu">${lu}</div>${res}</div>`;
+  }).join('');
+  box.innerHTML = (statHtml ? `<div class="arch-stats"><span class="hint2">Úspěšnost taktik:</span> ${statHtml}</div>` : '') + rows;
+  box.querySelectorAll('.arch-rbtn').forEach(b => b.onclick = () => {
+    const skore = prompt('Skóre (např. 10:8) — nepovinné:') || '';
+    const poznamka = prompt('Poznámka (nepovinné):') || '';
+    const a = loadArchiv(), it = a.find(x => x.id == b.dataset.id);
+    if (it) { it.result = { vysledek: b.dataset.r, skore: skore.trim(), poznamka: poznamka.trim() }; saveArchiv(a); renderArchiv(); }
+  });
+  box.querySelectorAll('.arch-clr').forEach(b => b.onclick = () => {
+    const a = loadArchiv(), it = a.find(x => x.id == b.dataset.id);
+    if (it) { it.result = null; saveArchiv(a); renderArchiv(); }
+  });
+  box.querySelectorAll('.arch-del').forEach(b => b.onclick = () => {
+    if (!confirm('Smazat tento záznam z archivu?')) return;
+    saveArchiv(loadArchiv().filter(x => x.id != b.dataset.id)); renderArchiv();
+  });
 }
 
 async function init() {
