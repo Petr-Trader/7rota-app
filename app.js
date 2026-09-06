@@ -680,7 +680,8 @@ function renderScout() {
 let SIM = null, simMatch = 0, simSel = { us: new Set(), opp: new Set() }, simWT = 0.5;
 let OPP_POS = {};   // profil pozicovani souperu z lonskych zapasu (kdo hraje kterou pozici)
 let simTactic = 'A';   // A=clutch (silni na konec), B=rychly start, C=zkusenost (osvedceni do ohne)
-let simOrder = null;   // rucni override poradi (pole jmen); null = auto dle taktiky
+let simOrder = null;   // rucni override naseho poradi (pole jmen); null = auto dle taktiky
+let simOppOrder = null; // rucni override souperova poradi (pole jmen); null = auto dle ratingu
 const simWp = (ra, rb) => 1 / (1 + Math.pow(10, (rb - ra) / 400));
 function effR(h) {
   if (h.rt != null && h.rl != null) return Math.round(simWT * h.rt + (1 - simWT) * h.rl);
@@ -697,6 +698,7 @@ function simInitSel() {
   // F3: nasi = vsichni dostupni (odskrtnutim = "dnes nehraje"); souper = predpokladane jadro 4
   simSel.us = new Set(simRated(simUsTeam()).map(h => h.j));
   simSel.opp = new Set(top(simOppTeam()));
+  simOrder = null; simOppOrder = null;  // zmena zapasu -> zrus rucni prehozeni
 }
 // F3 rozpis: pozice -> singly hry (kanonicky z 156 realnych zapisu, 100% konzistentni).
 // Domaci (D) a hoste (H) maji jine PORADI her, ale POSLEDNI hra pozice je stejna: pos1->15..pos4->18.
@@ -883,9 +885,44 @@ function renderSimOppProfile() {
     <div class="op-tbl">${posRows}</div>
     <p class="hint">Kdo loni hrával kterou pozici (× kolikrát) + konzistence pozice. ${p.predvidatelnost < 15 ? '<b>Hodně rotují</b> → těžko odhadnout, koho dají do rozhodujících pozdních her; drž se svojí strategie.' : 'Docela stálí → jejich rozhodující pozice se dají odhadnout.'} Znáš-li jejich dnešní sestavu, naklikej ji nahoře u „Soupeř".</p>`;
 }
+// F3: rozhodujici souboje pozdnich her — nase pozice vs jejich pozice (games 15-18 = poz i vs poz i).
+function orderedSide(team, sel, ord, tactic) {
+  const avail = simRated(team).filter(h => sel.has(h.j));
+  const auto = avail.slice().sort((a, b) => (tactic ? tacScore(b) - tacScore(a) : effR(b) - effR(a)));
+  return ord ? ord.map(j => avail.find(h => h.j === j)).filter(Boolean).concat(auto.filter(h => !ord.includes(h.j))) : auto;
+}
+function renderSimClutch() {
+  const box = $('simClutch'); if (!box || !SIM) return;
+  const us = orderedSide(simUsTeam(), simSel.us, simOrder, true);
+  const opp = orderedSide(simOppTeam(), simSel.opp, simOppOrder, false);
+  if (us.length < 1 || opp.length < 1) { box.innerHTML = ''; return; }
+  const away = !SIM.rozpis[simMatch].doma, usSide = away ? 'H' : 'D', oppSide = away ? 'D' : 'H';
+  const posOrder = [4, 3, 2, 1], games = [18, 17, 16, 15];  // order[i] -> pos posOrder[i] -> rozhodujici hra games[i]
+  let rows = '';
+  for (let i = 0; i < 4; i++) {
+    const u = us[i], o = opp[i];
+    if (!u && !o) continue;
+    const wp = (u && o) ? Math.round(simWp(effR(u), effR(o)) * 100) : null;
+    const wpc = wp == null ? '' : wp >= 55 ? 'cl-w' : wp <= 45 ? 'cl-l' : 'cl-t';
+    const up = i > 0 ? `<button class="cl-mv" data-i="${i}" data-d="up">▲</button>` : '';
+    const dn = i < Math.min(3, opp.length - 1) ? `<button class="cl-mv" data-i="${i}" data-d="dn">▼</button>` : '';
+    rows += `<tr><td class="cl-g">hra ${games[i]}<br><span class="cl-pp">${usSide}${posOrder[i]}·${oppSide}${posOrder[i]}</span></td>
+      <td class="cl-us">${u ? escH(simShort(u.j)) + ` <span class="cl-r">${effR(u)}</span>` : '–'}</td>
+      <td class="cl-vs ${wpc}">${wp != null ? wp + '%' : ''}</td>
+      <td class="cl-opp">${o ? escH(simShort(o.j)) + ` <span class="cl-r">${effR(o)}</span>` : '–'} <span class="cl-mvs">${up}${dn}</span></td></tr>`;
+  }
+  box.innerHTML = `<div class="sim-eyebrow" style="margin-top:14px">🔑 Rozhodující souboje (pozdní hry 15-18)</div>
+    <p class="hint" style="margin:2px 0 6px">Naše pozice vs jejich pozice v rozhodujících hrách (% = šance našeho). Soupeře řadím dle síly na jejich rozhodující pozice; <b>▲▼ u soupeře</b> přehodíš, když znáš/odhadneš jejich sestavu.</p>
+    <table class="cl-tbl"><thead><tr><th>Hra</th><th>My</th><th>%</th><th>Soupeř</th></tr></thead><tbody>${rows}</tbody></table>`;
+  box.querySelectorAll('.cl-mv').forEach(b => b.onclick = () => {
+    const i = +b.dataset.i, j = b.dataset.d === 'up' ? i - 1 : i + 1;
+    const arr = opp.map(h => h.j);[arr[i], arr[j]] = [arr[j], arr[i]];
+    simOppOrder = arr; renderSim();
+  });
+}
 function renderSim() {
   if (!SIM) return;
-  renderSimChips(); renderSimLineups(); renderSimOppProfile(); renderSimRec(); renderSimGrid(); renderSimPred(); renderSimDoubles();
+  renderSimChips(); renderSimLineups(); renderSimOppProfile(); renderSimRec(); renderSimClutch(); renderSimGrid(); renderSimPred(); renderSimDoubles();
 }
 
 // ===== ARCHIV SESTAV (ulozeni F3 sestavy + vysledek zapasu, localStorage) =====
