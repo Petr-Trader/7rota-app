@@ -688,7 +688,7 @@ const simFcol = (f) => f == null ? 'var(--mut)' : f >= 60 ? 'var(--a)' : f <= 40
 const simShort = (n) => ('' + n).split(' ')[0];
 const simNorm = (s) => ('' + s).replace(/\s*Praha\s*/g, ' ').replace(/\s+/g, ' ').trim().toLowerCase();
 const simUsTeam = () => SIM.teams.find(t => t.us);
-const simOppTeam = () => SIM.teams.find(t => simNorm(t.n) === simNorm(SIM.rozpis[simMatch].s));
+const simOppTeam = () => { const m = SIM.rozpis[simMatch]; return SIM.teams.find(t => simNorm(t.n) === simNorm(m.souper || m.s)); };
 const simRated = (team) => team.hraci.filter(h => effR(h) != null);
 function simInitSel() {
   const top = (team) => simRated(team).slice().sort((a, b) => effR(b) - effR(a)).slice(0, 4).map(h => h.j);
@@ -707,10 +707,10 @@ const simChosen = (team, who) => simRated(team).filter(h => simSel[who].has(h.j)
 function renderSimChips() {
   const box = $('simChips'); if (!box || !SIM) return;
   box.innerHTML = SIM.rozpis.map((m, i) => {
-    const dm = m.dt.split('.');
+    const dm = String(m.datum || m.dt || '').split('.');
     return `<button class="sim-chip${i === simMatch ? ' on' : ''}" data-i="${i}">
       <span class="sc-d">${m.den} ${dm[0]}.${dm[1]}.</span>
-      <span class="sc-o">${escH(m.s)}</span>
+      <span class="sc-o">${escH(m.souper || m.s)}</span>
       <span class="sc-ha ${m.doma ? 'h' : 'a'}">${m.doma ? 'DOMA' : 'VENKU'}</span></button>`;
   }).join('');
   box.querySelectorAll('.sim-chip').forEach(c => c.onclick = () => { simMatch = +c.dataset.i; simInitSel(); renderSim(); });
