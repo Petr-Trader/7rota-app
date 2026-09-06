@@ -678,6 +678,7 @@ function renderScout() {
 // Predikce z BLENDU: turnajový rating (rt, recency-vážený z 64k zápasů) + ligové
 // LKH-implikované (rl). Váha simWT laditelná sliderem (0=jen liga, 1=jen turnaj).
 let SIM = null, simMatch = 0, simSel = { us: new Set(), opp: new Set() }, simWT = 0.5;
+let OPP_POS = {};   // profil pozicovani souperu z lonskych zapasu (kdo hraje kterou pozici)
 let simTactic = 'A';   // A=clutch (silni na konec), B=rychly start, C=zkusenost (osvedceni do ohne)
 let simOrder = null;   // rucni override poradi (pole jmen); null = auto dle taktiky
 const simWp = (ra, rb) => 1 / (1 + Math.pow(10, (rb - ra) / 400));
@@ -851,9 +852,40 @@ function renderSimRec() {
   });
   const sb = $('simSaveBtn'); if (sb) sb.onclick = saveLineup;
 }
+// F3: profil pozicovani souperu (kdo loni hrava kterou pozici + jak jsou predvidatelni).
+function oppProfile() {
+  const m = SIM.rozpis[simMatch], target = simNorm(m.souper || m.s);
+  const key = Object.keys(OPP_POS).find(k => simNorm(k) === target);
+  return key ? OPP_POS[key] : null;
+}
+function renderSimOppProfile() {
+  const box = $('simOppProfile'); if (!box || !SIM) return;
+  const p = oppProfile();
+  if (!p) {
+    box.innerHTML = `<div class="sim-eyebrow" style="margin-top:14px">🕵️ Jak soupeř staví sestavu</div>
+      <p class="hint">Z loňska nemám jeho pozicování — nový tým v 1. lize A (přišel z nižší soutěže). Naskáče po pár odehraných zápasech sezóny.</p>`;
+    return;
+  }
+  const sig = p.signal === 'predvidatelni' ? '<span class="op-sig p">✅ Předvídatelní</span>'
+    : p.signal === 'dost meni' ? '<span class="op-sig m">◐ Dost mění</span>'
+    : '<span class="op-sig t">🎲 Hodně rotují (možná taktizují)</span>';
+  // ratingy souperovych hracu (stejna skala jako nasi) — z sim_data
+  const opp = simOppTeam(), rmap = {};
+  if (opp) opp.hraci.forEach(h => { rmap[h.j.trim()] = effR(h); });
+  const rtxt = (name) => { const r = rmap[name.trim()]; return r != null ? `<span class="op-r">${r}</span>` : ''; };
+  const posRows = ['1', '2', '3', '4'].map(pos => {
+    const arr = (p.pozice || {})[pos] || [];
+    const pls = arr.map(x => `${escH(x.h.split(' ')[0])} ${rtxt(x.h)} <span class="op-n">${x.n}×</span>`).join(' · ');
+    return `<div class="op-prow"><span class="op-pos">poz ${pos}</span><span class="op-pl">${pls || '—'}</span><span class="op-k">${(p.konzistence || {})[pos] || 0}%</span></div>`;
+  }).join('');
+  box.innerHTML = `<div class="sim-eyebrow" style="margin-top:14px">🕵️ Jak soupeř staví sestavu <span class="hint2">(${p.zapasu} loňských zápasů)</span></div>
+    <div class="op-head">${sig} <span class="hint2">stejné jádro jen ${p.predvidatelnost}% zápasů</span></div>
+    <div class="op-tbl">${posRows}</div>
+    <p class="hint">Kdo loni hrával kterou pozici (× kolikrát) + konzistence pozice. ${p.predvidatelnost < 15 ? '<b>Hodně rotují</b> → těžko odhadnout, koho dají do rozhodujících pozdních her; drž se svojí strategie.' : 'Docela stálí → jejich rozhodující pozice se dají odhadnout.'} Znáš-li jejich dnešní sestavu, naklikej ji nahoře u „Soupeř".</p>`;
+}
 function renderSim() {
   if (!SIM) return;
-  renderSimChips(); renderSimLineups(); renderSimRec(); renderSimGrid(); renderSimPred(); renderSimDoubles();
+  renderSimChips(); renderSimLineups(); renderSimOppProfile(); renderSimRec(); renderSimGrid(); renderSimPred(); renderSimDoubles();
 }
 
 // ===== ARCHIV SESTAV (ulozeni F3 sestavy + vysledek zapasu, localStorage) =====
@@ -914,6 +946,7 @@ async function init() {
   TEAM_HISTORY = await fetch('team_history.json').then(r => r.ok ? r.json() : {}).catch(() => ({}));
   SCOUT = await fetch('scout.json').then(r => r.ok ? r.json() : null).catch(() => null);
   SIM = await fetch('sim_data.json').then(r => r.ok ? r.json() : null).catch(() => null);
+  OPP_POS = await fetch('opp_positioning.json').then(r => r.ok ? r.json() : {}).catch(() => ({}));
   if (SIM && SIM.wT_default != null) simWT = SIM.wT_default;
   params = loadParams(); overrides = loadOverrides();
   $('meta').textContent = `${DATA.players.length} hráčů · A-tým ${DATA.a_team_size}`;

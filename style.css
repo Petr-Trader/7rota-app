@@ -263,3 +263,17 @@ table.sim-grid .sim-rn{text-align:left;font-weight:700;font-size:10.5px;white-sp
 .arch-res.l{background:rgba(220,38,38,.09)}
 .arch-res.t{background:var(--bg)}
 .arch-clr{background:none;border:0;color:var(--b);font-size:12px;cursor:pointer;margin-left:6px;text-decoration:underline}
+/* F3 profil pozicovani soupere */
+.op-head{display:flex;align-items:center;gap:8px;margin:2px 0 8px;flex-wrap:wrap}
+.op-sig{font-size:12px;font-weight:700;padding:3px 9px;border-radius:7px}
+.op-sig.p{background:rgba(21,128,61,.12);color:var(--a)}
+.op-sig.m{background:rgba(184,121,26,.14);color:#b8791a}
+.op-sig.t{background:rgba(29,78,216,.1);color:var(--b)}
+.op-tbl{margin:4px 0}
+.op-prow{display:flex;align-items:baseline;gap:8px;padding:5px 0;border-bottom:1px solid var(--line);font-size:13px}
+.op-prow:last-child{border-bottom:0}
+.op-pos{flex:none;width:42px;font-weight:700;color:var(--mut);font-size:12px}
+.op-pl{flex:1;line-height:1.5}
+.op-r{font-size:11px;font-weight:700;color:var(--teal);font-variant-numeric:tabular-nums}
+.op-n{font-size:10px;color:var(--mut)}
+.op-k{flex:none;font-size:11px;color:var(--mut);font-variant-numeric:tabular-nums}

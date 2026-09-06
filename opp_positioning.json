@@ -1,0 +1,1475 @@
+{
+ "Šipky Kbely": {
+  "zapasu": 24,
+  "pozice": {
+   "1": [
+    {
+     "h": "Zerzán Miloš",
+     "n": 16
+    },
+    {
+     "h": "Vostárek Martin",
+     "n": 3
+    },
+    {
+     "h": "Řepa Michal",
+     "n": 3
+    }
+   ],
+   "2": [
+    {
+     "h": "Stiborek David",
+     "n": 13
+    },
+    {
+     "h": "Vostárek Martin",
+     "n": 5
+    },
+    {
+     "h": "Zerzán Miloš",
+     "n": 3
+    }
+   ],
+   "3": [
+    {
+     "h": "Javornický Josef",
+     "n": 11
+    },
+    {
+     "h": "Celler Miroslav",
+     "n": 8
+    },
+    {
+     "h": "Stiborek David",
+     "n": 4
+    }
+   ],
+   "4": [
+    {
+     "h": "Celler Miroslav",
+     "n": 16
+    },
+    {
+     "h": "Javornický Josef",
+     "n": 7
+    }
+   ]
+  },
+  "konzistence": {
+   "1": 67,
+   "2": 54,
+   "3": 46,
+   "4": 70
+  },
+  "predvidatelnost": 21,
+  "signal": "dost meni",
+  "hraci": {
+   "Celler Miroslav": {
+    "3": 8,
+    "4": 16
+   },
+   "Zerzán Miloš": {
+    "1": 16,
+    "5": 3,
+    "2": 3,
+    "3": 1
+   },
+   "Stiborek David": {
+    "2": 13,
+    "3": 4,
+    "5": 2,
+    "1": 1
+   },
+   "Javornický Josef": {
+    "4": 7,
+    "3": 11
+   },
+   "Řepa Michal": {
+    "5": 4,
+    "1": 3,
+    "6": 3,
+    "7": 1,
+    "2": 3
+   },
+   "Vostárek Martin": {
+    "6": 2,
+    "1": 3,
+    "5": 3,
+    "2": 5
+   },
+   "Nový Jan": {
+    "5": 3,
+    "1": 1,
+    "7": 1,
+    "6": 1
+   },
+   "Kučera Dušan": {
+    "8": 1,
+    "5": 1
+   }
+  }
+ },
+ "K2 Říčany": {
+  "zapasu": 24,
+  "pozice": {
+   "1": [
+    {
+     "h": "Bubeník Miroslav",
+     "n": 16
+    },
+    {
+     "h": "Řehka Petr",
+     "n": 3
+    },
+    {
+     "h": "Kaška Zdeněk",
+     "n": 3
+    }
+   ],
+   "2": [
+    {
+     "h": "Kaška Zdeněk",
+     "n": 11
+    },
+    {
+     "h": "Hlína Jan",
+     "n": 4
+    },
+    {
+     "h": "Kracík Martin",
+     "n": 3
+    }
+   ],
+   "3": [
+    {
+     "h": "Řehka Petr",
+     "n": 14
+    },
+    {
+     "h": "Hlína Jan",
+     "n": 3
+    },
+    {
+     "h": "Kaška Zdeněk",
+     "n": 2
+    }
+   ],
+   "4": [
+    {
+     "h": "Kracík Martin",
+     "n": 19
+    },
+    {
+     "h": "Řehka Petr",
+     "n": 2
+    },
+    {
+     "h": "Bubeník Miroslav",
+     "n": 1
+    }
+   ]
+  },
+  "konzistence": {
+   "1": 67,
+   "2": 46,
+   "3": 58,
+   "4": 83
+  },
+  "predvidatelnost": 25,
+  "signal": "dost meni",
+  "hraci": {
+   "Kracík Martin": {
+    "4": 19,
+    "2": 3,
+    "3": 1
+   },
+   "Bubeník Miroslav": {
+    "1": 16,
+    "6": 1,
+    "4": 1,
+    "3": 2,
+    "2": 2
+   },
+   "Řehka Petr": {
+    "3": 14,
+    "1": 3,
+    "2": 2,
+    "5": 1,
+    "4": 2
+   },
+   "Kaška Zdeněk": {
+    "2": 11,
+    "3": 2,
+    "5": 1,
+    "1": 3,
+    "6": 1,
+    "4": 1
+   },
+   "Medřický Václav": {
+    "5": 12,
+    "2": 2,
+    "6": 2,
+    "3": 2
+   },
+   "Hlína Jan": {
+    "3": 3,
+    "5": 6,
+    "2": 4,
+    "1": 2
+   }
+  }
+ },
+ "Stiflerovci Praha": {
+  "zapasu": 24,
+  "pozice": {
+   "1": [
+    {
+     "h": "Ligas Denis",
+     "n": 8
+    },
+    {
+     "h": "Šístek Luděk",
+     "n": 4
+    },
+    {
+     "h": "Solařík David",
+     "n": 3
+    }
+   ],
+   "2": [
+    {
+     "h": "Těšínský Denis",
+     "n": 9
+    },
+    {
+     "h": "Gratz Lumír",
+     "n": 6
+    },
+    {
+     "h": "Brettschneiderová Simona",
+     "n": 4
+    }
+   ],
+   "3": [
+    {
+     "h": "Gratz Lumír",
+     "n": 8
+    },
+    {
+     "h": "Ligas Denis",
+     "n": 4
+    },
+    {
+     "h": "Solařík David",
+     "n": 3
+    }
+   ],
+   "4": [
+    {
+     "h": "Solařík David",
+     "n": 12
+    },
+    {
+     "h": "Těšínský Denis",
+     "n": 4
+    },
+    {
+     "h": "Gratz Lumír",
+     "n": 3
+    }
+   ]
+  },
+  "konzistence": {
+   "1": 33,
+   "2": 38,
+   "3": 36,
+   "4": 50
+  },
+  "predvidatelnost": 21,
+  "signal": "dost meni",
+  "hraci": {
+   "Gratz Lumír": {
+    "3": 8,
+    "2": 6,
+    "1": 2,
+    "4": 3,
+    "5": 1,
+    "6": 1
+   },
+   "Solařík David": {
+    "4": 12,
+    "2": 2,
+    "3": 3,
+    "1": 3
+   },
+   "Těšínský Denis": {
+    "2": 9,
+    "4": 4,
+    "1": 2,
+    "3": 1,
+    "5": 1
+   },
+   "Ligas Denis": {
+    "5": 4,
+    "1": 8,
+    "3": 4,
+    "4": 1
+   },
+   "Brettschneiderová Simona": {
+    "3": 3,
+    "1": 2,
+    "2": 4
+   },
+   "Šístek Luděk": {
+    "1": 4,
+    "3": 1,
+    "2": 1,
+    "4": 1
+   },
+   "Slobodník Martin": {
+    "2": 1,
+    "4": 2,
+    "3": 1,
+    "1": 2
+   },
+   "Vlach Jakub": {
+    "1": 1,
+    "4": 1,
+    "2": 1,
+    "5": 1,
+    "3": 1
+   }
+  }
+ },
+ "Sgt. Pepik's Band Praha B": {
+  "zapasu": 24,
+  "pozice": {
+   "1": [
+    {
+     "h": "Hradský Pavel",
+     "n": 13
+    },
+    {
+     "h": "Gaper Tomáš",
+     "n": 3
+    },
+    {
+     "h": "Siuda Daniel",
+     "n": 3
+    }
+   ],
+   "2": [
+    {
+     "h": "Gaper Tomáš",
+     "n": 8
+    },
+    {
+     "h": "Chuchel Martin",
+     "n": 7
+    },
+    {
+     "h": "Siuda Daniel",
+     "n": 6
+    }
+   ],
+   "3": [
+    {
+     "h": "Hradský Pavel",
+     "n": 7
+    },
+    {
+     "h": "Gaper Tomáš",
+     "n": 5
+    },
+    {
+     "h": "Siuda Daniel",
+     "n": 4
+    }
+   ],
+   "4": [
+    {
+     "h": "Šnejdarová Jitka",
+     "n": 6
+    },
+    {
+     "h": "Gaper Tomáš",
+     "n": 5
+    },
+    {
+     "h": "Hradský Pavel",
+     "n": 4
+    }
+   ]
+  },
+  "konzistence": {
+   "1": 54,
+   "2": 33,
+   "3": 29,
+   "4": 26
+  },
+  "predvidatelnost": 0,
+  "signal": "hodne rotuji / mozna taktizuji",
+  "hraci": {
+   "Hradský Pavel": {
+    "1": 13,
+    "3": 7,
+    "4": 4
+   },
+   "Gaper Tomáš": {
+    "2": 8,
+    "1": 3,
+    "3": 5,
+    "5": 2,
+    "4": 5
+   },
+   "Siuda Daniel": {
+    "3": 4,
+    "4": 3,
+    "2": 6,
+    "5": 4,
+    "1": 3
+   },
+   "Šnejdarová Jitka": {
+    "5": 4,
+    "4": 6,
+    "3": 2,
+    "6": 5,
+    "2": 2
+   },
+   "Hlavatý Tomáš": {
+    "4": 1,
+    "5": 11,
+    "3": 2,
+    "2": 1,
+    "1": 1,
+    "6": 2
+   },
+   "Chuchel Martin": {
+    "2": 7,
+    "4": 1,
+    "1": 2,
+    "3": 2
+   },
+   "Kaněra Zdeněk": {
+    "3": 2,
+    "5": 2,
+    "4": 2,
+    "1": 2
+   },
+   "Rysová Karolína": {
+    "4": 1
+   }
+  }
+ },
+ "Amatéři Písnice": {
+  "zapasu": 24,
+  "pozice": {
+   "1": [
+    {
+     "h": "Novák Vladimír",
+     "n": 12
+    },
+    {
+     "h": "Novák David",
+     "n": 12
+    }
+   ],
+   "2": [
+    {
+     "h": "Kopač Miroslav",
+     "n": 22
+    },
+    {
+     "h": "Novák Vladimír",
+     "n": 1
+    },
+    {
+     "h": "Novák David",
+     "n": 1
+    }
+   ],
+   "3": [
+    {
+     "h": "Bláha Petr",
+     "n": 22
+    },
+    {
+     "h": "Semrád Filip",
+     "n": 1
+    },
+    {
+     "h": "Kopač Miroslav",
+     "n": 1
+    }
+   ],
+   "4": [
+    {
+     "h": "Neužil Miroslav",
+     "n": 22
+    },
+    {
+     "h": "Bláha Petr",
+     "n": 2
+    }
+   ]
+  },
+  "konzistence": {
+   "1": 50,
+   "2": 92,
+   "3": 92,
+   "4": 92
+  },
+  "predvidatelnost": 46,
+  "signal": "predvidatelni",
+  "hraci": {
+   "Bláha Petr": {
+    "3": 22,
+    "4": 2
+   },
+   "Kopač Miroslav": {
+    "2": 22,
+    "3": 1
+   },
+   "Neužil Miroslav": {
+    "4": 22
+   },
+   "Novák Vladimír": {
+    "1": 12,
+    "5": 6,
+    "2": 1,
+    "6": 1
+   },
+   "Novák David": {
+    "5": 5,
+    "1": 12,
+    "2": 1
+   },
+   "Semrád Filip": {
+    "5": 3,
+    "6": 2,
+    "3": 1
+   },
+   "Lexová Natálie": {
+    "6": 2,
+    "5": 1
+   },
+   "Adámek Jaroslav": {
+    "5": 2
+   }
+  }
+ },
+ "Horní Rozptyly Praha X": {
+  "zapasu": 24,
+  "pozice": {
+   "1": [
+    {
+     "h": "Přibyl Robert",
+     "n": 7
+    },
+    {
+     "h": "Gutvirt Petr",
+     "n": 4
+    },
+    {
+     "h": "Dobiášovský Petr",
+     "n": 4
+    }
+   ],
+   "2": [
+    {
+     "h": "Davídek David",
+     "n": 3
+    },
+    {
+     "h": "Kopecký Jiří",
+     "n": 2
+    },
+    {
+     "h": "Dobiášovský Petr",
+     "n": 1
+    }
+   ],
+   "3": [
+    {
+     "h": "Dobiášovský Petr",
+     "n": 5
+    },
+    {
+     "h": "Přibyl Robert",
+     "n": 4
+    },
+    {
+     "h": "Gutvirt Petr",
+     "n": 4
+    }
+   ],
+   "4": [
+    {
+     "h": "Gutvirt Petr",
+     "n": 4
+    },
+    {
+     "h": "Dobiášovský Petr",
+     "n": 3
+    },
+    {
+     "h": "Kopecký Jiří",
+     "n": 3
+    }
+   ]
+  },
+  "konzistence": {
+   "1": 29,
+   "2": 50,
+   "3": 28,
+   "4": 40
+  },
+  "predvidatelnost": 0,
+  "signal": "hodne rotuji / mozna taktizuji",
+  "hraci": {
+   "Přibyl Robert": {
+    "3": 4,
+    "5": 6,
+    "1": 7,
+    "6": 1
+   },
+   "Dobiášovský Petr": {
+    "1": 4,
+    "4": 3,
+    "3": 5,
+    "2": 1,
+    "5": 4,
+    "6": 1
+   },
+   "Gutvirt Petr": {
+    "1": 4,
+    "4": 4,
+    "3": 4,
+    "5": 1
+   },
+   "Davídek David": {
+    "5": 5,
+    "2": 3,
+    "1": 2,
+    "6": 2,
+    "3": 1
+   },
+   "Kopecký Jiří": {
+    "4": 3,
+    "1": 4,
+    "3": 3,
+    "2": 2
+   },
+   "Kameník Tomáš": {
+    "5": 3,
+    "7": 1,
+    "6": 3,
+    "1": 1
+   },
+   "Hladík Tomáš": {
+    "5": 1,
+    "1": 2,
+    "3": 1
+   }
+  }
+ },
+ "Horní Rozptyly Praha": {
+  "zapasu": 24,
+  "pozice": {
+   "1": [
+    {
+     "h": "Linek Adam",
+     "n": 10
+    },
+    {
+     "h": "Strbáček Stanislav",
+     "n": 5
+    },
+    {
+     "h": "Prokeš Radek",
+     "n": 4
+    }
+   ],
+   "2": [
+    {
+     "h": "Bartek David",
+     "n": 6
+    },
+    {
+     "h": "Prokeš Radek",
+     "n": 5
+    },
+    {
+     "h": "Linek Adam",
+     "n": 5
+    }
+   ],
+   "3": [
+    {
+     "h": "Prokeš Radek",
+     "n": 7
+    },
+    {
+     "h": "Pavlát Radek",
+     "n": 6
+    },
+    {
+     "h": "Bárta Daniel",
+     "n": 4
+    }
+   ],
+   "4": [
+    {
+     "h": "Strbáček Stanislav",
+     "n": 14
+    },
+    {
+     "h": "Prokeš Radek",
+     "n": 5
+    },
+    {
+     "h": "Bartek David",
+     "n": 3
+    }
+   ]
+  },
+  "konzistence": {
+   "1": 42,
+   "2": 25,
+   "3": 29,
+   "4": 58
+  },
+  "predvidatelnost": 4,
+  "signal": "hodne rotuji / mozna taktizuji",
+  "hraci": {
+   "Prokeš Radek": {
+    "3": 7,
+    "5": 1,
+    "2": 5,
+    "4": 5,
+    "1": 4
+   },
+   "Strbáček Stanislav": {
+    "4": 14,
+    "1": 5,
+    "5": 1,
+    "2": 2
+   },
+   "Linek Adam": {
+    "3": 3,
+    "1": 10,
+    "2": 5
+   },
+   "Pavlát Radek": {
+    "2": 4,
+    "6": 3,
+    "3": 6,
+    "1": 2,
+    "4": 1,
+    "5": 1
+   },
+   "Bartek David": {
+    "1": 1,
+    "2": 6,
+    "7": 1,
+    "4": 3,
+    "3": 4,
+    "5": 1
+   },
+   "Bárta Daniel": {
+    "5": 8,
+    "1": 2,
+    "3": 4,
+    "4": 1,
+    "2": 1
+   },
+   "Murín Milan": {
+    "6": 4,
+    "5": 7,
+    "7": 2,
+    "2": 1
+   }
+  }
+ },
+ "Sedmá rota Praha": {
+  "zapasu": 24,
+  "pozice": {
+   "1": [
+    {
+     "h": "Vach Josef",
+     "n": 13
+    },
+    {
+     "h": "Bajtek Jindřich",
+     "n": 3
+    },
+    {
+     "h": "Kožíšek Jiří",
+     "n": 3
+    }
+   ],
+   "2": [
+    {
+     "h": "Kožíšek Jiří",
+     "n": 9
+    },
+    {
+     "h": "Řečník Vilém",
+     "n": 6
+    },
+    {
+     "h": "Vach Josef",
+     "n": 4
+    }
+   ],
+   "3": [
+    {
+     "h": "Kožíšek Jiří",
+     "n": 6
+    },
+    {
+     "h": "Vach Josef",
+     "n": 6
+    },
+    {
+     "h": "Řečník Vilém",
+     "n": 5
+    }
+   ],
+   "4": [
+    {
+     "h": "Bajtek Jindřich",
+     "n": 10
+    },
+    {
+     "h": "Řečník Vilém",
+     "n": 7
+    },
+    {
+     "h": "Majerčin David",
+     "n": 3
+    }
+   ]
+  },
+  "konzistence": {
+   "1": 54,
+   "2": 38,
+   "3": 25,
+   "4": 42
+  },
+  "predvidatelnost": 0,
+  "signal": "hodne rotuji / mozna taktizuji",
+  "hraci": {
+   "Vach Josef": {
+    "1": 13,
+    "2": 4,
+    "3": 6,
+    "5": 1
+   },
+   "Řečník Vilém": {
+    "3": 5,
+    "4": 7,
+    "5": 2,
+    "2": 6,
+    "1": 3
+   },
+   "Kožíšek Jiří": {
+    "2": 9,
+    "3": 6,
+    "1": 3,
+    "4": 2,
+    "5": 1
+   },
+   "Schraml Petr": {
+    "5": 10,
+    "7": 1,
+    "2": 2,
+    "6": 1,
+    "3": 3,
+    "4": 1,
+    "1": 2
+   },
+   "Bajtek Jindřich": {
+    "4": 10,
+    "3": 3,
+    "2": 3,
+    "1": 3
+   },
+   "Procházka Lubomír": {
+    "7": 9,
+    "6": 6,
+    "5": 3,
+    "8": 1
+   },
+   "Majerčin David": {
+    "7": 1,
+    "4": 3,
+    "5": 4,
+    "3": 1,
+    "6": 4,
+    "8": 1
+   },
+   "Velev Stanislav": {
+    "5": 3,
+    "4": 1,
+    "6": 4
+   }
+  }
+ },
+ "Brilliant darts Praha": {
+  "zapasu": 24,
+  "pozice": {
+   "1": [
+    {
+     "h": "Pfleger Michal",
+     "n": 15
+    },
+    {
+     "h": "Homola Jiří",
+     "n": 5
+    },
+    {
+     "h": "Mošnička Martin",
+     "n": 3
+    }
+   ],
+   "2": [
+    {
+     "h": "Korčáková Renáta",
+     "n": 10
+    },
+    {
+     "h": "Homola Jiří",
+     "n": 7
+    },
+    {
+     "h": "Pfleger Michal",
+     "n": 6
+    }
+   ],
+   "3": [
+    {
+     "h": "Homola Jiří",
+     "n": 11
+    },
+    {
+     "h": "Nová Tereza",
+     "n": 8
+    },
+    {
+     "h": "Korčáková Renáta",
+     "n": 2
+    }
+   ],
+   "4": [
+    {
+     "h": "Shíbal Petr",
+     "n": 21
+    },
+    {
+     "h": "Nová Tereza",
+     "n": 2
+    },
+    {
+     "h": "Korčáková Renáta",
+     "n": 1
+    }
+   ]
+  },
+  "konzistence": {
+   "1": 62,
+   "2": 43,
+   "3": 48,
+   "4": 88
+  },
+  "predvidatelnost": 25,
+  "signal": "dost meni",
+  "hraci": {
+   "Pfleger Michal": {
+    "2": 6,
+    "1": 15,
+    "3": 1,
+    "5": 1
+   },
+   "Homola Jiří": {
+    "3": 11,
+    "2": 7,
+    "1": 5
+   },
+   "Shíbal Petr": {
+    "4": 21,
+    "5": 1,
+    "3": 1
+   },
+   "Korčáková Renáta": {
+    "2": 10,
+    "4": 1,
+    "5": 4,
+    "1": 1,
+    "3": 2,
+    "6": 1
+   },
+   "Mošnička Martin": {
+    "1": 3,
+    "5": 10,
+    "6": 4
+   },
+   "Nová Tereza": {
+    "3": 8,
+    "5": 3,
+    "4": 2,
+    "6": 1
+   }
+  }
+ },
+ "Plzeňka Praha B": {
+  "zapasu": 24,
+  "pozice": {
+   "1": [
+    {
+     "h": "Navrátil Zdeněk",
+     "n": 17
+    },
+    {
+     "h": "Lochner František",
+     "n": 5
+    },
+    {
+     "h": "Buřič Jan",
+     "n": 2
+    }
+   ],
+   "2": [
+    {
+     "h": "Hruška Petr",
+     "n": 14
+    },
+    {
+     "h": "Buřič Jan",
+     "n": 5
+    },
+    {
+     "h": "Navrátil Zdeněk",
+     "n": 3
+    }
+   ],
+   "3": [
+    {
+     "h": "Buřič Jan",
+     "n": 10
+    },
+    {
+     "h": "Říha Josef",
+     "n": 9
+    },
+    {
+     "h": "Hruška Petr",
+     "n": 5
+    }
+   ],
+   "4": [
+    {
+     "h": "Říha Josef",
+     "n": 13
+    },
+    {
+     "h": "Buřič Jan",
+     "n": 7
+    },
+    {
+     "h": "Hruška Petr",
+     "n": 4
+    }
+   ]
+  },
+  "konzistence": {
+   "1": 71,
+   "2": 58,
+   "3": 42,
+   "4": 54
+  },
+  "predvidatelnost": 29,
+  "signal": "dost meni",
+  "hraci": {
+   "Buřič Jan": {
+    "1": 2,
+    "3": 10,
+    "2": 5,
+    "4": 7
+   },
+   "Říha Josef": {
+    "3": 9,
+    "4": 13,
+    "2": 2
+   },
+   "Hruška Petr": {
+    "4": 4,
+    "2": 14,
+    "3": 5
+   },
+   "Lochner František": {
+    "5": 18,
+    "1": 5
+   },
+   "Navrátil Zdeněk": {
+    "2": 3,
+    "1": 17,
+    "5": 1
+   },
+   "Buřičová Hana": {
+    "6": 6,
+    "5": 1,
+    "7": 6
+   },
+   "Key Jay": {
+    "5": 4,
+    "6": 4
+   }
+  }
+ },
+ "Bílá Hora Praha": {
+  "zapasu": 24,
+  "pozice": {
+   "1": [
+    {
+     "h": "Andrýs Martin",
+     "n": 11
+    },
+    {
+     "h": "Onduš Vladimír",
+     "n": 9
+    },
+    {
+     "h": "Tomášek Zbyněk",
+     "n": 3
+    }
+   ],
+   "2": [
+    {
+     "h": "Onduš Vladimír",
+     "n": 8
+    },
+    {
+     "h": "Tomášek Zbyněk",
+     "n": 5
+    },
+    {
+     "h": "Šveňha Vladimír",
+     "n": 4
+    }
+   ],
+   "3": [
+    {
+     "h": "Šveňha Vladimír",
+     "n": 11
+    },
+    {
+     "h": "Tomášek Zbyněk",
+     "n": 11
+    }
+   ],
+   "4": [
+    {
+     "h": "Říha Petr",
+     "n": 19
+    },
+    {
+     "h": "Tomášek Zbyněk",
+     "n": 4
+    }
+   ]
+  },
+  "konzistence": {
+   "1": 46,
+   "2": 35,
+   "3": 50,
+   "4": 83
+  },
+  "predvidatelnost": 0,
+  "signal": "hodne rotuji / mozna taktizuji",
+  "hraci": {
+   "Tomášek Zbyněk": {
+    "2": 5,
+    "1": 3,
+    "3": 11,
+    "4": 4
+   },
+   "Říha Petr": {
+    "4": 19
+   },
+   "Onduš Vladimír": {
+    "5": 2,
+    "2": 8,
+    "1": 9
+   },
+   "Andrýs Martin": {
+    "1": 11,
+    "5": 6,
+    "2": 1
+   },
+   "Šveňha Vladimír": {
+    "3": 11,
+    "2": 4
+   },
+   "Kopálek Petr": {
+    "5": 5,
+    "6": 3,
+    "7": 2,
+    "1": 1,
+    "2": 2
+   },
+   "Kopálková Zdeňka": {
+    "5": 8,
+    "6": 2,
+    "2": 3
+   },
+   "Šanda Martin": {
+    "7": 1,
+    "5": 3
+   }
+  }
+ },
+ "Bonus Bendovka Praha": {
+  "zapasu": 24,
+  "pozice": {
+   "1": [
+    {
+     "h": "Kučera Vratislav",
+     "n": 8
+    },
+    {
+     "h": "Těšínský Miroslav",
+     "n": 7
+    },
+    {
+     "h": "Vaněk Miroslav",
+     "n": 3
+    }
+   ],
+   "2": [
+    {
+     "h": "Kučera Vratislav",
+     "n": 4
+    },
+    {
+     "h": "Vaněk Miroslav",
+     "n": 4
+    },
+    {
+     "h": "Těšínský Miroslav",
+     "n": 3
+    }
+   ],
+   "3": [
+    {
+     "h": "Vaněk Miroslav",
+     "n": 7
+    },
+    {
+     "h": "Těšínský Miroslav",
+     "n": 6
+    },
+    {
+     "h": "Lajvr Lukáš",
+     "n": 5
+    }
+   ],
+   "4": [
+    {
+     "h": "Vaněk Miroslav",
+     "n": 5
+    },
+    {
+     "h": "Kučera Vratislav",
+     "n": 4
+    },
+    {
+     "h": "Těšínský Miroslav",
+     "n": 4
+    }
+   ]
+  },
+  "konzistence": {
+   "1": 33,
+   "2": 17,
+   "3": 29,
+   "4": 22
+  },
+  "predvidatelnost": 0,
+  "signal": "hodne rotuji / mozna taktizuji",
+  "hraci": {
+   "Těšínský Miroslav": {
+    "3": 6,
+    "2": 3,
+    "4": 4,
+    "1": 7
+   },
+   "Vaněk Miroslav": {
+    "7": 1,
+    "3": 7,
+    "4": 5,
+    "1": 3,
+    "2": 4
+   },
+   "Lajvr Lukáš": {
+    "6": 2,
+    "3": 5,
+    "5": 3,
+    "4": 4,
+    "2": 3,
+    "1": 1
+   },
+   "Kučera Vratislav": {
+    "4": 4,
+    "1": 8,
+    "2": 4,
+    "3": 1
+   },
+   "Šuman Ivo": {
+    "5": 7,
+    "3": 1,
+    "4": 2,
+    "6": 1,
+    "2": 2,
+    "1": 1
+   },
+   "Kozlík František": {
+    "5": 2,
+    "3": 1,
+    "4": 1,
+    "1": 1,
+    "2": 2
+   },
+   "Rutar Pavel": {
+    "3": 1,
+    "2": 2,
+    "5": 2,
+    "1": 1
+   },
+   "Libánský Jiří": {
+    "2": 1,
+    "1": 1,
+    "4": 2,
+    "3": 1
+   },
+   "Dušek Petr": {
+    "1": 1,
+    "4": 1,
+    "5": 2
+   }
+  }
+ },
+ "Zlatý Barbaři VV Praha": {
+  "zapasu": 24,
+  "pozice": {
+   "1": [
+    {
+     "h": "Maxa Jan",
+     "n": 9
+    },
+    {
+     "h": "Setikovský Roman",
+     "n": 5
+    },
+    {
+     "h": "Procházka Jaroslav",
+     "n": 4
+    }
+   ],
+   "2": [
+    {
+     "h": "Procházka Jaroslav",
+     "n": 8
+    },
+    {
+     "h": "Vimr Jiří",
+     "n": 5
+    },
+    {
+     "h": "Vlček Jiří",
+     "n": 5
+    }
+   ],
+   "3": [
+    {
+     "h": "Setikovský Roman",
+     "n": 10
+    },
+    {
+     "h": "Vimr Jiří",
+     "n": 5
+    },
+    {
+     "h": "Maxa Jan",
+     "n": 3
+    }
+   ],
+   "4": [
+    {
+     "h": "Procházka Jaroslav",
+     "n": 7
+    },
+    {
+     "h": "Vlček Jiří",
+     "n": 6
+    },
+    {
+     "h": "Vimr Jiří",
+     "n": 6
+    }
+   ]
+  },
+  "konzistence": {
+   "1": 38,
+   "2": 35,
+   "3": 42,
+   "4": 29
+  },
+  "predvidatelnost": 0,
+  "signal": "hodne rotuji / mozna taktizuji",
+  "hraci": {
+   "Vlček Jiří": {
+    "4": 6,
+    "5": 5,
+    "6": 2,
+    "7": 1,
+    "2": 5,
+    "1": 1,
+    "3": 3
+   },
+   "Procházka Jaroslav": {
+    "1": 4,
+    "5": 1,
+    "4": 7,
+    "2": 8,
+    "3": 3
+   },
+   "Setikovský Roman": {
+    "3": 10,
+    "1": 5,
+    "4": 2,
+    "2": 4
+   },
+   "Vimr Jiří": {
+    "2": 5,
+    "3": 5,
+    "4": 6,
+    "1": 4
+   },
+   "Maxa Jan": {
+    "1": 9,
+    "3": 3
+   },
+   "Marval Petr": {
+    "5": 10,
+    "4": 1,
+    "1": 1
+   },
+   "Procházka Filip": {
+    "4": 2,
+    "2": 1,
+    "6": 1
+   }
+  }
+ }
+}
