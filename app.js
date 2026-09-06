@@ -785,20 +785,23 @@ function renderSimDoubles() {
   const pr = (x, y) => (effR(x) + effR(y)) / 2;
   const nm = (x, y) => `${escH(simShort(x.j))} + ${escH(simShort(y.j))} <span class="sim-pstr">~${Math.round(pr(x, y))}</span>`;
   const p = us.slice(0, 4), opp4 = opp.slice(0, 4);
-  let best = null;
-  if (p.length >= 4 && opp4.length >= 4) {
-    [[[0, 1], [2, 3]], [[0, 2], [1, 3]], [[0, 3], [1, 2]]].forEach(s => {
-      const us4 = [p[s[0][0]], p[s[0][1]], p[s[1][0]], p[s[1][1]]];
-      const w = doublesWin(us4, opp4);
-      if (!best || w > best.w) best = { w, a: [us4[0], us4[1]], b: [us4[2], us4[3]] };
-    });
+  if (p.length < 4 || opp4.length < 4) {
+    box.innerHTML = `<div class="sim-eyebrow" style="margin-top:14px">Optimalizace párů (double + cricket)</div>
+      <p class="hint">Vyber aspoň 4 hráče (na 2 dvojice) v naší i soupeřově sestavě — pak ti navrhnu páry.</p>`;
+    return;
   }
+  // vsechna 3 rozdeleni 4 hracu do 2 paru + P(segment); pravidlo: 501 a Cricket = RUZNE dvojice (rotace)
+  const splits = [[[0, 1], [2, 3]], [[0, 2], [1, 3]], [[0, 3], [1, 2]]].map(s => {
+    const us4 = [p[s[0][0]], p[s[0][1]], p[s[1][0]], p[s[1][1]]];
+    return { w: doublesWin(us4, opp4), a: [us4[0], us4[1]], b: [us4[2], us4[3]] };
+  }).sort((x, y) => y.w - x.w);
+  const dbl = splits[0], crk = splits[1];  // double = nejlepsi rozdeleni, cricket = 2. nejlepsi (JINE pary)
   box.innerHTML = `<div class="sim-eyebrow" style="margin-top:14px">Optimalizace párů (double + cricket)</div>
     <div class="sim-dbl">
-      ${best ? `<div class="sim-dbl-r"><b>⚖️ Doporučené 2 dvojice</b> <span class="sim-pstr">šance na segment ${Math.round(best.w * 100)} %</span><br>${nm(best.a[0], best.a[1])}<br>${nm(best.b[0], best.b[1])}</div>`
-      : (p.length >= 2 ? `<div class="sim-dbl-r">${nm(p[0], p[1])}${p.length >= 4 ? `<br>${nm(p[2], p[3])}` : ''}</div>` : '')}
+      <div class="sim-dbl-r"><b>🎯 Double 501 (hra 9)</b> <span class="sim-pstr">${Math.round(dbl.w * 100)} %</span><br>${nm(dbl.a[0], dbl.a[1])} · ${nm(dbl.b[0], dbl.b[1])}</div>
+      <div class="sim-dbl-r" style="margin-top:7px"><b>🎯 Cricket (hra 10)</b> <span class="sim-pstr">${Math.round(crk.w * 100)} %</span><br>${nm(crk.a[0], crk.a[1])} · ${nm(crk.b[0], crk.b[1])}</div>
     </div>
-    <p class="hint">2 dvojice hrají na 2 terčích (2:0/1:1); při 1:1 rozhodnou vítězové proti sobě. Šance na segment = P(vyhrajeme oba terče) + P(1:1)×P(rozhodující). Model vybírá rozdělení s nejvyšší šancí; vyplatí se mít <b>obě dvojice silné</b> (kvůli rozhodující). Síla = průměr ratingu; souhra se zatím nemodeluje.</p>`;
+    <p class="hint">⚠️ Pravidlo (PRAVIDLA_LIGA.md): stejné páry <b>NESMÍ</b> hrát 501 i Cricket — musí se rotovat. Proto double + cricket = jiné dvojice. % = šance na segment (2 terče + rozhodující při 1:1). Model volí dvě nejlepší RŮZNÁ rozdělení.</p>`;
 }
 // F3 taktiky: skore, dle ktereho hraci dostavaji rozhodujici pozice.
 const TACTICS = {
