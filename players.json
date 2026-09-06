@@ -26,348 +26,35 @@
   },
   "players": [
     {
-      "jmeno": "Vach Josef",
-      "tym": "A",
-      "kat": "B",
-      "lkh": 66.4,
-      "legy": 199,
-      "turnaje": 2850,
-      "bt": 0.83,
-      "utkani": 24,
-      "hral": 24,
-      "h2h": {
-        "Řečník Vilém": [
-          5,
-          3
-        ],
-        "Puková Jaroslava": [
-          3,
-          1
-        ],
-        "Zbořil Karel": [
-          3,
-          0
-        ],
-        "Bajtek Jindřich": [
-          1,
-          1
-        ],
-        "Hozman Stanislav": [
-          2,
-          0
-        ],
-        "Schraml Petr": [
-          2,
-          0
-        ],
-        "Kožíšek Jiří": [
-          1,
-          0
-        ],
-        "Majerčin David": [
-          1,
-          0
-        ]
-      },
-      "reg": "CZE001834",
-      "turn_season": {
-        "cur": {
-          "turnaju": 9,
-          "v": 33,
-          "p": 15,
-          "winpct": 69
-        },
-        "last": {
-          "turnaju": 35,
-          "v": 106,
-          "p": 65,
-          "winpct": 62
-        },
-        "pohar_pozice": 17,
-        "pohar_total": 521
-      },
-      "lkh_detail": {
-        "legy_o": 199,
-        "legy_v": 120,
-        "zapasy_v": 55,
-        "n95": 226,
-        "n133": 40,
-        "n170": 5,
-        "z6": 4,
-        "z5": 0,
-        "z4": 0,
-        "z3": 0,
-        "her": 127
-      }
-    },
-    {
-      "jmeno": "Řečník Vilém",
-      "tym": "A",
-      "kat": "B",
-      "lkh": 66.1,
-      "legy": 202,
-      "turnaje": 3250,
-      "bt": 1.21,
-      "utkani": 23,
-      "hral": 23,
-      "h2h": {
-        "Bajtek Jindřich": [
-          8,
-          5
-        ],
-        "Schraml Petr": [
-          6,
-          3
-        ],
-        "Kožíšek Jiří": [
-          6,
-          3
-        ],
-        "Vach Josef": [
-          3,
-          5
-        ],
-        "Puková Jaroslava": [
-          7,
-          0
-        ],
-        "Hozman Stanislav": [
-          6,
-          1
-        ],
-        "Zbořil Karel": [
-          5,
-          1
-        ],
-        "Velev Stanislav": [
-          2,
-          1
-        ],
-        "Majerčin David": [
-          3,
-          0
-        ],
-        "Procházka Lubomír": [
-          2,
-          0
-        ],
-        "Polák Michal": [
-          1,
-          0
-        ],
-        "Královič Martin": [
-          1,
-          0
-        ]
-      },
-      "reg": "CZE084595",
-      "turn_season": {
-        "cur": {
-          "turnaju": 6,
-          "v": 20,
-          "p": 9,
-          "winpct": 69
-        },
-        "last": {
-          "turnaju": 71,
-          "v": 271,
-          "p": 117,
-          "winpct": 70
-        },
-        "pohar_pozice": 3,
-        "pohar_total": 521
-      },
-      "lkh_detail": {
-        "legy_o": 202,
-        "legy_v": 122,
-        "zapasy_v": 54,
-        "n95": 196,
-        "n133": 56,
-        "n170": 8,
-        "z6": 4,
-        "z5": 0,
-        "z4": 0,
-        "z3": 0,
-        "her": 121
-      }
-    },
-    {
       "jmeno": "Bajtek Jindřich",
+      "reg": "CZE073925",
+      "h2h": {
+        "Schraml Petr": [
+          4,
+          3
+        ],
+        "Zbořil Karel": [
+          3,
+          4
+        ],
+        "Majerčin David": [
+          1,
+          0
+        ]
+      },
       "tym": "A",
       "kat": "B",
       "lkh": 62.6,
       "legy": 165,
-      "turnaje": 2750,
+      "turnaje": 16150,
       "bt": 1.11,
       "utkani": 19,
-      "hral": 19,
-      "h2h": {
-        "Řečník Vilém": [
-          5,
-          8
-        ],
-        "Kožíšek Jiří": [
-          7,
-          4
-        ],
-        "Schraml Petr": [
-          4,
-          3
-        ],
-        "Zbořil Karel": [
-          3,
-          4
-        ],
-        "Velev Stanislav": [
-          3,
-          0
-        ],
-        "Vach Josef": [
-          1,
-          1
-        ],
-        "Hozman Stanislav": [
-          1,
-          1
-        ],
-        "Polák Michal": [
-          1,
-          0
-        ],
-        "Majerčin David": [
-          1,
-          0
-        ]
-      },
-      "reg": "CZE073925",
-      "turn_season": {
-        "cur": {
-          "turnaju": 4,
-          "v": 12,
-          "p": 8,
-          "winpct": 60
-        },
-        "last": {
-          "turnaju": 39,
-          "v": 139,
-          "p": 70,
-          "winpct": 67
-        },
-        "pohar_pozice": 21,
-        "pohar_total": 521
-      },
-      "lkh_detail": {
-        "legy_o": 165,
-        "legy_v": 94,
-        "zapasy_v": 41,
-        "n95": 166,
-        "n133": 40,
-        "n170": 2,
-        "z6": 4,
-        "z5": 1,
-        "z4": 0,
-        "z3": 0,
-        "her": 102
-      }
-    },
-    {
-      "jmeno": "Kožíšek Jiří",
-      "tym": "A",
-      "kat": "B",
-      "lkh": 57.6,
-      "legy": 175,
-      "turnaje": 2750,
-      "bt": 1.08,
-      "utkani": 21,
-      "hral": 21,
-      "h2h": {
-        "Bajtek Jindřich": [
-          4,
-          7
-        ],
-        "Hozman Stanislav": [
-          7,
-          2
-        ],
-        "Řečník Vilém": [
-          3,
-          6
-        ],
-        "Zbořil Karel": [
-          4,
-          1
-        ],
-        "Schraml Petr": [
-          3,
-          2
-        ],
-        "Majerčin David": [
-          4,
-          0
-        ],
-        "Puková Jaroslava": [
-          2,
-          0
-        ],
-        "Vach Josef": [
-          0,
-          1
-        ]
-      },
-      "reg": "CZE070593",
-      "turn_season": {
-        "cur": {
-          "turnaju": 4,
-          "v": 15,
-          "p": 4,
-          "winpct": 79
-        },
-        "last": {
-          "turnaju": 36,
-          "v": 125,
-          "p": 67,
-          "winpct": 65
-        },
-        "pohar_pozice": 21,
-        "pohar_total": 521
-      },
-      "lkh_detail": {
-        "legy_o": 175,
-        "legy_v": 94,
-        "zapasy_v": 40,
-        "n95": 155,
-        "n133": 28,
-        "n170": 5,
-        "z6": 4,
-        "z5": 2,
-        "z4": 0,
-        "z3": 0,
-        "her": 114
-      }
+      "hral": 19
     },
     {
       "jmeno": "Majerčin David",
-      "tym": "A",
-      "kat": "B",
-      "lkh": 56.6,
-      "legy": 53,
-      "turnaje": 2750,
-      "bt": 0.12,
-      "utkani": 15,
-      "hral": 10,
+      "reg": "CZE020476",
       "h2h": {
-        "Hozman Stanislav": [
-          6,
-          4
-        ],
-        "Kožíšek Jiří": [
-          0,
-          4
-        ],
-        "Řečník Vilém": [
-          0,
-          3
-        ],
         "Schraml Petr": [
           1,
           2
@@ -380,258 +67,80 @@
           1,
           0
         ],
-        "Vach Josef": [
-          0,
-          1
-        ],
-        "Puková Jaroslava": [
-          1,
-          0
-        ],
         "Bajtek Jindřich": [
           0,
           1
         ]
       },
-      "reg": "CZE020476",
-      "turn_season": {
-        "cur": {
-          "turnaju": 6,
-          "v": 18,
-          "p": 12,
-          "winpct": 60
-        },
-        "last": {
-          "turnaju": 21,
-          "v": 49,
-          "p": 41,
-          "winpct": 54
-        },
-        "pohar_pozice": 21,
-        "pohar_total": 521
-      },
-      "lkh_detail": {
-        "legy_o": 53,
-        "legy_v": 29,
-        "zapasy_v": 14,
-        "n95": 38,
-        "n133": 5,
-        "n170": 3,
-        "z6": 0,
-        "z5": 0,
-        "z4": 0,
-        "z3": 0,
-        "her": 33
-      }
-    },
-    {
-      "jmeno": "Velev Stanislav",
       "tym": "A",
       "kat": "B",
-      "lkh": 58.8,
-      "legy": 25,
-      "turnaje": 750,
-      "bt": 0.31,
-      "utkani": 12,
-      "hral": 8,
-      "h2h": {
-        "Řečník Vilém": [
-          1,
-          2
-        ],
-        "Bajtek Jindřich": [
-          0,
-          3
-        ]
-      },
-      "reg": "CZE059619",
-      "turn_season": {
-        "cur": {
-          "turnaju": 1,
-          "v": 4,
-          "p": 2,
-          "winpct": 67
-        },
-        "last": {
-          "turnaju": 12,
-          "v": 33,
-          "p": 24,
-          "winpct": 58
-        },
-        "pohar_pozice": 268,
-        "pohar_total": 521
-      },
-      "lkh_detail": {
-        "legy_o": 25,
-        "legy_v": 15,
-        "zapasy_v": 6,
-        "n95": 22,
-        "n133": 4,
-        "n170": 0,
-        "z6": 0,
-        "z5": 0,
-        "z4": 0,
-        "z3": 0,
-        "her": 20
-      }
+      "lkh": 56.6,
+      "legy": 53,
+      "turnaje": 6550,
+      "bt": 0.12,
+      "utkani": 15,
+      "hral": 10
     },
     {
       "jmeno": "Schraml Petr",
+      "reg": "CZE063740",
+      "h2h": {
+        "Bajtek Jindřich": [
+          3,
+          4
+        ],
+        "Zbořil Karel": [
+          2,
+          4
+        ],
+        "Procházka Lubomír": [
+          3,
+          0
+        ],
+        "Majerčin David": [
+          2,
+          1
+        ],
+        "Královič Martin": [
+          1,
+          0
+        ]
+      },
       "tym": "A",
       "kat": "A",
       "lkh": 38.0,
       "legy": 97,
-      "turnaje": 2250,
+      "turnaje": 10100,
       "bt": 0.21,
       "utkani": 22,
-      "hral": 17,
-      "h2h": {
-        "Řečník Vilém": [
-          3,
-          6
-        ],
-        "Bajtek Jindřich": [
-          3,
-          4
-        ],
-        "Zbořil Karel": [
-          2,
-          4
-        ],
-        "Hozman Stanislav": [
-          3,
-          2
-        ],
-        "Kožíšek Jiří": [
-          2,
-          3
-        ],
-        "Procházka Lubomír": [
-          3,
-          0
-        ],
-        "Majerčin David": [
-          2,
-          1
-        ],
-        "Vach Josef": [
-          0,
-          2
-        ],
-        "Královič Martin": [
-          1,
-          0
-        ]
-      },
-      "reg": "CZE063740",
-      "turn_season": {
-        "cur": {
-          "turnaju": 4,
-          "v": 11,
-          "p": 8,
-          "winpct": 58
-        },
-        "last": {
-          "turnaju": 36,
-          "v": 86,
-          "p": 69,
-          "winpct": 55
-        },
-        "pohar_pozice": 47,
-        "pohar_total": 521
-      },
-      "lkh_detail": {
-        "legy_o": 97,
-        "legy_v": 39,
-        "zapasy_v": 14,
-        "n95": 61,
-        "n133": 4,
-        "n170": 1,
-        "z6": 1,
-        "z5": 0,
-        "z4": 0,
-        "z3": 0,
-        "her": 53
-      }
+      "hral": 17
     },
     {
       "jmeno": "Procházka Lubomír",
+      "reg": "CZE030947",
+      "h2h": {
+        "Schraml Petr": [
+          0,
+          3
+        ],
+        "Zbořil Karel": [
+          0,
+          1
+        ]
+      },
       "tym": "A",
       "kat": "B",
       "lkh": 16.0,
       "legy": 10,
-      "turnaje": 1050,
+      "turnaje": 2100,
       "bt": -1.86,
       "utkani": 24,
-      "hral": 5,
-      "h2h": {
-        "Schraml Petr": [
-          0,
-          3
-        ],
-        "Hozman Stanislav": [
-          0,
-          2
-        ],
-        "Řečník Vilém": [
-          0,
-          2
-        ],
-        "Puková Jaroslava": [
-          0,
-          1
-        ],
-        "Zbořil Karel": [
-          0,
-          1
-        ]
-      },
-      "reg": "CZE030947",
-      "turn_season": {
-        "cur": {
-          "turnaju": 3,
-          "v": 1,
-          "p": 6,
-          "winpct": 14
-        },
-        "last": {
-          "turnaju": 18,
-          "v": 9,
-          "p": 36,
-          "winpct": 20
-        },
-        "pohar_pozice": 192,
-        "pohar_total": 521
-      },
-      "lkh_detail": {
-        "legy_o": 10,
-        "legy_v": 2,
-        "zapasy_v": 0,
-        "n95": 4,
-        "n133": 1,
-        "n170": 0,
-        "z6": 0,
-        "z5": 0,
-        "z4": 0,
-        "z3": 0,
-        "her": 6
-      }
+      "hral": 5
     },
     {
       "jmeno": "Královič Martin",
-      "tym": "B",
-      "kat": "D",
-      "lkh": 65.6,
-      "legy": 220,
-      "turnaje": null,
-      "bt": -0.2,
-      "utkani": 24,
-      "hral": 24,
+      "reg": "CZE073050",
       "h2h": {
-        "Řečník Vilém": [
-          0,
-          1
-        ],
         "Zbořil Karel": [
           1,
           0
@@ -641,70 +150,26 @@
           1
         ]
       },
-      "reg": "CZE073050",
-      "turn_season": {
-        "cur": {
-          "turnaju": 0,
-          "v": 0,
-          "p": 0,
-          "winpct": null
-        },
-        "last": {
-          "turnaju": 4,
-          "v": 6,
-          "p": 8,
-          "winpct": 43
-        },
-        "pohar_pozice": null
-      },
-      "lkh_detail": {
-        "legy_o": 220,
-        "legy_v": 147,
-        "zapasy_v": 67,
-        "n95": 162,
-        "n133": 30,
-        "n170": 3,
-        "z6": 2,
-        "z5": 0,
-        "z4": 0,
-        "z3": 0,
-        "her": 124
-      }
+      "tym": "B",
+      "kat": "D",
+      "lkh": 65.6,
+      "legy": 220,
+      "turnaje": 900,
+      "bt": -0.2,
+      "utkani": 24,
+      "hral": 24
     },
     {
       "jmeno": "Zbořil Karel",
-      "tym": "B",
-      "kat": "D",
-      "lkh": 60.6,
-      "legy": 126,
-      "turnaje": 1950,
-      "bt": 0.4,
-      "utkani": 16,
-      "hral": 16,
+      "reg": "CZE057352",
       "h2h": {
         "Bajtek Jindřich": [
           4,
           3
         ],
-        "Řečník Vilém": [
-          1,
-          5
-        ],
         "Schraml Petr": [
           4,
           2
-        ],
-        "Kožíšek Jiří": [
-          1,
-          4
-        ],
-        "Hozman Stanislav": [
-          3,
-          0
-        ],
-        "Vach Josef": [
-          0,
-          3
         ],
         "Majerčin David": [
           3,
@@ -719,39 +184,19 @@
           0
         ]
       },
-      "reg": "CZE057352",
-      "turn_season": {
-        "cur": {
-          "turnaju": 7,
-          "v": 18,
-          "p": 14,
-          "winpct": 56
-        },
-        "last": {
-          "turnaju": 45,
-          "v": 105,
-          "p": 84,
-          "winpct": 56
-        },
-        "pohar_pozice": 70,
-        "pohar_total": 521
-      },
-      "lkh_detail": {
-        "legy_o": 126,
-        "legy_v": 78,
-        "zapasy_v": 34,
-        "n95": 99,
-        "n133": 12,
-        "n170": 3,
-        "z6": 1,
-        "z5": 0,
-        "z4": 0,
-        "z3": 0,
-        "her": 77
-      }
+      "tym": "B",
+      "kat": "D",
+      "lkh": 60.6,
+      "legy": 126,
+      "turnaje": 10750,
+      "bt": 0.4,
+      "utkani": 16,
+      "hral": 16
     },
     {
       "jmeno": "Hamšík Robert",
+      "reg": "CZE059170",
+      "h2h": {},
       "tym": "B",
       "kat": "D",
       "lkh": 48.1,
@@ -759,381 +204,25 @@
       "turnaje": null,
       "bt": null,
       "utkani": 24,
-      "hral": 24,
-      "h2h": {},
-      "reg": "CZE059170",
-      "turn_season": {
-        "cur": {
-          "turnaju": 0,
-          "v": 0,
-          "p": 0,
-          "winpct": null
-        },
-        "last": {
-          "turnaju": 0,
-          "v": 0,
-          "p": 0,
-          "winpct": null
-        },
-        "pohar_pozice": null
-      },
-      "lkh_detail": {
-        "legy_o": 208,
-        "legy_v": 108,
-        "zapasy_v": 44,
-        "n95": 123,
-        "n133": 15,
-        "n170": 0,
-        "z6": 0,
-        "z5": 0,
-        "z4": 0,
-        "z3": 0,
-        "her": 131
-      }
-    },
-    {
-      "jmeno": "Puková Jaroslava",
-      "tym": "B",
-      "kat": "D",
-      "lkh": 47.4,
-      "legy": 183,
-      "turnaje": 1650,
-      "bt": -0.55,
-      "utkani": 24,
-      "hral": 24,
-      "h2h": {
-        "Řečník Vilém": [
-          0,
-          7
-        ],
-        "Vach Josef": [
-          1,
-          3
-        ],
-        "Kožíšek Jiří": [
-          0,
-          2
-        ],
-        "Procházka Lubomír": [
-          1,
-          0
-        ],
-        "Majerčin David": [
-          0,
-          1
-        ]
-      },
-      "reg": "CZE046245",
-      "turn_season": {
-        "cur": {
-          "turnaju": 6,
-          "v": 8,
-          "p": 12,
-          "winpct": 40
-        },
-        "last": {
-          "turnaju": 37,
-          "v": 43,
-          "p": 75,
-          "winpct": 36
-        },
-        "pohar_pozice": 9,
-        "pohar_total": 110
-      },
-      "lkh_detail": {
-        "legy_o": 183,
-        "legy_v": 90,
-        "zapasy_v": 40,
-        "n95": 110,
-        "n133": 12,
-        "n170": 1,
-        "z6": 0,
-        "z5": 0,
-        "z4": 0,
-        "z3": 0,
-        "her": 117
-      }
-    },
-    {
-      "jmeno": "Moravec Zdeněk",
-      "tym": "B",
-      "kat": "B",
-      "lkh": 42.5,
-      "legy": 12,
-      "turnaje": null,
-      "bt": null,
-      "utkani": 6,
-      "hral": 5,
-      "h2h": {},
-      "reg": "CZE009041",
-      "turn_season": {
-        "cur": {
-          "turnaju": 0,
-          "v": 0,
-          "p": 0,
-          "winpct": null
-        },
-        "last": {
-          "turnaju": 0,
-          "v": 0,
-          "p": 0,
-          "winpct": null
-        },
-        "pohar_pozice": null
-      },
-      "lkh_detail": {
-        "legy_o": 12,
-        "legy_v": 6,
-        "zapasy_v": 2,
-        "n95": 7,
-        "n133": 0,
-        "n170": 0,
-        "z6": 0,
-        "z5": 0,
-        "z4": 0,
-        "z3": 0,
-        "her": 9
-      }
-    },
-    {
-      "jmeno": "Polák Michal",
-      "tym": "B",
-      "kat": "D",
-      "lkh": 35.6,
-      "legy": 43,
-      "turnaje": null,
-      "bt": -0.34,
-      "utkani": 17,
-      "hral": 14,
-      "h2h": {
-        "Bajtek Jindřich": [
-          0,
-          1
-        ],
-        "Řečník Vilém": [
-          0,
-          1
-        ]
-      },
-      "reg": "CZE080513",
-      "turn_season": {
-        "cur": {
-          "turnaju": 0,
-          "v": 0,
-          "p": 0,
-          "winpct": null
-        },
-        "last": {
-          "turnaju": 1,
-          "v": 1,
-          "p": 2,
-          "winpct": 33
-        },
-        "pohar_pozice": null
-      },
-      "lkh_detail": {
-        "legy_o": 43,
-        "legy_v": 17,
-        "zapasy_v": 7,
-        "n95": 9,
-        "n133": 5,
-        "n170": 0,
-        "z6": 0,
-        "z5": 0,
-        "z4": 0,
-        "z3": 0,
-        "her": 35
-      }
-    },
-    {
-      "jmeno": "Hampeis Pavel",
-      "tym": "B",
-      "kat": "D",
-      "lkh": 26.7,
-      "legy": 36,
-      "turnaje": null,
-      "bt": -1.39,
-      "utkani": 13,
-      "hral": 9,
-      "h2h": {},
-      "reg": "CZE060160",
-      "turn_season": {
-        "cur": {
-          "turnaju": 0,
-          "v": 0,
-          "p": 0,
-          "winpct": null
-        },
-        "last": {
-          "turnaju": 1,
-          "v": 0,
-          "p": 2,
-          "winpct": 0
-        },
-        "pohar_pozice": null
-      },
-      "lkh_detail": {
-        "legy_o": 36,
-        "legy_v": 12,
-        "zapasy_v": 4,
-        "n95": 6,
-        "n133": 1,
-        "n170": 0,
-        "z6": 0,
-        "z5": 0,
-        "z4": 0,
-        "z3": 0,
-        "her": 18
-      }
-    },
-    {
-      "jmeno": "Knotek Václav",
-      "tym": "B",
-      "kat": "D",
-      "lkh": 27.8,
-      "legy": 67,
-      "turnaje": null,
-      "bt": null,
-      "utkani": 17,
-      "hral": 17,
-      "h2h": {},
-      "reg": "CZE029537",
-      "turn_season": {
-        "cur": {
-          "turnaju": 0,
-          "v": 0,
-          "p": 0,
-          "winpct": null
-        },
-        "last": {
-          "turnaju": 0,
-          "v": 0,
-          "p": 0,
-          "winpct": null
-        },
-        "pohar_pozice": null
-      },
-      "lkh_detail": {
-        "legy_o": 67,
-        "legy_v": 21,
-        "zapasy_v": 7,
-        "n95": 24,
-        "n133": 4,
-        "n170": 0,
-        "z6": 0,
-        "z5": 0,
-        "z4": 0,
-        "z3": 0,
-        "her": 52
-      }
-    },
-    {
-      "jmeno": "Hozman Stanislav",
-      "tym": "B",
-      "kat": "D",
-      "lkh": 45.4,
-      "legy": 100,
-      "turnaje": 1850,
-      "bt": -0.51,
-      "utkani": 3,
-      "hral": 3,
-      "h2h": {
-        "Majerčin David": [
-          4,
-          6
-        ],
-        "Kožíšek Jiří": [
-          2,
-          7
-        ],
-        "Řečník Vilém": [
-          1,
-          6
-        ],
-        "Schraml Petr": [
-          2,
-          3
-        ],
-        "Zbořil Karel": [
-          0,
-          3
-        ],
-        "Procházka Lubomír": [
-          2,
-          0
-        ],
-        "Vach Josef": [
-          0,
-          2
-        ],
-        "Bajtek Jindřich": [
-          1,
-          1
-        ]
-      },
-      "reg": "CZE043320",
-      "turn_season": {
-        "cur": {
-          "turnaju": 10,
-          "v": 14,
-          "p": 20,
-          "winpct": 41
-        },
-        "last": {
-          "turnaju": 72,
-          "v": 86,
-          "p": 144,
-          "winpct": 37
-        },
-        "pohar_pozice": 82,
-        "pohar_total": 521
-      },
-      "lkh_detail": {
-        "legy_o": 100,
-        "legy_v": 50,
-        "zapasy_v": 20,
-        "n95": 47,
-        "n133": 7,
-        "n170": 1,
-        "z6": 0,
-        "z5": 0,
-        "z4": 0,
-        "z3": 0,
-        "her": 13
-      }
+      "hral": 24
     },
     {
       "jmeno": "Krykorka Milan",
+      "reg": "CZE062053",
+      "h2h": {
+        "Majerčin David": [
+          0,
+          1
+        ]
+      },
       "tym": "-",
       "kat": "B",
       "lkh": null,
       "legy": null,
-      "turnaje": null,
+      "turnaje": 750,
       "bt": -0.42,
       "utkani": 0,
-      "hral": 0,
-      "h2h": {
-        "Majerčin David": [
-          0,
-          1
-        ]
-      },
-      "reg": "CZE062053",
-      "turn_season": {
-        "cur": {
-          "turnaju": 0,
-          "v": 0,
-          "p": 0,
-          "winpct": null
-        },
-        "last": {
-          "turnaju": 1,
-          "v": 1,
-          "p": 2,
-          "winpct": 33
-        },
-        "pohar_pozice": null
-      }
+      "hral": 0
     }
   ]
 }
