@@ -2,7 +2,7 @@
  "season": "2026/27",
  "league": "1. liga A",
  "klub": "Sedmá rota Praha",
- "generated": "2026-09-05",
+ "generated": "2026-09-06",
  "rozpis": [
   {
    "k": 1,
@@ -343,7 +343,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 208,
-     "turnaje": 11050
+     "turnaje": 13750
     },
     {
      "jmeno": "Kopač Miroslav",
@@ -407,7 +407,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 112,
-     "turnaje": 11400
+     "turnaje": 13950
     },
     {
      "jmeno": "Henner Martin",
@@ -415,7 +415,7 @@
      "kat": "D",
      "liga": "3. liga N",
      "legy": 170,
-     "turnaje": 9700
+     "turnaje": 11300
     },
     {
      "jmeno": "Shíbal Petr",
@@ -468,7 +468,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 188,
-     "turnaje": 12500
+     "turnaje": 14450
     },
     {
      "jmeno": "Nemeš Jan",
@@ -476,7 +476,7 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 183,
-     "turnaje": 12000
+     "turnaje": 13950
     },
     {
      "jmeno": "Linek Adam",
@@ -620,7 +620,7 @@
      "kat": "C",
      "liga": "2. liga B",
      "legy": 223,
-     "turnaje": 8950
+     "turnaje": 9400
     },
     {
      "jmeno": "Dvořák Radek",
@@ -628,7 +628,7 @@
      "kat": "C",
      "liga": "2. liga B",
      "legy": 195,
-     "turnaje": 2250
+     "turnaje": 2600
     },
     {
      "jmeno": "Hocek Jakub",
@@ -644,7 +644,7 @@
      "kat": "C",
      "liga": "2. liga B",
      "legy": 144,
-     "turnaje": 10500
+     "turnaje": 11150
     },
     {
      "jmeno": "Bubla Martin",
@@ -715,7 +715,7 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 228,
-     "turnaje": 7550
+     "turnaje": 9500
     },
     {
      "jmeno": "Vokřálová Petra",
@@ -723,7 +723,7 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 33,
-     "turnaje": 4750
+     "turnaje": 5800
     },
     {
      "jmeno": "Mayer Marián",
@@ -996,7 +996,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 206,
-     "turnaje": 9250
+     "turnaje": 9900
     },
     {
      "jmeno": "Říha Josef",
@@ -1020,7 +1020,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 54,
-     "turnaje": 4150
+     "turnaje": 4500
     },
     {
      "jmeno": "Navrátil Zdeněk",
@@ -1174,7 +1174,7 @@
      "kat": "D",
      "liga": "3. liga B",
      "legy": 116,
-     "turnaje": 10450
+     "turnaje": 12550
     },
     {
      "jmeno": "Gaper Tomáš",
