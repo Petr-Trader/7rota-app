@@ -899,6 +899,45 @@ function renderSimOppProfile() {
     <div class="op-tbl">${posRows}</div>
     <p class="hint">Kdo loni hrával kterou pozici (× kolikrát) + konzistence pozice. ${p.predvidatelnost < 15 ? '<b>Hodně rotují</b> → těžko odhadnout, koho dají do rozhodujících pozdních her; drž se svojí strategie.' : 'Docela stálí → jejich rozhodující pozice se dají odhadnout.'} Znáš-li jejich dnešní sestavu, naklikej ji nahoře u „Soupeř".</p>`;
 }
+// F3: editor souperovy sestavy — Petr naklika JEJICH poradi na boardy (vc. nahradniku). Krmi simOppOrder -> rozhodujici souboje.
+function renderSimOppLineup() {
+  const box = $('simOppLineup'); if (!box || !SIM) return;
+  const opp = simOppTeam();
+  const avail = simRated(opp).filter(h => simSel.opp.has(h.j));
+  const away = !(SIM.rozpis[simMatch] && SIM.rozpis[simMatch].doma), oppSide = away ? 'D' : 'H';
+  const oppPg = away ? POS_GAMES_D : POS_GAMES_H;  // souper je opacna strana nez my
+  if (avail.length < 1) {
+    box.innerHTML = `<div class="sim-eyebrow" style="margin-top:14px">🔴 Jejich sestava — naklikej pořadí</div>
+      <p class="hint">Ťukni na jejich hráče výše u „Soupeř" = kdo dnes hraje (přidej i náhradníky). Pak je tady ▲▼ seřadíš na boardy.</p>`;
+    return;
+  }
+  const auto = avail.slice().sort((a, b) => effR(b) - effR(a));
+  const order = simOppOrder
+    ? simOppOrder.map(j => avail.find(h => h.j === j)).filter(Boolean).concat(auto.filter(h => !simOppOrder.includes(h.j)))
+    : auto;
+  const posOrder = [4, 3, 2, 1];  // top = jejich board 4 (rozhodujici posledni hra 18)
+  let rows = '';
+  order.forEach((h, i) => {
+    const core = i < 4, pos = core ? posOrder[i] : i + 1;
+    const games = core ? oppPg[pos] : null, lastG = games ? games[games.length - 1] : null;
+    const gtxt = games ? games.map(g => DECISIVE.has(g) ? `<b class="rec-dec">${g}</b>` : g).join(' · ')
+      : '<span class="rec-subnote">náhradník (čtyřhry)</span>';
+    const up = i > 0 ? `<button class="rec-mv" data-mv="up" data-i="${i}">▲</button>` : '<span class="rec-mvx"></span>';
+    const dn = i < order.length - 1 ? `<button class="rec-mv" data-mv="dn" data-i="${i}">▼</button>` : '<span class="rec-mvx"></span>';
+    rows += `<tr class="${core ? 'rec-core' : 'rec-sub'}"><td class="rec-pos">${oppSide}${pos}</td>
+      <td class="rec-nm">${escH(simShort(h.j))} <span class="rec-r">${effR(h)}${h.f != null ? ` · ${h.f}%` : ''}</span>${core && DECISIVE.has(lastG) ? `<span class="rec-badge">🔑 hra ${lastG}</span>` : ''}</td>
+      <td class="rec-g">${gtxt}</td><td class="rec-mvwrap">${up}${dn}</td></tr>`;
+  });
+  box.innerHTML = `<div class="sim-eyebrow" style="margin-top:14px">🔴 Jejich sestava — naklikej jejich pořadí <span class="hint2">(${avail.length} vybraných${simOppOrder ? ' · ručně' : ''})</span></div>
+    <p class="hint" style="margin:2px 0 8px">1) Nahoře u „Soupeř" ťukni, kdo hraje (i náhradníky). 2) Tady je ▲▼ seřaď na boardy ${oppSide}1-${oppSide}8 dle jejich zápisu / tvého odhadu. Boardy 4·3·2·1 hrají rozhodující hry 18·17·16·15 — ty krmí „Rozhodující souboje".${simOppOrder ? ' <a href="#" id="oppOrdReset">↺ zpět na auto (dle ratingu)</a>' : ''}</p>
+    <table class="rec-tbl"><thead><tr><th>Board</th><th>Hráč (rating · forma)</th><th>Singly hry</th><th></th></tr></thead><tbody>${rows}</tbody></table>`;
+  box.querySelectorAll('.rec-mv').forEach(b => b.onclick = () => {
+    const i = +b.dataset.i, j = b.dataset.mv === 'up' ? i - 1 : i + 1;
+    const arr = order.map(h => h.j);[arr[i], arr[j]] = [arr[j], arr[i]];
+    simOppOrder = arr; renderSim();
+  });
+  const rst = $('oppOrdReset'); if (rst) rst.onclick = (e) => { e.preventDefault(); simOppOrder = null; renderSim(); };
+}
 // F3: rozhodujici souboje pozdnich her — nase pozice vs jejich pozice (games 15-18 = poz i vs poz i).
 function orderedSide(team, sel, ord, tactic) {
   const avail = simRated(team).filter(h => sel.has(h.j));
@@ -942,7 +981,7 @@ function renderSimClutch() {
 }
 function renderSim() {
   if (!SIM) return;
-  renderSimChips(); renderSimLineups(); renderSimOppProfile(); renderSimRec(); renderSimClutch(); renderSimGrid(); renderSimPred(); renderSimDoubles();
+  renderSimChips(); renderSimLineups(); renderSimOppProfile(); renderSimOppLineup(); renderSimRec(); renderSimClutch(); renderSimGrid(); renderSimPred(); renderSimDoubles();
 }
 
 // ===== ARCHIV SESTAV (ulozeni F3 sestavy + vysledek zapasu, localStorage) =====
