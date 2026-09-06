@@ -74,12 +74,13 @@
         <input type="range" id="simWT" min="0" max="1" step="0.1"></div>
     </div>
     <div class="card">
-      <div class="sim-eyebrow">Sestavy <span class="hint2">(ťukni = přehoď hráče)</span></div>
+      <div class="sim-eyebrow">Sestavy <span class="hint2">(ťukni na hráče = dnes hraje / nehraje)</span></div>
       <div class="sim-cols">
-        <div><div class="sim-colh us">🟢 My</div><div id="simUs"></div></div>
+        <div><div class="sim-colh us">🟢 My (dostupní)</div><div id="simUs"></div></div>
         <div><div class="sim-colh opp" id="simOppName">Soupeř</div><div id="simOpp"></div></div>
       </div>
     </div>
+    <div class="card"><div id="simRec"></div></div>
     <div class="card">
       <div class="sim-eyebrow">Souboje 1v1 (šance našich)</div>
       <div class="sim-gwrap"><table class="sim-grid" id="simGrid"></table></div>

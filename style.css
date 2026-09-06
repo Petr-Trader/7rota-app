@@ -220,3 +220,18 @@ table.sim-grid .sim-rn{text-align:left;font-weight:700;font-size:10.5px;white-sp
 .sim-dbl{font-size:13px;margin-top:2px}
 .sim-dbl-r{padding:3px 0}
 .sim-pstr{color:var(--teal);font-weight:700;font-size:12px}
+/* F3 doporucena sestava (pozice) */
+.rec-tbl{border-collapse:collapse;width:100%;font-size:13px;margin-top:4px}
+.rec-tbl th{font-size:10px;text-transform:uppercase;letter-spacing:.04em;color:var(--mut);font-weight:700;text-align:left;padding:4px 6px;border-bottom:2px solid var(--line)}
+.rec-tbl td{padding:7px 6px;border-bottom:1px solid var(--line);vertical-align:middle}
+.rec-tbl tbody tr:last-child td{border-bottom:0}
+.rec-pos{font-weight:800;font-variant-numeric:tabular-nums;color:var(--teal);white-space:nowrap}
+.rec-sub .rec-pos{color:var(--mut)}
+.rec-nm{font-weight:600}
+.rec-r{font-size:11px;color:var(--mut);font-weight:700;font-variant-numeric:tabular-nums}
+.rec-g{font-size:12px;color:var(--mut);font-variant-numeric:tabular-nums}
+.rec-dec{color:var(--a);font-weight:800}
+.rec-badge{display:inline-block;font-size:10px;font-weight:700;color:#fff;background:var(--a);border-radius:6px;padding:1px 6px;margin-left:6px;white-space:nowrap}
+.rec-core{background:rgba(21,128,61,.05)}
+.rec-sub{opacity:.72}
+.rec-subnote{font-style:italic}

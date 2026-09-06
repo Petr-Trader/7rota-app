@@ -690,8 +690,16 @@ const simOppTeam = () => SIM.teams.find(t => simNorm(t.n) === simNorm(SIM.rozpis
 const simRated = (team) => team.hraci.filter(h => effR(h) != null);
 function simInitSel() {
   const top = (team) => simRated(team).slice().sort((a, b) => effR(b) - effR(a)).slice(0, 4).map(h => h.j);
-  simSel.us = new Set(top(simUsTeam())); simSel.opp = new Set(top(simOppTeam()));
+  // F3: nasi = vsichni dostupni (odskrtnutim = "dnes nehraje"); souper = predpokladane jadro 4
+  simSel.us = new Set(simRated(simUsTeam()).map(h => h.j));
+  simSel.opp = new Set(top(simOppTeam()));
 }
+// F3 rozpis: pozice -> singly hry (kanonicky z 156 realnych zapisu, 100% konzistentni).
+// Domaci (D) a hoste (H) maji jine PORADI her, ale POSLEDNI hra pozice je stejna: pos1->15..pos4->18.
+const POS_GAMES_D = { 1: [1, 5, 11, 15], 2: [2, 6, 12, 16], 3: [3, 7, 13, 17], 4: [4, 8, 14, 18] };
+const POS_GAMES_H = { 1: [3, 8, 12, 15], 2: [4, 7, 11, 16], 3: [1, 6, 14, 17], 4: [2, 5, 13, 18] };
+const DECISIVE = new Set([15, 16, 17, 18]);  // pozdni rozhodujici single hry (konec utkani)
+const posGames = () => (SIM && SIM.rozpis[simMatch] && SIM.rozpis[simMatch].doma) ? POS_GAMES_D : POS_GAMES_H;
 const simChosen = (team, who) => simRated(team).filter(h => simSel[who].has(h.j)).sort((a, b) => effR(b) - effR(a)).slice(0, 4);
 
 function renderSimChips() {
@@ -761,9 +769,34 @@ function renderSimDoubles() {
     <div class="sim-dbl-r"><b>Cricket:</b> ${pair(d1, d3)} · ${pair(d2, d4)}</div></div>
     <p class="hint">Páry dle rotace UŠO (501: D1+D2 / D3+D4, Cricket: D1+D3 / D2+D4). Síla = průměr ratingu; souhra dvojic se zatím nemodeluje.</p>`;
 }
+// F3: doporucena sestava — dostupni hraci na pozice tak, aby nejsilnejsi hrali pozdni rozhodujici hry.
+function renderSimRec() {
+  const box = $('simRec'); if (!box || !SIM) return;
+  const us = simRated(simUsTeam()).filter(h => simSel.us.has(h.j)).sort((a, b) => effR(b) - effR(a));
+  const pg = posGames(), away = !(SIM.rozpis[simMatch] && SIM.rozpis[simMatch].doma), side = away ? 'H' : 'D';
+  if (us.length < 1) {
+    box.innerHTML = `<div class="sim-eyebrow" style="margin-top:14px">📋 Doporučená sestava</div>
+      <p class="hint">Ťukni na naše hráče výše = kdo dnes hraje. Z dostupných ti sestavím pozice.</p>`;
+    return;
+  }
+  const posOrder = [4, 3, 2, 1];  // nejsilnejsi -> pozice 4 (posledni hra 18), pak 3 (17), 2 (16), 1 (15)
+  let rows = '';
+  us.forEach((h, i) => {
+    const core = i < 4, pos = core ? posOrder[i] : i + 1;
+    const games = core ? pg[pos] : null, lastG = games ? games[games.length - 1] : null;
+    const gtxt = games ? games.map(g => DECISIVE.has(g) ? `<b class="rec-dec">${g}</b>` : g).join(' · ')
+      : '<span class="rec-subnote">čtyřhry + střídání</span>';
+    rows += `<tr class="${core ? 'rec-core' : 'rec-sub'}"><td class="rec-pos">${side}${pos}</td>
+      <td class="rec-nm">${escH(simShort(h.j))} <span class="rec-r">${effR(h)}</span>${core && DECISIVE.has(lastG) ? `<span class="rec-badge">🔑 hra ${lastG}</span>` : ''}</td>
+      <td class="rec-g">${gtxt}</td></tr>`;
+  });
+  box.innerHTML = `<div class="sim-eyebrow" style="margin-top:14px">📋 Doporučená sestava <span class="hint2">(${us.length} hráčů · ${away ? 'venku' : 'doma'})</span></div>
+    <p class="hint" style="margin:4px 0 8px">Nejsilnější dostupní na pozice, jejichž poslední hra je nejpozději — tví nejlepší rozhodují konec utkání. Jádro 1-4 hraje singly, náhradníci čtyřhry + střídání.</p>
+    <table class="rec-tbl"><thead><tr><th>Poz</th><th>Hráč (rating)</th><th>Singly hry</th></tr></thead><tbody>${rows}</tbody></table>`;
+}
 function renderSim() {
   if (!SIM) return;
-  renderSimChips(); renderSimLineups(); renderSimGrid(); renderSimPred(); renderSimDoubles();
+  renderSimChips(); renderSimLineups(); renderSimRec(); renderSimGrid(); renderSimPred(); renderSimDoubles();
 }
 
 async function init() {
