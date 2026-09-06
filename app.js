@@ -746,13 +746,25 @@ function renderSimGrid() {
   g.innerHTML = h;
 }
 function simPoisson(ps) { let d = [1]; for (const p of ps) { const nd = new Array(d.length + 1).fill(0); for (let i = 0; i < d.length; i++) { nd[i] += d[i] * (1 - p); nd[i + 1] += d[i] * p; } d = nd; } return d; }
+// Double/Cricket: 2 nase dvojice vs 2 jejich na 2 tercich (2:0/1:1/0:2); pri 1:1 rozhodnou vitezove.
+// us4/opp4 = 4 hraci (dvojice [0,1] a [2,3]). Vraci P(vyhrajeme segment).
+function doublesWin(us4, opp4) {
+  const pr = (a, b) => (effR(a) + effR(b)) / 2;
+  if (us4.length < 4 || opp4.length < 4) {
+    const uP = pr(us4[0], us4[1] || us4[0]), oP = pr(opp4[0], opp4[1] || opp4[0]);
+    return simWp(uP, oP);
+  }
+  const P1 = pr(us4[0], us4[1]), P2 = pr(us4[2], us4[3]), Q1 = pr(opp4[0], opp4[1]), Q2 = pr(opp4[2], opp4[3]);
+  const p1 = simWp(P1, Q1), p2 = simWp(P2, Q2);       // vyhra na tercich
+  const d1 = simWp(P1, Q2), d2 = simWp(P2, Q1);       // rozhodujici: nas vitez vs jejich vitez
+  return p1 * p2 + p1 * (1 - p2) * d1 + (1 - p1) * p2 * d2;
+}
 function renderSimPred() {
   const us = simChosen(simUsTeam(), 'us'), opp = simChosen(simOppTeam(), 'opp'), box = $('simPred');
   if (us.length < 1 || opp.length < 1) { box.innerHTML = '<p class="hint">Vyber hráče v sestavách níže.</p>'; return; }
   const sp = []; us.forEach(u => opp.forEach(o => sp.push(simWp(effR(u), effR(o)))));
-  const uP = us.slice(0, 2).reduce((s, x) => s + effR(x), 0) / Math.min(2, us.length);
-  const oP = opp.slice(0, 2).reduce((s, x) => s + effR(x), 0) / Math.min(2, opp.length);
-  const all = sp.concat([simWp(uP, oP), simWp(uP, oP)]);
+  const dw = doublesWin(us.slice(0, 4), opp.slice(0, 4));   // double + cricket (2 dvojice + rozhodujici)
+  const all = sp.concat([dw, dw]);
   const exp = all.reduce((s, x) => s + x, 0), tot = all.length, dist = simPoisson(all), half = tot / 2;
   let pw = 0, pt = 0, pl = 0; dist.forEach((v, i) => { i > half ? pw += v : i === half ? pt += v : pl += v; });
   const W = Math.round(pw * 100), T = Math.round(pt * 100), L = Math.round(pl * 100);
@@ -765,29 +777,28 @@ function renderSimPred() {
       <div class="sim-co warn"><b>⚠️ Pozor na</b>${escH(oppTop.j)} · ${effR(oppTop)}${oppTop.f != null ? ` · forma ${oppTop.f}%` : ''}</div>
       <div class="sim-co arm"><b>💪 Naše zbraň</b>${escH(simShort(best.u))} vs ${escH(simShort(best.o))} · ${Math.round(best.p * 100)}% pro nás</div></div>`;
 }
-// F3: optimalizace paru na double + cricket (2 parove hry). Enumeruje rozdeleni top-4 do 2 paru.
+// F3: optimalizace paru na double + cricket (2 dvojice na 2 tercich + rozhodujici). Enumeruje rozdeleni top-4.
 function renderSimDoubles() {
   const box = $('simDoubles'); if (!box) return;
   const us = simChosen(simUsTeam(), 'us'), opp = simChosen(simOppTeam(), 'opp');
   if (us.length < 2) { box.innerHTML = '<div class="hint" style="margin-top:10px">Pro páry vyber aspoň 2 hráče v naší sestavě.</div>'; return; }
-  const oppPairR = opp.length >= 2 ? (effR(opp[0]) + effR(opp[1])) / 2 : (opp.length ? effR(opp[0]) : 1200);
   const pr = (x, y) => (effR(x) + effR(y)) / 2;
-  const wp = (x, y) => Math.round(simWp(pr(x, y), oppPairR) * 100);
-  const nm = (x, y) => `${escH(simShort(x.j))} + ${escH(simShort(y.j))} <span class="sim-pstr">~${Math.round(pr(x, y))} · ${wp(x, y)}%</span>`;
-  const p = us.slice(0, 4);
-  let bal = null;
-  if (p.length >= 4) {
-    [[[0, 1], [2, 3]], [[0, 2], [1, 3]], [[0, 3], [1, 2]]].forEach(sp => {
-      const exp = simWp(pr(p[sp[0][0]], p[sp[0][1]]), oppPairR) + simWp(pr(p[sp[1][0]], p[sp[1][1]]), oppPairR);
-      if (!bal || exp > bal.exp) bal = { exp, a: [p[sp[0][0]], p[sp[0][1]]], b: [p[sp[1][0]], p[sp[1][1]]] };
+  const nm = (x, y) => `${escH(simShort(x.j))} + ${escH(simShort(y.j))} <span class="sim-pstr">~${Math.round(pr(x, y))}</span>`;
+  const p = us.slice(0, 4), opp4 = opp.slice(0, 4);
+  let best = null;
+  if (p.length >= 4 && opp4.length >= 4) {
+    [[[0, 1], [2, 3]], [[0, 2], [1, 3]], [[0, 3], [1, 2]]].forEach(s => {
+      const us4 = [p[s[0][0]], p[s[0][1]], p[s[1][0]], p[s[1][1]]];
+      const w = doublesWin(us4, opp4);
+      if (!best || w > best.w) best = { w, a: [us4[0], us4[1]], b: [us4[2], us4[3]] };
     });
   }
   box.innerHTML = `<div class="sim-eyebrow" style="margin-top:14px">Optimalizace párů (double + cricket)</div>
     <div class="sim-dbl">
-      ${bal ? `<div class="sim-dbl-r"><b>⚖️ Vyvážené (max. součet výher):</b><br>${nm(bal.a[0], bal.a[1])}<br>${nm(bal.b[0], bal.b[1])}</div>` : ''}
-      ${p.length >= 2 ? `<div class="sim-dbl-r" style="margin-top:7px"><b>💪 Silný pár (urvi 1 jistě):</b><br>${nm(p[0], p[1])}${p.length >= 4 ? `<br><span class="hint2">druhý pár:</span> ${nm(p[2], p[3])}` : ''}</div>` : ''}
+      ${best ? `<div class="sim-dbl-r"><b>⚖️ Doporučené 2 dvojice</b> <span class="sim-pstr">šance na segment ${Math.round(best.w * 100)} %</span><br>${nm(best.a[0], best.a[1])}<br>${nm(best.b[0], best.b[1])}</div>`
+      : (p.length >= 2 ? `<div class="sim-dbl-r">${nm(p[0], p[1])}${p.length >= 4 ? `<br>${nm(p[2], p[3])}` : ''}</div>` : '')}
     </div>
-    <p class="hint">% = šance páru porazit jejich průměrný pár (~${Math.round(oppPairR)}). <b>Vyvážené</b> = rozdělí sílu, maximalizuje očekávaný součet obou párovek. <b>Silný pár</b> = 2 nejsilnější spolu (jistota jedné výhry, druhá slabší). Síla = průměr ratingu; souhra se zatím nemodeluje.</p>`;
+    <p class="hint">2 dvojice hrají na 2 terčích (2:0/1:1); při 1:1 rozhodnou vítězové proti sobě. Šance na segment = P(vyhrajeme oba terče) + P(1:1)×P(rozhodující). Model vybírá rozdělení s nejvyšší šancí; vyplatí se mít <b>obě dvojice silné</b> (kvůli rozhodující). Síla = průměr ratingu; souhra se zatím nemodeluje.</p>`;
 }
 // F3 taktiky: skore, dle ktereho hraci dostavaji rozhodujici pozice.
 const TACTICS = {
