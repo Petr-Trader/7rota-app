@@ -2,7 +2,7 @@
  "season": "2026/27",
  "league": "1. liga A",
  "klub": "Sedmá rota Praha",
- "generated": "2026-09-08",
+ "generated": "2026-09-09",
  "rozpis": [
   {
    "k": 1,
@@ -288,7 +288,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 53,
-     "turnaje": 6550
+     "turnaje": 7400
     },
     {
      "jmeno": "Hamšík Robert",
@@ -543,7 +543,7 @@
      "kat": "D",
      "liga": "3. liga L",
      "legy": 87,
-     "turnaje": 4500
+     "turnaje": 4750
     },
     {
      "jmeno": "Gutvirt Petr",
@@ -551,7 +551,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 207,
-     "turnaje": 13900
+     "turnaje": 14850
     },
     {
      "jmeno": "Kopecký Jiří",
@@ -699,7 +699,7 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 214,
-     "turnaje": 6600
+     "turnaje": 7550
     },
     {
      "jmeno": "Stanko Jindřich",
@@ -707,7 +707,7 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 215,
-     "turnaje": 5800
+     "turnaje": 6350
     },
     {
      "jmeno": "Cirkovský Jaroslav",
@@ -715,7 +715,7 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 228,
-     "turnaje": 9500
+     "turnaje": 9850
     },
     {
      "jmeno": "Vokřálová Petra",
@@ -747,7 +747,7 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 27,
-     "turnaje": 2800
+     "turnaje": 3050
     }
    ]
   },
@@ -1097,7 +1097,7 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 60,
-     "turnaje": 3050
+     "turnaje": 3800
     },
     {
      "jmeno": "Forman Bohumil",
@@ -1121,7 +1121,7 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 65,
-     "turnaje": 4150
+     "turnaje": 4400
     },
     {
      "jmeno": "Černohorský Miroslav",
