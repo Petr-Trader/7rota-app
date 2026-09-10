@@ -266,6 +266,13 @@ table.sim-grid .sim-rn{text-align:left;font-weight:700;font-size:10.5px;white-sp
 .arch-head b{font-size:14px}
 .arch-head .hint2{flex:1}
 .arch-del{background:none;border:0;color:var(--mut);font-size:15px;cursor:pointer;padding:0 4px}
+.arch-share{background:none;border:0;font:inherit;font-size:11.5px;font-weight:700;color:var(--teal);
+  cursor:pointer;padding:2px 6px;border-radius:7px;margin-left:auto}
+.arch-share:active{background:var(--bg)}
+.arch-tools{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 11px}
+.arch-tool{flex:1 1 auto;min-width:140px;background:var(--bg);border:1px solid var(--line);border-radius:9px;
+  padding:9px 11px;font:inherit;font-size:13px;color:var(--txt);cursor:pointer}
+.arch-tool:active{background:var(--line)}
 .arch-lu{font-size:12px;margin:6px 0;display:flex;gap:9px;flex-wrap:wrap}
 .arch-core{color:var(--txt);font-weight:600}
 .arch-sub{color:var(--mut)}

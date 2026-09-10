@@ -1057,8 +1057,97 @@ function saveLineup() {
   saveArchiv(arr);
   const btn = $('simSaveBtn'); if (btn) { btn.textContent = '✓ Uloženo do archivu'; btn.disabled = true; setTimeout(renderSimRec, 1600); }
 }
+// ── Sdileni sestavy (A) + export/import archivu (D) ──────────────────────────
+const DNY = ['Ne', 'Po', 'Út', 'St', 'Čt', 'Pá', 'So'];
+function denZData(d) {                       // "20.9.2026" -> "Ne"
+  const m = /^(\d+)\.(\d+)\.(\d+)$/.exec(('' + d).trim());
+  if (!m) return '';
+  const dt = new Date(+m[3], +m[2] - 1, +m[1]);
+  return isNaN(dt) ? '' : DNY[dt.getDay()];
+}
+
+// Rozhodujici hra pozice = posledni z jejiho rozpisu (vzdy 15-18, viz PRAVIDLA_LIGA.md)
+function hraProPozici(pos) {
+  const m = /^([DH])(\d)$/.exec(pos || '');
+  if (!m) return null;
+  const tab = m[1] === 'D' ? POS_GAMES_D : POS_GAMES_H;
+  const g = tab[+m[2]];
+  return g ? g[g.length - 1] : null;
+}
+
+function lineupText(a) {
+  const den = denZData(a.date);
+  const L = [`Sedmá rota — ${den ? den + ' ' : ''}${a.date} ${a.doma ? 'DOMA' : 'VENKU'} vs ${a.souper}`];
+  L.push(`Taktika: ${(TACTICS[a.tactic] || {}).nm || a.tactic}`, '');
+  const zaklad = a.lineup.filter(p => p.core), nahr = a.lineup.filter(p => !p.core);
+  const w = Math.max(...a.lineup.map(p => p.jmeno.length));
+  zaklad.forEach(p => {
+    const h = hraProPozici(p.pos);
+    L.push(`${p.pos}  ${p.jmeno.padEnd(w)}${h ? '  → hra ' + h : ''}`);
+  });
+  if (nahr.length) {
+    L.push('── náhradníci ──');
+    nahr.forEach(p => L.push(`${p.pos}  ${p.jmeno}`));
+  }
+  if (a.result && a.result.vysledek) {
+    const v = { V: 'Výhra', P: 'Prohra', R: 'Remíza' }[a.result.vysledek] || a.result.vysledek;
+    L.push('', `Výsledek: ${v}${a.result.skore ? ' ' + a.result.skore : ''}${a.result.poznamka ? ' · ' + a.result.poznamka : ''}`);
+  }
+  return L.join('\n');
+}
+
+async function shareLineup(a, btn) {
+  const text = lineupText(a);
+  const title = `Sestava vs ${a.souper} (${a.date})`;
+  if (navigator.share) {
+    try { await navigator.share({ title, text }); return; } catch (e) { if (e && e.name === 'AbortError') return; }
+  }
+  try {                                       // fallback: schranka (desktop, starsi prohlizece)
+    await navigator.clipboard.writeText(text);
+    if (btn) { const o = btn.textContent; btn.textContent = '✓ zkopírováno'; setTimeout(() => btn.textContent = o, 1600); }
+  } catch { alert(text); }                    // posledni zachrana: aspon to ukaz
+}
+
+const ARCHIV_FILE = () => `7rota-archiv-${new Date().toISOString().slice(0, 10)}.json`;
+
+async function exportArchiv() {
+  const arr = loadArchiv();
+  if (!arr.length) { alert('Archiv je prázdný — není co zálohovat.'); return; }
+  const blob = new Blob([JSON.stringify({ app: '7rota', exported: new Date().toISOString(), archiv: arr }, null, 1)],
+    { type: 'application/json' });
+  const file = new File([blob], ARCHIV_FILE(), { type: 'application/json' });
+  if (navigator.canShare && navigator.canShare({ files: [file] })) {
+    try { await navigator.share({ title: 'Záloha archivu sestav', files: [file] }); return; } catch (e) { if (e && e.name === 'AbortError') return; }
+  }
+  const a = document.createElement('a');       // fallback: stazeni
+  a.href = URL.createObjectURL(blob); a.download = file.name; a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+}
+
+// Slucuje podle id — opakovany import stejne zalohy nic nezduplikuje.
+function importArchiv(file) {
+  const rd = new FileReader();
+  rd.onload = () => {
+    let vni;
+    try { vni = JSON.parse(rd.result); } catch { alert('Soubor nejde přečíst — není to JSON záloha.'); return; }
+    const nove = Array.isArray(vni) ? vni : (vni && vni.archiv);
+    if (!Array.isArray(nove)) { alert('V souboru není archiv sestav.'); return; }
+    const stare = loadArchiv(), znam = new Set(stare.map(x => String(x.id)));
+    const pridat = nove.filter(x => x && x.id && x.lineup && !znam.has(String(x.id)));
+    if (!pridat.length) { alert(`Nic nového — všechny záznamy (${nove.length}) už v archivu jsou.`); return; }
+    const spoj = stare.concat(pridat).sort((x, y) => (y.id || 0) - (x.id || 0));
+    saveArchiv(spoj);
+    alert(`Načteno ${pridat.length} z ${nove.length} záznamů (zbytek už tu byl).`);
+    renderArchiv();
+  };
+  rd.readAsText(file);
+}
+
 function renderArchiv() {
   const box = $('archivList'); if (!box) return;
+  const exp = $('archExport'), imp = $('archImport'), impF = $('archImportFile');
+  if (exp) exp.onclick = exportArchiv;
+  if (imp && impF) { imp.onclick = () => impF.click(); impF.onchange = () => { if (impF.files[0]) importArchiv(impF.files[0]); impF.value = ''; }; }
   const arr = loadArchiv();
   if (!arr.length) { box.innerHTML = '<p class="hint">Zatím nic uloženého. V Simulátoru → Doporučená sestava dej „💾 Uložit sestavu", a po zápase sem zadáš výsledek.</p>'; return; }
   const stat = {};
@@ -1072,7 +1161,7 @@ function renderArchiv() {
     const lu = a.lineup.map(p => `<span class="${p.core ? 'arch-core' : 'arch-sub'}">${p.pos} ${escH(short(p.jmeno))}</span>`).join(' ');
     const res = r ? `<div class="arch-res ${r.vysledek === 'V' ? 'w' : r.vysledek === 'P' ? 'l' : 't'}"><b>${r.vysledek === 'V' ? '✅ Výhra' : r.vysledek === 'P' ? '❌ Prohra' : '➖ Remíza'}</b>${r.skore ? ' ' + escH(r.skore) : ''}${r.poznamka ? ' · ' + escH(r.poznamka) : ''} <button class="arch-clr" data-id="${a.id}">upravit</button></div>`
       : `<div class="arch-entry">Výsledek: <button class="arch-rbtn" data-id="${a.id}" data-r="V">✅ Výhra</button><button class="arch-rbtn" data-id="${a.id}" data-r="P">❌ Prohra</button><button class="arch-rbtn" data-id="${a.id}" data-r="R">➖ Remíza</button></div>`;
-    return `<div class="arch-item"><div class="arch-head"><b>${escH(a.souper)}</b> <span class="hint2">${a.date} · ${a.doma ? 'doma' : 'venku'} · ${(TACTICS[a.tactic] || {}).nm || a.tactic}</span><button class="arch-del" data-id="${a.id}">✕</button></div>
+    return `<div class="arch-item"><div class="arch-head"><b>${escH(a.souper)}</b> <span class="hint2">${a.date} · ${a.doma ? 'doma' : 'venku'} · ${(TACTICS[a.tactic] || {}).nm || a.tactic}</span><button class="arch-share" data-id="${a.id}">📤 Sdílet</button><button class="arch-del" data-id="${a.id}">✕</button></div>
       <div class="arch-lu">${lu}</div>${res}</div>`;
   }).join('');
   box.innerHTML = (statHtml ? `<div class="arch-stats"><span class="hint2">Úspěšnost taktik:</span> ${statHtml}</div>` : '') + rows;
@@ -1085,6 +1174,10 @@ function renderArchiv() {
   box.querySelectorAll('.arch-clr').forEach(b => b.onclick = () => {
     const a = loadArchiv(), it = a.find(x => x.id == b.dataset.id);
     if (it) { it.result = null; saveArchiv(a); renderArchiv(); }
+  });
+  box.querySelectorAll('.arch-share').forEach(b => b.onclick = () => {
+    const a = loadArchiv().find(x => x.id == b.dataset.id);
+    if (a) shareLineup(a, b);
   });
   box.querySelectorAll('.arch-del').forEach(b => b.onclick = () => {
     if (!confirm('Smazat tento záznam z archivu?')) return;

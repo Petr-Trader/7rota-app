@@ -100,6 +100,11 @@
     <div class="card">
       <div class="scout-head"><h2>Archiv sestav</h2><span class="hint2">ulož sestavu · zadej výsledek · porovnej</span></div>
       <p class="hint">Uložené sestavy z F3. Po zápase u každé klikni na výsledek (Výhra/Prohra/Remíza) + skóre. Nahoře vidíš úspěšnost jednotlivých taktik.</p>
+      <div class="arch-tools">
+        <button id="archExport" class="arch-tool">⬇️ Zálohovat archiv</button>
+        <button id="archImport" class="arch-tool">⬆️ Načíst zálohu</button>
+        <input id="archImportFile" type="file" accept="application/json,.json" hidden>
+      </div>
       <div id="archivList"></div>
     </div>
   </section>
