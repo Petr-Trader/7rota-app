@@ -29,46 +29,77 @@
       "jmeno": "Bajtek Jindřich",
       "reg": "CZE073925",
       "h2h": {
-        "Schraml Petr": [
-          4,
-          3
-        ],
         "Zbořil Karel": [
-          3,
-          4
+          24,
+          20
+        ],
+        "Schraml Petr": [
+          16,
+          23
         ],
         "Majerčin David": [
-          1,
-          0
+          19,
+          13
+        ],
+        "Krykorka Milan": [
+          7,
+          9
+        ],
+        "Královič Martin": [
+          9,
+          5
+        ],
+        "Procházka Lubomír": [
+          6,
+          1
+        ],
+        "Hamšík Robert": [
+          4,
+          1
         ]
       },
       "tym": "A",
       "kat": "B",
       "lkh": 62.6,
       "legy": 165,
-      "turnaje": 16150,
+      "turnaje": 16600,
       "bt": 1.11,
       "utkani": 19,
-      "hral": 19
+      "hral": 19,
+      "lkh_n": null,
+      "leg_n": null,
+      "zap_n": null
     },
     {
       "jmeno": "Majerčin David",
       "reg": "CZE020476",
       "h2h": {
         "Schraml Petr": [
-          1,
-          2
-        ],
-        "Zbořil Karel": [
-          0,
-          3
-        ],
-        "Krykorka Milan": [
-          1,
-          0
+          13,
+          27
         ],
         "Bajtek Jindřich": [
-          0,
+          13,
+          19
+        ],
+        "Zbořil Karel": [
+          9,
+          13
+        ],
+        "Procházka Lubomír": [
+          16,
+          2
+        ],
+        "Královič Martin": [
+          6,
+          8
+        ],
+        "Krykorka Milan": [
+          6,
+          3
+        ],
+        "Hamšík Robert": [
+          3,
           1
         ]
       },
@@ -76,55 +107,89 @@
       "kat": "B",
       "lkh": 56.6,
       "legy": 53,
-      "turnaje": 6550,
+      "turnaje": 7850,
       "bt": 0.12,
       "utkani": 15,
-      "hral": 10
+      "hral": 10,
+      "lkh_n": 65.6,
+      "leg_n": 9,
+      "zap_n": 4
     },
     {
       "jmeno": "Schraml Petr",
       "reg": "CZE063740",
       "h2h": {
-        "Bajtek Jindřich": [
-          3,
-          4
-        ],
         "Zbořil Karel": [
-          2,
-          4
-        ],
-        "Procházka Lubomír": [
-          3,
-          0
+          31,
+          11
         ],
         "Majerčin David": [
-          2,
-          1
+          27,
+          13
+        ],
+        "Bajtek Jindřich": [
+          23,
+          16
         ],
         "Královič Martin": [
-          1,
-          0
+          21,
+          7
+        ],
+        "Procházka Lubomír": [
+          21,
+          1
+        ],
+        "Krykorka Milan": [
+          10,
+          8
+        ],
+        "Hamšík Robert": [
+          4,
+          3
         ]
       },
       "tym": "A",
       "kat": "A",
       "lkh": 38.0,
       "legy": 97,
-      "turnaje": 10100,
+      "turnaje": 11500,
       "bt": 0.21,
       "utkani": 22,
-      "hral": 17
+      "hral": 17,
+      "lkh_n": 33.3,
+      "leg_n": 6,
+      "zap_n": 3
     },
     {
       "jmeno": "Procházka Lubomír",
       "reg": "CZE030947",
       "h2h": {
         "Schraml Petr": [
-          0,
-          3
+          1,
+          21
+        ],
+        "Majerčin David": [
+          2,
+          16
         ],
         "Zbořil Karel": [
-          0,
+          1,
+          10
+        ],
+        "Královič Martin": [
+          2,
+          7
+        ],
+        "Bajtek Jindřich": [
+          1,
+          6
+        ],
+        "Krykorka Milan": [
+          1,
+          5
+        ],
+        "Hamšík Robert": [
+          2,
           1
         ]
       },
@@ -135,19 +200,38 @@
       "turnaje": 2100,
       "bt": -1.86,
       "utkani": 24,
-      "hral": 5
+      "hral": 5,
+      "lkh_n": null,
+      "leg_n": null,
+      "zap_n": null
     },
     {
       "jmeno": "Královič Martin",
       "reg": "CZE073050",
       "h2h": {
-        "Zbořil Karel": [
-          1,
-          0
-        ],
         "Schraml Petr": [
+          7,
+          21
+        ],
+        "Bajtek Jindřich": [
+          5,
+          9
+        ],
+        "Majerčin David": [
+          8,
+          6
+        ],
+        "Zbořil Karel": [
+          5,
+          6
+        ],
+        "Procházka Lubomír": [
+          7,
+          2
+        ],
+        "Krykorka Milan": [
           0,
-          1
+          4
         ]
       },
       "tym": "B",
@@ -157,46 +241,85 @@
       "turnaje": 900,
       "bt": -0.2,
       "utkani": 24,
-      "hral": 24
+      "hral": 24,
+      "lkh_n": 46.0,
+      "leg_n": 10,
+      "zap_n": 4
     },
     {
       "jmeno": "Zbořil Karel",
       "reg": "CZE057352",
       "h2h": {
         "Bajtek Jindřich": [
-          4,
-          3
+          20,
+          24
         ],
         "Schraml Petr": [
-          4,
-          2
+          11,
+          31
         ],
         "Majerčin David": [
-          3,
-          0
-        ],
-        "Královič Martin": [
-          0,
-          1
+          13,
+          9
         ],
         "Procházka Lubomír": [
-          1,
-          0
+          10,
+          1
+        ],
+        "Královič Martin": [
+          6,
+          5
+        ],
+        "Krykorka Milan": [
+          4,
+          4
+        ],
+        "Hamšík Robert": [
+          2,
+          1
         ]
       },
       "tym": "B",
       "kat": "D",
       "lkh": 60.6,
       "legy": 126,
-      "turnaje": 10750,
+      "turnaje": 11200,
       "bt": 0.4,
       "utkani": 16,
-      "hral": 16
+      "hral": 16,
+      "lkh_n": 105.0,
+      "leg_n": 2,
+      "zap_n": 1
     },
     {
       "jmeno": "Hamšík Robert",
       "reg": "CZE059170",
-      "h2h": {},
+      "h2h": {
+        "Krykorka Milan": [
+          1,
+          6
+        ],
+        "Schraml Petr": [
+          3,
+          4
+        ],
+        "Bajtek Jindřich": [
+          1,
+          4
+        ],
+        "Majerčin David": [
+          1,
+          3
+        ],
+        "Procházka Lubomír": [
+          1,
+          2
+        ],
+        "Zbořil Karel": [
+          1,
+          2
+        ]
+      },
       "tym": "B",
       "kat": "D",
       "lkh": 48.1,
@@ -204,15 +327,42 @@
       "turnaje": null,
       "bt": null,
       "utkani": 24,
-      "hral": 24
+      "hral": 24,
+      "lkh_n": 25.0,
+      "leg_n": 8,
+      "zap_n": 3
     },
     {
       "jmeno": "Krykorka Milan",
       "reg": "CZE062053",
       "h2h": {
+        "Schraml Petr": [
+          8,
+          10
+        ],
+        "Bajtek Jindřich": [
+          9,
+          7
+        ],
         "Majerčin David": [
-          0,
+          3,
+          6
+        ],
+        "Zbořil Karel": [
+          4,
+          4
+        ],
+        "Hamšík Robert": [
+          6,
           1
+        ],
+        "Procházka Lubomír": [
+          5,
+          1
+        ],
+        "Královič Martin": [
+          4,
+          0
         ]
       },
       "tym": "-",
@@ -222,7 +372,10 @@
       "turnaje": 750,
       "bt": -0.42,
       "utkani": 0,
-      "hral": 0
+      "hral": 0,
+      "lkh_n": 85.0,
+      "leg_n": 2,
+      "zap_n": 1
     }
   ]
 }

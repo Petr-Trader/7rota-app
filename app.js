@@ -161,6 +161,9 @@ function render() {
 }
 
 let LAST = {};
+// cestina: 1 leg / 2-4 legy / 5+ legu
+const legStr = (n) => `${n} ${n === 1 ? 'leg' : (n >= 2 && n <= 4 ? 'legy' : 'legů')}`;
+
 function tile(label, val, sub) {
   return `<div class="tile"><span class="tl">${label}</span><span class="tv">${val}</span>${sub ? `<span class="ts">${sub}</span>` : ''}</div>`;
 }
@@ -176,7 +179,9 @@ function openDetail(jmeno) {
     + `tým ${p.klub || p.tym || '—'} · ${liga}` + (p.rank ? ` · pořadí #${p.rank}` : '');
   $('dStats').innerHTML =
     tile('Vážené skóre', p.score == null ? '—' : p.score.toFixed(2))
-    + tile('LKH (liga)', p.lkh == null ? '—' : p.lkh.toFixed(1), p.legy != null ? `${p.legy} legů` : 'bez ligy')
+    + tile('LKH (liga)', p.lkh == null ? '—' : p.lkh.toFixed(1), p.legy != null ? legStr(p.legy) : 'bez ligy')
+    + tile('LKH letos', p.lkh_n == null ? '—' : p.lkh_n.toFixed(1),
+        p.leg_n ? `${legStr(p.leg_n)}${p.zap_n ? ' · ' + p.zap_n + ' záp.' : ''}` : 'letos ještě nehrál')
     + tile('Pohár pořadí', (p.turn_season && p.turn_season.pohar_pozice) ? p.turn_season.pohar_pozice + '/' + p.turn_season.pohar_total : '—', 'Středočeský pohár (živé)')
     + tile('Síla (BT)', p.bt == null ? '—' : p.bt.toFixed(2), 'vzájemné zápasy')
     + tile('Docházka', p.utkani == null ? '—' : `${p.utkani}/${total}`,
@@ -185,6 +190,11 @@ function openDetail(jmeno) {
   if (p.jenLiga) notes.push('„Jen liga" — nehraje turnaje, soudí se hlavně z LKH.');
   if (p.lkh == null) notes.push('Bez ligových dat — posuzuje se z turnajů (BT).');
   if (p.legy != null && p.legy < (params.lref || 120)) notes.push(`Málo odehraných legů (${p.legy}) → LKH méně prokázané (spolehlivostní faktor).`);
+  if (p.lkh_n != null && (p.leg_n || 0) < 4) notes.push(`„LKH letos" je zatím z ${legStr(p.leg_n)} — neprůkazné, do pořadí se nepočítá.`);
+  else if (p.lkh_n != null && p.lkh != null) {
+    const d = p.lkh_n - p.lkh;
+    if (Math.abs(d) >= 8) notes.push(`Letošní forma ${d > 0 ? 'nad' : 'pod'} loňským LKH o ${Math.abs(d).toFixed(1)} (z ${legStr(p.leg_n)}).`);
+  }
   $('dNote').textContent = notes.join(' ');
   renderLkh(p);
   renderTurn(p);
@@ -646,7 +656,7 @@ function openTeam(i) { if (i == null || i < 0) return; scoutTeam = i; renderTeam
 function nowTag(p) {
   if (p.lkh_n == null) return '';
   const low = (p.leg_n || 0) < 4;
-  const t = `LKH běžící sezóny: ${p.lkh_n} z ${p.leg_n} legů` + (p.zap_n ? ` (${p.zap_n} zápasy)` : '');
+  const t = `LKH běžící sezóny: ${p.lkh_n} z ${legStr(p.leg_n)}` + (p.zap_n ? ` (${p.zap_n} zápasy)` : '');
   return `<span class="pl-now${low ? ' low' : ''}" title="${t}">letos ${Math.round(p.lkh_n)}</span>`;
 }
 
