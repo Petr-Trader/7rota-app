@@ -935,10 +935,14 @@ function renderSimOppProfile() {
   const p = oppProfile();
   if (!p) {
     box.innerHTML = `<div class="sim-eyebrow" style="margin-top:14px">🕵️ Jak soupeř staví sestavu</div>
-      <p class="hint">Z loňska nemám jeho pozicování — nový tým v 1. lize A (přišel z nižší soutěže). Naskáče po pár odehraných zápasech sezóny.</p>`;
+      <p class="hint">Nemám jeho pozicování — nový tým v 1. lize A a letos ještě neodehrál zápas se zápisem. Naskočí hned po prvním odehraném kole.</p>`;
     return;
   }
-  const sig = p.signal === 'predvidatelni' ? '<span class="op-sig p">✅ Předvídatelní</span>'
+  // malo_dat = tym je v lize novy a ma zatim 1-2 zapasy. Sestavu ukaz (je to jedine,
+  // co o nem existuje), ale predvidatelnost NE — z jednoho zapasu vyjde vzdy 100 %.
+  const tenky = !!p.malo_dat;
+  const sig = tenky ? '<span class="op-sig t">⚠️ Málo dat</span>'
+    : p.signal === 'predvidatelni' ? '<span class="op-sig p">✅ Předvídatelní</span>'
     : p.signal === 'dost meni' ? '<span class="op-sig m">◐ Dost mění</span>'
     : '<span class="op-sig t">🎲 Hodně rotují (možná taktizují)</span>';
   // ratingy souperovych hracu (stejna skala jako nasi) — z sim_data
@@ -950,10 +954,17 @@ function renderSimOppProfile() {
     const pls = arr.map(x => `${escH(x.h.split(' ')[0])} ${rtxt(x.h)} <span class="op-n">${x.n}×</span>`).join(' · ');
     return `<div class="op-prow"><span class="op-pos">poz ${pos}</span><span class="op-pl">${pls || '—'}</span><span class="op-k">${(p.konzistence || {})[pos] || 0}%</span></div>`;
   }).join('');
-  box.innerHTML = `<div class="sim-eyebrow" style="margin-top:14px">🕵️ Jak soupeř staví sestavu <span class="hint2">(${p.zapasu} loňských zápasů)</span></div>
-    <div class="op-head">${sig} <span class="hint2">stejné jádro jen ${p.predvidatelnost}% zápasů</span></div>
+  const zapStr = `${p.zapasu} ${p.zapasu === 1 ? 'zápas' : (p.zapasu < 5 ? 'zápasy' : 'zápasů')}`;
+  const hlava = tenky
+    ? `${sig} <span class="hint2">jen ${zapStr} — na profil je brzo</span>`
+    : `${sig} <span class="hint2">stejné jádro jen ${p.predvidatelnost}% zápasů</span>`;
+  const patka = tenky
+    ? `Takhle nastoupili v ${p.zapasu === 1 ? 'jediném odehraném zápase' : 'dosud odehraných zápasech'} — ber to jako vodítko, ne jako profil. Spolehlivější bude po 3 kolech.`
+    : `Kdo hrával kterou pozici (× kolikrát) + konzistence pozice. ${p.predvidatelnost < 15 ? '<b>Hodně rotují</b> → těžko odhadnout, koho dají do rozhodujících pozdních her; drž se svojí strategie.' : 'Docela stálí → jejich rozhodující pozice se dají odhadnout.'}`;
+  box.innerHTML = `<div class="sim-eyebrow" style="margin-top:14px">🕵️ Jak soupeř staví sestavu <span class="hint2">(${zapStr})</span></div>
+    <div class="op-head">${hlava}</div>
     <div class="op-tbl">${posRows}</div>
-    <p class="hint">Kdo loni hrával kterou pozici (× kolikrát) + konzistence pozice. ${p.predvidatelnost < 15 ? '<b>Hodně rotují</b> → těžko odhadnout, koho dají do rozhodujících pozdních her; drž se svojí strategie.' : 'Docela stálí → jejich rozhodující pozice se dají odhadnout.'} Znáš-li jejich dnešní sestavu, naklikej ji nahoře u „Soupeř".</p>`;
+    <p class="hint">${patka} Znáš-li jejich dnešní sestavu, naklikej ji nahoře u „Soupeř".</p>`;
 }
 // F3: editor souperovy sestavy — Petr naklika JEJICH poradi na boardy (vc. nahradniku). Krmi simOppOrder -> rozhodujici souboje.
 function renderSimOppLineup() {
@@ -1187,11 +1198,11 @@ function renderArchiv() {
 
 async function init() {
   DATA = await (await fetch('players.json', { cache: 'no-store' })).json();
-  LIGA_INDEX = await fetch('liga_index.json').then(r => r.ok ? r.json() : {}).catch(() => ({}));
-  TEAM_HISTORY = await fetch('team_history.json').then(r => r.ok ? r.json() : {}).catch(() => ({}));
-  SCOUT = await fetch('scout.json').then(r => r.ok ? r.json() : null).catch(() => null);
-  SIM = await fetch('sim_data.json').then(r => r.ok ? r.json() : null).catch(() => null);
-  OPP_POS = await fetch('opp_positioning.json').then(r => r.ok ? r.json() : {}).catch(() => ({}));
+  LIGA_INDEX = await fetch('liga_index.json', { cache: 'no-store' }).then(r => r.ok ? r.json() : {}).catch(() => ({}));
+  TEAM_HISTORY = await fetch('team_history.json', { cache: 'no-store' }).then(r => r.ok ? r.json() : {}).catch(() => ({}));
+  SCOUT = await fetch('scout.json', { cache: 'no-store' }).then(r => r.ok ? r.json() : null).catch(() => null);
+  SIM = await fetch('sim_data.json', { cache: 'no-store' }).then(r => r.ok ? r.json() : null).catch(() => null);
+  OPP_POS = await fetch('opp_positioning.json', { cache: 'no-store' }).then(r => r.ok ? r.json() : {}).catch(() => ({}));
   if (SIM && SIM.wT_default != null) simWT = SIM.wT_default;
   params = loadParams(); overrides = loadOverrides();
   $('meta').textContent = `${DATA.players.length} hráčů · A-tým ${DATA.a_team_size}`;
