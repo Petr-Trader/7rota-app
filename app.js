@@ -135,7 +135,7 @@ function render() {
       : (p.jenLiga ? ' <span class="tag jl">jen liga</span>' : '');
     const total = (DATA.liga_zapasu && DATA.liga_zapasu[p.tym]) || 24;
     const doch = p.utkani != null
-      ? ` <span class="tag doch" title="na soupisce ${p.utkani}/${total}, reálně hrál ${p.hral}×">📋 ${p.utkani}/${total}</span>` : '';
+      ? ` <span class="tag doch" title="${dochN() ? `letos na soupisce ${p.utkani_n || 0}/${dochN()}, hrál ${p.hral_n || 0}× · ` : ''}loni ${p.utkani}/${total}, hrál ${p.hral}×">📋 ${dochVal(p, total)}</span>` : '';
     tr.innerHTML = `
       <td>${p.rank || ''}</td>
       <td class="l name">${p.jmeno}${jl}${doch}</td>
@@ -164,6 +164,20 @@ let LAST = {};
 // cestina: 1 leg / 2-4 legy / 5+ legu
 const legStr = (n) => `${n} ${n === 1 ? 'leg' : (n >= 2 && n <= 4 ? 'legy' : 'legů')}`;
 
+// Dochazka: hlavni cislo = BEZICI sezona (od 1. kola nove ligy), lonska v podtitulku.
+// Dokud nova sezona nema odehrane kolo (liga_zapasu_n = 0), ukaze se rovnou lonska.
+const dochN = () => (DATA && DATA.liga_zapasu_n) || 0;
+function dochVal(p, total) {
+  if (p.isCand || p.utkani == null) return '—';
+  return dochN() ? `${p.utkani_n || 0}/${dochN()}` : `${p.utkani}/${total}`;
+}
+function dochSub(p, total) {
+  if (p.isCand) return 'kandidát (cizí klub)';
+  if (p.utkani == null) return '—';
+  if (!dochN()) return `reálně hrál ${p.hral}×`;
+  return `letos hrál ${p.hral_n || 0}× · loni ${p.utkani}/${total} (hrál ${p.hral}×)`;
+}
+
 function tile(label, val, sub) {
   return `<div class="tile"><span class="tl">${label}</span><span class="tv">${val}</span>${sub ? `<span class="ts">${sub}</span>` : ''}</div>`;
 }
@@ -184,8 +198,7 @@ function openDetail(jmeno) {
         p.leg_n ? `${legStr(p.leg_n)}${p.zap_n ? ' · ' + p.zap_n + ' záp.' : ''}` : 'letos ještě nehrál')
     + tile('Pohár pořadí', (p.turn_season && p.turn_season.pohar_pozice) ? p.turn_season.pohar_pozice + '/' + p.turn_season.pohar_total : '—', 'Středočeský pohár (živé)')
     + tile('Síla (BT)', p.bt == null ? '—' : p.bt.toFixed(2), 'vzájemné zápasy')
-    + tile('Docházka', p.utkani == null ? '—' : `${p.utkani}/${total}`,
-        p.utkani == null ? (p.isCand ? 'kandidát (cizí klub)' : '—') : `reálně hrál ${p.hral}×`);
+    + tile('Docházka', dochVal(p, total), dochSub(p, total));
   const notes = [];
   if (p.jenLiga) notes.push('„Jen liga" — nehraje turnaje, soudí se hlavně z LKH.');
   if (p.lkh == null) notes.push('Bez ligových dat — posuzuje se z turnajů (BT).');
