@@ -11,7 +11,11 @@
    "cas": "18:00",
    "doma": false,
    "souper": "Horní Rozptyly X",
-   "hala": "Bar Chrpa, Praha 4"
+   "hala": "Bar Chrpa, Praha 4",
+   "mid": "43921416",
+   "my": 10,
+   "opp": 8,
+   "res": "V"
   },
   {
    "k": 2,
@@ -20,7 +24,8 @@
    "cas": "18:00",
    "doma": true,
    "souper": "Hyeny",
-   "hala": "Pivnice Pipkin, Praha 4"
+   "hala": "Pivnice Pipkin, Praha 4",
+   "mid": "43924232"
   },
   {
    "k": 3,
@@ -29,7 +34,8 @@
    "cas": "19:00",
    "doma": false,
    "souper": "Nepřátelé bobří hráze",
-   "hala": "Bar Devítka, Praha 9"
+   "hala": "Bar Devítka, Praha 9",
+   "mid": "43925256"
   },
   {
    "k": 4,
@@ -38,7 +44,8 @@
    "cas": "18:00",
    "doma": true,
    "souper": "Brilliant darts",
-   "hala": "Pivnice Pipkin, Praha 4"
+   "hala": "Pivnice Pipkin, Praha 4",
+   "mid": "43927816"
   },
   {
    "k": 5,
@@ -47,7 +54,8 @@
    "cas": "18:00",
    "doma": false,
    "souper": "Amatéři Písnice",
-   "hala": "Pivnice Pipkin, Praha 4"
+   "hala": "Pivnice Pipkin, Praha 4",
+   "mid": "43929096"
   },
   {
    "k": 6,
@@ -56,7 +64,8 @@
    "cas": "18:00",
    "doma": true,
    "souper": "Maniac Darts",
-   "hala": "Pivnice Pipkin, Praha 4"
+   "hala": "Pivnice Pipkin, Praha 4",
+   "mid": "43931400"
   },
   {
    "k": 7,
@@ -65,7 +74,8 @@
    "cas": "18:00",
    "doma": false,
    "souper": "Rychlý hroty",
-   "hala": "Sportbar Hostivař Darts Club, Praha 10"
+   "hala": "Sportbar Hostivař Darts Club, Praha 10",
+   "mid": "43932936"
   },
   {
    "k": 8,
@@ -74,7 +84,8 @@
    "cas": "18:00",
    "doma": true,
    "souper": "Plzeňka B",
-   "hala": "Pivnice Pipkin, Praha 4"
+   "hala": "Pivnice Pipkin, Praha 4",
+   "mid": "43934984"
   },
   {
    "k": 9,
@@ -83,7 +94,8 @@
    "cas": "18:00",
    "doma": false,
    "souper": "Louže DC",
-   "hala": "Louže, Praha 2"
+   "hala": "Louže, Praha 2",
+   "mid": "43936776"
   },
   {
    "k": 10,
@@ -92,7 +104,8 @@
    "cas": "18:00",
    "doma": true,
    "souper": "I AM 180",
-   "hala": "Pivnice Pipkin, Praha 4"
+   "hala": "Pivnice Pipkin, Praha 4",
+   "mid": "43938568"
   },
   {
    "k": 11,
@@ -101,7 +114,8 @@
    "cas": "18:00",
    "doma": false,
    "souper": "Sgt. Pepik's Band B",
-   "hala": "Restaurace Alfa, Praha 4"
+   "hala": "Restaurace Alfa, Praha 4",
+   "mid": "43940616"
   },
   {
    "k": 12,
@@ -110,7 +124,8 @@
    "cas": "19:00",
    "doma": false,
    "souper": "Šipky Kbely",
-   "hala": "Zastávka U hřiště, Praha 9"
+   "hala": "Zastávka U hřiště, Praha 9",
+   "mid": "43942408"
   },
   {
    "k": 13,
@@ -119,7 +134,8 @@
    "cas": "18:00",
    "doma": true,
    "souper": "Horní Rozptyly",
-   "hala": "Pivnice Pipkin, Praha 4"
+   "hala": "Pivnice Pipkin, Praha 4",
+   "mid": "43944200"
   },
   {
    "k": 14,
@@ -128,7 +144,8 @@
    "cas": "18:00",
    "doma": true,
    "souper": "Horní Rozptyly X",
-   "hala": "Pivnice Pipkin, Praha 4"
+   "hala": "Pivnice Pipkin, Praha 4",
+   "mid": "43944712"
   },
   {
    "k": 15,
@@ -137,7 +154,8 @@
    "cas": "18:00",
    "doma": false,
    "souper": "Hyeny",
-   "hala": "Klub AJETO P.M.P., Praha 7"
+   "hala": "Klub AJETO P.M.P., Praha 7",
+   "mid": "43947528"
   },
   {
    "k": 16,
@@ -146,7 +164,8 @@
    "cas": "18:00",
    "doma": true,
    "souper": "Nepřátelé bobří hráze",
-   "hala": "Pivnice Pipkin, Praha 4"
+   "hala": "Pivnice Pipkin, Praha 4",
+   "mid": "43948552"
   },
   {
    "k": 17,
@@ -155,7 +174,8 @@
    "cas": "18:00",
    "doma": false,
    "souper": "Brilliant darts",
-   "hala": "Restaurace Alfa, Praha 4"
+   "hala": "Restaurace Alfa, Praha 4",
+   "mid": "43951112"
   },
   {
    "k": 18,
@@ -164,7 +184,8 @@
    "cas": "18:00",
    "doma": true,
    "souper": "Amatéři Písnice",
-   "hala": "Pivnice Pipkin, Praha 4"
+   "hala": "Pivnice Pipkin, Praha 4",
+   "mid": "43952392"
   },
   {
    "k": 19,
@@ -173,7 +194,8 @@
    "cas": "18:00",
    "doma": false,
    "souper": "Maniac Darts",
-   "hala": "Restaurace Club Troja, Praha 8"
+   "hala": "Restaurace Club Troja, Praha 8",
+   "mid": "43954696"
   },
   {
    "k": 20,
@@ -182,7 +204,8 @@
    "cas": "18:00",
    "doma": true,
    "souper": "Rychlý hroty",
-   "hala": "Pivnice Pipkin, Praha 4"
+   "hala": "Pivnice Pipkin, Praha 4",
+   "mid": "43956232"
   },
   {
    "k": 21,
@@ -191,7 +214,8 @@
    "cas": "18:00",
    "doma": false,
    "souper": "Plzeňka B",
-   "hala": "Plzeňka, Praha 9"
+   "hala": "Plzeňka, Praha 9",
+   "mid": "43958280"
   },
   {
    "k": 22,
@@ -200,7 +224,8 @@
    "cas": "18:00",
    "doma": true,
    "souper": "Louže DC",
-   "hala": "Pivnice Pipkin, Praha 4"
+   "hala": "Pivnice Pipkin, Praha 4",
+   "mid": "43960072"
   },
   {
    "k": 23,
@@ -209,7 +234,8 @@
    "cas": "17:00",
    "doma": false,
    "souper": "I AM 180",
-   "hala": "Bulls Restaurant, Praha 5"
+   "hala": "Bulls Restaurant, Praha 5",
+   "mid": "43961864"
   },
   {
    "k": 24,
@@ -218,7 +244,8 @@
    "cas": "18:00",
    "doma": true,
    "souper": "Sgt. Pepik's Band B",
-   "hala": "Pivnice Pipkin, Praha 4"
+   "hala": "Pivnice Pipkin, Praha 4",
+   "mid": "43963912"
   },
   {
    "k": 25,
@@ -227,7 +254,8 @@
    "cas": "18:00",
    "doma": true,
    "souper": "Šipky Kbely",
-   "hala": "Pivnice Pipkin, Praha 4"
+   "hala": "Pivnice Pipkin, Praha 4",
+   "mid": "43965704"
   },
   {
    "k": 26,
@@ -236,9 +264,19 @@
    "cas": "18:00",
    "doma": false,
    "souper": "Horní Rozptyly",
-   "hala": "Bar Chrpa, Praha 4"
+   "hala": "Bar Chrpa, Praha 4",
+   "mid": "43967496"
   }
  ],
+ "bilance": {
+  "odehrano": 1,
+  "v": 1,
+  "r": 0,
+  "p": 0,
+  "her_pro": 10,
+  "her_proti": 8,
+  "body": 2
+ },
  "teams": [
   {
    "nazev": "Sedmá rota Praha",

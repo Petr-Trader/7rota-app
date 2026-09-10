@@ -1,5 +1,5 @@
 {
- "a": 936,
+ "a": 937,
  "b": 7.9,
  "halflife": 12.0,
  "wT_default": 0.5,
@@ -13,7 +13,11 @@
    "cas": "18:00",
    "doma": false,
    "souper": "Horní Rozptyly X",
-   "hala": "Bar Chrpa, Praha 4"
+   "hala": "Bar Chrpa, Praha 4",
+   "mid": "43921416",
+   "my": 10,
+   "opp": 8,
+   "res": "V"
   },
   {
    "k": 2,
@@ -22,7 +26,8 @@
    "cas": "18:00",
    "doma": true,
    "souper": "Hyeny",
-   "hala": "Pivnice Pipkin, Praha 4"
+   "hala": "Pivnice Pipkin, Praha 4",
+   "mid": "43924232"
   },
   {
    "k": 3,
@@ -31,7 +36,8 @@
    "cas": "19:00",
    "doma": false,
    "souper": "Nepřátelé bobří hráze",
-   "hala": "Bar Devítka, Praha 9"
+   "hala": "Bar Devítka, Praha 9",
+   "mid": "43925256"
   },
   {
    "k": 4,
@@ -40,7 +46,8 @@
    "cas": "18:00",
    "doma": true,
    "souper": "Brilliant darts",
-   "hala": "Pivnice Pipkin, Praha 4"
+   "hala": "Pivnice Pipkin, Praha 4",
+   "mid": "43927816"
   },
   {
    "k": 5,
@@ -49,7 +56,8 @@
    "cas": "18:00",
    "doma": false,
    "souper": "Amatéři Písnice",
-   "hala": "Pivnice Pipkin, Praha 4"
+   "hala": "Pivnice Pipkin, Praha 4",
+   "mid": "43929096"
   },
   {
    "k": 6,
@@ -58,7 +66,8 @@
    "cas": "18:00",
    "doma": true,
    "souper": "Maniac Darts",
-   "hala": "Pivnice Pipkin, Praha 4"
+   "hala": "Pivnice Pipkin, Praha 4",
+   "mid": "43931400"
   },
   {
    "k": 7,
@@ -67,7 +76,8 @@
    "cas": "18:00",
    "doma": false,
    "souper": "Rychlý hroty",
-   "hala": "Sportbar Hostivař Darts Club, Praha 10"
+   "hala": "Sportbar Hostivař Darts Club, Praha 10",
+   "mid": "43932936"
   },
   {
    "k": 8,
@@ -76,7 +86,8 @@
    "cas": "18:00",
    "doma": true,
    "souper": "Plzeňka B",
-   "hala": "Pivnice Pipkin, Praha 4"
+   "hala": "Pivnice Pipkin, Praha 4",
+   "mid": "43934984"
   },
   {
    "k": 9,
@@ -85,7 +96,8 @@
    "cas": "18:00",
    "doma": false,
    "souper": "Louže DC",
-   "hala": "Louže, Praha 2"
+   "hala": "Louže, Praha 2",
+   "mid": "43936776"
   },
   {
    "k": 10,
@@ -94,7 +106,8 @@
    "cas": "18:00",
    "doma": true,
    "souper": "I AM 180",
-   "hala": "Pivnice Pipkin, Praha 4"
+   "hala": "Pivnice Pipkin, Praha 4",
+   "mid": "43938568"
   },
   {
    "k": 11,
@@ -103,7 +116,8 @@
    "cas": "18:00",
    "doma": false,
    "souper": "Sgt. Pepik's Band B",
-   "hala": "Restaurace Alfa, Praha 4"
+   "hala": "Restaurace Alfa, Praha 4",
+   "mid": "43940616"
   },
   {
    "k": 12,
@@ -112,7 +126,8 @@
    "cas": "19:00",
    "doma": false,
    "souper": "Šipky Kbely",
-   "hala": "Zastávka U hřiště, Praha 9"
+   "hala": "Zastávka U hřiště, Praha 9",
+   "mid": "43942408"
   },
   {
    "k": 13,
@@ -121,7 +136,8 @@
    "cas": "18:00",
    "doma": true,
    "souper": "Horní Rozptyly",
-   "hala": "Pivnice Pipkin, Praha 4"
+   "hala": "Pivnice Pipkin, Praha 4",
+   "mid": "43944200"
   },
   {
    "k": 14,
@@ -130,7 +146,8 @@
    "cas": "18:00",
    "doma": true,
    "souper": "Horní Rozptyly X",
-   "hala": "Pivnice Pipkin, Praha 4"
+   "hala": "Pivnice Pipkin, Praha 4",
+   "mid": "43944712"
   },
   {
    "k": 15,
@@ -139,7 +156,8 @@
    "cas": "18:00",
    "doma": false,
    "souper": "Hyeny",
-   "hala": "Klub AJETO P.M.P., Praha 7"
+   "hala": "Klub AJETO P.M.P., Praha 7",
+   "mid": "43947528"
   },
   {
    "k": 16,
@@ -148,7 +166,8 @@
    "cas": "18:00",
    "doma": true,
    "souper": "Nepřátelé bobří hráze",
-   "hala": "Pivnice Pipkin, Praha 4"
+   "hala": "Pivnice Pipkin, Praha 4",
+   "mid": "43948552"
   },
   {
    "k": 17,
@@ -157,7 +176,8 @@
    "cas": "18:00",
    "doma": false,
    "souper": "Brilliant darts",
-   "hala": "Restaurace Alfa, Praha 4"
+   "hala": "Restaurace Alfa, Praha 4",
+   "mid": "43951112"
   },
   {
    "k": 18,
@@ -166,7 +186,8 @@
    "cas": "18:00",
    "doma": true,
    "souper": "Amatéři Písnice",
-   "hala": "Pivnice Pipkin, Praha 4"
+   "hala": "Pivnice Pipkin, Praha 4",
+   "mid": "43952392"
   },
   {
    "k": 19,
@@ -175,7 +196,8 @@
    "cas": "18:00",
    "doma": false,
    "souper": "Maniac Darts",
-   "hala": "Restaurace Club Troja, Praha 8"
+   "hala": "Restaurace Club Troja, Praha 8",
+   "mid": "43954696"
   },
   {
    "k": 20,
@@ -184,7 +206,8 @@
    "cas": "18:00",
    "doma": true,
    "souper": "Rychlý hroty",
-   "hala": "Pivnice Pipkin, Praha 4"
+   "hala": "Pivnice Pipkin, Praha 4",
+   "mid": "43956232"
   },
   {
    "k": 21,
@@ -193,7 +216,8 @@
    "cas": "18:00",
    "doma": false,
    "souper": "Plzeňka B",
-   "hala": "Plzeňka, Praha 9"
+   "hala": "Plzeňka, Praha 9",
+   "mid": "43958280"
   },
   {
    "k": 22,
@@ -202,7 +226,8 @@
    "cas": "18:00",
    "doma": true,
    "souper": "Louže DC",
-   "hala": "Pivnice Pipkin, Praha 4"
+   "hala": "Pivnice Pipkin, Praha 4",
+   "mid": "43960072"
   },
   {
    "k": 23,
@@ -211,7 +236,8 @@
    "cas": "17:00",
    "doma": false,
    "souper": "I AM 180",
-   "hala": "Bulls Restaurant, Praha 5"
+   "hala": "Bulls Restaurant, Praha 5",
+   "mid": "43961864"
   },
   {
    "k": 24,
@@ -220,7 +246,8 @@
    "cas": "18:00",
    "doma": true,
    "souper": "Sgt. Pepik's Band B",
-   "hala": "Pivnice Pipkin, Praha 4"
+   "hala": "Pivnice Pipkin, Praha 4",
+   "mid": "43963912"
   },
   {
    "k": 25,
@@ -229,7 +256,8 @@
    "cas": "18:00",
    "doma": true,
    "souper": "Šipky Kbely",
-   "hala": "Pivnice Pipkin, Praha 4"
+   "hala": "Pivnice Pipkin, Praha 4",
+   "mid": "43965704"
   },
   {
    "k": 26,
@@ -238,17 +266,27 @@
    "cas": "18:00",
    "doma": false,
    "souper": "Horní Rozptyly",
-   "hala": "Bar Chrpa, Praha 4"
+   "hala": "Bar Chrpa, Praha 4",
+   "mid": "43967496"
   }
  ],
+ "bilance": {
+  "odehrano": 1,
+  "v": 1,
+  "r": 0,
+  "p": 0,
+  "her_pro": 10,
+  "her_proti": 8,
+  "body": 2
+ },
  "teams": [
   {
    "n": "Sedmá rota Praha",
    "hraci": [
     {
      "j": "Královič Martin",
-     "rt": 1241,
-     "rl": 1314,
+     "rt": 1243,
+     "rl": 1315,
      "eN": 158,
      "f": 50,
      "lkh": 65.6,
@@ -257,8 +295,8 @@
     },
     {
      "j": "Bajtek Jindřich",
-     "rt": 1405,
-     "rl": 1430,
+     "rt": 1407,
+     "rl": 1432,
      "eN": 1031,
      "f": 68,
      "lkh": 62.6,
@@ -267,18 +305,18 @@
     },
     {
      "j": "Zbořil Karel",
-     "rt": 1249,
-     "rl": 1285,
-     "eN": 464,
-     "f": 49,
+     "rt": 1257,
+     "rl": 1287,
+     "eN": 471,
+     "f": 52,
      "lkh": 60.6,
      "kat": "D",
      "t": 11200
     },
     {
      "j": "Majerčin David",
-     "rt": 1236,
-     "rl": 1383,
+     "rt": 1238,
+     "rl": 1384,
      "eN": 320,
      "f": 38,
      "lkh": 56.6,
@@ -287,8 +325,8 @@
     },
     {
      "j": "Hamšík Robert",
-     "rt": 1081,
-     "rl": 1213,
+     "rt": 1082,
+     "rl": 1215,
      "eN": 28,
      "f": null,
      "lkh": 48.1,
@@ -297,8 +335,8 @@
     },
     {
      "j": "Schraml Petr",
-     "rt": 1327,
-     "rl": 1236,
+     "rt": 1328,
+     "rl": 1237,
      "eN": 510,
      "f": 62,
      "lkh": 38.0,
@@ -307,8 +345,8 @@
     },
     {
      "j": "Procházka Lubomír",
-     "rt": 926,
-     "rl": 1062,
+     "rt": 928,
+     "rl": 1064,
      "eN": 131,
      "f": 0,
      "lkh": 16.0,
@@ -317,7 +355,7 @@
     },
     {
      "j": "Krykorka Milan",
-     "rt": 1322,
+     "rt": 1323,
      "rl": null,
      "eN": 52,
      "f": 67,
@@ -333,8 +371,8 @@
    "hraci": [
     {
      "j": "Neužil Miroslav",
-     "rt": 1446,
-     "rl": 1570,
+     "rt": 1448,
+     "rl": 1571,
      "eN": 222,
      "f": 65,
      "lkh": 80.3,
@@ -344,7 +382,7 @@
     {
      "j": "Kopač Miroslav",
      "rt": null,
-     "rl": 1404,
+     "rl": 1405,
      "eN": 6,
      "f": null,
      "lkh": 59.2,
@@ -353,8 +391,8 @@
     },
     {
      "j": "Semrád Filip",
-     "rt": 1181,
-     "rl": 1340,
+     "rt": 1182,
+     "rl": 1342,
      "eN": 24,
      "f": 71,
      "lkh": 51.2,
@@ -363,8 +401,8 @@
     },
     {
      "j": "Bláha Petr",
-     "rt": 1232,
-     "rl": 1328,
+     "rt": 1233,
+     "rl": 1329,
      "eN": 138,
      "f": 64,
      "lkh": 49.6,
@@ -374,7 +412,7 @@
     {
      "j": "Novák David",
      "rt": null,
-     "rl": 1297,
+     "rl": 1298,
      "eN": 7,
      "f": null,
      "lkh": 45.7,
@@ -398,8 +436,8 @@
    "hraci": [
     {
      "j": "Nová Tereza",
-     "rt": 1345,
-     "rl": 1435,
+     "rt": 1346,
+     "rl": 1436,
      "eN": 432,
      "f": 56,
      "lkh": 63.2,
@@ -408,8 +446,8 @@
     },
     {
      "j": "Henner Martin",
-     "rt": 1252,
-     "rl": 1291,
+     "rt": 1254,
+     "rl": 1292,
      "eN": 453,
      "f": 57,
      "lkh": 61.5,
@@ -419,7 +457,7 @@
     {
      "j": "Shíbal Petr",
      "rt": null,
-     "rl": 1403,
+     "rl": 1404,
      "eN": 4,
      "f": null,
      "lkh": 59.1,
@@ -428,8 +466,8 @@
     },
     {
      "j": "Homola Jiří",
-     "rt": 1256,
-     "rl": 1396,
+     "rt": 1258,
+     "rl": 1398,
      "eN": 149,
      "f": 38,
      "lkh": 58.3,
@@ -438,8 +476,8 @@
     },
     {
      "j": "Pfleger Michal",
-     "rt": 1317,
-     "rl": 1324,
+     "rt": 1319,
+     "rl": 1325,
      "eN": 261,
      "f": 68,
      "lkh": 49.1,
@@ -448,8 +486,8 @@
     },
     {
      "j": "Korčáková Renáta",
-     "rt": 1295,
-     "rl": 1227,
+     "rt": 1296,
+     "rl": 1228,
      "eN": 71,
      "f": 33,
      "lkh": 36.8,
@@ -463,8 +501,8 @@
    "hraci": [
     {
      "j": "Strbáček Stanislav",
-     "rt": 1552,
-     "rl": 1713,
+     "rt": 1553,
+     "rl": 1714,
      "eN": 50,
      "f": 71,
      "lkh": 98.4,
@@ -473,8 +511,8 @@
     },
     {
      "j": "Nemeš Jan",
-     "rt": 1521,
-     "rl": 1422,
+     "rt": 1523,
+     "rl": 1423,
      "eN": 59,
      "f": 80,
      "lkh": 81.0,
@@ -484,7 +522,7 @@
     {
      "j": "Linek Adam",
      "rt": null,
-     "rl": 1458,
+     "rl": 1459,
      "eN": 2,
      "f": null,
      "lkh": 66.1,
@@ -493,8 +531,8 @@
     },
     {
      "j": "Bartek David",
-     "rt": 1287,
-     "rl": 1419,
+     "rt": 1289,
+     "rl": 1421,
      "eN": 26,
      "f": 47,
      "lkh": 61.2,
@@ -503,8 +541,8 @@
     },
     {
      "j": "Prokeš Radek",
-     "rt": 1257,
-     "rl": 1347,
+     "rt": 1259,
+     "rl": 1349,
      "eN": 124,
      "f": 60,
      "lkh": 52.1,
@@ -514,7 +552,7 @@
     {
      "j": "Pavlát Radek",
      "rt": null,
-     "rl": 1152,
+     "rl": 1154,
      "eN": 6,
      "f": 0,
      "lkh": 27.4,
@@ -524,7 +562,7 @@
     {
      "j": "Bárta Daniel",
      "rt": null,
-     "rl": 1136,
+     "rl": 1137,
      "eN": 0,
      "f": null,
      "lkh": 25.3,
@@ -534,7 +572,7 @@
     {
      "j": "Murín Milan",
      "rt": null,
-     "rl": 1056,
+     "rl": 1057,
      "eN": 7,
      "f": 0,
      "lkh": 15.2,
@@ -548,8 +586,8 @@
    "hraci": [
     {
      "j": "Kameník Tomáš",
-     "rt": 1330,
-     "rl": 1309,
+     "rt": 1332,
+     "rl": 1310,
      "eN": 266,
      "f": 20,
      "lkh": 64.7,
@@ -558,8 +596,8 @@
     },
     {
      "j": "Gutvirt Petr",
-     "rt": 1485,
-     "rl": 1321,
+     "rt": 1486,
+     "rl": 1323,
      "eN": 238,
      "f": 65,
      "lkh": 48.8,
@@ -568,8 +606,8 @@
     },
     {
      "j": "Kopecký Jiří",
-     "rt": 1358,
-     "rl": 1317,
+     "rt": 1359,
+     "rl": 1319,
      "eN": 54,
      "f": null,
      "lkh": 48.3,
@@ -578,8 +616,8 @@
     },
     {
      "j": "Přibyl Robert",
-     "rt": 1350,
-     "rl": 1238,
+     "rt": 1352,
+     "rl": 1240,
      "eN": 334,
      "f": 50,
      "lkh": 38.3,
@@ -589,7 +627,7 @@
     {
      "j": "Dobiášovský Petr",
      "rt": null,
-     "rl": 1215,
+     "rl": 1216,
      "eN": 2,
      "f": null,
      "lkh": 35.3,
@@ -598,8 +636,8 @@
     },
     {
      "j": "Hladík Tomáš",
-     "rt": 1356,
-     "rl": 1207,
+     "rt": 1358,
+     "rl": 1208,
      "eN": 72,
      "f": null,
      "lkh": 34.3,
@@ -608,8 +646,8 @@
     },
     {
      "j": "Davídek David",
-     "rt": 1370,
-     "rl": 1192,
+     "rt": 1371,
+     "rl": 1193,
      "eN": 420,
      "f": 63,
      "lkh": 32.4,
@@ -619,7 +657,7 @@
     {
      "j": "Murín Milan",
      "rt": null,
-     "rl": 1056,
+     "rl": 1057,
      "eN": 7,
      "f": 0,
      "lkh": 15.2,
@@ -633,8 +671,8 @@
    "hraci": [
     {
      "j": "Veselý Martin",
-     "rt": 1427,
-     "rl": 1368,
+     "rt": 1428,
+     "rl": 1369,
      "eN": 142,
      "f": 68,
      "lkh": 72.0,
@@ -643,8 +681,8 @@
     },
     {
      "j": "Dvořák Radek",
-     "rt": 1329,
-     "rl": 1368,
+     "rt": 1330,
+     "rl": 1369,
      "eN": 22,
      "f": 33,
      "lkh": 71.9,
@@ -653,8 +691,8 @@
     },
     {
      "j": "Hocek Jakub",
-     "rt": 1436,
-     "rl": 1338,
+     "rt": 1437,
+     "rl": 1339,
      "eN": 22,
      "f": 60,
      "lkh": 67.0,
@@ -663,8 +701,8 @@
     },
     {
      "j": "Vadocky Daniel",
-     "rt": 1375,
-     "rl": 1321,
+     "rt": 1376,
+     "rl": 1323,
      "eN": 103,
      "f": 62,
      "lkh": 64.2,
@@ -673,8 +711,8 @@
     },
     {
      "j": "Bubla Martin",
-     "rt": 1342,
-     "rl": 1202,
+     "rt": 1343,
+     "rl": 1204,
      "eN": 11,
      "f": null,
      "lkh": 44.4,
@@ -683,8 +721,8 @@
     },
     {
      "j": "Buršíková Tamara",
-     "rt": 1243,
-     "rl": 1102,
+     "rt": 1244,
+     "rl": 1104,
      "eN": 11,
      "f": 33,
      "lkh": 27.7,
@@ -693,7 +731,7 @@
     },
     {
      "j": "Jirkalová Milena",
-     "rt": 1103,
+     "rt": 1104,
      "rl": null,
      "eN": 14,
      "f": null,
@@ -709,7 +747,7 @@
     {
      "j": "Tůma Marek",
      "rt": null,
-     "rl": 1431,
+     "rl": 1432,
      "eN": 3,
      "f": null,
      "lkh": 82.5,
@@ -718,8 +756,8 @@
     },
     {
      "j": "Drlík Tomáš",
-     "rt": 1458,
-     "rl": 1354,
+     "rt": 1459,
+     "rl": 1355,
      "eN": 74,
      "f": 84,
      "lkh": 69.6,
@@ -728,8 +766,8 @@
     },
     {
      "j": "Stanko Jindřich",
-     "rt": 1314,
-     "rl": 1317,
+     "rt": 1315,
+     "rl": 1318,
      "eN": 128,
      "f": 57,
      "lkh": 63.4,
@@ -738,8 +776,8 @@
     },
     {
      "j": "Cirkovský Jaroslav",
-     "rt": 1272,
-     "rl": 1262,
+     "rt": 1273,
+     "rl": 1264,
      "eN": 280,
      "f": 57,
      "lkh": 54.4,
@@ -748,8 +786,8 @@
     },
     {
      "j": "Vokřálová Petra",
-     "rt": 1229,
-     "rl": 1181,
+     "rt": 1230,
+     "rl": 1183,
      "eN": 240,
      "f": 23,
      "lkh": 40.9,
@@ -758,8 +796,8 @@
     },
     {
      "j": "Mayer Marián",
-     "rt": 1079,
-     "rl": 1166,
+     "rt": 1081,
+     "rl": 1168,
      "eN": 42,
      "f": null,
      "lkh": 38.4,
@@ -768,8 +806,8 @@
     },
     {
      "j": "Šiman Martin",
-     "rt": 1270,
-     "rl": 1151,
+     "rt": 1271,
+     "rl": 1153,
      "eN": 17,
      "f": null,
      "lkh": 35.9,
@@ -778,8 +816,8 @@
     },
     {
      "j": "Bečvář David",
-     "rt": 1007,
-     "rl": 992,
+     "rt": 1008,
+     "rl": 993,
      "eN": 99,
      "f": 8,
      "lkh": 9.3,
@@ -794,7 +832,7 @@
     {
      "j": "Jakl Antonín",
      "rt": null,
-     "rl": 1349,
+     "rl": 1350,
      "eN": 1,
      "f": null,
      "lkh": 68.8,
@@ -804,7 +842,7 @@
     {
      "j": "Dvořák Leoš",
      "rt": null,
-     "rl": 1293,
+     "rl": 1294,
      "eN": 6,
      "f": 60,
      "lkh": 59.5,
@@ -813,8 +851,8 @@
     },
     {
      "j": "Dvořák Robert",
-     "rt": 1340,
-     "rl": 1258,
+     "rt": 1341,
+     "rl": 1260,
      "eN": 19,
      "f": null,
      "lkh": 53.7,
@@ -824,7 +862,7 @@
     {
      "j": "Janků Petr",
      "rt": null,
-     "rl": 1251,
+     "rl": 1252,
      "eN": 0,
      "f": null,
      "lkh": 52.5,
@@ -834,7 +872,7 @@
     {
      "j": "Jelínek Marek",
      "rt": null,
-     "rl": 1198,
+     "rl": 1200,
      "eN": 0,
      "f": null,
      "lkh": 43.7,
@@ -879,7 +917,7 @@
     {
      "j": "Smutný Jiří",
      "rt": null,
-     "rl": 1702,
+     "rl": 1703,
      "eN": 2,
      "f": null,
      "lkh": 127.6,
@@ -889,7 +927,7 @@
     {
      "j": "Šarman René",
      "rt": null,
-     "rl": 1402,
+     "rl": 1404,
      "eN": 0,
      "f": null,
      "lkh": 77.7,
@@ -899,7 +937,7 @@
     {
      "j": "Vopálka Martin",
      "rt": null,
-     "rl": 1374,
+     "rl": 1375,
      "eN": 0,
      "f": null,
      "lkh": 72.9,
@@ -909,7 +947,7 @@
     {
      "j": "Machač Ladislav",
      "rt": null,
-     "rl": 1281,
+     "rl": 1282,
      "eN": 0,
      "f": null,
      "lkh": 57.5,
@@ -919,7 +957,7 @@
     {
      "j": "Nečas Václav",
      "rt": null,
-     "rl": 1202,
+     "rl": 1204,
      "eN": 0,
      "f": null,
      "lkh": 44.4,
@@ -929,7 +967,7 @@
     {
      "j": "Zdražil Jan",
      "rt": null,
-     "rl": 1184,
+     "rl": 1185,
      "eN": 0,
      "f": null,
      "lkh": 41.3,
@@ -939,7 +977,7 @@
     {
      "j": "Hofinger Josef",
      "rt": null,
-     "rl": 1079,
+     "rl": 1080,
      "eN": 0,
      "f": null,
      "lkh": 23.8,
@@ -953,8 +991,8 @@
    "hraci": [
     {
      "j": "Kuča Jan",
-     "rt": 1298,
-     "rl": 1379,
+     "rt": 1300,
+     "rl": 1381,
      "eN": 69,
      "f": 47,
      "lkh": 76.9,
@@ -963,8 +1001,8 @@
     },
     {
      "j": "Štola Ondřej",
-     "rt": 1498,
-     "rl": 1395,
+     "rt": 1499,
+     "rl": 1396,
      "eN": 39,
      "f": null,
      "lkh": 76.5,
@@ -974,7 +1012,7 @@
     {
      "j": "Lébl Martin",
      "rt": null,
-     "rl": 1389,
+     "rl": 1390,
      "eN": 2,
      "f": null,
      "lkh": 75.5,
@@ -984,7 +1022,7 @@
     {
      "j": "Dafčík Zdeněk",
      "rt": null,
-     "rl": 1276,
+     "rl": 1278,
      "eN": 2,
      "f": null,
      "lkh": 56.7,
@@ -994,7 +1032,7 @@
     {
      "j": "Menšík Ladislav",
      "rt": null,
-     "rl": 1224,
+     "rl": 1225,
      "eN": 2,
      "f": null,
      "lkh": 48.0,
@@ -1004,7 +1042,7 @@
     {
      "j": "Dorko Miroslav",
      "rt": null,
-     "rl": 1174,
+     "rl": 1175,
      "eN": 0,
      "f": null,
      "lkh": 39.6,
@@ -1039,7 +1077,7 @@
     {
      "j": "Hruška Petr",
      "rt": null,
-     "rl": 1512,
+     "rl": 1513,
      "eN": 4,
      "f": null,
      "lkh": 72.9,
@@ -1048,8 +1086,8 @@
     },
     {
      "j": "Říha Josef",
-     "rt": 1468,
-     "rl": 1504,
+     "rt": 1469,
+     "rl": 1505,
      "eN": 11,
      "f": null,
      "lkh": 71.9,
@@ -1058,8 +1096,8 @@
     },
     {
      "j": "Buřič Jan",
-     "rt": 1429,
-     "rl": 1410,
+     "rt": 1430,
+     "rl": 1411,
      "eN": 24,
      "f": null,
      "lkh": 60.0,
@@ -1069,7 +1107,7 @@
     {
      "j": "Lochner František",
      "rt": null,
-     "rl": 1287,
+     "rl": 1288,
      "eN": 2,
      "f": null,
      "lkh": 44.4,
@@ -1079,7 +1117,7 @@
     {
      "j": "Navrátil Zdeněk",
      "rt": null,
-     "rl": 1242,
+     "rl": 1244,
      "eN": 3,
      "f": null,
      "lkh": 38.8,
@@ -1089,7 +1127,7 @@
     {
      "j": "Key Jay",
      "rt": null,
-     "rl": 1200,
+     "rl": 1201,
      "eN": 0,
      "f": null,
      "lkh": 33.4,
@@ -1099,7 +1137,7 @@
     {
      "j": "Faltejsek Libor",
      "rt": null,
-     "rl": 1114,
+     "rl": 1116,
      "eN": 0,
      "f": null,
      "lkh": 21.7,
@@ -1109,7 +1147,7 @@
     {
      "j": "Buřičová Hana",
      "rt": null,
-     "rl": 956,
+     "rl": 957,
      "eN": 7,
      "f": null,
      "lkh": 2.5,
@@ -1123,8 +1161,8 @@
    "hraci": [
     {
      "j": "Fiala Václav",
-     "rt": 1354,
-     "rl": 1332,
+     "rt": 1355,
+     "rl": 1333,
      "eN": 12,
      "f": null,
      "lkh": 66.0,
@@ -1133,8 +1171,8 @@
     },
     {
      "j": "Ondrik Lubomír",
-     "rt": 1367,
-     "rl": 1309,
+     "rt": 1368,
+     "rl": 1311,
      "eN": 36,
      "f": 20,
      "lkh": 62.2,
@@ -1143,8 +1181,8 @@
     },
     {
      "j": "Houdek Oto",
-     "rt": 1378,
-     "rl": 1290,
+     "rt": 1379,
+     "rl": 1291,
      "eN": 21,
      "f": null,
      "lkh": 59.0,
@@ -1153,8 +1191,8 @@
     },
     {
      "j": "Mertl Michal",
-     "rt": 1251,
-     "rl": 1226,
+     "rt": 1252,
+     "rl": 1227,
      "eN": 73,
      "f": 64,
      "lkh": 48.3,
@@ -1163,8 +1201,8 @@
     },
     {
      "j": "Forman Bohumil",
-     "rt": 1287,
-     "rl": 1205,
+     "rt": 1288,
+     "rl": 1207,
      "eN": 38,
      "f": 67,
      "lkh": 44.9,
@@ -1173,8 +1211,8 @@
     },
     {
      "j": "Havlová Marie",
-     "rt": 1198,
-     "rl": 1142,
+     "rt": 1199,
+     "rl": 1144,
      "eN": 103,
      "f": 56,
      "lkh": 34.4,
@@ -1183,8 +1221,8 @@
     },
     {
      "j": "Šlehofr David",
-     "rt": 1009,
-     "rl": 1015,
+     "rt": 1011,
+     "rl": 1017,
      "eN": 150,
      "f": 33,
      "lkh": 13.2,
@@ -1194,7 +1232,7 @@
     {
      "j": "Černohorský Miroslav",
      "rt": null,
-     "rl": 946,
+     "rl": 948,
      "eN": 3,
      "f": 33,
      "lkh": 1.7,
@@ -1208,8 +1246,8 @@
    "hraci": [
     {
      "j": "Chuchel Martin",
-     "rt": 1382,
-     "rl": 1353,
+     "rt": 1384,
+     "rl": 1355,
      "eN": 166,
      "f": 67,
      "lkh": 72.4,
@@ -1218,8 +1256,8 @@
     },
     {
      "j": "Krušina Lukáš",
-     "rt": 1426,
-     "rl": 1342,
+     "rt": 1427,
+     "rl": 1344,
      "eN": 14,
      "f": 60,
      "lkh": 67.7,
@@ -1229,7 +1267,7 @@
     {
      "j": "Hradský Pavel",
      "rt": null,
-     "rl": 1457,
+     "rl": 1459,
      "eN": 0,
      "f": null,
      "lkh": 66.0,
@@ -1238,8 +1276,8 @@
     },
     {
      "j": "Kaněra Zdeněk",
-     "rt": 1400,
-     "rl": 1309,
+     "rt": 1402,
+     "rl": 1310,
      "eN": 101,
      "f": 33,
      "lkh": 64.7,
@@ -1248,8 +1286,8 @@
     },
     {
      "j": "Gaper Tomáš",
-     "rt": 1497,
-     "rl": 1396,
+     "rt": 1498,
+     "rl": 1397,
      "eN": 22,
      "f": null,
      "lkh": 58.2,
@@ -1259,7 +1297,7 @@
     {
      "j": "Rysová Karolína",
      "rt": null,
-     "rl": 1331,
+     "rl": 1332,
      "eN": 1,
      "f": null,
      "lkh": 50.0,
@@ -1268,8 +1306,8 @@
     },
     {
      "j": "Siuda Daniel",
-     "rt": 1148,
-     "rl": 1257,
+     "rt": 1150,
+     "rl": 1258,
      "eN": 24,
      "f": 33,
      "lkh": 40.6,
@@ -1279,7 +1317,7 @@
     {
      "j": "Hlavatý Tomáš",
      "rt": null,
-     "rl": 1212,
+     "rl": 1214,
      "eN": 6,
      "f": null,
      "lkh": 35.0,
@@ -1288,8 +1326,8 @@
     },
     {
      "j": "Šnejdarová Jitka",
-     "rt": 1198,
-     "rl": 1163,
+     "rt": 1200,
+     "rl": 1165,
      "eN": 108,
      "f": 33,
      "lkh": 28.8,
@@ -1304,7 +1342,7 @@
     {
      "j": "Celler Miroslav",
      "rt": null,
-     "rl": 1475,
+     "rl": 1476,
      "eN": 2,
      "f": null,
      "lkh": 68.2,
@@ -1313,8 +1351,8 @@
     },
     {
      "j": "Javornický Josef",
-     "rt": 1455,
-     "rl": 1453,
+     "rt": 1456,
+     "rl": 1455,
      "eN": 190,
      "f": 65,
      "lkh": 65.5,
@@ -1324,7 +1362,7 @@
     {
      "j": "Stiborek David",
      "rt": null,
-     "rl": 1351,
+     "rl": 1353,
      "eN": 6,
      "f": 33,
      "lkh": 52.6,
@@ -1334,7 +1372,7 @@
     {
      "j": "Řepa Michal",
      "rt": null,
-     "rl": 1285,
+     "rl": 1286,
      "eN": 6,
      "f": 50,
      "lkh": 44.2,
@@ -1344,7 +1382,7 @@
     {
      "j": "Vostárek Martin",
      "rt": null,
-     "rl": 1267,
+     "rl": 1268,
      "eN": 0,
      "f": null,
      "lkh": 41.9,
@@ -1353,8 +1391,8 @@
     },
     {
      "j": "Zerzán Miloš",
-     "rt": 1187,
-     "rl": 1243,
+     "rt": 1188,
+     "rl": 1245,
      "eN": 45,
      "f": 33,
      "lkh": 38.9,
@@ -1364,7 +1402,7 @@
     {
      "j": "Vent Lukáš",
      "rt": null,
-     "rl": 1131,
+     "rl": 1132,
      "eN": 0,
      "f": null,
      "lkh": 33.8,
@@ -1374,7 +1412,7 @@
     {
      "j": "Kučera Dušan",
      "rt": null,
-     "rl": 1203,
+     "rl": 1204,
      "eN": 0,
      "f": null,
      "lkh": 33.8,

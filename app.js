@@ -586,14 +586,33 @@ const crossKat = (kat) => (!kat || kat === 'B') ? null : ((kat === 'C' || kat ==
 const normTeam = (s) => ('' + s).replace(/\s*Praha\s*/g, ' ').replace(/\s+/g, ' ').trim().toLowerCase();
 const teamIdxByShort = (short) => SCOUT ? SCOUT.teams.findIndex(t => normTeam(t.nazev) === normTeam(short)) : -1;
 
+const RES_NM = { V: 'výhra', R: 'remíza', P: 'prohra' };
+
+function bilanceHtml() {
+  const b = SCOUT && SCOUT.bilance;
+  if (!b || !b.odehrano) return '';
+  const zbyva = SCOUT.rozpis.length - b.odehrano;
+  return `<div class="rz-bil">
+    <span class="rz-bil-sc">${b.v}–${b.r}–${b.p}</span>
+    <span class="rz-bil-meta">${b.odehrano} z ${SCOUT.rozpis.length} odehráno · her ${b.her_pro}:${b.her_proti}
+      · ${b.body} ${b.body === 1 ? 'bod' : (b.body < 5 ? 'body' : 'bodů')}${zbyva ? ' · zbývá ' + zbyva : ''}</span></div>`;
+}
+
 function renderRozpis() {
   const box = $('rozpisList'); if (!box || !SCOUT) return;
-  box.innerHTML = SCOUT.rozpis.map((m, i) => {
-    const dm = m.datum.split('.'); const next = i === 0 ? ' <span class="rz-next">PŘÍŠTÍ</span>' : '';
-    return `<button class="rz-row" data-i="${teamIdxByShort(m.souper)}">
+  // "PŘÍŠTÍ" patri prvnimu NEodehranemu, ne prvnimu v poradi
+  const nextI = SCOUT.rozpis.findIndex(m => !m.res);
+  box.innerHTML = bilanceHtml() + SCOUT.rozpis.map((m, i) => {
+    const dm = m.datum.split('.');
+    const next = i === nextI ? ' <span class="rz-next">PŘÍŠTÍ</span>' : '';
+    const sc = m.res
+      ? `<span class="rz-sc ${m.res}" title="${RES_NM[m.res]}">${m.my}:${m.opp}</span>`
+      : '';
+    return `<button class="rz-row${m.res ? ' done' : ''}" data-i="${teamIdxByShort(m.souper)}">
       <span class="rz-date"><b>${dm[0]}.${dm[1]}.</b><small>${m.den}</small></span>
       <span class="rz-main"><span class="rz-opp">${escH(m.souper)}${next}</span>
-        <span class="rz-meta">${m.cas} · ${escH(m.hala)}</span></span>
+        <span class="rz-meta">${m.res ? RES_NM[m.res] : m.cas} · ${escH(m.hala)}</span></span>
+      ${sc}
       <span class="rz-ha ${m.doma ? 'h' : 'a'}">${m.doma ? 'DOMA' : 'VENKU'}</span></button>`;
   }).join('');
   box.querySelectorAll('.rz-row').forEach(b => b.onclick = () => openTeam(+b.dataset.i));
