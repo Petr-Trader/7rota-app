@@ -197,12 +197,14 @@ function openDetail(jmeno) {
     + tile('LKH letos', p.lkh_n == null ? '—' : p.lkh_n.toFixed(1),
         p.leg_n ? `${legStr(p.leg_n)}${p.zap_n ? ' · ' + p.zap_n + ' záp.' : ''}` : 'letos ještě nehrál')
     + tile('Pohár pořadí', (p.turn_season && p.turn_season.pohar_pozice) ? p.turn_season.pohar_pozice + '/' + p.turn_season.pohar_total : '—', 'Středočeský pohár (živé)')
-    + tile('Síla (BT)', p.bt == null ? '—' : p.bt.toFixed(2), 'vzájemné zápasy')
+    + tile('Síla (BT)', p.bt == null ? '—' : p.bt.toFixed(2),
+        p.bt == null ? 'bez turnajových singlů' : `z ${p.bt_n} zápasů`)
     + tile('Docházka', dochVal(p, total), dochSub(p, total));
   const notes = [];
   if (p.jenLiga) notes.push('„Jen liga" — nehraje turnaje, soudí se hlavně z LKH.');
   if (p.lkh == null) notes.push('Bez ligových dat — posuzuje se z turnajů (BT).');
   if (p.legy != null && p.legy < (params.lref || 120)) notes.push(`Málo odehraných legů (${p.legy}) → LKH méně prokázané (spolehlivostní faktor).`);
+  if (p.bt != null && (p.bt_n || 0) < 30) notes.push(`Síla BT stojí jen na ${p.bt_n} zápasech — málo průkazné.`);
   if (p.lkh_n != null && (p.leg_n || 0) < 4) notes.push(`„LKH letos" je zatím z ${legStr(p.leg_n)} — neprůkazné, do pořadí se nepočítá.`);
   else if (p.lkh_n != null && p.lkh != null) {
     const d = p.lkh_n - p.lkh;
