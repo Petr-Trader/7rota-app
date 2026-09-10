@@ -171,6 +171,8 @@ td.name{cursor:pointer}
 .pl-lkh b{font-size:16px;font-variant-numeric:tabular-nums}
 .pl-lkh small{display:block;font-size:8.5px;color:var(--mut);text-transform:uppercase}
 .pl-adj{display:block;font-size:10.5px;color:#b8791a;font-weight:800}
+.pl-now{display:block;font-size:10px;font-weight:700;color:var(--teal);margin-top:1px;white-space:nowrap}
+.pl-now.low{color:var(--mut);font-weight:600;font-style:italic}
 .pchip{font-size:9.5px;font-weight:800;padding:1px 5px;border-radius:5px}
 .pchip.in{background:#dcfce7;color:#15803d} .pchip.jl{background:var(--bg);color:var(--mut)}
 .pchip.low{background:#fef3c7;color:#92400e} .pchip.high{background:#dcfce7;color:#0f766e}

@@ -302,7 +302,10 @@
      "kat": "D",
      "liga": "3. liga N",
      "legy": 220,
-     "turnaje": 900
+     "turnaje": 900,
+     "lkh_n": 46.0,
+     "leg_n": 10,
+     "zap_n": 4
     },
     {
      "jmeno": "Bajtek Jindřich",
@@ -310,7 +313,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 165,
-     "turnaje": 16600
+     "turnaje": 16600,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Zbořil Karel",
@@ -318,7 +324,10 @@
      "kat": "D",
      "liga": "3. liga N",
      "legy": 126,
-     "turnaje": 11200
+     "turnaje": 11200,
+     "lkh_n": 105.0,
+     "leg_n": 2,
+     "zap_n": 1
     },
     {
      "jmeno": "Majerčin David",
@@ -326,7 +335,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 53,
-     "turnaje": 7850
+     "turnaje": 7850,
+     "lkh_n": 65.6,
+     "leg_n": 9,
+     "zap_n": 4
     },
     {
      "jmeno": "Hamšík Robert",
@@ -334,7 +346,10 @@
      "kat": "D",
      "liga": "3. liga N",
      "legy": 208,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": 25.0,
+     "leg_n": 8,
+     "zap_n": 3
     },
     {
      "jmeno": "Schraml Petr",
@@ -342,7 +357,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 97,
-     "turnaje": 11500
+     "turnaje": 11500,
+     "lkh_n": 33.3,
+     "leg_n": 6,
+     "zap_n": 3
     },
     {
      "jmeno": "Procházka Lubomír",
@@ -350,7 +368,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 10,
-     "turnaje": 2100
+     "turnaje": 2100,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Krykorka Milan",
@@ -358,7 +379,10 @@
      "kat": null,
      "liga": null,
      "legy": null,
-     "turnaje": 750
+     "turnaje": 750,
+     "lkh_n": 85.0,
+     "leg_n": 2,
+     "zap_n": 1
     }
    ],
    "us": true
@@ -381,7 +405,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 208,
-     "turnaje": 13750
+     "turnaje": 13750,
+     "lkh_n": 54.5,
+     "leg_n": 11,
+     "zap_n": 4
     },
     {
      "jmeno": "Kopač Miroslav",
@@ -389,7 +416,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 211,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": 50.0,
+     "leg_n": 12,
+     "zap_n": 4
     },
     {
      "jmeno": "Semrád Filip",
@@ -397,7 +427,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 24,
-     "turnaje": 1000
+     "turnaje": 1000,
+     "lkh_n": 57.0,
+     "leg_n": 10,
+     "zap_n": 4
     },
     {
      "jmeno": "Bláha Petr",
@@ -405,7 +438,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 217,
-     "turnaje": 10400
+     "turnaje": 10400,
+     "lkh_n": 28.9,
+     "leg_n": 9,
+     "zap_n": 4
     },
     {
      "jmeno": "Novák David",
@@ -413,7 +449,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 148,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Lexová Natálie",
@@ -421,7 +460,10 @@
      "kat": null,
      "liga": null,
      "legy": null,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     }
    ]
   },
@@ -445,7 +487,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 112,
-     "turnaje": 13950
+     "turnaje": 13950,
+     "lkh_n": 73.3,
+     "leg_n": 3,
+     "zap_n": 1
     },
     {
      "jmeno": "Henner Martin",
@@ -453,7 +498,10 @@
      "kat": "D",
      "liga": "3. liga N",
      "legy": 170,
-     "turnaje": 11950
+     "turnaje": 11950,
+     "lkh_n": 35.0,
+     "leg_n": 8,
+     "zap_n": 3
     },
     {
      "jmeno": "Shíbal Petr",
@@ -461,7 +509,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 211,
-     "turnaje": 1900
+     "turnaje": 1900,
+     "lkh_n": 90.0,
+     "leg_n": 2,
+     "zap_n": 1
     },
     {
      "jmeno": "Homola Jiří",
@@ -469,7 +520,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 213,
-     "turnaje": 4400
+     "turnaje": 4400,
+     "lkh_n": 44.4,
+     "leg_n": 9,
+     "zap_n": 3
     },
     {
      "jmeno": "Pfleger Michal",
@@ -477,7 +531,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 223,
-     "turnaje": 12850
+     "turnaje": 12850,
+     "lkh_n": 73.6,
+     "leg_n": 11,
+     "zap_n": 4
     },
     {
      "jmeno": "Korčáková Renáta",
@@ -485,7 +542,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 129,
-     "turnaje": 8200
+     "turnaje": 8200,
+     "lkh_n": 76.2,
+     "leg_n": 8,
+     "zap_n": 4
     }
    ]
   },
@@ -506,7 +566,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 188,
-     "turnaje": 15300
+     "turnaje": 15300,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Nemeš Jan",
@@ -514,7 +577,10 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 183,
-     "turnaje": 13950
+     "turnaje": 13950,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Linek Adam",
@@ -522,7 +588,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 158,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Bartek David",
@@ -530,7 +599,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 136,
-     "turnaje": 8200
+     "turnaje": 8200,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Prokeš Radek",
@@ -538,7 +610,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 183,
-     "turnaje": 9750
+     "turnaje": 9750,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Pavlát Radek",
@@ -546,7 +621,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 140,
-     "turnaje": 600
+     "turnaje": 600,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Bárta Daniel",
@@ -554,7 +632,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 81,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Murín Milan",
@@ -562,7 +643,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 31,
-     "turnaje": 4600
+     "turnaje": 4600,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     }
    ]
   },
@@ -581,7 +665,10 @@
      "kat": "D",
      "liga": "3. liga L",
      "legy": 87,
-     "turnaje": 4750
+     "turnaje": 4750,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Gutvirt Petr",
@@ -589,7 +676,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 207,
-     "turnaje": 14850
+     "turnaje": 14850,
+     "lkh_n": 56.0,
+     "leg_n": 10,
+     "zap_n": 4
     },
     {
      "jmeno": "Kopecký Jiří",
@@ -597,7 +687,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 223,
-     "turnaje": 350
+     "turnaje": 350,
+     "lkh_n": 68.0,
+     "leg_n": 10,
+     "zap_n": 4
     },
     {
      "jmeno": "Přibyl Robert",
@@ -605,7 +698,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 145,
-     "turnaje": 5400
+     "turnaje": 5400,
+     "lkh_n": 0.0,
+     "leg_n": 4,
+     "zap_n": 2
     },
     {
      "jmeno": "Dobiášovský Petr",
@@ -613,7 +709,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 150,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": 10.0,
+     "leg_n": 5,
+     "zap_n": 2
     },
     {
      "jmeno": "Hladík Tomáš",
@@ -621,7 +720,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 76,
-     "turnaje": 1900
+     "turnaje": 1900,
+     "lkh_n": 21.2,
+     "leg_n": 8,
+     "zap_n": 4
     },
     {
      "jmeno": "Davídek David",
@@ -629,7 +731,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 103,
-     "turnaje": 8900
+     "turnaje": 8900,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Murín Milan",
@@ -637,7 +742,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 31,
-     "turnaje": 4600
+     "turnaje": 4600,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     }
    ]
   },
@@ -658,7 +766,10 @@
      "kat": "C",
      "liga": "2. liga B",
      "legy": 223,
-     "turnaje": 9400
+     "turnaje": 9400,
+     "lkh_n": 75.0,
+     "leg_n": 8,
+     "zap_n": 4
     },
     {
      "jmeno": "Dvořák Radek",
@@ -666,7 +777,10 @@
      "kat": "C",
      "liga": "2. liga B",
      "legy": 195,
-     "turnaje": 2600
+     "turnaje": 2600,
+     "lkh_n": 38.2,
+     "leg_n": 11,
+     "zap_n": 4
     },
     {
      "jmeno": "Hocek Jakub",
@@ -674,7 +788,10 @@
      "kat": "C",
      "liga": "2. liga B",
      "legy": 205,
-     "turnaje": 1750
+     "turnaje": 1750,
+     "lkh_n": 60.0,
+     "leg_n": 11,
+     "zap_n": 4
     },
     {
      "jmeno": "Vadocky Daniel",
@@ -682,7 +799,10 @@
      "kat": "C",
      "liga": "2. liga B",
      "legy": 144,
-     "turnaje": 11150
+     "turnaje": 11150,
+     "lkh_n": 41.0,
+     "leg_n": 10,
+     "zap_n": 4
     },
     {
      "jmeno": "Bubla Martin",
@@ -690,7 +810,10 @@
      "kat": "C",
      "liga": "2. liga B",
      "legy": 117,
-     "turnaje": 350
+     "turnaje": 350,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Buršíková Tamara",
@@ -698,7 +821,10 @@
      "kat": "C",
      "liga": "2. liga B",
      "legy": 30,
-     "turnaje": 1050
+     "turnaje": 1050,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Jirkalová Milena",
@@ -706,7 +832,10 @@
      "kat": null,
      "liga": null,
      "legy": null,
-     "turnaje": 500
+     "turnaje": 500,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     }
    ]
   },
@@ -729,7 +858,10 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 201,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": 92.9,
+     "leg_n": 7,
+     "zap_n": 3
     },
     {
      "jmeno": "Drlík Tomáš",
@@ -737,7 +869,10 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 214,
-     "turnaje": 7550
+     "turnaje": 7550,
+     "lkh_n": 102.2,
+     "leg_n": 9,
+     "zap_n": 4
     },
     {
      "jmeno": "Stanko Jindřich",
@@ -745,7 +880,10 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 215,
-     "turnaje": 6350
+     "turnaje": 6350,
+     "lkh_n": 36.2,
+     "leg_n": 8,
+     "zap_n": 3
     },
     {
      "jmeno": "Cirkovský Jaroslav",
@@ -753,7 +891,10 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 228,
-     "turnaje": 9850
+     "turnaje": 9850,
+     "lkh_n": 52.7,
+     "leg_n": 11,
+     "zap_n": 4
     },
     {
      "jmeno": "Vokřálová Petra",
@@ -761,7 +902,10 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 33,
-     "turnaje": 5800
+     "turnaje": 5800,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Mayer Marián",
@@ -769,7 +913,10 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 37,
-     "turnaje": 900
+     "turnaje": 900,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Šiman Martin",
@@ -777,7 +924,10 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 54,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": 5.0,
+     "leg_n": 2,
+     "zap_n": 1
     },
     {
      "jmeno": "Bečvář David",
@@ -785,7 +935,10 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 27,
-     "turnaje": 3050
+     "turnaje": 3050,
+     "lkh_n": 5.0,
+     "leg_n": 2,
+     "zap_n": 1
     }
    ]
   },
@@ -810,7 +963,10 @@
      "kat": "C",
      "liga": "2. liga A",
      "legy": 217,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": 38.8,
+     "leg_n": 8,
+     "zap_n": 3
     },
     {
      "jmeno": "Dvořák Leoš",
@@ -818,7 +974,10 @@
      "kat": "C",
      "liga": "2. liga A",
      "legy": 217,
-     "turnaje": 900
+     "turnaje": 900,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Dvořák Robert",
@@ -826,7 +985,10 @@
      "kat": "C",
      "liga": "2. liga A",
      "legy": 57,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": 21.8,
+     "leg_n": 11,
+     "zap_n": 4
     },
     {
      "jmeno": "Janků Petr",
@@ -834,7 +996,10 @@
      "kat": "C",
      "liga": "2. liga A",
      "legy": 177,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": 48.2,
+     "leg_n": 11,
+     "zap_n": 4
     },
     {
      "jmeno": "Jelínek Marek",
@@ -842,7 +1007,10 @@
      "kat": "C",
      "liga": "2. liga A",
      "legy": 141,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": 70.0,
+     "leg_n": 9,
+     "zap_n": 4
     },
     {
      "jmeno": "Brzobohatý Jiří",
@@ -850,7 +1018,10 @@
      "kat": null,
      "liga": null,
      "legy": null,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Jelínek David",
@@ -858,7 +1029,10 @@
      "kat": null,
      "liga": null,
      "legy": null,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": 5.0,
+     "leg_n": 2,
+     "zap_n": 1
     },
     {
      "jmeno": "Lang Jan",
@@ -866,7 +1040,10 @@
      "kat": null,
      "liga": null,
      "legy": null,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     }
    ]
   },
@@ -885,7 +1062,10 @@
      "kat": "C",
      "liga": "2. liga D",
      "legy": 42,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": 136.2,
+     "leg_n": 8,
+     "zap_n": 4
     },
     {
      "jmeno": "Šarman René",
@@ -893,7 +1073,10 @@
      "kat": "C",
      "liga": "2. liga D",
      "legy": 250,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": 96.2,
+     "leg_n": 8,
+     "zap_n": 4
     },
     {
      "jmeno": "Vopálka Martin",
@@ -901,7 +1084,10 @@
      "kat": "C",
      "liga": "2. liga D",
      "legy": 91,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Machač Ladislav",
@@ -909,7 +1095,10 @@
      "kat": "C",
      "liga": "2. liga D",
      "legy": 230,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": 52.0,
+     "leg_n": 10,
+     "zap_n": 4
     },
     {
      "jmeno": "Nečas Václav",
@@ -917,7 +1106,10 @@
      "kat": "C",
      "liga": "2. liga D",
      "legy": 154,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Zdražil Jan",
@@ -925,7 +1117,10 @@
      "kat": "C",
      "liga": "2. liga D",
      "legy": 165,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": 63.3,
+     "leg_n": 9,
+     "zap_n": 4
     },
     {
      "jmeno": "Hofinger Josef",
@@ -933,7 +1128,10 @@
      "kat": "C",
      "liga": "2. liga D",
      "legy": 63,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     }
    ]
   },
@@ -959,7 +1157,10 @@
      "kat": "D",
      "liga": "3. liga K",
      "legy": 115,
-     "turnaje": 9050
+     "turnaje": 9050,
+     "lkh_n": 38.2,
+     "leg_n": 11,
+     "zap_n": 4
     },
     {
      "jmeno": "Štola Ondřej",
@@ -967,7 +1168,10 @@
      "kat": "C",
      "liga": "2. liga D",
      "legy": 192,
-     "turnaje": 350
+     "turnaje": 350,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Lébl Martin",
@@ -975,7 +1179,10 @@
      "kat": "C",
      "liga": "2. liga D",
      "legy": 211,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": 73.3,
+     "leg_n": 9,
+     "zap_n": 4
     },
     {
      "jmeno": "Dafčík Zdeněk",
@@ -983,7 +1190,10 @@
      "kat": "C",
      "liga": "2. liga D",
      "legy": 114,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Menšík Ladislav",
@@ -991,7 +1201,10 @@
      "kat": "C",
      "liga": "2. liga D",
      "legy": 171,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": 25.6,
+     "leg_n": 9,
+     "zap_n": 4
     },
     {
      "jmeno": "Dorko Miroslav",
@@ -999,7 +1212,10 @@
      "kat": "C",
      "liga": "2. liga D",
      "legy": 27,
-     "turnaje": 250
+     "turnaje": 250,
+     "lkh_n": 15.0,
+     "leg_n": 10,
+     "zap_n": 4
     },
     {
      "jmeno": "Fiala Stanislav",
@@ -1007,7 +1223,10 @@
      "kat": null,
      "liga": null,
      "legy": null,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Reichman Jakub",
@@ -1015,7 +1234,10 @@
      "kat": null,
      "liga": null,
      "legy": null,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     }
    ]
   },
@@ -1034,7 +1256,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 206,
-     "turnaje": 9900
+     "turnaje": 9900,
+     "lkh_n": 74.5,
+     "leg_n": 11,
+     "zap_n": 4
     },
     {
      "jmeno": "Říha Josef",
@@ -1042,7 +1267,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 227,
-     "turnaje": 2250
+     "turnaje": 2250,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Buřič Jan",
@@ -1050,7 +1278,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 228,
-     "turnaje": 3300
+     "turnaje": 3300,
+     "lkh_n": 56.4,
+     "leg_n": 11,
+     "zap_n": 4
     },
     {
      "jmeno": "Lochner František",
@@ -1058,7 +1289,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 54,
-     "turnaje": 4500
+     "turnaje": 4500,
+     "lkh_n": 28.0,
+     "leg_n": 10,
+     "zap_n": 4
     },
     {
      "jmeno": "Navrátil Zdeněk",
@@ -1066,7 +1300,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 184,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": 33.0,
+     "leg_n": 10,
+     "zap_n": 4
     },
     {
      "jmeno": "Key Jay",
@@ -1074,7 +1311,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 29,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Faltejsek Libor",
@@ -1082,7 +1322,10 @@
      "kat": "A",
      "liga": "Extraliga VÝCHOD",
      "legy": 6,
-     "turnaje": 3400
+     "turnaje": 3400,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Buřičová Hana",
@@ -1090,7 +1333,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 4,
-     "turnaje": 1450
+     "turnaje": 1450,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     }
    ]
   },
@@ -1111,7 +1357,10 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 213,
-     "turnaje": 350
+     "turnaje": 350,
+     "lkh_n": 57.5,
+     "leg_n": 8,
+     "zap_n": 4
     },
     {
      "jmeno": "Ondrik Lubomír",
@@ -1119,7 +1368,10 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 210,
-     "turnaje": 1800
+     "turnaje": 1800,
+     "lkh_n": 10.0,
+     "leg_n": 6,
+     "zap_n": 3
     },
     {
      "jmeno": "Houdek Oto",
@@ -1127,7 +1379,10 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 205,
-     "turnaje": 450
+     "turnaje": 450,
+     "lkh_n": 12.9,
+     "leg_n": 7,
+     "zap_n": 3
     },
     {
      "jmeno": "Mertl Michal",
@@ -1135,7 +1390,10 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 60,
-     "turnaje": 3800
+     "turnaje": 3800,
+     "lkh_n": 33.0,
+     "leg_n": 10,
+     "zap_n": 4
     },
     {
      "jmeno": "Forman Bohumil",
@@ -1143,7 +1401,10 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 71,
-     "turnaje": 8200
+     "turnaje": 8200,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Havlová Marie",
@@ -1151,7 +1412,10 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 78,
-     "turnaje": 2600
+     "turnaje": 2600,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Šlehofr David",
@@ -1159,7 +1423,10 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 65,
-     "turnaje": 4400
+     "turnaje": 4400,
+     "lkh_n": 5.0,
+     "leg_n": 2,
+     "zap_n": 1
     },
     {
      "jmeno": "Černohorský Miroslav",
@@ -1167,7 +1434,10 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 6,
-     "turnaje": 350
+     "turnaje": 350,
+     "lkh_n": 0.0,
+     "leg_n": 2,
+     "zap_n": 1
     }
    ]
   },
@@ -1188,7 +1458,10 @@
      "kat": "D",
      "liga": "3. liga C",
      "legy": 108,
-     "turnaje": 6600
+     "turnaje": 6600,
+     "lkh_n": 5.0,
+     "leg_n": 4,
+     "zap_n": 2
     },
     {
      "jmeno": "Krušina Lukáš",
@@ -1196,7 +1469,10 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 236,
-     "turnaje": 2450
+     "turnaje": 2450,
+     "lkh_n": 80.0,
+     "leg_n": 11,
+     "zap_n": 4
     },
     {
      "jmeno": "Hradský Pavel",
@@ -1204,7 +1480,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 229,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Kaněra Zdeněk",
@@ -1212,7 +1491,10 @@
      "kat": "D",
      "liga": "3. liga B",
      "legy": 116,
-     "turnaje": 12550
+     "turnaje": 12550,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Gaper Tomáš",
@@ -1220,7 +1502,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 217,
-     "turnaje": 7200
+     "turnaje": 7200,
+     "lkh_n": 56.4,
+     "leg_n": 11,
+     "zap_n": 4
     },
     {
      "jmeno": "Rysová Karolína",
@@ -1228,7 +1513,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 5,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Siuda Daniel",
@@ -1236,7 +1524,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 143,
-     "turnaje": 1600
+     "turnaje": 1600,
+     "lkh_n": 63.0,
+     "leg_n": 10,
+     "zap_n": 4
     },
     {
      "jmeno": "Hlavatý Tomáš",
@@ -1244,7 +1535,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 76,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Šnejdarová Jitka",
@@ -1252,7 +1546,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 109,
-     "turnaje": 5550
+     "turnaje": 5550,
+     "lkh_n": 2.5,
+     "leg_n": 4,
+     "zap_n": 2
     }
    ]
   },
@@ -1273,7 +1570,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 226,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Javornický Josef",
@@ -1281,7 +1581,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 174,
-     "turnaje": 13500
+     "turnaje": 13500,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Stiborek David",
@@ -1289,7 +1592,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 159,
-     "turnaje": 350
+     "turnaje": 350,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Řepa Michal",
@@ -1297,7 +1603,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 100,
-     "turnaje": 1300
+     "turnaje": 1300,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Vostárek Martin",
@@ -1305,7 +1614,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 88,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Zerzán Miloš",
@@ -1313,7 +1625,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 171,
-     "turnaje": 3500
+     "turnaje": 3500,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Vent Lukáš",
@@ -1321,7 +1636,10 @@
      "kat": "D",
      "liga": "3. liga K",
      "legy": 121,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     },
     {
      "jmeno": "Kučera Dušan",
@@ -1329,7 +1647,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 8,
-     "turnaje": null
+     "turnaje": null,
+     "lkh_n": null,
+     "leg_n": null,
+     "zap_n": null
     }
    ]
   }

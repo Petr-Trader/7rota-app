@@ -641,6 +641,15 @@ function renderSouperiList() {
 }
 
 function openTeam(i) { if (i == null || i < 0) return; scoutTeam = i; renderTeamDetail(); $('teamDetail').classList.remove('hidden'); }
+// LKH bezici sezony: mala hodnota vedle lonske. Pod 4 legy ji neuvadi ani web
+// (overeno 2026-09-10: vsech 9 hracu bez LKH na webu melo <= 3 legy) -> ztlumit.
+function nowTag(p) {
+  if (p.lkh_n == null) return '';
+  const low = (p.leg_n || 0) < 4;
+  const t = `LKH běžící sezóny: ${p.lkh_n} z ${p.leg_n} legů` + (p.zap_n ? ` (${p.zap_n} zápasy)` : '');
+  return `<span class="pl-now${low ? ' low' : ''}" title="${t}">letos ${Math.round(p.lkh_n)}</span>`;
+}
+
 function renderTeamDetail() {
   if (scoutTeam == null) return; const t = SCOUT.teams[scoutTeam]; const s = teamStrength(t);
   const players = [...t.hraci].sort((a, b) => (oppLkh(b) ?? -1) - (oppLkh(a) ?? -1));
@@ -663,6 +672,9 @@ function renderTeamDetail() {
       + (jenLiga ? ` ${jenLiga} hráčů hraje jen ligu (bez turnajů).` : '') + `</div>`;
   }
   if (crossN) h += `<div class="td-note">🔀 <b>${crossN} z jiné ligy:</b> LKH přepočteno na 1. ligu dle nastavené korekce (Nastavení). Řazení i hrozby počítám z přepočtu.</div>`;
+  const hasNow = players.some(p => p.lkh_n != null);
+  if (hasNow) h += `<div class="td-note">📈 <b>letos</b> = LKH běžící sezóny 2026/27. Velké číslo je loňské (stabilní báze),
+    <span class="pl-now">letos</span> se počítá z málo legů — <span class="pl-now low">šedě</span> jsou pod 4 legy, tam to zatím nic neznamená.</div>`;
   h += `<div class="scout-eyebrow">Soupiska dle síly</div><div class="td-plist">`;
   players.forEach((p, idx) => {
     const a = oppLkh(p); const w = a != null ? Math.max(4, Math.round(a / max * 100)) : 0;
@@ -675,7 +687,7 @@ function renderTeamDetail() {
     h += `<div class="pl-row"><span class="pl-rank">${idx + 1}</span>
       <span class="pl-main"><span class="pl-name">${escH(p.jmeno)} ${chips}</span>
         <span class="pl-bar"><i style="width:${w}%;background:${col}"></i></span></span>
-      <span class="pl-lkh"><b>${p.lkh != null ? Math.round(p.lkh) : '–'}</b><small>LKH</small>${cc ? `<span class="pl-adj">≈${Math.round(a)}</span>` : ''}</span></div>`;
+      <span class="pl-lkh"><b>${p.lkh != null ? Math.round(p.lkh) : '–'}</b><small>LKH</small>${cc ? `<span class="pl-adj">≈${Math.round(a)}</span>` : ''}${nowTag(p)}</span></div>`;
   });
   h += `</div>`;
   if (t.transfers && (t.transfers.prisli.length || t.transfers.odesli.length)) {
