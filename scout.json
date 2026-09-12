@@ -2,7 +2,7 @@
  "season": "2026/27",
  "league": "1. liga A",
  "klub": "Sedmá rota Praha",
- "generated": "2026-09-11",
+ "generated": "2026-09-12",
  "rozpis": [
   {
    "k": 1,
@@ -313,7 +313,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 165,
-     "turnaje": 16600,
+     "turnaje": 17300,
      "lkh_n": null,
      "leg_n": null,
      "zap_n": null
@@ -335,7 +335,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 53,
-     "turnaje": 7850,
+     "turnaje": 8600,
      "lkh_n": 65.6,
      "leg_n": 9,
      "zap_n": 4
@@ -357,7 +357,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 97,
-     "turnaje": 11500,
+     "turnaje": 11700,
      "lkh_n": 33.3,
      "leg_n": 6,
      "zap_n": 3
@@ -531,7 +531,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 223,
-     "turnaje": 13300,
+     "turnaje": 13700,
      "lkh_n": 73.6,
      "leg_n": 11,
      "zap_n": 4
@@ -577,7 +577,7 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 183,
-     "turnaje": 13950,
+     "turnaje": 15000,
      "lkh_n": null,
      "leg_n": null,
      "zap_n": null
@@ -599,7 +599,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 136,
-     "turnaje": 8200,
+     "turnaje": 8950,
      "lkh_n": null,
      "leg_n": null,
      "zap_n": null
@@ -665,7 +665,7 @@
      "kat": "D",
      "liga": "3. liga L",
      "legy": 87,
-     "turnaje": 4750,
+     "turnaje": 5400,
      "lkh_n": null,
      "leg_n": null,
      "zap_n": null
@@ -731,7 +731,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 103,
-     "turnaje": 8900,
+     "turnaje": 9250,
      "lkh_n": null,
      "leg_n": null,
      "zap_n": null
@@ -891,7 +891,7 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 228,
-     "turnaje": 10300,
+     "turnaje": 10500,
      "lkh_n": 52.7,
      "leg_n": 11,
      "zap_n": 4
@@ -902,7 +902,7 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 33,
-     "turnaje": 6150,
+     "turnaje": 6700,
      "lkh_n": null,
      "leg_n": null,
      "zap_n": null
