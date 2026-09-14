@@ -4,7 +4,7 @@
  "halflife": 12.0,
  "wT_default": 0.5,
  "span": "2022-2026",
- "generated": "2026-09-13",
+ "generated": "2026-09-14",
  "rozpis": [
   {
    "k": 1,
@@ -548,8 +548,8 @@
      "lkh": 98.4,
      "kat": "B",
      "t": 15300,
-     "lkh_n": null,
-     "leg_n": null
+     "lkh_n": 122.5,
+     "leg_n": 4
     },
     {
      "j": "Nemeš Jan",
@@ -560,8 +560,8 @@
      "lkh": 81.0,
      "kat": "C",
      "t": 15000,
-     "lkh_n": null,
-     "leg_n": null
+     "lkh_n": 111.0,
+     "leg_n": 10
     },
     {
      "j": "Linek Adam",
@@ -572,8 +572,8 @@
      "lkh": 66.1,
      "kat": "B",
      "t": null,
-     "lkh_n": null,
-     "leg_n": null
+     "lkh_n": 28.0,
+     "leg_n": 5
     },
     {
      "j": "Bartek David",
@@ -584,8 +584,8 @@
      "lkh": 61.2,
      "kat": "B",
      "t": 8950,
-     "lkh_n": null,
-     "leg_n": null
+     "lkh_n": 78.0,
+     "leg_n": 5
     },
     {
      "j": "Prokeš Radek",
@@ -596,8 +596,8 @@
      "lkh": 52.1,
      "kat": "B",
      "t": 9750,
-     "lkh_n": null,
-     "leg_n": null
+     "lkh_n": 97.5,
+     "leg_n": 4
     },
     {
      "j": "Pavlát Radek",
@@ -608,8 +608,8 @@
      "lkh": 27.4,
      "kat": "B",
      "t": 600,
-     "lkh_n": null,
-     "leg_n": null
+     "lkh_n": 62.0,
+     "leg_n": 5
     },
     {
      "j": "Bárta Daniel",
@@ -620,8 +620,8 @@
      "lkh": 25.3,
      "kat": "B",
      "t": null,
-     "lkh_n": null,
-     "leg_n": null
+     "lkh_n": 12.5,
+     "leg_n": 4
     },
     {
      "j": "Murín Milan",
@@ -749,7 +749,7 @@
      "f": 68,
      "lkh": 72.0,
      "kat": "C",
-     "t": 9400,
+     "t": 10250,
      "lkh_n": 75.0,
      "leg_n": 8
     },
@@ -1432,7 +1432,7 @@
      "f": 67,
      "lkh": 72.4,
      "kat": "D",
-     "t": 7650,
+     "t": 8400,
      "lkh_n": 5.0,
      "leg_n": 4
     },
@@ -1444,7 +1444,7 @@
      "f": 60,
      "lkh": 67.7,
      "kat": "C",
-     "t": 4100,
+     "t": 4550,
      "lkh_n": 80.0,
      "leg_n": 11
     },
@@ -1528,7 +1528,7 @@
      "f": 33,
      "lkh": 28.8,
      "kat": "B",
-     "t": 8850,
+     "t": 9100,
      "lkh_n": 2.5,
      "leg_n": 4
     }
@@ -1546,8 +1546,8 @@
      "lkh": 68.2,
      "kat": "B",
      "t": null,
-     "lkh_n": null,
-     "leg_n": null
+     "lkh_n": 55.0,
+     "leg_n": 10
     },
     {
      "j": "Javornický Josef",
@@ -1558,8 +1558,8 @@
      "lkh": 65.5,
      "kat": "B",
      "t": 13500,
-     "lkh_n": null,
-     "leg_n": null
+     "lkh_n": 70.0,
+     "leg_n": 9
     },
     {
      "j": "Stiborek David",
@@ -1594,8 +1594,8 @@
      "lkh": 41.9,
      "kat": "B",
      "t": null,
-     "lkh_n": null,
-     "leg_n": null
+     "lkh_n": 14.4,
+     "leg_n": 9
     },
     {
      "j": "Zerzán Miloš",
@@ -1606,8 +1606,8 @@
      "lkh": 38.9,
      "kat": "B",
      "t": 3500,
-     "lkh_n": null,
-     "leg_n": null
+     "lkh_n": 17.8,
+     "leg_n": 9
     },
     {
      "j": "Vent Lukáš",
