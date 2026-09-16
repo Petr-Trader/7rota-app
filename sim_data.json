@@ -4,7 +4,7 @@
  "halflife": 12.0,
  "wT_default": 0.5,
  "span": "2022-2026",
- "generated": "2026-09-15",
+ "generated": "2026-09-16",
  "rozpis": [
   {
    "k": 1,
@@ -1332,8 +1332,8 @@
      "lkh": 66.0,
      "kat": "C",
      "t": 350,
-     "lkh_n": 57.5,
-     "leg_n": 8
+     "lkh_n": 68.1,
+     "leg_n": 16
     },
     {
      "j": "Ondrik Lubomír",
@@ -1344,8 +1344,8 @@
      "lkh": 62.2,
      "kat": "C",
      "t": 1800,
-     "lkh_n": 10.0,
-     "leg_n": 6
+     "lkh_n": 52.8,
+     "leg_n": 18
     },
     {
      "j": "Houdek Oto",
@@ -1356,8 +1356,8 @@
      "lkh": 59.0,
      "kat": "C",
      "t": 450,
-     "lkh_n": 12.9,
-     "leg_n": 7
+     "lkh_n": 36.7,
+     "leg_n": 18
     },
     {
      "j": "Mertl Michal",
@@ -1380,8 +1380,8 @@
      "lkh": 44.9,
      "kat": "C",
      "t": 8200,
-     "lkh_n": null,
-     "leg_n": null
+     "lkh_n": 11.7,
+     "leg_n": 6
     },
     {
      "j": "Havlová Marie",
@@ -1404,8 +1404,8 @@
      "lkh": 13.2,
      "kat": "C",
      "t": 4850,
-     "lkh_n": 5.0,
-     "leg_n": 2
+     "lkh_n": 18.0,
+     "leg_n": 5
     },
     {
      "j": "Černohorský Miroslav",
@@ -1546,8 +1546,8 @@
      "lkh": 68.2,
      "kat": "B",
      "t": null,
-     "lkh_n": 55.0,
-     "leg_n": 10
+     "lkh_n": 58.6,
+     "leg_n": 21
     },
     {
      "j": "Javornický Josef",
@@ -1558,8 +1558,8 @@
      "lkh": 65.5,
      "kat": "B",
      "t": 13500,
-     "lkh_n": 70.0,
-     "leg_n": 9
+     "lkh_n": 54.7,
+     "leg_n": 19
     },
     {
      "j": "Stiborek David",
@@ -1570,8 +1570,8 @@
      "lkh": 52.6,
      "kat": "B",
      "t": 350,
-     "lkh_n": null,
-     "leg_n": null
+     "lkh_n": 36.7,
+     "leg_n": 9
     },
     {
      "j": "Řepa Michal",
@@ -1582,8 +1582,8 @@
      "lkh": 44.2,
      "kat": "B",
      "t": 1300,
-     "lkh_n": null,
-     "leg_n": null
+     "lkh_n": 61.2,
+     "leg_n": 8
     },
     {
      "j": "Vostárek Martin",
@@ -1606,8 +1606,8 @@
      "lkh": 38.9,
      "kat": "B",
      "t": 3500,
-     "lkh_n": 17.8,
-     "leg_n": 9
+     "lkh_n": 15.5,
+     "leg_n": 11
     },
     {
      "j": "Vent Lukáš",
