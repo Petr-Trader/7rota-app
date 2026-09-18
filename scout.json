@@ -2,7 +2,7 @@
  "season": "2026/27",
  "league": "1. liga A",
  "klub": "Sedmá rota Praha",
- "generated": "2026-09-17",
+ "generated": "2026-09-18",
  "rozpis": [
   {
    "k": 1,
@@ -438,7 +438,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 217,
-     "turnaje": 11300,
+     "turnaje": 11700,
      "lkh_n": 28.9,
      "leg_n": 9,
      "zap_n": 4
@@ -531,7 +531,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 223,
-     "turnaje": 15150,
+     "turnaje": 15550,
      "lkh_n": 73.6,
      "leg_n": 11,
      "zap_n": 4
@@ -665,7 +665,7 @@
      "kat": "D",
      "liga": "3. liga L",
      "legy": 87,
-     "turnaje": 5400,
+     "turnaje": 6150,
      "lkh_n": null,
      "leg_n": null,
      "zap_n": null
@@ -880,7 +880,7 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 215,
-     "turnaje": 6800,
+     "turnaje": 6900,
      "lkh_n": 36.2,
      "leg_n": 8,
      "zap_n": 3
@@ -891,7 +891,7 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 228,
-     "turnaje": 10500,
+     "turnaje": 11000,
      "lkh_n": 52.7,
      "leg_n": 11,
      "zap_n": 4
@@ -902,7 +902,7 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 33,
-     "turnaje": 6700,
+     "turnaje": 6800,
      "lkh_n": null,
      "leg_n": null,
      "zap_n": null
@@ -1368,7 +1368,7 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 210,
-     "turnaje": 1800,
+     "turnaje": 2550,
      "lkh_n": 52.8,
      "leg_n": 18,
      "zap_n": 7
@@ -1401,7 +1401,7 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 71,
-     "turnaje": 8200,
+     "turnaje": 8750,
      "lkh_n": 11.7,
      "leg_n": 6,
      "zap_n": 3
@@ -1423,7 +1423,7 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 65,
-     "turnaje": 4850,
+     "turnaje": 5200,
      "lkh_n": 18.0,
      "leg_n": 5,
      "zap_n": 2
@@ -1458,7 +1458,7 @@
      "kat": "D",
      "liga": "3. liga C",
      "legy": 108,
-     "turnaje": 8400,
+     "turnaje": 9250,
      "lkh_n": 5.0,
      "leg_n": 4,
      "zap_n": 2
