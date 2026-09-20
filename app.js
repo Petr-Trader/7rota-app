@@ -1054,7 +1054,7 @@ function renderSim() {
 // ===== ARCHIV SESTAV (ulozeni F3 sestavy + vysledek zapasu, localStorage) =====
 const ARCHIV_KEY = '7rota-archiv';
 function loadArchiv() { try { return JSON.parse(localStorage.getItem(ARCHIV_KEY) || '[]'); } catch { return []; } }
-function saveArchiv(a) { try { localStorage.setItem(ARCHIV_KEY, JSON.stringify(a)); } catch { } }
+function saveArchiv(a) { try { localStorage.setItem(ARCHIV_KEY, JSON.stringify(a)); } catch { } cloudAuto(); }
 function saveLineup() {
   if (!SIM) return;
   const m = SIM.rozpis[simMatch];
@@ -1154,11 +1154,69 @@ function importArchiv(file) {
   rd.readAsText(file);
 }
 
+// ── Zaloha do cloudu (worker -> privatni repo 7-rota) ────────────────────────
+// Klic zada Petr jednou v appce (uklada se do localStorage, NENI ve zdrojaku).
+// Bezi i automaticky po kazde zmene archivu; ticho pri chybe, at nic neobtezuje.
+const CLOUD_URL = 'https://7rota-proxy.schramlp-1a4.workers.dev/archiv-backup';
+const CLOUD_KEY = '7rota-cloud-key';     // ulozeny klic
+const CLOUD_LAST = '7rota-cloud-last';   // {"at":ISO,"n":pocet,"sig":delka+id}
+let cloudTimer = null;
+
+const cloudKey = () => { try { return localStorage.getItem(CLOUD_KEY) || ''; } catch { return ''; } };
+const cloudLast = () => { try { return JSON.parse(localStorage.getItem(CLOUD_LAST) || 'null'); } catch { return null; } };
+
+async function cloudSend(rucne) {
+  const arr = loadArchiv();
+  if (!arr.length) { if (rucne) alert('Archiv je prázdný — není co zálohovat.'); return false; }
+  let key = cloudKey();
+  if (!key) {
+    if (!rucne) return false;                 // automat bez klice nic nedela
+    key = (prompt('Zálohovací klíč (nastavený v Cloudflare workeru jako BACKUP_KEY):') || '').trim();
+    if (!key) return false;
+    try { localStorage.setItem(CLOUD_KEY, key); } catch { }
+  }
+  const body = JSON.stringify({ app: '7rota', exported: new Date().toISOString(), archiv: arr });
+  const st = $('archCloudStat'); if (st) st.textContent = 'zálohuji…';
+  try {
+    const r = await fetch(CLOUD_URL, { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-Backup-Key': key }, body });
+    if (r.status === 401) { try { localStorage.removeItem(CLOUD_KEY); } catch { } throw new Error('špatný klíč — zadej ho znovu'); }
+    if (r.status === 503) throw new Error('worker ještě nemá nastavené GH_TOKEN/BACKUP_KEY');
+    if (!r.ok) throw new Error(await r.text() || ('chyba ' + r.status));
+    try { localStorage.setItem(CLOUD_LAST, JSON.stringify({ at: new Date().toISOString(), n: arr.length, sig: cloudSig(arr) })); } catch { }
+    if (st) st.textContent = `☁️ zálohováno ${new Date().toLocaleString('cs-CZ')} (${arr.length})`;
+    return true;
+  } catch (e) {
+    if (st) st.textContent = '⚠️ záloha selhala: ' + (e.message || e);
+    if (rucne) alert('Záloha do cloudu selhala: ' + (e.message || e));
+    return false;
+  }
+}
+
+const cloudSig = (arr) => arr.length + ':' + arr.map(a => a.id + (a.result ? 'r' : '')).join(',');
+
+function cloudAuto() {                        // po zmene archivu, s odkladem (debounce)
+  if (!cloudKey()) return;
+  clearTimeout(cloudTimer);
+  cloudTimer = setTimeout(() => {
+    const l = cloudLast();
+    if (l && l.sig === cloudSig(loadArchiv())) return;   // nic noveho -> neposilej
+    cloudSend(false);
+  }, 2000);
+}
+
+function cloudStatText() {
+  if (!cloudKey()) return 'cloud záloha: nenastavená (ťukni na ☁️)';
+  const l = cloudLast();
+  return l ? `☁️ poslední záloha ${new Date(l.at).toLocaleString('cs-CZ')} (${l.n})` : '☁️ klíč nastaven, zatím nezálohováno';
+}
+
 function renderArchiv() {
   const box = $('archivList'); if (!box) return;
-  const exp = $('archExport'), imp = $('archImport'), impF = $('archImportFile');
+  const exp = $('archExport'), imp = $('archImport'), impF = $('archImportFile'), cld = $('archCloud'), st = $('archCloudStat');
   if (exp) exp.onclick = exportArchiv;
   if (imp && impF) { imp.onclick = () => impF.click(); impF.onchange = () => { if (impF.files[0]) importArchiv(impF.files[0]); impF.value = ''; }; }
+  if (cld) cld.onclick = async () => { await cloudSend(true); if (st) setTimeout(() => st.textContent = cloudStatText(), 4000); };
+  if (st) st.textContent = cloudStatText();
   const arr = loadArchiv();
   if (!arr.length) { box.innerHTML = '<p class="hint">Zatím nic uloženého. V Simulátoru → Doporučená sestava dej „💾 Uložit sestavu", a po zápase sem zadáš výsledek.</p>'; return; }
   const stat = {};
