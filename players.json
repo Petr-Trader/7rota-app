@@ -24,7 +24,7 @@
     "A": 24,
     "B": 24
   },
-  "liga_zapasu_n": 2,
+  "liga_zapasu_n": 3,
   "players": [
     {
       "jmeno": "Bajtek Jindřich",
@@ -70,9 +70,9 @@
       "hral": 19,
       "utkani_n": 0,
       "hral_n": 0,
-      "lkh_n": 64.4,
-      "leg_n": 9,
-      "zap_n": 3
+      "lkh_n": 66.3,
+      "leg_n": 19,
+      "zap_n": 7
     },
     {
       "jmeno": "Majerčin David",
@@ -118,9 +118,9 @@
       "hral": 10,
       "utkani_n": 1,
       "hral_n": 1,
-      "lkh_n": 42.9,
-      "leg_n": 17,
-      "zap_n": 7
+      "lkh_n": 47.4,
+      "leg_n": 27,
+      "zap_n": 11
     },
     {
       "jmeno": "Schraml Petr",
@@ -166,9 +166,9 @@
       "hral": 17,
       "utkani_n": 1,
       "hral_n": 1,
-      "lkh_n": 43.3,
-      "leg_n": 9,
-      "zap_n": 4
+      "lkh_n": 41.6,
+      "leg_n": 19,
+      "zap_n": 8
     },
     {
       "jmeno": "Procházka Lubomír",
@@ -258,9 +258,9 @@
       "hral": 24,
       "utkani_n": 1,
       "hral_n": 1,
-      "lkh_n": 41.7,
-      "leg_n": 18,
-      "zap_n": 7
+      "lkh_n": 44.8,
+      "leg_n": 23,
+      "zap_n": 9
     },
     {
       "jmeno": "Zbořil Karel",
@@ -350,9 +350,9 @@
       "hral": 24,
       "utkani_n": 1,
       "hral_n": 1,
-      "lkh_n": 23.0,
-      "leg_n": 10,
-      "zap_n": 4
+      "lkh_n": 30.7,
+      "leg_n": 14,
+      "zap_n": 6
     },
     {
       "jmeno": "Krykorka Milan",
