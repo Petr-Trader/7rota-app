@@ -2,7 +2,7 @@
  "season": "2026/27",
  "league": "1. liga A",
  "klub": "Sedmá rota Praha",
- "generated": "2026-09-26",
+ "generated": "2026-09-27",
  "rozpis": [
   {
    "k": 1,
@@ -444,7 +444,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 217,
-     "turnaje": 12000,
+     "turnaje": 12500,
      "lkh_n": 32.0,
      "leg_n": 20,
      "zap_n": 8
@@ -537,7 +537,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 223,
-     "turnaje": 16550,
+     "turnaje": 17550,
      "lkh_n": 62.3,
      "leg_n": 22,
      "zap_n": 8
@@ -671,7 +671,7 @@
      "kat": "D",
      "liga": "3. liga L",
      "legy": 87,
-     "turnaje": 7850,
+     "turnaje": 8650,
      "lkh_n": null,
      "leg_n": null,
      "zap_n": null
@@ -772,7 +772,7 @@
      "kat": "C",
      "liga": "2. liga B",
      "legy": 223,
-     "turnaje": 11300,
+     "turnaje": 12200,
      "lkh_n": 54.7,
      "leg_n": 19,
      "zap_n": 8
@@ -805,7 +805,7 @@
      "kat": "C",
      "liga": "2. liga B",
      "legy": 144,
-     "turnaje": 12100,
+     "turnaje": 13000,
      "lkh_n": 53.5,
      "leg_n": 20,
      "zap_n": 8
@@ -897,7 +897,7 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 228,
-     "turnaje": 11000,
+     "turnaje": 12300,
      "lkh_n": 50.0,
      "leg_n": 20,
      "zap_n": 8
@@ -908,7 +908,7 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 33,
-     "turnaje": 6800,
+     "turnaje": 7900,
      "lkh_n": null,
      "leg_n": null,
      "zap_n": null
@@ -1176,7 +1176,7 @@
      "kat": "D",
      "liga": "3. liga K",
      "legy": 115,
-     "turnaje": 9650,
+     "turnaje": 10750,
      "lkh_n": 53.0,
      "leg_n": 30,
      "zap_n": 12
@@ -1275,7 +1275,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 206,
-     "turnaje": 11300,
+     "turnaje": 12600,
      "lkh_n": 66.8,
      "leg_n": 19,
      "zap_n": 8
@@ -1308,7 +1308,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 54,
-     "turnaje": 4500,
+     "turnaje": 6000,
      "lkh_n": 21.4,
      "leg_n": 14,
      "zap_n": 6
@@ -1554,7 +1554,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 76,
-     "turnaje": null,
+     "turnaje": 700,
      "lkh_n": 2.5,
      "leg_n": 4,
      "zap_n": 2
@@ -1600,7 +1600,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 174,
-     "turnaje": 14900,
+     "turnaje": 16200,
      "lkh_n": 54.7,
      "leg_n": 19,
      "zap_n": 8
