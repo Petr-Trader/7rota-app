@@ -2,7 +2,7 @@
  "season": "2026/27",
  "league": "1. liga A",
  "klub": "Sedmá rota Praha",
- "generated": "2026-09-28",
+ "generated": "2026-09-29",
  "rozpis": [
   {
    "k": 1,
@@ -572,10 +572,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 188,
-     "turnaje": 16800,
-     "lkh_n": 112.3,
-     "leg_n": 13,
-     "zap_n": 6
+     "turnaje": 17550,
+     "lkh_n": 95.4,
+     "leg_n": 24,
+     "zap_n": 10
     },
     {
      "jmeno": "Nemeš Jan",
@@ -583,7 +583,7 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 183,
-     "turnaje": 17050,
+     "turnaje": 17900,
      "lkh_n": 114.7,
      "leg_n": 19,
      "zap_n": 8
@@ -595,9 +595,9 @@
      "liga": "1. liga A",
      "legy": 158,
      "turnaje": null,
-     "lkh_n": 41.1,
-     "leg_n": 9,
-     "zap_n": 4
+     "lkh_n": 63.7,
+     "leg_n": 19,
+     "zap_n": 8
     },
     {
      "jmeno": "Bartek David",
@@ -606,9 +606,9 @@
      "liga": "1. liga A",
      "legy": 136,
      "turnaje": 9400,
-     "lkh_n": 80.0,
-     "leg_n": 10,
-     "zap_n": 4
+     "lkh_n": 78.1,
+     "leg_n": 16,
+     "zap_n": 6
     },
     {
      "jmeno": "Prokeš Radek",
@@ -617,9 +617,9 @@
      "liga": "1. liga A",
      "legy": 183,
      "turnaje": 10850,
-     "lkh_n": 75.6,
-     "leg_n": 9,
-     "zap_n": 4
+     "lkh_n": 66.4,
+     "leg_n": 14,
+     "zap_n": 6
     },
     {
      "jmeno": "Pavlát Radek",
@@ -628,9 +628,9 @@
      "liga": "1. liga A",
      "legy": 140,
      "turnaje": 600,
-     "lkh_n": 52.0,
-     "leg_n": 10,
-     "zap_n": 4
+     "lkh_n": 48.0,
+     "leg_n": 15,
+     "zap_n": 6
     },
     {
      "jmeno": "Bárta Daniel",
@@ -639,9 +639,9 @@
      "liga": "1. liga A",
      "legy": 81,
      "turnaje": null,
-     "lkh_n": 12.5,
-     "leg_n": 4,
-     "zap_n": 2
+     "lkh_n": 26.7,
+     "leg_n": 9,
+     "zap_n": 4
     },
     {
      "jmeno": "Murín Milan",
@@ -649,7 +649,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 31,
-     "turnaje": 4600,
+     "turnaje": 4850,
      "lkh_n": null,
      "leg_n": null,
      "zap_n": null
@@ -748,7 +748,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 31,
-     "turnaje": 4600,
+     "turnaje": 4850,
      "lkh_n": null,
      "leg_n": null,
      "zap_n": null
@@ -773,9 +773,9 @@
      "liga": "2. liga B",
      "legy": 223,
      "turnaje": 12200,
-     "lkh_n": 54.7,
-     "leg_n": 19,
-     "zap_n": 8
+     "lkh_n": 53.7,
+     "leg_n": 30,
+     "zap_n": 12
     },
     {
      "jmeno": "Dvořák Radek",
@@ -784,9 +784,9 @@
      "liga": "2. liga B",
      "legy": 195,
      "turnaje": 2600,
-     "lkh_n": 56.8,
-     "leg_n": 19,
-     "zap_n": 7
+     "lkh_n": 48.8,
+     "leg_n": 24,
+     "zap_n": 9
     },
     {
      "jmeno": "Hocek Jakub",
@@ -795,9 +795,9 @@
      "liga": "2. liga B",
      "legy": 205,
      "turnaje": 1750,
-     "lkh_n": 63.3,
-     "leg_n": 21,
-     "zap_n": 8
+     "lkh_n": 56.5,
+     "leg_n": 31,
+     "zap_n": 12
     },
     {
      "jmeno": "Vadocky Daniel",
@@ -817,9 +817,9 @@
      "liga": "2. liga B",
      "legy": 117,
      "turnaje": 350,
-     "lkh_n": null,
-     "leg_n": null,
-     "zap_n": null
+     "lkh_n": 24.2,
+     "leg_n": 12,
+     "zap_n": 4
     },
     {
      "jmeno": "Buršíková Tamara",
@@ -828,9 +828,9 @@
      "liga": "2. liga B",
      "legy": 30,
      "turnaje": 1050,
-     "lkh_n": 5.0,
-     "leg_n": 2,
-     "zap_n": 1
+     "lkh_n": 36.7,
+     "leg_n": 6,
+     "zap_n": 3
     },
     {
      "jmeno": "Jirkalová Milena",
@@ -970,8 +970,8 @@
      "liga": "2. liga A",
      "legy": 217,
      "turnaje": null,
-     "lkh_n": 37.9,
-     "leg_n": 28,
+     "lkh_n": 45.9,
+     "leg_n": 29,
      "zap_n": 11
     },
     {
@@ -981,8 +981,8 @@
      "liga": "2. liga A",
      "legy": 217,
      "turnaje": 1250,
-     "lkh_n": 36.5,
-     "leg_n": 20,
+     "lkh_n": 38.9,
+     "leg_n": 19,
      "zap_n": 8
     },
     {
@@ -992,7 +992,7 @@
      "liga": "2. liga A",
      "legy": 57,
      "turnaje": 1100,
-     "lkh_n": 23.0,
+     "lkh_n": 28.7,
      "leg_n": 30,
      "zap_n": 12
     },
@@ -1014,7 +1014,7 @@
      "liga": "2. liga A",
      "legy": 141,
      "turnaje": null,
-     "lkh_n": 63.3,
+     "lkh_n": 65.0,
      "leg_n": 18,
      "zap_n": 8
     },
@@ -1082,8 +1082,8 @@
      "liga": "2. liga D",
      "legy": 250,
      "turnaje": null,
-     "lkh_n": 90.0,
-     "leg_n": 26,
+     "lkh_n": 86.7,
+     "leg_n": 27,
      "zap_n": 12
     },
     {
@@ -1104,8 +1104,8 @@
      "liga": "2. liga D",
      "legy": 230,
      "turnaje": null,
-     "lkh_n": 57.1,
-     "leg_n": 24,
+     "lkh_n": 59.6,
+     "leg_n": 23,
      "zap_n": 9
     },
     {
