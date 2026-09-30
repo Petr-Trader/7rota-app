@@ -2,7 +2,7 @@
  "season": "2026/27",
  "league": "1. liga A",
  "klub": "Sedmá rota Praha",
- "generated": "2026-09-29",
+ "generated": "2026-09-30",
  "rozpis": [
   {
    "k": 1,
@@ -494,9 +494,9 @@
      "liga": "1. liga A",
      "legy": 112,
      "turnaje": 16150,
-     "lkh_n": 73.3,
-     "leg_n": 3,
-     "zap_n": 1
+     "lkh_n": 54.2,
+     "leg_n": 12,
+     "zap_n": 5
     },
     {
      "jmeno": "Henner Martin",
@@ -505,9 +505,9 @@
      "liga": "3. liga N",
      "legy": 170,
      "turnaje": 13950,
-     "lkh_n": 31.8,
-     "leg_n": 17,
-     "zap_n": 7
+     "lkh_n": 37.4,
+     "leg_n": 27,
+     "zap_n": 11
     },
     {
      "jmeno": "Shíbal Petr",
@@ -516,9 +516,9 @@
      "liga": "1. liga A",
      "legy": 211,
      "turnaje": 2550,
-     "lkh_n": 70.0,
-     "leg_n": 13,
-     "zap_n": 5
+     "lkh_n": 65.0,
+     "leg_n": 24,
+     "zap_n": 9
     },
     {
      "jmeno": "Homola Jiří",
@@ -538,9 +538,9 @@
      "liga": "1. liga A",
      "legy": 223,
      "turnaje": 17550,
-     "lkh_n": 62.3,
-     "leg_n": 22,
-     "zap_n": 8
+     "lkh_n": 63.8,
+     "leg_n": 32,
+     "zap_n": 12
     },
     {
      "jmeno": "Korčáková Renáta",
@@ -704,7 +704,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 145,
-     "turnaje": 6100,
+     "turnaje": 6550,
      "lkh_n": 3.8,
      "leg_n": 13,
      "zap_n": 6
@@ -1478,9 +1478,9 @@
      "liga": "3. liga C",
      "legy": 108,
      "turnaje": 11350,
-     "lkh_n": 51.4,
-     "leg_n": 14,
-     "zap_n": 6
+     "lkh_n": 68.8,
+     "leg_n": 24,
+     "zap_n": 10
     },
     {
      "jmeno": "Krušina Lukáš",
@@ -1500,9 +1500,9 @@
      "liga": "1. liga A",
      "legy": 229,
      "turnaje": null,
-     "lkh_n": 80.0,
-     "leg_n": 5,
-     "zap_n": 2
+     "lkh_n": 45.0,
+     "leg_n": 12,
+     "zap_n": 5
     },
     {
      "jmeno": "Kaněra Zdeněk",
@@ -1511,9 +1511,9 @@
      "liga": "3. liga B",
      "legy": 116,
      "turnaje": 15650,
-     "lkh_n": 64.0,
-     "leg_n": 5,
-     "zap_n": 2
+     "lkh_n": 47.5,
+     "leg_n": 16,
+     "zap_n": 6
     },
     {
      "jmeno": "Gaper Tomáš",
@@ -1522,9 +1522,9 @@
      "liga": "1. liga A",
      "legy": 217,
      "turnaje": 10200,
-     "lkh_n": 70.7,
-     "leg_n": 15,
-     "zap_n": 6
+     "lkh_n": 66.7,
+     "leg_n": 24,
+     "zap_n": 10
     },
     {
      "jmeno": "Rysová Karolína",
@@ -1544,9 +1544,9 @@
      "liga": "1. liga A",
      "legy": 143,
      "turnaje": 2850,
-     "lkh_n": 63.0,
-     "leg_n": 10,
-     "zap_n": 4
+     "lkh_n": 52.3,
+     "leg_n": 13,
+     "zap_n": 5
     },
     {
      "jmeno": "Hlavatý Tomáš",
