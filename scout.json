@@ -2,7 +2,7 @@
  "season": "2026/27",
  "league": "1. liga A",
  "klub": "Sedmá rota Praha",
- "generated": "2026-10-08",
+ "generated": "2026-10-09",
  "rozpis": [
   {
    "k": 1,
@@ -886,7 +886,7 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 215,
-     "turnaje": 9750,
+     "turnaje": 9950,
      "lkh_n": 53.8,
      "leg_n": 29,
      "zap_n": 11
@@ -1420,7 +1420,7 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 71,
-     "turnaje": 10050,
+     "turnaje": 10700,
      "lkh_n": 11.7,
      "leg_n": 6,
      "zap_n": 3
