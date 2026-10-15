@@ -2,7 +2,7 @@
  "season": "2026/27",
  "league": "1. liga A",
  "klub": "Sedmá rota Praha",
- "generated": "2026-10-14",
+ "generated": "2026-10-15",
  "rozpis": [
   {
    "k": 1,
@@ -322,7 +322,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 165,
-     "turnaje": 22450,
+     "turnaje": 23100,
      "lkh_n": 56.7,
      "leg_n": 30,
      "zap_n": 11
@@ -529,7 +529,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 213,
-     "turnaje": 5700,
+     "turnaje": 6350,
      "lkh_n": 32.3,
      "leg_n": 26,
      "zap_n": 10
@@ -686,9 +686,9 @@
      "liga": "1. liga A",
      "legy": 207,
      "turnaje": 18050,
-     "lkh_n": 32.5,
-     "leg_n": 24,
-     "zap_n": 10
+     "lkh_n": 42.7,
+     "leg_n": 33,
+     "zap_n": 14
     },
     {
      "jmeno": "Kopecký Jiří",
@@ -697,9 +697,9 @@
      "liga": "1. liga A",
      "legy": 223,
      "turnaje": 350,
-     "lkh_n": 42.8,
-     "leg_n": 32,
-     "zap_n": 12
+     "lkh_n": 41.2,
+     "leg_n": 41,
+     "zap_n": 16
     },
     {
      "jmeno": "Přibyl Robert",
@@ -708,9 +708,9 @@
      "liga": "1. liga A",
      "legy": 145,
      "turnaje": 7350,
-     "lkh_n": 6.5,
-     "leg_n": 23,
-     "zap_n": 10
+     "lkh_n": 18.0,
+     "leg_n": 35,
+     "zap_n": 14
     },
     {
      "jmeno": "Dobiášovský Petr",
@@ -730,9 +730,9 @@
      "liga": "1. liga A",
      "legy": 76,
      "turnaje": 1900,
-     "lkh_n": 34.4,
-     "leg_n": 16,
-     "zap_n": 8
+     "lkh_n": 30.0,
+     "leg_n": 24,
+     "zap_n": 12
     },
     {
      "jmeno": "Davídek David",
@@ -1180,9 +1180,9 @@
      "liga": "3. liga K",
      "legy": 115,
      "turnaje": 11400,
-     "lkh_n": 51.5,
-     "leg_n": 39,
-     "zap_n": 16
+     "lkh_n": 51.9,
+     "leg_n": 47,
+     "zap_n": 19
     },
     {
      "jmeno": "Štola Ondřej",
@@ -1191,9 +1191,9 @@
      "liga": "2. liga D",
      "legy": 192,
      "turnaje": 350,
-     "lkh_n": 44.3,
-     "leg_n": 28,
-     "zap_n": 12
+     "lkh_n": 51.1,
+     "leg_n": 37,
+     "zap_n": 16
     },
     {
      "jmeno": "Lébl Martin",
@@ -1202,9 +1202,9 @@
      "liga": "2. liga D",
      "legy": 211,
      "turnaje": null,
-     "lkh_n": 63.7,
-     "leg_n": 38,
-     "zap_n": 16
+     "lkh_n": 66.2,
+     "leg_n": 48,
+     "zap_n": 20
     },
     {
      "jmeno": "Dafčík Zdeněk",
@@ -1213,9 +1213,9 @@
      "liga": "2. liga D",
      "legy": 114,
      "turnaje": null,
-     "lkh_n": 23.3,
-     "leg_n": 3,
-     "zap_n": 1
+     "lkh_n": 24.0,
+     "leg_n": 5,
+     "zap_n": 2
     },
     {
      "jmeno": "Menšík Ladislav",
@@ -1224,9 +1224,9 @@
      "liga": "2. liga D",
      "legy": 171,
      "turnaje": null,
-     "lkh_n": 27.7,
-     "leg_n": 30,
-     "zap_n": 13
+     "lkh_n": 28.9,
+     "leg_n": 36,
+     "zap_n": 16
     },
     {
      "jmeno": "Dorko Miroslav",
@@ -1235,9 +1235,9 @@
      "liga": "2. liga D",
      "legy": 27,
      "turnaje": 250,
-     "lkh_n": 20.6,
-     "leg_n": 16,
-     "zap_n": 6
+     "lkh_n": 21.1,
+     "leg_n": 19,
+     "zap_n": 7
     },
     {
      "jmeno": "Fiala Stanislav",

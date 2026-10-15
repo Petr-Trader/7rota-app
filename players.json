@@ -35,7 +35,7 @@
           20
         ],
         "Schraml Petr": [
-          16,
+          17,
           23
         ],
         "Majerčin David": [
@@ -63,9 +63,9 @@
       "kat": "B",
       "lkh": 62.6,
       "legy": 165,
-      "turnaje": 22450,
+      "turnaje": 23100,
       "bt": 1.05,
-      "bt_n": 679,
+      "bt_n": 684,
       "utkani": 19,
       "hral": 19,
       "utkani_n": 0,
@@ -136,7 +136,7 @@
         ],
         "Bajtek Jindřich": [
           23,
-          16
+          17
         ],
         "Královič Martin": [
           21,
@@ -161,7 +161,7 @@
       "legy": 97,
       "turnaje": 15150,
       "bt": 0.43,
-      "bt_n": 339,
+      "bt_n": 343,
       "utkani": 22,
       "hral": 17,
       "utkani_n": 1,
