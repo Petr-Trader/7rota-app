@@ -24,7 +24,7 @@
     "A": 24,
     "B": 24
   },
-  "liga_zapasu_n": 4,
+  "liga_zapasu_n": 5,
   "players": [
     {
       "jmeno": "Bajtek Jindřich",
@@ -118,9 +118,9 @@
       "hral": 10,
       "utkani_n": 1,
       "hral_n": 1,
-      "lkh_n": 44.4,
-      "leg_n": 36,
-      "zap_n": 15
+      "lkh_n": 46.3,
+      "leg_n": 46,
+      "zap_n": 19
     },
     {
       "jmeno": "Schraml Petr",
@@ -166,9 +166,9 @@
       "hral": 17,
       "utkani_n": 1,
       "hral_n": 1,
-      "lkh_n": 43.5,
-      "leg_n": 31,
-      "zap_n": 12
+      "lkh_n": 53.8,
+      "leg_n": 40,
+      "zap_n": 16
     },
     {
       "jmeno": "Procházka Lubomír",
@@ -258,9 +258,9 @@
       "hral": 24,
       "utkani_n": 1,
       "hral_n": 1,
-      "lkh_n": 36.3,
-      "leg_n": 30,
-      "zap_n": 12
+      "lkh_n": 34.9,
+      "leg_n": 41,
+      "zap_n": 16
     },
     {
       "jmeno": "Zbořil Karel",
@@ -306,9 +306,9 @@
       "hral": 16,
       "utkani_n": 1,
       "hral_n": 1,
-      "lkh_n": 60.0,
-      "leg_n": 10,
-      "zap_n": 4
+      "lkh_n": 52.6,
+      "leg_n": 19,
+      "zap_n": 8
     },
     {
       "jmeno": "Hamšík Robert",
