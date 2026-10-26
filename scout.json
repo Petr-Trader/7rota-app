@@ -2,7 +2,7 @@
  "season": "2026/27",
  "league": "1. liga A",
  "klub": "Sedmá rota Praha",
- "generated": "2026-10-25",
+ "generated": "2026-10-26",
  "rozpis": [
   {
    "k": 1,
@@ -77,7 +77,10 @@
    "doma": true,
    "souper": "Maniac Darts",
    "hala": "Pivnice Pipkin, Praha 4",
-   "mid": "43931400"
+   "mid": "43931400",
+   "my": 13,
+   "opp": 5,
+   "res": "V"
   },
   {
    "k": 7,
@@ -281,13 +284,13 @@
   }
  ],
  "bilance": {
-  "odehrano": 5,
-  "v": 2,
+  "odehrano": 6,
+  "v": 3,
   "r": 0,
   "p": 3,
-  "her_pro": 40,
-  "her_proti": 50,
-  "body": 4
+  "her_pro": 53,
+  "her_proti": 55,
+  "body": 6
  },
  "teams": [
   {
@@ -315,9 +318,9 @@
      "liga": "3. liga N",
      "legy": 220,
      "turnaje": 1750,
-     "lkh_n": 34.9,
-     "leg_n": 41,
-     "zap_n": 16
+     "lkh_n": 38.8,
+     "leg_n": 43,
+     "zap_n": 17
     },
     {
      "jmeno": "Bajtek Jindřich",
@@ -326,9 +329,9 @@
      "liga": "1. liga A",
      "legy": 165,
      "turnaje": 27150,
-     "lkh_n": 56.7,
-     "leg_n": 30,
-     "zap_n": 11
+     "lkh_n": 58.6,
+     "leg_n": 36,
+     "zap_n": 14
     },
     {
      "jmeno": "Zbořil Karel",
@@ -337,9 +340,9 @@
      "liga": "3. liga N",
      "legy": 126,
      "turnaje": 17050,
-     "lkh_n": 52.6,
-     "leg_n": 19,
-     "zap_n": 8
+     "lkh_n": 62.7,
+     "leg_n": 30,
+     "zap_n": 12
     },
     {
      "jmeno": "Majerčin David",
@@ -348,9 +351,9 @@
      "liga": "1. liga A",
      "legy": 53,
      "turnaje": 9350,
-     "lkh_n": 46.3,
-     "leg_n": 46,
-     "zap_n": 19
+     "lkh_n": 47.0,
+     "leg_n": 57,
+     "zap_n": 23
     },
     {
      "jmeno": "Hamšík Robert",
@@ -370,9 +373,9 @@
      "liga": "1. liga A",
      "legy": 97,
      "turnaje": 15650,
-     "lkh_n": 53.8,
-     "leg_n": 40,
-     "zap_n": 16
+     "lkh_n": 59.4,
+     "leg_n": 50,
+     "zap_n": 20
     },
     {
      "jmeno": "Procházka Lubomír",
@@ -418,9 +421,9 @@
      "liga": "1. liga A",
      "legy": 208,
      "turnaje": 22750,
-     "lkh_n": 74.5,
-     "leg_n": 53,
-     "zap_n": 20
+     "lkh_n": 71.1,
+     "leg_n": 64,
+     "zap_n": 24
     },
     {
      "jmeno": "Kopač Miroslav",
@@ -429,9 +432,9 @@
      "liga": "1. liga A",
      "legy": 211,
      "turnaje": null,
-     "lkh_n": 40.2,
-     "leg_n": 52,
-     "zap_n": 20
+     "lkh_n": 39.8,
+     "leg_n": 63,
+     "zap_n": 24
     },
     {
      "jmeno": "Semrád Filip",
@@ -439,7 +442,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 24,
-     "turnaje": 1550,
+     "turnaje": 2850,
      "lkh_n": 56.3,
      "leg_n": 19,
      "zap_n": 8
@@ -450,10 +453,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 217,
-     "turnaje": 14750,
-     "lkh_n": 42.2,
-     "leg_n": 49,
-     "zap_n": 20
+     "turnaje": 15850,
+     "lkh_n": 41.0,
+     "leg_n": 58,
+     "zap_n": 24
     },
     {
      "jmeno": "Novák David",
@@ -462,9 +465,9 @@
      "liga": "1. liga A",
      "legy": 148,
      "turnaje": null,
-     "lkh_n": 33.8,
-     "leg_n": 29,
-     "zap_n": 12
+     "lkh_n": 33.3,
+     "leg_n": 39,
+     "zap_n": 16
     },
     {
      "jmeno": "Lexová Natálie",
@@ -511,9 +514,9 @@
      "liga": "3. liga N",
      "legy": 170,
      "turnaje": 18550,
-     "lkh_n": 47.1,
-     "leg_n": 45,
-     "zap_n": 19
+     "lkh_n": 47.8,
+     "leg_n": 55,
+     "zap_n": 23
     },
     {
      "jmeno": "Shíbal Petr",
@@ -522,9 +525,9 @@
      "liga": "1. liga A",
      "legy": 211,
      "turnaje": 2550,
-     "lkh_n": 60.3,
-     "leg_n": 38,
-     "zap_n": 15
+     "lkh_n": 63.2,
+     "leg_n": 47,
+     "zap_n": 19
     },
     {
      "jmeno": "Homola Jiří",
@@ -544,9 +547,9 @@
      "liga": "1. liga A",
      "legy": 223,
      "turnaje": 23850,
-     "lkh_n": 57.0,
-     "leg_n": 50,
-     "zap_n": 19
+     "lkh_n": 59.8,
+     "leg_n": 59,
+     "zap_n": 23
     },
     {
      "jmeno": "Korčáková Renáta",
@@ -555,9 +558,9 @@
      "liga": "1. liga A",
      "legy": 129,
      "turnaje": 11750,
-     "lkh_n": 57.3,
-     "leg_n": 15,
-     "zap_n": 7
+     "lkh_n": 60.4,
+     "leg_n": 26,
+     "zap_n": 11
     }
    ]
   },
@@ -579,9 +582,9 @@
      "liga": "1. liga A",
      "legy": 188,
      "turnaje": 21800,
-     "lkh_n": 98.3,
-     "leg_n": 41,
-     "zap_n": 18
+     "lkh_n": 99.8,
+     "leg_n": 50,
+     "zap_n": 22
     },
     {
      "jmeno": "Nemeš Jan",
@@ -601,9 +604,9 @@
      "liga": "1. liga A",
      "legy": 158,
      "turnaje": null,
-     "lkh_n": 68.5,
-     "leg_n": 26,
-     "zap_n": 11
+     "lkh_n": 68.3,
+     "leg_n": 36,
+     "zap_n": 15
     },
     {
      "jmeno": "Bartek David",
@@ -612,9 +615,9 @@
      "liga": "1. liga A",
      "legy": 136,
      "turnaje": 10900,
-     "lkh_n": 66.2,
-     "leg_n": 21,
-     "zap_n": 8
+     "lkh_n": 66.9,
+     "leg_n": 32,
+     "zap_n": 12
     },
     {
      "jmeno": "Prokeš Radek",
@@ -623,9 +626,9 @@
      "liga": "1. liga A",
      "legy": 183,
      "turnaje": 14100,
-     "lkh_n": 55.0,
-     "leg_n": 28,
-     "zap_n": 12
+     "lkh_n": 53.8,
+     "leg_n": 34,
+     "zap_n": 14
     },
     {
      "jmeno": "Pavlát Radek",
@@ -634,9 +637,9 @@
      "liga": "1. liga A",
      "legy": 140,
      "turnaje": 600,
-     "lkh_n": 37.0,
-     "leg_n": 27,
-     "zap_n": 11
+     "lkh_n": 34.4,
+     "leg_n": 32,
+     "zap_n": 13
     },
     {
      "jmeno": "Bárta Daniel",
@@ -688,10 +691,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 207,
-     "turnaje": 20000,
-     "lkh_n": 42.7,
-     "leg_n": 33,
-     "zap_n": 14
+     "turnaje": 20600,
+     "lkh_n": 40.3,
+     "leg_n": 35,
+     "zap_n": 15
     },
     {
      "jmeno": "Kopecký Jiří",
@@ -700,9 +703,9 @@
      "liga": "1. liga A",
      "legy": 223,
      "turnaje": 350,
-     "lkh_n": 41.2,
-     "leg_n": 41,
-     "zap_n": 16
+     "lkh_n": 42.2,
+     "leg_n": 50,
+     "zap_n": 20
     },
     {
      "jmeno": "Přibyl Robert",
@@ -711,9 +714,9 @@
      "liga": "1. liga A",
      "legy": 145,
      "turnaje": 7350,
-     "lkh_n": 18.0,
-     "leg_n": 35,
-     "zap_n": 14
+     "lkh_n": 19.3,
+     "leg_n": 44,
+     "zap_n": 18
     },
     {
      "jmeno": "Dobiášovský Petr",
@@ -722,9 +725,9 @@
      "liga": "1. liga A",
      "legy": 150,
      "turnaje": null,
-     "lkh_n": 10.0,
-     "leg_n": 10,
-     "zap_n": 4
+     "lkh_n": 30.0,
+     "leg_n": 22,
+     "zap_n": 8
     },
     {
      "jmeno": "Hladík Tomáš",
@@ -733,9 +736,9 @@
      "liga": "1. liga A",
      "legy": 76,
      "turnaje": 1900,
-     "lkh_n": 30.0,
-     "leg_n": 24,
-     "zap_n": 12
+     "lkh_n": 24.8,
+     "leg_n": 31,
+     "zap_n": 15
     },
     {
      "jmeno": "Davídek David",
@@ -779,9 +782,9 @@
      "liga": "2. liga B",
      "legy": 223,
      "turnaje": 15550,
-     "lkh_n": 65.2,
-     "leg_n": 48,
-     "zap_n": 20
+     "lkh_n": 65.8,
+     "leg_n": 59,
+     "zap_n": 24
     },
     {
      "jmeno": "Dvořák Radek",
@@ -790,9 +793,9 @@
      "liga": "2. liga B",
      "legy": 195,
      "turnaje": 4750,
-     "lkh_n": 51.3,
-     "leg_n": 46,
-     "zap_n": 17
+     "lkh_n": 51.1,
+     "leg_n": 55,
+     "zap_n": 21
     },
     {
      "jmeno": "Hocek Jakub",
@@ -801,9 +804,9 @@
      "liga": "2. liga B",
      "legy": 205,
      "turnaje": 1750,
-     "lkh_n": 58.8,
-     "leg_n": 50,
-     "zap_n": 19
+     "lkh_n": 62.4,
+     "leg_n": 59,
+     "zap_n": 23
     },
     {
      "jmeno": "Vadocky Daniel",
@@ -823,9 +826,9 @@
      "liga": "2. liga B",
      "legy": 117,
      "turnaje": 350,
-     "lkh_n": 37.8,
-     "leg_n": 23,
-     "zap_n": 8
+     "lkh_n": 42.4,
+     "leg_n": 33,
+     "zap_n": 12
     },
     {
      "jmeno": "Buršíková Tamara",
@@ -871,9 +874,9 @@
      "liga": "2. liga C",
      "legy": 201,
      "turnaje": null,
-     "lkh_n": 56.3,
-     "leg_n": 38,
-     "zap_n": 15
+     "lkh_n": 61.7,
+     "leg_n": 46,
+     "zap_n": 19
     },
     {
      "jmeno": "Drlík Tomáš",
@@ -882,9 +885,9 @@
      "liga": "2. liga C",
      "legy": 214,
      "turnaje": 10300,
-     "lkh_n": 81.2,
-     "leg_n": 48,
-     "zap_n": 20
+     "lkh_n": 82.9,
+     "leg_n": 58,
+     "zap_n": 24
     },
     {
      "jmeno": "Stanko Jindřich",
@@ -893,9 +896,9 @@
      "liga": "2. liga C",
      "legy": 215,
      "turnaje": 11550,
-     "lkh_n": 53.8,
-     "leg_n": 50,
-     "zap_n": 19
+     "lkh_n": 50.3,
+     "leg_n": 61,
+     "zap_n": 23
     },
     {
      "jmeno": "Cirkovský Jaroslav",
@@ -903,10 +906,10 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 228,
-     "turnaje": 15500,
-     "lkh_n": 53.4,
-     "leg_n": 50,
-     "zap_n": 20
+     "turnaje": 16700,
+     "lkh_n": 50.0,
+     "leg_n": 62,
+     "zap_n": 24
     },
     {
      "jmeno": "Vokřálová Petra",
@@ -1088,9 +1091,9 @@
      "liga": "2. liga D",
      "legy": 250,
      "turnaje": null,
-     "lkh_n": 82.2,
-     "leg_n": 46,
-     "zap_n": 20
+     "lkh_n": 76.2,
+     "leg_n": 55,
+     "zap_n": 24
     },
     {
      "jmeno": "Vopálka Martin",
@@ -1110,9 +1113,9 @@
      "liga": "2. liga D",
      "legy": 230,
      "turnaje": null,
-     "lkh_n": 48.8,
-     "leg_n": 43,
-     "zap_n": 17
+     "lkh_n": 44.1,
+     "leg_n": 54,
+     "zap_n": 21
     },
     {
      "jmeno": "Gratz Lumír",
@@ -1121,9 +1124,9 @@
      "liga": "1. liga A",
      "legy": 186,
      "turnaje": 2100,
-     "lkh_n": 51.1,
-     "leg_n": 28,
-     "zap_n": 12
+     "lkh_n": 44.6,
+     "leg_n": 37,
+     "zap_n": 16
     },
     {
      "jmeno": "Nečas Václav",
@@ -1143,9 +1146,9 @@
      "liga": "2. liga D",
      "legy": 165,
      "turnaje": null,
-     "lkh_n": 35.5,
-     "leg_n": 33,
-     "zap_n": 14
+     "lkh_n": 35.0,
+     "leg_n": 44,
+     "zap_n": 18
     },
     {
      "jmeno": "Hofinger Josef",
@@ -1182,10 +1185,10 @@
      "kat": "D",
      "liga": "3. liga K",
      "legy": 115,
-     "turnaje": 11650,
-     "lkh_n": 51.9,
-     "leg_n": 47,
-     "zap_n": 19
+     "turnaje": 12150,
+     "lkh_n": 51.6,
+     "leg_n": 55,
+     "zap_n": 23
     },
     {
      "jmeno": "Štola Ondřej",
@@ -1194,9 +1197,9 @@
      "liga": "2. liga D",
      "legy": 192,
      "turnaje": 350,
-     "lkh_n": 51.1,
-     "leg_n": 37,
-     "zap_n": 16
+     "lkh_n": 49.8,
+     "leg_n": 42,
+     "zap_n": 18
     },
     {
      "jmeno": "Lébl Martin",
@@ -1205,9 +1208,9 @@
      "liga": "2. liga D",
      "legy": 211,
      "turnaje": null,
-     "lkh_n": 66.2,
-     "leg_n": 48,
-     "zap_n": 20
+     "lkh_n": 66.6,
+     "leg_n": 59,
+     "zap_n": 24
     },
     {
      "jmeno": "Dafčík Zdeněk",
@@ -1216,9 +1219,9 @@
      "liga": "2. liga D",
      "legy": 114,
      "turnaje": null,
-     "lkh_n": 24.0,
-     "leg_n": 5,
-     "zap_n": 2
+     "lkh_n": 27.0,
+     "leg_n": 10,
+     "zap_n": 4
     },
     {
      "jmeno": "Menšík Ladislav",
@@ -1227,9 +1230,9 @@
      "liga": "2. liga D",
      "legy": 171,
      "turnaje": null,
-     "lkh_n": 28.9,
-     "leg_n": 36,
-     "zap_n": 16
+     "lkh_n": 26.1,
+     "leg_n": 46,
+     "zap_n": 20
     },
     {
      "jmeno": "Dorko Miroslav",
@@ -1282,9 +1285,9 @@
      "liga": "1. liga A",
      "legy": 206,
      "turnaje": 17050,
-     "lkh_n": 65.5,
-     "leg_n": 49,
-     "zap_n": 20
+     "lkh_n": 61.4,
+     "leg_n": 58,
+     "zap_n": 24
     },
     {
      "jmeno": "Říha Josef",
@@ -1293,9 +1296,9 @@
      "liga": "1. liga A",
      "legy": 227,
      "turnaje": 2250,
-     "lkh_n": 70.0,
-     "leg_n": 38,
-     "zap_n": 16
+     "lkh_n": 70.2,
+     "leg_n": 49,
+     "zap_n": 20
     },
     {
      "jmeno": "Buřič Jan",
@@ -1304,9 +1307,9 @@
      "liga": "1. liga A",
      "legy": 228,
      "turnaje": 4950,
-     "lkh_n": 56.8,
-     "leg_n": 50,
-     "zap_n": 20
+     "lkh_n": 57.5,
+     "leg_n": 61,
+     "zap_n": 24
     },
     {
      "jmeno": "Lochner František",
@@ -1315,9 +1318,9 @@
      "liga": "1. liga A",
      "legy": 54,
      "turnaje": 6900,
-     "lkh_n": 29.8,
-     "leg_n": 43,
-     "zap_n": 18
+     "lkh_n": 29.1,
+     "leg_n": 53,
+     "zap_n": 22
     },
     {
      "jmeno": "Navrátil Zdeněk",
@@ -1448,7 +1451,7 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 65,
-     "turnaje": 7350,
+     "turnaje": 8050,
      "lkh_n": 27.9,
      "leg_n": 14,
      "zap_n": 5
