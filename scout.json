@@ -2,7 +2,7 @@
  "season": "2026/27",
  "league": "1. liga A",
  "klub": "Sedmá rota Praha",
- "generated": "2026-10-26",
+ "generated": "2026-10-27",
  "rozpis": [
   {
    "k": 1,
@@ -1386,9 +1386,9 @@
      "liga": "2. liga C",
      "legy": 213,
      "turnaje": 350,
-     "lkh_n": 74.7,
-     "leg_n": 43,
-     "zap_n": 20
+     "lkh_n": 73.8,
+     "leg_n": 53,
+     "zap_n": 24
     },
     {
      "jmeno": "Ondrik Lubomír",
@@ -1397,9 +1397,9 @@
      "liga": "2. liga C",
      "legy": 210,
      "turnaje": 3300,
-     "lkh_n": 41.0,
-     "leg_n": 48,
-     "zap_n": 18
+     "lkh_n": 37.3,
+     "leg_n": 60,
+     "zap_n": 22
     },
     {
      "jmeno": "Houdek Oto",
@@ -1408,9 +1408,9 @@
      "liga": "2. liga C",
      "legy": 205,
      "turnaje": 450,
-     "lkh_n": 53.0,
-     "leg_n": 46,
-     "zap_n": 19
+     "lkh_n": 56.3,
+     "leg_n": 57,
+     "zap_n": 23
     },
     {
      "jmeno": "Mertl Michal",
@@ -1452,9 +1452,9 @@
      "liga": "2. liga C",
      "legy": 65,
      "turnaje": 8050,
-     "lkh_n": 27.9,
-     "leg_n": 14,
-     "zap_n": 5
+     "lkh_n": 27.0,
+     "leg_n": 23,
+     "zap_n": 9
     },
     {
      "jmeno": "Černohorský Miroslav",
@@ -1498,9 +1498,9 @@
      "liga": "2. liga C",
      "legy": 236,
      "turnaje": 4550,
-     "lkh_n": 59.2,
-     "leg_n": 36,
-     "zap_n": 14
+     "lkh_n": 63.6,
+     "leg_n": 42,
+     "zap_n": 16
     },
     {
      "jmeno": "Hradský Pavel",
@@ -1509,9 +1509,9 @@
      "liga": "1. liga A",
      "legy": 229,
      "turnaje": null,
-     "lkh_n": 54.5,
-     "leg_n": 29,
-     "zap_n": 13
+     "lkh_n": 59.5,
+     "leg_n": 38,
+     "zap_n": 17
     },
     {
      "jmeno": "Kaněra Zdeněk",
@@ -1520,9 +1520,9 @@
      "liga": "3. liga B",
      "legy": 116,
      "turnaje": 22350,
-     "lkh_n": 51.7,
-     "leg_n": 24,
-     "zap_n": 10
+     "lkh_n": 54.6,
+     "leg_n": 28,
+     "zap_n": 12
     },
     {
      "jmeno": "Gaper Tomáš",
@@ -1531,9 +1531,9 @@
      "liga": "1. liga A",
      "legy": 217,
      "turnaje": 10950,
-     "lkh_n": 60.0,
-     "leg_n": 34,
-     "zap_n": 14
+     "lkh_n": 56.7,
+     "leg_n": 45,
+     "zap_n": 18
     },
     {
      "jmeno": "Rysová Karolína",
@@ -1575,9 +1575,9 @@
      "liga": "1. liga A",
      "legy": 109,
      "turnaje": 14400,
-     "lkh_n": 8.9,
-     "leg_n": 9,
-     "zap_n": 4
+     "lkh_n": 21.0,
+     "leg_n": 21,
+     "zap_n": 8
     }
    ]
   },
