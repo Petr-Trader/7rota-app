@@ -2,7 +2,7 @@
  "season": "2026/27",
  "league": "1. liga A",
  "klub": "Sedmá rota Praha",
- "generated": "2026-11-02",
+ "generated": "2026-11-03",
  "rozpis": [
   {
    "k": 1,
@@ -328,7 +328,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 165,
-     "turnaje": 27750,
+     "turnaje": 28400,
      "lkh_n": 58.6,
      "leg_n": 36,
      "zap_n": 14
@@ -339,7 +339,7 @@
      "kat": "D",
      "liga": "3. liga N",
      "legy": 126,
-     "turnaje": 17050,
+     "turnaje": 17400,
      "lkh_n": 62.7,
      "leg_n": 30,
      "zap_n": 12
@@ -513,7 +513,7 @@
      "kat": "D",
      "liga": "3. liga N",
      "legy": 170,
-     "turnaje": 18650,
+     "turnaje": 19700,
      "lkh_n": 47.8,
      "leg_n": 55,
      "zap_n": 23
@@ -546,7 +546,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 223,
-     "turnaje": 23850,
+     "turnaje": 24700,
      "lkh_n": 59.8,
      "leg_n": 59,
      "zap_n": 23
@@ -581,7 +581,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 188,
-     "turnaje": 22200,
+     "turnaje": 23150,
      "lkh_n": 99.8,
      "leg_n": 50,
      "zap_n": 22
@@ -603,7 +603,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 158,
-     "turnaje": null,
+     "turnaje": 750,
      "lkh_n": 68.3,
      "leg_n": 36,
      "zap_n": 15
@@ -625,7 +625,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 183,
-     "turnaje": 14400,
+     "turnaje": 15250,
      "lkh_n": 53.8,
      "leg_n": 34,
      "zap_n": 14
@@ -658,7 +658,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 31,
-     "turnaje": 6200,
+     "turnaje": 6550,
      "lkh_n": null,
      "leg_n": null,
      "zap_n": null
@@ -692,9 +692,9 @@
      "liga": "1. liga A",
      "legy": 207,
      "turnaje": 21850,
-     "lkh_n": 40.3,
-     "leg_n": 35,
-     "zap_n": 15
+     "lkh_n": 43.6,
+     "leg_n": 44,
+     "zap_n": 19
     },
     {
      "jmeno": "Kopecký Jiří",
@@ -703,9 +703,9 @@
      "liga": "1. liga A",
      "legy": 223,
      "turnaje": 350,
-     "lkh_n": 42.2,
-     "leg_n": 50,
-     "zap_n": 20
+     "lkh_n": 42.4,
+     "leg_n": 59,
+     "zap_n": 24
     },
     {
      "jmeno": "Přibyl Robert",
@@ -725,9 +725,9 @@
      "liga": "1. liga A",
      "legy": 150,
      "turnaje": null,
-     "lkh_n": 30.0,
-     "leg_n": 22,
-     "zap_n": 8
+     "lkh_n": 38.1,
+     "leg_n": 32,
+     "zap_n": 12
     },
     {
      "jmeno": "Hladík Tomáš",
@@ -736,9 +736,9 @@
      "liga": "1. liga A",
      "legy": 76,
      "turnaje": 2350,
-     "lkh_n": 24.8,
-     "leg_n": 31,
-     "zap_n": 15
+     "lkh_n": 23.3,
+     "leg_n": 33,
+     "zap_n": 16
     },
     {
      "jmeno": "Davídek David",
@@ -747,9 +747,9 @@
      "liga": "1. liga A",
      "legy": 103,
      "turnaje": 13950,
-     "lkh_n": 39.0,
-     "leg_n": 10,
-     "zap_n": 4
+     "lkh_n": 27.2,
+     "leg_n": 18,
+     "zap_n": 7
     },
     {
      "jmeno": "Murín Milan",
@@ -757,7 +757,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 31,
-     "turnaje": 6200,
+     "turnaje": 6550,
      "lkh_n": null,
      "leg_n": null,
      "zap_n": null
@@ -1519,7 +1519,7 @@
      "kat": "D",
      "liga": "3. liga B",
      "legy": 116,
-     "turnaje": 22350,
+     "turnaje": 23400,
      "lkh_n": 54.6,
      "leg_n": 28,
      "zap_n": 12
@@ -1599,9 +1599,9 @@
      "liga": "1. liga A",
      "legy": 226,
      "turnaje": null,
-     "lkh_n": 63.3,
-     "leg_n": 46,
-     "zap_n": 18
+     "lkh_n": 63.9,
+     "leg_n": 54,
+     "zap_n": 22
     },
     {
      "jmeno": "Javornický Josef",
@@ -1609,10 +1609,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 174,
-     "turnaje": 19750,
-     "lkh_n": 54.3,
-     "leg_n": 37,
-     "zap_n": 16
+     "turnaje": 20400,
+     "lkh_n": 56.8,
+     "leg_n": 47,
+     "zap_n": 20
     },
     {
      "jmeno": "Stiborek David",
@@ -1632,9 +1632,9 @@
      "liga": "1. liga A",
      "legy": 100,
      "turnaje": 1300,
-     "lkh_n": 57.9,
-     "leg_n": 14,
-     "zap_n": 5
+     "lkh_n": 49.6,
+     "leg_n": 25,
+     "zap_n": 9
     },
     {
      "jmeno": "Vostárek Martin",
@@ -1653,10 +1653,10 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 171,
-     "turnaje": 3500,
-     "lkh_n": 34.5,
-     "leg_n": 33,
-     "zap_n": 15
+     "turnaje": 4050,
+     "lkh_n": 36.7,
+     "leg_n": 42,
+     "zap_n": 19
     },
     {
      "jmeno": "Vent Lukáš",
