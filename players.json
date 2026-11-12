@@ -36,7 +36,7 @@
         ],
         "Schraml Petr": [
           17,
-          23
+          24
         ],
         "Majerčin David": [
           19,
@@ -63,9 +63,9 @@
       "kat": "B",
       "lkh": 62.6,
       "legy": 165,
-      "turnaje": 28950,
+      "turnaje": 29300,
       "bt": 0.93,
-      "bt_n": 716,
+      "bt_n": 719,
       "utkani": 19,
       "hral": 19,
       "utkani_n": 0,
@@ -111,9 +111,9 @@
       "kat": "B",
       "lkh": 56.6,
       "legy": 53,
-      "turnaje": 10250,
-      "bt": -0.1,
-      "bt_n": 210,
+      "turnaje": 11000,
+      "bt": -0.08,
+      "bt_n": 216,
       "utkani": 15,
       "hral": 10,
       "utkani_n": 1,
@@ -130,13 +130,13 @@
           31,
           12
         ],
+        "Bajtek Jindřich": [
+          24,
+          17
+        ],
         "Majerčin David": [
           28,
           13
-        ],
-        "Bajtek Jindřich": [
-          23,
-          17
         ],
         "Královič Martin": [
           21,
@@ -159,9 +159,9 @@
       "kat": "A",
       "lkh": 38.0,
       "legy": 97,
-      "turnaje": 16750,
-      "bt": 0.31,
-      "bt_n": 365,
+      "turnaje": 17200,
+      "bt": 0.3,
+      "bt_n": 368,
       "utkani": 22,
       "hral": 17,
       "utkani_n": 1,
@@ -208,7 +208,7 @@
       "lkh": 16.0,
       "legy": 10,
       "turnaje": 2100,
-      "bt": -2.16,
+      "bt": -2.15,
       "bt_n": 92,
       "utkani": 24,
       "hral": 5,
@@ -252,7 +252,7 @@
       "lkh": 65.6,
       "legy": 220,
       "turnaje": 1750,
-      "bt": 0.08,
+      "bt": 0.07,
       "bt_n": 27,
       "utkani": 24,
       "hral": 24,
@@ -300,8 +300,8 @@
       "lkh": 60.6,
       "legy": 126,
       "turnaje": 19200,
-      "bt": 0.1,
-      "bt_n": 408,
+      "bt": 0.09,
+      "bt_n": 411,
       "utkani": 16,
       "hral": 16,
       "utkani_n": 1,
@@ -392,7 +392,7 @@
       "lkh": null,
       "legy": null,
       "turnaje": 3750,
-      "bt": 0.83,
+      "bt": 0.84,
       "bt_n": 22,
       "utkani": 0,
       "hral": 0,
