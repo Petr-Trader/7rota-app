@@ -2,7 +2,7 @@
  "season": "2026/27",
  "league": "1. liga A",
  "klub": "Sedmá rota Praha",
- "generated": "2026-11-20",
+ "generated": "2026-11-21",
  "rozpis": [
   {
    "k": 1,
@@ -334,7 +334,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 165,
-     "turnaje": 29500,
+     "turnaje": 29800,
      "lkh_n": 58.0,
      "leg_n": 46,
      "zap_n": 18
@@ -598,7 +598,7 @@
      "kat": "C",
      "liga": "2. liga C",
      "legy": 183,
-     "turnaje": 28000,
+     "turnaje": 29150,
      "lkh_n": 123.0,
      "leg_n": 53,
      "zap_n": 24
@@ -719,7 +719,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 145,
-     "turnaje": 8800,
+     "turnaje": 9150,
      "lkh_n": 17.0,
      "leg_n": 53,
      "zap_n": 22
@@ -752,7 +752,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 103,
-     "turnaje": 15350,
+     "turnaje": 16000,
      "lkh_n": 27.2,
      "leg_n": 18,
      "zap_n": 7
@@ -787,7 +787,7 @@
      "kat": "C",
      "liga": "2. liga B",
      "legy": 223,
-     "turnaje": 18050,
+     "turnaje": 18800,
      "lkh_n": 61.4,
      "leg_n": 77,
      "zap_n": 32
@@ -995,7 +995,7 @@
      "kat": "C",
      "liga": "2. liga A",
      "legy": 217,
-     "turnaje": 1250,
+     "turnaje": 1700,
      "lkh_n": 35.7,
      "leg_n": 65,
      "zap_n": 27
@@ -1028,7 +1028,7 @@
      "kat": "C",
      "liga": "2. liga A",
      "legy": 141,
-     "turnaje": null,
+     "turnaje": 650,
      "lkh_n": 46.9,
      "leg_n": 68,
      "zap_n": 28
@@ -1312,7 +1312,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 228,
-     "turnaje": 4950,
+     "turnaje": 5800,
      "lkh_n": 54.9,
      "leg_n": 69,
      "zap_n": 28
@@ -1356,7 +1356,7 @@
      "kat": "A",
      "liga": "Extraliga VÝCHOD",
      "legy": 6,
-     "turnaje": 8050,
+     "turnaje": 8500,
      "lkh_n": null,
      "leg_n": null,
      "zap_n": null
@@ -1615,7 +1615,7 @@
      "kat": "B",
      "liga": "1. liga A",
      "legy": 174,
-     "turnaje": 22000,
+     "turnaje": 22200,
      "lkh_n": 62.4,
      "leg_n": 67,
      "zap_n": 28
