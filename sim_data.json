@@ -4,7 +4,7 @@
  "halflife": 12.0,
  "wT_default": 0.5,
  "span": "2022-2026",
- "generated": "2026-11-22",
+ "generated": "2026-11-23",
  "rozpis": [
   {
    "k": 1,
@@ -118,7 +118,10 @@
    "doma": false,
    "souper": "Louže DC",
    "hala": "Louže, Praha 2",
-   "mid": "43936776"
+   "mid": "43936776",
+   "my": 8,
+   "opp": 10,
+   "res": "P"
   },
   {
    "k": 10,
@@ -292,12 +295,12 @@
   }
  ],
  "bilance": {
-  "odehrano": 8,
+  "odehrano": 9,
   "v": 5,
   "r": 0,
-  "p": 3,
-  "her_pro": 74,
-  "her_proti": 70,
+  "p": 4,
+  "her_pro": 82,
+  "her_proti": 80,
   "body": 10
  },
  "teams": [
@@ -313,8 +316,8 @@
      "lkh": 65.6,
      "kat": "D",
      "t": 1750,
-     "lkh_n": 41.3,
-     "leg_n": 61
+     "lkh_n": 37.3,
+     "leg_n": 71
     },
     {
      "j": "Bajtek Jindřich",
@@ -325,8 +328,8 @@
      "lkh": 62.6,
      "kat": "B",
      "t": 29800,
-     "lkh_n": 58.0,
-     "leg_n": 46
+     "lkh_n": 62.4,
+     "leg_n": 55
     },
     {
      "j": "Zbořil Karel",
@@ -337,8 +340,8 @@
      "lkh": 60.6,
      "kat": "D",
      "t": 19400,
-     "lkh_n": 60.8,
-     "leg_n": 40
+     "lkh_n": 60.0,
+     "leg_n": 49
     },
     {
      "j": "Majerčin David",
@@ -349,8 +352,8 @@
      "lkh": 56.6,
      "kat": "B",
      "t": 11000,
-     "lkh_n": 48.3,
-     "leg_n": 65
+     "lkh_n": 48.0,
+     "leg_n": 70
     },
     {
      "j": "Hamšík Robert",
@@ -373,8 +376,8 @@
      "lkh": 38.0,
      "kat": "B",
      "t": 17700,
-     "lkh_n": 61.0,
-     "leg_n": 70
+     "lkh_n": 61.4,
+     "leg_n": 76
     },
     {
      "j": "Procházka Lubomír",
@@ -415,8 +418,8 @@
      "lkh": 80.3,
      "kat": "B",
      "t": 25000,
-     "lkh_n": 67.5,
-     "leg_n": 84
+     "lkh_n": 70.8,
+     "leg_n": 92
     },
     {
      "j": "Kopač Miroslav",
@@ -427,8 +430,8 @@
      "lkh": 59.2,
      "kat": "B",
      "t": null,
-     "lkh_n": 36.8,
-     "leg_n": 81
+     "lkh_n": 41.7,
+     "leg_n": 90
     },
     {
      "j": "Semrád Filip",
@@ -439,8 +442,8 @@
      "lkh": 51.2,
      "kat": "B",
      "t": 4200,
-     "lkh_n": 52.3,
-     "leg_n": 30
+     "lkh_n": 57.1,
+     "leg_n": 38
     },
     {
      "j": "Bláha Petr",
@@ -451,8 +454,8 @@
      "lkh": 49.6,
      "kat": "B",
      "t": 18100,
-     "lkh_n": 36.4,
-     "leg_n": 76
+     "lkh_n": 39.5,
+     "leg_n": 80
     },
     {
      "j": "Novák David",
@@ -463,8 +466,8 @@
      "lkh": 45.7,
      "kat": "B",
      "t": null,
-     "lkh_n": 33.1,
-     "leg_n": 48
+     "lkh_n": 30.6,
+     "leg_n": 52
     },
     {
      "j": "Lexová Natálie",
@@ -670,8 +673,8 @@
      "lkh": 64.7,
      "kat": "D",
      "t": 11800,
-     "lkh_n": null,
-     "leg_n": null
+     "lkh_n": 10.0,
+     "leg_n": 5
     },
     {
      "j": "Gutvirt Petr",
@@ -682,8 +685,8 @@
      "lkh": 48.8,
      "kat": "B",
      "t": 24900,
-     "lkh_n": 46.1,
-     "leg_n": 64
+     "lkh_n": 49.1,
+     "leg_n": 74
     },
     {
      "j": "Kopecký Jiří",
@@ -694,8 +697,8 @@
      "lkh": 48.3,
      "kat": "B",
      "t": 350,
-     "lkh_n": 49.6,
-     "leg_n": 75
+     "lkh_n": 48.4,
+     "leg_n": 85
     },
     {
      "j": "Přibyl Robert",
@@ -706,8 +709,8 @@
      "lkh": 38.3,
      "kat": "B",
      "t": 9150,
-     "lkh_n": 17.0,
-     "leg_n": 53
+     "lkh_n": 18.8,
+     "leg_n": 57
     },
     {
      "j": "Dobiášovský Petr",
@@ -730,8 +733,8 @@
      "lkh": 34.3,
      "kat": "B",
      "t": 2700,
-     "lkh_n": 19.5,
-     "leg_n": 42
+     "lkh_n": 18.3,
+     "leg_n": 52
     },
     {
      "j": "Davídek David",
@@ -771,8 +774,8 @@
      "lkh": 72.0,
      "kat": "C",
      "t": 18800,
-     "lkh_n": 61.4,
-     "leg_n": 77
+     "lkh_n": 62.0,
+     "leg_n": 87
     },
     {
      "j": "Dvořák Radek",
@@ -783,8 +786,8 @@
      "lkh": 71.9,
      "kat": "C",
      "t": 6350,
-     "lkh_n": 55.9,
-     "leg_n": 75
+     "lkh_n": 55.5,
+     "leg_n": 85
     },
     {
      "j": "Hocek Jakub",
@@ -795,8 +798,8 @@
      "lkh": 67.0,
      "kat": "C",
      "t": 1750,
-     "lkh_n": 60.7,
-     "leg_n": 70
+     "lkh_n": 61.2,
+     "leg_n": 80
     },
     {
      "j": "Vadocky Daniel",
@@ -807,8 +810,8 @@
      "lkh": 64.2,
      "kat": "C",
      "t": 17700,
-     "lkh_n": 52.2,
-     "leg_n": 51
+     "lkh_n": 49.0,
+     "leg_n": 60
     },
     {
      "j": "Bubla Martin",
@@ -860,8 +863,8 @@
      "lkh": 82.5,
      "kat": "C",
      "t": null,
-     "lkh_n": 70.5,
-     "leg_n": 65
+     "lkh_n": 68.5,
+     "leg_n": 73
     },
     {
      "j": "Drlík Tomáš",
@@ -872,8 +875,8 @@
      "lkh": 69.6,
      "kat": "C",
      "t": 11600,
-     "lkh_n": 78.8,
-     "leg_n": 76
+     "lkh_n": 80.1,
+     "leg_n": 86
     },
     {
      "j": "Stanko Jindřich",
@@ -884,8 +887,8 @@
      "lkh": 63.4,
      "kat": "C",
      "t": 12600,
-     "lkh_n": 49.7,
-     "leg_n": 66
+     "lkh_n": 45.3,
+     "leg_n": 75
     },
     {
      "j": "Cirkovský Jaroslav",
@@ -896,8 +899,8 @@
      "lkh": 54.4,
      "kat": "C",
      "t": 19050,
-     "lkh_n": 51.7,
-     "leg_n": 82
+     "lkh_n": 54.7,
+     "leg_n": 91
     },
     {
      "j": "Vokřálová Petra",
@@ -961,8 +964,8 @@
      "lkh": 68.8,
      "kat": "C",
      "t": null,
-     "lkh_n": 60.2,
-     "leg_n": 65
+     "lkh_n": 59.5,
+     "leg_n": 75
     },
     {
      "j": "Dvořák Leoš",
@@ -973,8 +976,8 @@
      "lkh": 59.5,
      "kat": "C",
      "t": 1700,
-     "lkh_n": 35.7,
-     "leg_n": 65
+     "lkh_n": 36.6,
+     "leg_n": 76
     },
     {
      "j": "Dvořák Robert",
@@ -997,8 +1000,8 @@
      "lkh": 52.5,
      "kat": "C",
      "t": null,
-     "lkh_n": 52.6,
-     "leg_n": 62
+     "lkh_n": 55.6,
+     "leg_n": 70
     },
     {
      "j": "Jelínek Marek",
@@ -1009,8 +1012,8 @@
      "lkh": 43.7,
      "kat": "C",
      "t": 650,
-     "lkh_n": 46.9,
-     "leg_n": 68
+     "lkh_n": 45.5,
+     "leg_n": 78
     },
     {
      "j": "Brzobohatý Jiří",
@@ -1074,8 +1077,8 @@
      "lkh": 77.7,
      "kat": "C",
      "t": null,
-     "lkh_n": 68.1,
-     "leg_n": 75
+     "lkh_n": 72.9,
+     "leg_n": 83
     },
     {
      "j": "Vopálka Martin",
@@ -1086,8 +1089,8 @@
      "lkh": 72.9,
      "kat": "C",
      "t": null,
-     "lkh_n": 63.0,
-     "leg_n": 10
+     "lkh_n": 60.5,
+     "leg_n": 20
     },
     {
      "j": "Machač Ladislav",
@@ -1098,8 +1101,8 @@
      "lkh": 57.5,
      "kat": "C",
      "t": null,
-     "lkh_n": 45.4,
-     "leg_n": 72
+     "lkh_n": 43.4,
+     "leg_n": 83
     },
     {
      "j": "Gratz Lumír",
@@ -1122,8 +1125,8 @@
      "lkh": 44.4,
      "kat": "C",
      "t": null,
-     "lkh_n": 27.6,
-     "leg_n": 21
+     "lkh_n": 22.9,
+     "leg_n": 31
     },
     {
      "j": "Zdražil Jan",
@@ -1163,8 +1166,8 @@
      "lkh": 76.9,
      "kat": "D",
      "t": 12950,
-     "lkh_n": 54.3,
-     "leg_n": 65
+     "lkh_n": 55.3,
+     "leg_n": 73
     },
     {
      "j": "Štola Ondřej",
@@ -1175,8 +1178,8 @@
      "lkh": 76.5,
      "kat": "C",
      "t": 350,
-     "lkh_n": 48.8,
-     "leg_n": 52
+     "lkh_n": 46.1,
+     "leg_n": 56
     },
     {
      "j": "Lébl Martin",
@@ -1199,8 +1202,8 @@
      "lkh": 56.7,
      "kat": "C",
      "t": null,
-     "lkh_n": 31.0,
-     "leg_n": 20
+     "lkh_n": 25.0,
+     "leg_n": 28
     },
     {
      "j": "Menšík Ladislav",
@@ -1212,7 +1215,7 @@
      "kat": "C",
      "t": null,
      "lkh_n": 28.2,
-     "leg_n": 68
+     "leg_n": 76
     },
     {
      "j": "Dorko Miroslav",
@@ -1223,8 +1226,8 @@
      "lkh": 39.6,
      "kat": "C",
      "t": 250,
-     "lkh_n": 22.9,
-     "leg_n": 28
+     "lkh_n": 21.8,
+     "leg_n": 33
     },
     {
      "j": "Fiala Stanislav",
@@ -1365,8 +1368,8 @@
      "lkh": 66.0,
      "kat": "C",
      "t": 350,
-     "lkh_n": 72.3,
-     "leg_n": 71
+     "lkh_n": 69.8,
+     "leg_n": 81
     },
     {
      "j": "Ondrik Lubomír",
@@ -1377,8 +1380,8 @@
      "lkh": 62.2,
      "kat": "C",
      "t": 4150,
-     "lkh_n": 37.0,
-     "leg_n": 70
+     "lkh_n": 38.6,
+     "leg_n": 79
     },
     {
      "j": "Houdek Oto",
@@ -1389,8 +1392,8 @@
      "lkh": 59.0,
      "kat": "C",
      "t": 1400,
-     "lkh_n": 52.8,
-     "leg_n": 76
+     "lkh_n": 54.1,
+     "leg_n": 85
     },
     {
      "j": "Mertl Michal",
@@ -1437,8 +1440,8 @@
      "lkh": 13.2,
      "kat": "C",
      "t": 8850,
-     "lkh_n": 24.3,
-     "leg_n": 35
+     "lkh_n": 28.5,
+     "leg_n": 46
     },
     {
      "j": "Černohorský Miroslav",
@@ -1466,8 +1469,8 @@
      "lkh": 72.4,
      "kat": "D",
      "t": 14000,
-     "lkh_n": 60.2,
-     "leg_n": 51
+     "lkh_n": 60.5,
+     "leg_n": 61
     },
     {
      "j": "Krušina Lukáš",
@@ -1478,8 +1481,8 @@
      "lkh": 67.7,
      "kat": "C",
      "t": 5100,
-     "lkh_n": 68.5,
-     "leg_n": 60
+     "lkh_n": 70.4,
+     "leg_n": 69
     },
     {
      "j": "Hradský Pavel",
@@ -1490,8 +1493,8 @@
      "lkh": 66.0,
      "kat": "B",
      "t": 450,
-     "lkh_n": 61.5,
-     "leg_n": 47
+     "lkh_n": 62.9,
+     "leg_n": 51
     },
     {
      "j": "Kaněra Zdeněk",
@@ -1514,8 +1517,8 @@
      "lkh": 58.2,
      "kat": "B",
      "t": 12700,
-     "lkh_n": 62.1,
-     "leg_n": 58
+     "lkh_n": 59.1,
+     "leg_n": 67
     },
     {
      "j": "Rysová Karolína",
@@ -1562,8 +1565,8 @@
      "lkh": 28.8,
      "kat": "B",
      "t": 16550,
-     "lkh_n": 33.1,
-     "leg_n": 32
+     "lkh_n": 30.0,
+     "leg_n": 36
     }
    ]
   },
